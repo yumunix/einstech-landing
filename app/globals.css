@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ====================================================================
+   EINSTECH Design System — Global Tokens & Primitives
+   ==================================================================== */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap");
+
+:root {
+  --color-void: #030508;
+  --color-cyan: #00e5ff;
+  --color-acid: #39ff14;
+  --color-alert: #ff3366;
+  --color-muted: #6e7787;
+  --color-muted-strong: #8b94a7;
+
+  --surface: rgba(255, 255, 255, 0.02);
+  --surface-border: rgba(0, 229, 255, 0.15);
+
+  --glow-cyan: 0 0 20px rgba(0, 229, 255, 0.4);
+  --glow-acid: 0 0 20px rgba(57, 255, 20, 0.4);
+  --glow-acid-strong: 0 0 30px rgba(57, 255, 20, 0.5);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-void);
+    color: #ffffff;
+    overflow-x: hidden;
+    font-family: "Pretendard", "Inter", system-ui, sans-serif;
+    background-image: linear-gradient(
+        rgba(0, 229, 255, 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-cyan);
+    color: var(--color-void);
+  }
+}
+
+@layer components {
+  /* Glass panel with corner markers */
+  .ds-glass-panel {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--surface-border);
+    position: relative;
+  }
+
+  .ds-glass-panel::before,
+  .ds-glass-panel::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-color: rgba(0, 229, 255, 0.4);
+    border-style: solid;
+    transition: all 0.3s ease;
+  }
+  .ds-glass-panel::before {
+    top: -1px;
+    left: -1px;
+    border-width: 1px 0 0 1px;
+  }
+  .ds-glass-panel::after {
+    bottom: -1px;
+    right: -1px;
+    border-width: 0 1px 1px 0;
+  }
+  .ds-glass-panel:hover::before,
+  .ds-glass-panel:hover::after {
+    width: 16px;
+    height: 16px;
+    border-color: var(--color-cyan);
+  }
+
+  .ds-glass-panel.hover-acid:hover::before,
+  .ds-glass-panel.hover-acid:hover::after {
+    border-color: var(--color-acid);
+  }
+
+  .ds-glass-panel.cta-frame {
+    border: 1px solid rgba(57, 255, 20, 0.2);
+  }
+  .ds-glass-panel.cta-frame::before,
+  .ds-glass-panel.cta-frame::after {
+    width: 12px;
+    height: 12px;
+    border-color: rgba(57, 255, 20, 0.6);
+  }
+  .ds-glass-panel.cta-frame::before {
+    border-width: 2px 0 0 2px;
+  }
+  .ds-glass-panel.cta-frame::after {
+    border-width: 0 2px 2px 0;
+  }
+  .ds-glass-panel.cta-frame:hover::before,
+  .ds-glass-panel.cta-frame:hover::after {
+    width: 24px;
+    height: 24px;
+    border-color: var(--color-acid);
+  }
+
+  /* Outlined display text */
+  .ds-text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    opacity: 0.7;
+  }
+
+  .ds-text-glow-cyan {
+    text-shadow: var(--glow-cyan);
+  }
+  .ds-text-glow-acid {
+    text-shadow: var(--glow-acid);
+  }
+  .ds-text-glow-acid-strong {
+    text-shadow: var(--glow-acid-strong);
+  }
+
+  .ds-data-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  /* Buttons */
+  .ds-btn-primary {
+    background-color: var(--color-cyan);
+    color: var(--color-void);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .ds-btn-primary:hover {
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
+    transform: translateY(-1px);
+  }
+  .ds-btn-primary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transition: all 0.5s ease;
+  }
+  .ds-btn-primary:hover::after {
+    left: 100%;
+  }
+
+  .ds-btn-secondary {
+    background: rgba(0, 229, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    color: var(--color-cyan);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ds-btn-secondary:hover {
+    background: rgba(0, 229, 255, 0.1);
+    border-color: var(--color-cyan);
+  }
+
+  /* CTA mega button frame with animated gradient */
+  .ds-cta-btn-wrapper {
+    position: relative;
+    padding: 2px;
+    background: linear-gradient(90deg, #39ff14, transparent, #39ff14);
+    background-size: 200% 100%;
+    animation: bgPan 3s linear infinite;
+  }
+
+  .ds-word-keep {
+    word-break: keep-all;
+  }
+
+  /* Decorative scanline sweep across viewport */
+  .ds-scanline-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 229, 255, 0.1);
+    opacity: 0.5;
+    animation: scanline 8s linear infinite;
+    pointer-events: none;
+    z-index: 50;
+  }
+}
+
+@keyframes pulseOpacity {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+@keyframes scanlineX {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes slideRight {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% - 2rem);
+    opacity: 0;
+  }
+}
+@keyframes bgPan {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
