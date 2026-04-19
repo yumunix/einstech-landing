@@ -62,6 +62,9 @@ export const metadata = {
   category: "technology",
   verification: {
     google: "eTMfjn8ahJns387AiDUpDMDuISVoPqqd16t-vibzajc",
+    other: {
+      "naver-site-verification": "d3ffc152f4e205bf983ed1e6c89f27741a563c29",
+    },
   },
 };
 
