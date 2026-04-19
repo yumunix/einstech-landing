@@ -60,6 +60,9 @@ export const metadata = {
     },
   },
   category: "technology",
+  verification: {
+    google: "eTMfjn8ahJns387AiDUpDMDuISVoPqqd16t-vibzajc",
+  },
 };
 
 export const viewport = {
