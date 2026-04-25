@@ -147,6 +147,14 @@ export default function Solution() {
                 <br />
                 <br />
                 <span className="text-acid">RTO 4시간 → 1시간 · RPO 24시간 → 30분</span>
+                <br />
+                <br />
+                <a
+                  href="/storage-backup.html"
+                  className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
+                >
+                  Storage & Backup 자세히 보기 →
+                </a>
               </>
             }
             footer={
