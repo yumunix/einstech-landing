@@ -80,6 +80,14 @@ export default function Solution() {
                 <span className="text-acid">
                   연간 계획되지 않은 다운타임 평균 92% 감소
                 </span>
+                <br />
+                <br />
+                <a
+                  href="/rose-ha.html"
+                  className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
+                >
+                  Rose HA 자세히 보기 →
+                </a>
               </>
             }
             footer={
