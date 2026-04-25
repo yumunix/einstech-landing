@@ -199,6 +199,14 @@ export default function Solution() {
                 <br />
                 <br />
                 <span className="text-acid">감사 대응 준비시간 평균 3주 → 2일</span>
+                <br />
+                <br />
+                <a
+                  href="/dlp-antivirus.html"
+                  className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
+                >
+                  DLP & 백신 자세히 보기 →
+                </a>
               </>
             }
             footer={
