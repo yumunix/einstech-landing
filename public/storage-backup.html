@@ -1,0 +1,1051 @@
+<html lang="ko" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Storage &amp; Backup Solutions - Non Stop System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@300;500;700&amp;display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'void': '#030508',
+                        'cyan': '#00E5FF',
+                        'acid': '#39FF14',
+                        'surface': 'rgba(255,255,255,0.02)',
+                        'surface-border': 'rgba(0, 229, 255, 0.15)',
+                        'alert': '#FF3366',
+                        'gray-txt': '#8B94A7',
+                        'gray-muted': '#6E7787',
+                    },
+                    fontFamily: {
+                        'display': ['"Space Grotesk"', 'sans-serif'],
+                        'mono': ['"JetBrains Mono"', 'monospace'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'widest': '.25em',
+                        'ultra': '.5em',
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse-opacity 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'scanline': 'slide-right 2s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'dash': 'dash 20s linear infinite',
+                    },
+                    keyframes: {
+                        'pulse-opacity': {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0.5 },
+                        },
+                        'slide-right': {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100%)' },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'dash': {
+                            'to': { strokeDashoffset: -1000 }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --glow-cyan: 0 0 20px rgba(0, 229, 255, 0.4);
+            --glow-acid: 0 0 20px rgba(57, 255, 20, 0.4);
+            --glow-alert: 0 0 20px rgba(255, 51, 102, 0.4);
+        }
+
+        body {
+            background-color: #030508;
+            color: white;
+            overflow-x: hidden;
+            background-image:
+                linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--surface-border);
+            position: relative;
+        }
+
+        .glass-panel::before, .glass-panel::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-color: rgba(0, 229, 255, 0.4);
+            border-style: solid;
+            transition: all 0.3s ease;
+        }
+        .glass-panel::before {
+            top: -1px; left: -1px;
+            border-width: 1px 0 0 1px;
+        }
+        .glass-panel::after {
+            bottom: -1px; right: -1px;
+            border-width: 0 1px 1px 0;
+        }
+
+        .glass-panel:hover::before, .glass-panel:hover::after {
+            width: 16px;
+            height: 16px;
+            border-color: #39FF14;
+        }
+
+        .glass-panel.theme-acid { border-color: rgba(57, 255, 20, 0.2); }
+        .glass-panel.theme-acid::before, .glass-panel.theme-acid::after { border-color: rgba(57, 255, 20, 0.5); }
+        .glass-panel.theme-acid:hover::before, .glass-panel.theme-acid:hover::after { border-color: #00E5FF; }
+
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 1px #ffffff;
+            opacity: 0.7;
+        }
+
+        .text-glow-cyan { text-shadow: var(--glow-cyan); }
+        .text-glow-acid { text-shadow: var(--glow-acid); }
+        .text-glow-alert { text-shadow: var(--glow-alert); }
+
+        .word-keep { word-break: keep-all; }
+
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #030508; border-left: 1px solid rgba(0,229,255,0.1); }
+        ::-webkit-scrollbar-thumb { background: rgba(0, 229, 255, 0.3); }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(57, 255, 20, 0.5); }
+
+        .nav-dot.active { background-color: #39FF14; box-shadow: 0 0 10px #39FF14; transform: scale(1.5); }
+
+        .bg-grid-small {
+            background-size: 10px 10px;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        .svg-flow-line {
+            stroke-dasharray: 10;
+            animation: dash 30s linear infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-acid selection:text-void relative flex flex-col w-full h-full">
+
+
+    <nav class="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden xl:flex flex-col gap-6 items-center">
+        <div class="h-32 w-px bg-gradient-to-b from-transparent via-cyan/50 to-transparent"></div>
+        <a href="#sec-acronis" class="group relative flex items-center justify-center w-6 h-6" title="Acronis Cyber Backup">
+            <div class="w-1.5 h-1.5 rounded-full bg-cyan/40 transition-all duration-300 group-hover:bg-acid group-hover:scale-150 group-hover:shadow-[0_0_10px_#39FF14]"></div>
+            <span class="absolute left-8 font-mono text-[10px] text-cyan/0 group-hover:text-cyan whitespace-nowrap transition-colors duration-300 tracking-widest uppercase">01_Acronis</span>
+        </a>
+        <a href="#sec-veritas" class="group relative flex items-center justify-center w-6 h-6" title="Veritas NetBackup">
+            <div class="w-1.5 h-1.5 rounded-full bg-cyan/40 transition-all duration-300 group-hover:bg-acid group-hover:scale-150 group-hover:shadow-[0_0_10px_#39FF14]"></div>
+            <span class="absolute left-8 font-mono text-[10px] text-cyan/0 group-hover:text-cyan whitespace-nowrap transition-colors duration-300 tracking-widest uppercase">02_Veritas</span>
+        </a>
+        <a href="#sec-hitachi" class="group relative flex items-center justify-center w-6 h-6" title="Hitachi WORM Storage">
+            <div class="w-1.5 h-1.5 rounded-full bg-cyan/40 transition-all duration-300 group-hover:bg-acid group-hover:scale-150 group-hover:shadow-[0_0_10px_#39FF14]"></div>
+            <span class="absolute left-8 font-mono text-[10px] text-cyan/0 group-hover:text-cyan whitespace-nowrap transition-colors duration-300 tracking-widest uppercase">03_Hitachi</span>
+        </a>
+        <a href="#sec-unified" class="group relative flex items-center justify-center w-6 h-6" title="Unified Strategy">
+            <div class="w-1.5 h-1.5 rounded-full bg-cyan/40 transition-all duration-300 group-hover:bg-acid group-hover:scale-150 group-hover:shadow-[0_0_10px_#39FF14]"></div>
+            <span class="absolute left-8 font-mono text-[10px] text-cyan/0 group-hover:text-cyan whitespace-nowrap transition-colors duration-300 tracking-widest uppercase">04_Unified_Arch</span>
+        </a>
+        <a href="#sec-compliance" class="group relative flex items-center justify-center w-6 h-6" title="Security Framework">
+            <div class="w-1.5 h-1.5 rounded-full bg-cyan/40 transition-all duration-300 group-hover:bg-acid group-hover:scale-150 group-hover:shadow-[0_0_10px_#39FF14]"></div>
+            <span class="absolute left-8 font-mono text-[10px] text-cyan/0 group-hover:text-cyan whitespace-nowrap transition-colors duration-300 tracking-widest uppercase">05_Compliance</span>
+        </a>
+        <a href="#sec-support" class="group relative flex items-center justify-center w-6 h-6" title="Implementation &amp; Support">
+            <div class="w-1.5 h-1.5 rounded-full bg-cyan/40 transition-all duration-300 group-hover:bg-acid group-hover:scale-150 group-hover:shadow-[0_0_10px_#39FF14]"></div>
+            <span class="absolute left-8 font-mono text-[10px] text-cyan/0 group-hover:text-cyan whitespace-nowrap transition-colors duration-300 tracking-widest uppercase">06_Support</span>
+        </a>
+        <div class="h-32 w-px bg-gradient-to-t from-transparent via-cyan/50 to-transparent"></div>
+    </nav>
+
+    <main class="w-full relative">
+
+
+        <section id="sec-acronis" class="min-h-screen w-full flex flex-col justify-center py-24 px-6 lg:px-24 xl:px-32 relative border-b border-surface-border/30">
+            <div class="absolute right-0 top-0 w-[800px] h-[800px] bg-cyan/5 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
+
+            <div class="max-w-[1600px] w-full mx-auto">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-12">
+                    <div class="px-3 py-1.5 border border-cyan/30 bg-cyan/5 font-mono text-xs text-cyan uppercase tracking-widest flex items-center gap-2 inline-flex w-max shadow-[0_0_15px_rgba(0,229,255,0.1)]">
+                        <span class="inline-block w-2 h-2 bg-cyan animate-pulse-fast"></span>
+                        SYS_ENDPOINT_BACKUP
+                    </div>
+                    <h2 class="font-mono text-sm md:text-base text-gray-muted tracking-widest word-keep">
+                        01. Data Protection -- 엔드포인트 및 클라우드 방어
+                    </h2>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-16 items-start">
+
+                    <div class="flex-1">
+                        <h3 class="font-display text-[clamp(3rem,5vw,5rem)] font-bold tracking-tight text-white leading-[1.05] word-keep mb-6">
+                            ACRONIS<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-blue-500">CYBER BACKUP</span>
+                        </h3>
+                        <p class="font-sans text-gray-txt text-lg leading-relaxed word-keep mb-12 border-l-2 border-cyan/30 pl-6 max-w-2xl">
+                            <span class="text-white font-medium">현대적 데이터 보호의 표준.</span> 단순한 백업을 넘어 AI 기반 랜섬웨어 차단과 즉각적인 복구를 결합한 사이버 보호 통합 솔루션입니다.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                            <div class="glass-panel p-6 group hover:border-cyan/50 transition-colors">
+                                <div class="w-8 h-8 rounded bg-cyan/10 border border-cyan/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-4 h-4 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                </div>
+                                <h4 class="font-mono text-sm text-white mb-2 tracking-wide">ACTIVE_PROTECTION</h4>
+                                <p class="text-sm text-gray-txt word-keep">AI 기반 휴리스틱 분석으로 알려지지 않은 랜섬웨어를 실시간으로 탐지하고 차단합니다.</p>
+                            </div>
+                            <div class="glass-panel p-6 group hover:border-cyan/50 transition-colors">
+                                <div class="w-8 h-8 rounded bg-cyan/10 border border-cyan/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-4 h-4 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <h4 class="font-mono text-sm text-white mb-2 tracking-wide">INSTANT_RESTORE</h4>
+                                <p class="text-sm text-gray-txt word-keep">이기종 하드웨어나 하이퍼바이저로의 즉각적인 복구를 지원하여 RTO를 15초 이내로 단축합니다.</p>
+                            </div>
+                            <div class="glass-panel p-6 group hover:border-cyan/50 transition-colors">
+                                <div class="w-8 h-8 rounded bg-cyan/10 border border-cyan/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-4 h-4 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                                </div>
+                                <h4 class="font-mono text-sm text-white mb-2 tracking-wide">BLOCKCHAIN_NOTARY</h4>
+                                <p class="text-sm text-gray-txt word-keep">백업 데이터의 지문을 이더리움 블록체인에 기록하여 데이터의 무결성을 법적으로 증명합니다.</p>
+                            </div>
+                            <div class="glass-panel p-6 group hover:border-cyan/50 transition-colors">
+                                <div class="w-8 h-8 rounded bg-cyan/10 border border-cyan/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-4 h-4 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                                </div>
+                                <h4 class="font-mono text-sm text-white mb-2 tracking-wide">HYBRID_CLOUD</h4>
+                                <p class="text-sm text-gray-txt word-keep">로컬, 프라이빗, 퍼블릭 클라우드를 아우르는 유연한 백업 스토리지 아키텍처를 제공합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h4 class="font-mono text-xs text-gray-muted uppercase tracking-widest mb-4">Target Use Cases</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-3 py-1 bg-surface border border-surface-border font-mono text-xs text-white">ENDPOINT_BACKUP</span>
+                                <span class="px-3 py-1 bg-surface border border-surface-border font-mono text-xs text-white">VMWARE_HYPERV</span>
+                                <span class="px-3 py-1 bg-surface border border-surface-border font-mono text-xs text-white">MICROSOFT_365</span>
+                                <span class="px-3 py-1 bg-surface border border-surface-border font-mono text-xs text-white">SERVER_DR</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="w-full lg:w-[500px] xl:w-[600px] flex flex-col gap-8">
+
+
+                        <div class="glass-panel p-8 h-[400px] flex flex-col relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-grid-small opacity-20"></div>
+                            <div class="flex justify-between items-center mb-6 relative z-10">
+                                <div class="font-mono text-[10px] text-cyan tracking-widest">THREAT_DETECTION_MODEL</div>
+                                <div class="font-display text-5xl font-bold text-outline opacity-20 pointer-events-none">AI</div>
+                            </div>
+
+
+                            <div class="flex-1 relative flex items-center justify-center z-10">
+
+                                <div class="w-32 h-32 absolute z-20 flex items-center justify-center">
+                                    <div class="absolute inset-0 bg-cyan/20 blur-xl rounded-full"></div>
+                                    <svg class="w-24 h-24 text-cyan drop-shadow-[0_0_15px_rgba(0,229,255,0.8)] animate-float" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                    <div class="absolute w-full h-full border border-cyan/30 rounded-full animate-[spin_10s_linear_infinite] border-t-cyan border-b-cyan"></div>
+                                </div>
+
+
+                                <div class="absolute left-4 top-1/4 w-12 h-12 flex items-center justify-center group-hover:-translate-x-2 transition-transform">
+                                    <div class="w-3 h-3 bg-alert rounded-full shadow-[0_0_15px_#FF3366]"></div>
+                                    <div class="absolute w-full h-[1px] bg-gradient-to-r from-alert to-transparent -right-12 top-1/2"></div>
+                                    <span class="absolute -top-6 font-mono text-[9px] text-alert">MALWARE</span>
+                                </div>
+                                <div class="absolute left-8 bottom-1/4 w-12 h-12 flex items-center justify-center group-hover:-translate-x-2 transition-transform">
+                                    <div class="w-3 h-3 bg-alert rounded-full shadow-[0_0_15px_#FF3366]"></div>
+                                    <div class="absolute w-full h-[1px] bg-gradient-to-tr from-alert to-transparent -right-10 -top-4"></div>
+                                    <span class="absolute -bottom-6 font-mono text-[9px] text-alert">RANSOMWARE</span>
+                                </div>
+
+
+                                <div class="absolute right-8 top-1/3 w-16 h-16 flex flex-col items-center justify-center">
+                                    <svg class="w-8 h-8 text-acid drop-shadow-[0_0_10px_rgba(57,255,20,0.5)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                                    <span class="mt-2 font-mono text-[9px] text-acid">SECURE_DATA</span>
+                                    <div class="absolute w-24 h-[1px] bg-gradient-to-l from-acid to-transparent -left-20 top-1/2 opacity-50"></div>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto border-t border-surface-border pt-4 flex justify-between items-center relative z-10">
+                                <span class="font-mono text-[10px] text-gray-muted">STATUS: ACTIVELY MONITORING</span>
+                                <div class="flex gap-1">
+                                    <div class="w-1.5 h-3 bg-cyan animate-pulse"></div>
+                                    <div class="w-1.5 h-3 bg-cyan/50"></div>
+                                    <div class="w-1.5 h-3 bg-cyan/20"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="glass-panel p-6">
+                            <h4 class="font-mono text-xs text-white uppercase tracking-widest mb-6 border-b border-white/10 pb-2">Technical Specifications</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-sans text-sm text-gray-txt">Recovery Time Objective</span>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-acid animate-pulse-fast"></div>
+                                        <span class="font-mono text-xs text-acid">&lt; 15 SECONDS</span>
+                                    </div>
+                                </div>
+                                <div class="w-full h-px bg-white/5"></div>
+                                <div class="flex items-center justify-between">
+                                    <span class="font-sans text-sm text-gray-txt">Backup Architecture</span>
+                                    <span class="font-mono text-xs text-white">IMMUTABLE / WORM</span>
+                                </div>
+                                <div class="w-full h-px bg-white/5"></div>
+                                <div class="flex items-center justify-between">
+                                    <span class="font-sans text-sm text-gray-txt">Security Standard</span>
+                                    <span class="font-mono text-xs text-cyan">AES-256 ENCRYPTION</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="sec-veritas" class="min-h-screen w-full flex flex-col justify-center py-24 px-6 lg:px-24 xl:px-32 relative border-b border-surface-border/30 bg-gradient-to-b from-transparent to-[#030508]">
+            <div class="absolute left-0 top-1/4 w-[600px] h-[600px] bg-red-500/5 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
+
+            <div class="max-w-[1600px] w-full mx-auto">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-end gap-4 mb-12">
+                    <h2 class="font-mono text-sm md:text-base text-gray-muted tracking-widest word-keep order-2 sm:order-1 text-right">
+                        02. Enterprise Scale -- 대규모 하이브리드 인프라 보호
+                    </h2>
+                    <div class="px-3 py-1.5 border border-alert/30 bg-alert/5 font-mono text-xs text-alert uppercase tracking-widest flex items-center gap-2 inline-flex w-max order-1 sm:order-2 shadow-[0_0_15px_rgba(255,51,102,0.1)]">
+                        <span class="inline-block w-2 h-2 bg-alert animate-pulse-fast"></span>
+                        SYS_ENTERPRISE_BACKUP
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row-reverse gap-16 items-start">
+
+                    <div class="flex-1 text-right">
+                        <h3 class="font-display text-[clamp(3rem,5vw,5rem)] font-bold tracking-tight text-white leading-[1.05] word-keep mb-6">
+                            VERITAS<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-l from-alert to-orange-500">NETBACKUP</span>
+                        </h3>
+                        <p class="font-sans text-gray-txt text-lg leading-relaxed word-keep mb-12 border-r-2 border-alert/30 pr-6 ml-auto max-w-2xl">
+                            <span class="text-white font-medium">엔터프라이즈 백업의 압도적 리더.</span> 수백 개의 워크로드와 엑사바이트 급 데이터를 단일 플랫폼에서 완벽하게 제어하고 보호합니다.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-left" dir="ltr">
+                            <div class="glass-panel p-6 group hover:border-alert/50 transition-colors">
+                                <h4 class="font-mono text-sm text-alert mb-2 tracking-wide flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                                    SINGLE_PANE_MANAGEMENT
+                                </h4>
+                                <p class="text-sm text-gray-txt word-keep">단일 콘솔에서 물리, 가상, 클라우드 환경 전체를 통합 관리하여 운영 복잡성을 제거합니다.</p>
+                            </div>
+                            <div class="glass-panel p-6 group hover:border-alert/50 transition-colors">
+                                <h4 class="font-mono text-sm text-alert mb-2 tracking-wide flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                                    800+ WORKLOAD_SUPPORT
+                                </h4>
+                                <p class="text-sm text-gray-txt word-keep">데이터베이스, 애플리케이션, 스토리지 시스템 등 현존하는 거의 모든 엔터프라이즈 워크로드를 지원합니다.</p>
+                            </div>
+                            <div class="glass-panel p-6 group hover:border-alert/50 transition-colors">
+                                <h4 class="font-mono text-sm text-alert mb-2 tracking-wide flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                                    AI_ANOMALY_DETECTION
+                                </h4>
+                                <p class="text-sm text-gray-txt word-keep">머신러닝 알고리즘이 백업 데이터의 이상 징후를 감지하여 잠재적인 위협을 사전에 경고합니다.</p>
+                            </div>
+                            <div class="glass-panel p-6 group hover:border-alert/50 transition-colors">
+                                <h4 class="font-mono text-sm text-alert mb-2 tracking-wide flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                                    CLOUD_NATIVE_ARCH
+                                </h4>
+                                <p class="text-sm text-gray-txt word-keep">AWS, Azure, GCP 등 퍼블릭 클라우드 환경에 최적화된 중복제거 및 티어링을 제공합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 flex flex-col items-end">
+                            <h4 class="font-mono text-xs text-gray-muted uppercase tracking-widest mb-4">Enterprise Workloads</h4>
+                            <div class="flex flex-wrap gap-3 justify-end" dir="ltr">
+                                <span class="px-3 py-1 bg-surface border border-surface-border font-mono text-xs text-white">ORACLE_SAP_HANA</span>
+                                <span class="px-3 py-1 bg-surface border border-surface-border font-mono text-xs text-white">MULTI_CLOUD</span>
+                                <span class="px-3 py-1 bg-surface border border-surface-border font-mono text-xs text-white">KUBERNETES</span>
+                                <span class="px-3 py-1 bg-surface border border-surface-border font-mono text-xs text-white">NAS_SCALE_OUT</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="w-full lg:w-[500px] xl:w-[600px] flex flex-col gap-8">
+
+
+                        <div class="glass-panel p-6 h-[400px] flex flex-col relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-grid-small opacity-20"></div>
+                            <div class="flex justify-between items-center mb-4 relative z-10">
+                                <div class="font-display text-5xl font-bold text-outline opacity-20 pointer-events-none">NB</div>
+                                <div class="font-mono text-[10px] text-alert tracking-widest">TOPOLOGY_MAP</div>
+                            </div>
+
+
+                            <div class="flex-1 relative w-full h-full flex flex-col justify-between z-10 pt-4">
+
+                                <div class="flex justify-between w-full px-4">
+                                    <div class="flex flex-col items-center gap-2">
+                                        <div class="w-12 h-10 border border-white/20 bg-black/40 rounded flex items-center justify-center">
+                                            <span class="font-mono text-[8px] text-white">VMWARE</span>
+                                        </div>
+                                        <div class="w-px h-8 bg-gradient-to-b from-white/20 to-alert relative overflow-hidden">
+                                            <div class="w-full h-1/2 bg-alert absolute top-0 animate-[slide-right_1s_linear_infinite]" style="animation-direction: alternate;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center gap-2">
+                                        <div class="w-12 h-10 border border-white/20 bg-black/40 rounded flex items-center justify-center">
+                                            <span class="font-mono text-[8px] text-white">ORACLE</span>
+                                        </div>
+                                        <div class="w-px h-8 bg-gradient-to-b from-white/20 to-alert relative overflow-hidden">
+                                            <div class="w-full h-1/2 bg-alert absolute top-0 animate-[slide-right_1.5s_linear_infinite]" style="animation-direction: alternate;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center gap-2">
+                                        <div class="w-12 h-10 border border-white/20 bg-black/40 rounded flex items-center justify-center">
+                                            <span class="font-mono text-[8px] text-white">K8S</span>
+                                        </div>
+                                        <div class="w-px h-8 bg-gradient-to-b from-white/20 to-alert relative overflow-hidden">
+                                            <div class="w-full h-1/2 bg-alert absolute top-0 animate-[slide-right_1.2s_linear_infinite]" style="animation-direction: alternate;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="w-full h-20 border border-alert/40 bg-alert/5 backdrop-blur-md relative flex items-center justify-center group-hover:bg-alert/10 transition-colors">
+                                    <div class="absolute inset-x-0 h-px bg-alert/30 top-1/2"></div>
+                                    <div class="bg-void border border-alert px-4 py-2 relative z-10 flex flex-col items-center shadow-[0_0_20px_rgba(255,51,102,0.2)]">
+                                        <span class="font-mono text-xs text-alert font-bold tracking-widest">NETBACKUP_CORE</span>
+                                        <span class="font-mono text-[8px] text-gray-txt">DEDUPLICATION_ENGINE</span>
+                                    </div>
+                                </div>
+
+
+                                <div class="flex justify-between w-full px-8 pb-4">
+                                    <div class="flex flex-col items-center gap-2">
+                                        <div class="w-px h-8 bg-gradient-to-t from-white/20 to-alert relative overflow-hidden">
+                                            <div class="w-full h-1/2 bg-alert absolute bottom-0 animate-[slide-right_2s_linear_infinite]"></div>
+                                        </div>
+                                        <div class="w-16 h-10 border border-cyan/30 bg-cyan/5 rounded flex items-center justify-center">
+                                            <span class="font-mono text-[8px] text-cyan">APPLIANCE</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center gap-2">
+                                        <div class="w-px h-8 bg-gradient-to-t from-white/20 to-alert relative overflow-hidden">
+                                            <div class="w-full h-1/2 bg-alert absolute bottom-0 animate-[slide-right_2.5s_linear_infinite]"></div>
+                                        </div>
+                                        <div class="w-16 h-10 border border-cyan/30 bg-cyan/5 rounded flex items-center justify-center">
+                                            <span class="font-mono text-[8px] text-cyan">CLOUD_TIER</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="glass-panel p-6">
+                            <h4 class="font-mono text-xs text-white uppercase tracking-widest mb-6 border-b border-white/10 pb-2">Platform Scale Metrics</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-sans text-sm text-gray-txt">Global Data Managed</span>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-alert shadow-[0_0_8px_#FF3366]"></div>
+                                        <span class="font-mono text-xs text-white">65+ EXABYTES</span>
+                                    </div>
+                                </div>
+                                <div class="w-full h-px bg-white/5"></div>
+                                <div class="flex items-center justify-between">
+                                    <span class="font-sans text-sm text-gray-txt">System Reliability</span>
+                                    <span class="font-mono text-xs text-white font-bold tracking-widest">99.999%</span>
+                                </div>
+                                <div class="w-full h-px bg-white/5"></div>
+                                <div class="flex items-center justify-between">
+                                    <span class="font-sans text-sm text-gray-txt">Hardware Integration</span>
+                                    <span class="font-mono text-xs text-alert">FLEX_APPLIANCE</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="sec-hitachi" class="min-h-screen w-full flex flex-col justify-center py-24 px-6 lg:px-24 xl:px-32 relative border-b border-surface-border/30">
+            <div class="absolute right-1/4 top-1/3 w-[500px] h-[500px] bg-acid/5 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
+
+            <div class="max-w-[1600px] w-full mx-auto">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-12">
+                    <div class="px-3 py-1.5 border border-acid/30 bg-acid/5 font-mono text-xs text-acid uppercase tracking-widest flex items-center gap-2 inline-flex w-max shadow-[0_0_15px_rgba(57,255,20,0.1)]">
+                        <span class="inline-block w-2 h-2 bg-acid animate-pulse-fast"></span>
+                        SYS_STORAGE_COMPLIANCE
+                    </div>
+                    <h2 class="font-mono text-sm md:text-base text-gray-muted tracking-widest word-keep">
+                        03. Immutable Storage -- 데이터 위변조 원천 차단
+                    </h2>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-16 items-start">
+
+                    <div class="flex-1">
+                        <h3 class="font-display text-[clamp(3rem,5vw,5rem)] font-bold tracking-tight text-white leading-[1.05] word-keep mb-6">
+                            HITACHI<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-acid to-emerald-500">WORM STORAGE</span>
+                        </h3>
+                        <p class="font-sans text-gray-txt text-lg leading-relaxed word-keep mb-12 border-l-2 border-acid/30 pl-6 max-w-2xl">
+                            <span class="text-white font-medium">규제준수를 위한 절대적 데이터 보관.</span> Write Once Read Many 아키텍처로 랜섬웨어와 악의적 삭제로부터 기업의 핵심 자산을 하드웨어 레벨에서 보호합니다.
+                        </p>
+
+                        <div class="space-y-6 mb-12">
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 flex-shrink-0 w-8 h-8 rounded border border-acid/40 bg-acid/10 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-acid" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-mono text-sm text-acid mb-1 tracking-wide">WORM_COMPLIANCE (Write Once Read Many)</h4>
+                                    <p class="text-sm text-gray-txt word-keep">한 번 기록된 데이터는 설정된 보존 기간 동안 어떠한 권한으로도 수정, 덮어쓰기, 삭제가 불가능한 불변성(Immutability)을 보장합니다.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 flex-shrink-0 w-8 h-8 rounded border border-acid/40 bg-acid/10 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-acid" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-mono text-sm text-acid mb-1 tracking-wide">REGULATORY_REQUIREMENTS</h4>
+                                    <p class="text-sm text-gray-txt word-keep">GDPR, HIPAA, SEC 17a-4 등 글로벌 데이터 보호 및 컴플라이언스 규정을 완벽하게 충족하는 기술적 기반을 제공합니다.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="mt-1 flex-shrink-0 w-8 h-8 rounded border border-acid/40 bg-acid/10 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-acid" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-mono text-sm text-acid mb-1 tracking-wide">EXTREME_DURABILITY</h4>
+                                    <p class="text-sm text-gray-txt word-keep">오브젝트 스토리지 기반으로 99.9999999% (11 nines)의 데이터 내구성을 자랑하며 데이터 유실 가능성을 0에 가깝게 만듭니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 border-t border-surface-border pt-6">
+                            <h4 class="font-mono text-xs text-gray-muted uppercase tracking-widest mb-4">Core Use Cases</h4>
+                            <div class="flex flex-wrap gap-4">
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-xs font-mono text-white">01</span>
+                                    <span class="text-sm text-gray-txt">Financial Audit Trails</span>
+                                </div>
+                                <div class="w-px h-8 bg-surface-border"></div>
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-xs font-mono text-white">02</span>
+                                    <span class="text-sm text-gray-txt">Healthcare Records</span>
+                                </div>
+                                <div class="w-px h-8 bg-surface-border"></div>
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-xs font-mono text-white">03</span>
+                                    <span class="text-sm text-gray-txt">Legal Hold Data</span>
+                                </div>
+                                <div class="w-px h-8 bg-surface-border"></div>
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-xs font-mono text-white">04</span>
+                                    <span class="text-sm text-gray-txt">Surveillance Archiving</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="w-full lg:w-[500px] xl:w-[600px] flex flex-col gap-8">
+
+
+                        <div class="glass-panel theme-acid p-8 h-[400px] flex flex-col relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-acid/10 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                            <div class="flex justify-between items-center mb-2 relative z-10">
+                                <div class="font-mono text-[10px] text-acid tracking-widest">WORM_LOCK_MECHANISM</div>
+                                <div class="font-display text-5xl font-bold text-outline opacity-20 pointer-events-none text-acid">11 9s</div>
+                            </div>
+
+
+                            <div class="flex-1 w-full relative flex items-center justify-center z-10">
+
+
+                                <div class="absolute left-0 top-1/2 -translate-y-1/2 flex items-center gap-1 w-1/3">
+                                    <div class="h-[2px] w-full bg-cyan/30 relative overflow-hidden">
+                                        <div class="absolute inset-0 bg-cyan animate-[slide-right_1s_linear_infinite]"></div>
+                                    </div>
+                                    <span class="font-mono text-[8px] text-cyan absolute -top-4 right-2">UNLOCKED_IO</span>
+                                </div>
+
+
+                                <div class="w-40 h-48 border-2 border-acid bg-black/80 rounded-lg shadow-[0_0_30px_rgba(57,255,20,0.15)] flex flex-col items-center justify-center relative z-20 backdrop-blur-sm group-hover:shadow-[0_0_40px_rgba(57,255,20,0.3)] transition-all">
+
+                                    <div class="w-16 h-16 rounded-full border border-acid/50 bg-acid/10 flex items-center justify-center mb-4">
+                                        <svg class="w-8 h-8 text-acid drop-shadow-[0_0_8px_rgba(57,255,20,0.8)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                                    </div>
+
+
+                                    <div class="w-[80%] h-12 bg-void border border-acid/30 overflow-hidden flex flex-col justify-center p-2">
+                                        <div class="font-mono text-[6px] text-acid/70 leading-tight">
+                                            0x3F 0x2A 0x8B 0x1C<br>
+                                            <span class="text-white">LOCKED_BLOB_DATA</span><br>
+                                            0x9D 0x4E 0x7F 0x5A
+                                        </div>
+                                    </div>
+
+
+                                    <div class="absolute bottom-[-10px] bg-acid text-void font-mono text-[9px] px-3 py-1 font-bold">
+                                        IMMUTABLE
+                                    </div>
+                                </div>
+
+
+                                <div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+                                    <div class="w-16 h-8 border border-white/20 bg-white/5 flex items-center justify-center rounded">
+                                        <span class="font-mono text-[8px] text-white">SEC_17a-4</span>
+                                    </div>
+                                    <div class="w-16 h-8 border border-white/20 bg-white/5 flex items-center justify-center rounded">
+                                        <span class="font-mono text-[8px] text-white">GDPR_COMP</span>
+                                    </div>
+                                    <div class="w-16 h-8 border border-white/20 bg-white/5 flex items-center justify-center rounded">
+                                        <span class="font-mono text-[8px] text-white">HIPAA_SAFE</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="glass-panel theme-acid p-6">
+                            <h4 class="font-mono text-xs text-acid uppercase tracking-widest mb-6 border-b border-acid/20 pb-2">Hardware &amp; Policy Specs</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-sans text-sm text-gray-txt">Platform Engine</span>
+                                    <span class="font-mono text-xs text-white">VSP 5000 / HCP</span>
+                                </div>
+                                <div class="w-full h-px bg-white/5"></div>
+                                <div class="flex items-center justify-between">
+                                    <span class="font-sans text-sm text-gray-txt">Retention Lock Policy</span>
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-3 h-3 text-acid" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span class="font-mono text-xs text-acid">HARDWARE_ENFORCED</span>
+                                    </div>
+                                </div>
+                                <div class="w-full h-px bg-white/5"></div>
+                                <div class="flex items-center justify-between">
+                                    <span class="font-sans text-sm text-gray-txt">Data Integrity Guarantee</span>
+                                    <span class="font-mono text-xs text-white">70+ YEARS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="sec-unified" class="min-h-screen w-full flex flex-col justify-center py-24 px-6 lg:px-24 xl:px-32 relative border-b border-surface-border/30 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan/5 via-[#030508] to-[#030508]">
+
+            <div class="max-w-[1600px] w-full mx-auto text-center mb-16">
+                <div class="inline-flex px-3 py-1.5 border border-cyan/30 bg-cyan/5 font-mono text-xs text-cyan uppercase tracking-widest items-center gap-2 mb-6">
+                    <span class="inline-block w-2 h-2 bg-cyan animate-pulse-fast"></span>
+                    SYS_UNIFIED_ARCH
+                </div>
+                <h3 class="font-display text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
+                    통합 스토리지 + 백업 전략
+                </h3>
+                <p class="font-sans text-gray-txt text-lg max-w-3xl mx-auto word-keep">
+                    데이터의 가치와 접근 빈도에 따라 최적의 계층(Tier)을 구성하여 성능, 비용, 보안을 동시에 만족시키는 EINSTECH의 하이브리드 아키텍처입니다.
+                </p>
+            </div>
+
+            <div class="max-w-[1600px] w-full mx-auto relative">
+
+
+                <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-acid via-alert to-cyan opacity-30 -translate-y-1/2 hidden lg:block"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+
+
+                    <div class="glass-panel theme-acid p-8 flex flex-col group relative">
+                        <div class="absolute -top-4 left-8 bg-void px-2 font-mono text-sm text-acid font-bold tracking-widest border border-acid/50 shadow-[0_0_10px_rgba(57,255,20,0.2)]">HOT_TIER</div>
+
+                        <div class="text-center mb-8 mt-4">
+                            <h4 class="font-display text-2xl text-white font-bold mb-1">Hitachi WORM</h4>
+                            <p class="text-xs font-mono text-acid uppercase tracking-wide">Compliance &amp; Active Data</p>
+                        </div>
+
+                        <div class="flex-1 border border-white/10 bg-black/40 p-6 rounded relative overflow-hidden mb-6">
+                            <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(57,255,20,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px] animate-[slide-right_3s_linear_infinite]"></div>
+                            <ul class="space-y-4 relative z-10 font-sans text-sm text-gray-txt">
+                                <li class="flex items-center gap-3">
+                                    <div class="w-1 h-1 bg-acid rounded-full"></div>
+                                    <span class="text-white">실시간 트랜잭션 데이터</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-1 h-1 bg-acid rounded-full"></div>
+                                    <span class="text-white">법적 규제 대상 (수정 불가)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-1 h-1 bg-acid rounded-full"></div>
+                                    <span>NVMe/SSD 기반 최고 성능</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex justify-between items-center border-t border-acid/20 pt-4 font-mono text-[10px]">
+                            <span class="text-gray-muted">RTO: NEAR ZERO</span>
+                            <span class="text-acid px-2 py-1 bg-acid/10 border border-acid/30">LOCKED</span>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel p-8 flex flex-col group relative" style="border-color: rgba(255,51,102,0.2);">
+                        <div class="absolute -top-4 left-8 bg-void px-2 font-mono text-sm text-alert font-bold tracking-widest border border-alert/50 shadow-[0_0_10px_rgba(255,51,102,0.2)]">WARM_TIER</div>
+
+                        <div class="text-center mb-8 mt-4">
+                            <h4 class="font-display text-2xl text-white font-bold mb-1">Veritas NetBackup</h4>
+                            <p class="text-xs font-mono text-alert uppercase tracking-wide">Enterprise Protection</p>
+                        </div>
+
+                        <div class="flex-1 border border-white/10 bg-black/40 p-6 rounded relative overflow-hidden mb-6">
+                            <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,51,102,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px] animate-[slide-right_3s_linear_infinite]"></div>
+                            <ul class="space-y-4 relative z-10 font-sans text-sm text-gray-txt">
+                                <li class="flex items-center gap-3">
+                                    <div class="w-1 h-1 bg-alert rounded-full"></div>
+                                    <span class="text-white">주기적 백업 (일/주/월간)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-1 h-1 bg-alert rounded-full"></div>
+                                    <span class="text-white">대규모 DB / 가상화 통합</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-1 h-1 bg-alert rounded-full"></div>
+                                    <span>중복제거 기반 효율성 극대화</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex justify-between items-center border-t border-alert/20 pt-4 font-mono text-[10px]">
+                            <span class="text-gray-muted">RTO: MINUTES TO HOURS</span>
+                            <span class="text-alert px-2 py-1 bg-alert/10 border border-alert/30">DEDUPLICATED</span>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel p-8 flex flex-col group relative" style="border-color: rgba(0,229,255,0.2);">
+                        <div class="absolute -top-4 left-8 bg-void px-2 font-mono text-sm text-cyan font-bold tracking-widest border border-cyan/50 shadow-[0_0_10px_rgba(0,229,255,0.2)]">COLD_TIER</div>
+
+                        <div class="text-center mb-8 mt-4">
+                            <h4 class="font-display text-2xl text-white font-bold mb-1">Acronis Cloud</h4>
+                            <p class="text-xs font-mono text-cyan uppercase tracking-wide">Endpoint &amp; Archive</p>
+                        </div>
+
+                        <div class="flex-1 border border-white/10 bg-black/40 p-6 rounded relative overflow-hidden mb-6">
+                            <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,229,255,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px] animate-[slide-right_3s_linear_infinite]"></div>
+                            <ul class="space-y-4 relative z-10 font-sans text-sm text-gray-txt">
+                                <li class="flex items-center gap-3">
+                                    <div class="w-1 h-1 bg-cyan rounded-full"></div>
+                                    <span class="text-white">장기 보관용 아카이빙</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-1 h-1 bg-cyan rounded-full"></div>
+                                    <span class="text-white">엣지/엔드포인트 기기 백업</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-1 h-1 bg-cyan rounded-full"></div>
+                                    <span>비용 효율적인 클라우드 스토리지</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex justify-between items-center border-t border-cyan/20 pt-4 font-mono text-[10px]">
+                            <span class="text-gray-muted">RTO: HOURS TO DAYS</span>
+                            <span class="text-cyan px-2 py-1 bg-cyan/10 border border-cyan/30">CLOUD_SYNC</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="mt-16 bg-surface-border/10 border border-surface-border p-6 rounded flex items-center justify-between">
+                    <span class="font-mono text-xs text-gray-txt">DATA_LIFECYCLE_AUTOMATION</span>
+                    <div class="flex-1 mx-8 relative h-2">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full h-px bg-white/10"></div>
+                        </div>
+                        <div class="absolute inset-0 flex justify-around">
+                            <div class="w-2 h-2 rounded-full bg-acid mt-[3px]"></div>
+                            <div class="w-2 h-2 rounded-full bg-alert mt-[3px]"></div>
+                            <div class="w-2 h-2 rounded-full bg-cyan mt-[3px]"></div>
+                        </div>
+
+                        <div class="absolute left-0 top-[1px] w-4 h-1.5 bg-white shadow-[0_0_10px_white] rounded-full animate-[slide-right_4s_ease-in-out_infinite]"></div>
+                    </div>
+                    <span class="font-mono text-xs text-cyan">EINSTECH_MANAGED_SERVICES</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="sec-compliance" class="min-h-screen w-full flex flex-col justify-center py-24 px-6 lg:px-24 xl:px-32 relative border-b border-surface-border/30">
+
+            <div class="max-w-[1600px] w-full mx-auto flex flex-col lg:flex-row gap-16">
+
+
+                <div class="w-full lg:w-1/3 flex flex-col justify-center relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-acid to-transparent opacity-30"></div>
+                    <div class="pl-8">
+                        <div class="px-3 py-1.5 border border-white/20 bg-white/5 font-mono text-xs text-white uppercase tracking-widest flex items-center gap-2 inline-flex w-max mb-6">
+                            SYS_COMPLIANCE
+                        </div>
+                        <h3 class="font-display text-[clamp(2.5rem,4vw,4rem)] font-bold tracking-tight text-white leading-tight word-keep mb-6">
+                            보안 및<br>
+                            규제준수 프레임워크
+                        </h3>
+                        <p class="font-sans text-gray-txt text-lg leading-relaxed word-keep mb-8">
+                            단순한 백업 솔루션을 넘어, 기업이 직면한 법적/보안적 위협을 원천적으로 방어하는 멀티 레이어 보안 체계를 제공합니다.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+
+                    <div class="glass-panel p-8 group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-10 h-10 rounded-full bg-cyan/10 border border-cyan/30 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            </div>
+                            <span class="font-mono text-[10px] text-cyan px-2 py-1 bg-cyan/10 border border-cyan/20">ACRONIS</span>
+                        </div>
+                        <h4 class="font-display text-xl text-white font-bold mb-3 word-keep">Ransomware Resilience</h4>
+                        <p class="font-sans text-sm text-gray-txt mb-6 word-keep">Acronis Active Protection을 통한 실시간 프로세스 모니터링 및 무단 암호화 시도 자동 차단, 손상 데이터 즉각 롤백.</p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-mono text-gray-muted border border-white/10 px-2 py-1 rounded">AI_HEURISTICS</span>
+                            <span class="text-[10px] font-mono text-gray-muted border border-white/10 px-2 py-1 rounded">AUTO_RECOVERY</span>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel theme-acid p-8 group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-10 h-10 rounded-full bg-acid/10 border border-acid/30 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-acid" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            </div>
+                            <span class="font-mono text-[10px] text-acid px-2 py-1 bg-acid/10 border border-acid/20">HITACHI</span>
+                        </div>
+                        <h4 class="font-display text-xl text-white font-bold mb-3 word-keep">Regulatory Compliance</h4>
+                        <p class="font-sans text-sm text-gray-txt mb-6 word-keep">Hitachi 하드웨어 기반 WORM 기술로 가장 엄격한 글로벌 금융 및 의료 데이터 보존 규정(SEC, HIPAA) 완벽 준수.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-mono text-acid border border-acid/30 bg-acid/5 px-2 py-1 rounded">SEC_17a-4</span>
+                            <span class="text-[10px] font-mono text-acid border border-acid/30 bg-acid/5 px-2 py-1 rounded">HIPAA</span>
+                            <span class="text-[10px] font-mono text-acid border border-acid/30 bg-acid/5 px-2 py-1 rounded">GDPR</span>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel p-8 group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-10 h-10 rounded-full bg-alert/10 border border-alert/30 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-alert" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                            </div>
+                            <span class="font-mono text-[10px] text-alert px-2 py-1 bg-alert/10 border border-alert/20">VERITAS</span>
+                        </div>
+                        <h4 class="font-display text-xl text-white font-bold mb-3 word-keep">Enterprise Governance</h4>
+                        <p class="font-sans text-sm text-gray-txt mb-6 word-keep">Veritas Information Map을 활용한 전사적 데이터 가시성 확보 및 다크 데이터 식별, 정책 기반의 통합 관리.</p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-mono text-gray-muted border border-white/10 px-2 py-1 rounded">DATA_VISIBILITY</span>
+                            <span class="text-[10px] font-mono text-gray-muted border border-white/10 px-2 py-1 rounded">GLOBAL_POLICY</span>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel p-8 bg-gradient-to-br from-surface to-cyan/5 border-cyan/30 flex flex-col justify-center items-center text-center group">
+                        <div class="w-16 h-16 relative flex items-center justify-center mb-6">
+                            <div class="absolute inset-0 bg-cyan/20 blur-lg rounded-full"></div>
+                            <svg class="w-8 h-8 text-cyan drop-shadow-[0_0_10px_rgba(0,229,255,0.8)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-mono text-sm text-cyan tracking-widest uppercase mb-2">Zero Trust Architecture</h4>
+                        <p class="font-sans text-xs text-gray-txt">모든 데이터 접근 및 전송 구간은 AES-256으로 암호화되며, 통합된 관리 콘솔에서 무결성을 증명합니다.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="sec-support" class="min-h-screen w-full flex flex-col justify-center py-24 px-6 lg:px-24 xl:px-32 relative bg-[#030508]">
+            <div class="absolute left-1/2 bottom-0 w-[800px] h-[400px] bg-cyan/5 rounded-t-full blur-[150px] -z-10 -translate-x-1/2 pointer-events-none"></div>
+
+            <div class="max-w-[1600px] w-full mx-auto">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-16">
+                    <div class="px-3 py-1.5 border border-cyan/30 bg-cyan/5 font-mono text-xs text-cyan uppercase tracking-widest flex items-center gap-2 inline-flex w-max shadow-[0_0_15px_rgba(0,229,255,0.1)]">
+                        <span class="inline-block w-2 h-2 bg-cyan animate-pulse-fast"></span>
+                        SYS_SUPPORT
+                    </div>
+                    <h2 class="font-mono text-sm md:text-base text-gray-muted tracking-widest word-keep">
+                        기술 구현 및 24/7 전담 지원
+                    </h2>
+                </div>
+
+
+                <div class="relative w-full max-w-5xl mx-auto mb-24">
+
+                    <div class="absolute left-[23px] md:left-1/2 top-0 bottom-0 w-px bg-surface-border md:-translate-x-1/2"></div>
+
+                    <div class="absolute left-[23px] md:left-1/2 top-0 h-3/4 w-px bg-gradient-to-b from-cyan via-acid to-transparent md:-translate-x-1/2 shadow-[0_0_10px_rgba(0,229,255,0.5)]"></div>
+
+                    <div class="space-y-12">
+
+
+                        <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                            <div class="md:w-5/12 pl-16 md:pl-0 md:text-right md:pr-12 order-2 md:order-1 mt-4 md:mt-0">
+                                <h4 class="font-display text-xl text-white font-bold mb-2">현황 분석 및 설계</h4>
+                                <p class="text-sm text-gray-txt word-keep">기존 인프라 진단, 데이터 분류 및 보호 수준(RTO/RPO) 정의. EINSTECH 전문 엔지니어의 최적 아키텍처 제안.</p>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full border-2 border-cyan bg-void flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 shadow-[0_0_15px_rgba(0,229,255,0.3)] z-10">
+                                <span class="font-mono text-sm text-cyan font-bold">01</span>
+                            </div>
+                            <div class="md:w-5/12 hidden md:block order-3"></div>
+                        </div>
+
+
+                        <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                            <div class="md:w-5/12 hidden md:block order-1"></div>
+                            <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full border-2 border-cyan bg-void flex items-center justify-center md:-translate-x-1/2 order-2 shadow-[0_0_15px_rgba(0,229,255,0.3)] z-10">
+                                <span class="font-mono text-sm text-cyan font-bold">02</span>
+                            </div>
+                            <div class="md:w-5/12 pl-16 md:pl-12 order-3 mt-4 md:mt-0">
+                                <h4 class="font-display text-xl text-white font-bold mb-2">POC (개념 증명)</h4>
+                                <p class="text-sm text-gray-txt word-keep">실제 환경과 동일한 조건에서 데모 장비 투입. 성능, 호환성, 복구 시간 등 핵심 요구사항 사전 검증.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                            <div class="md:w-5/12 pl-16 md:pl-0 md:text-right md:pr-12 order-2 md:order-1 mt-4 md:mt-0">
+                                <h4 class="font-display text-xl text-acid font-bold mb-2">구축 및 마이그레이션</h4>
+                                <p class="text-sm text-gray-txt word-keep">무중단 환경을 목표로 한 단계별 마이그레이션 실행. 3중 백업 정책 적용 및 초기 전체 백업 수행.</p>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full border-2 border-acid bg-void flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 shadow-[0_0_15px_rgba(57,255,20,0.5)] z-10">
+                                <span class="font-mono text-sm text-acid font-bold">03</span>
+                            </div>
+                            <div class="md:w-5/12 hidden md:block order-3"></div>
+                        </div>
+
+
+                        <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                            <div class="md:w-5/12 hidden md:block order-1"></div>
+                            <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full border-2 border-surface-border bg-void flex items-center justify-center md:-translate-x-1/2 order-2 z-10">
+                                <span class="font-mono text-sm text-gray-muted font-bold">04</span>
+                            </div>
+                            <div class="md:w-5/12 pl-16 md:pl-12 order-3 mt-4 md:mt-0">
+                                <h4 class="font-display text-xl text-white font-bold mb-2">안정화 및 유지보수</h4>
+                                <p class="text-sm text-gray-txt word-keep">정기적인 모의 복구 훈련(Restore Drill), 24/7 모니터링, 전담 엔지니어의 장애 대응 및 정기 리포트 제공.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-panel p-6 text-center border-t-2 border-t-cyan">
+                        <div class="font-display text-4xl text-white font-bold mb-2">24/7/365</div>
+                        <div class="font-mono text-xs text-cyan uppercase tracking-widest mb-2">Technical Support</div>
+                        <p class="font-sans text-sm text-gray-txt word-keep">심야/주말 관계없이 즉각 대응하는 관제 센터 운영</p>
+                    </div>
+                    <div class="glass-panel p-6 text-center border-t-2 border-t-acid">
+                        <div class="font-display text-4xl text-white font-bold mb-2">100%</div>
+                        <div class="font-mono text-xs text-acid uppercase tracking-widest mb-2">Verified Restoration</div>
+                        <p class="font-sans text-sm text-gray-txt word-keep">분기별 실제 복구 테스트를 통한 데이터 정합성 보장</p>
+                    </div>
+                    <div class="glass-panel p-6 text-center border-t-2 border-t-alert">
+                        <div class="font-display text-4xl text-white font-bold mb-2">&lt; 2 Hrs</div>
+                        <div class="font-mono text-xs text-alert uppercase tracking-widest mb-2">On-site Response</div>
+                        <p class="font-sans text-sm text-gray-txt word-keep">크리티컬 장애 시 전국 주요 거점 엔지니어 현장 출동</p>
+                    </div>
+                </div>
+
+
+                <div class="mt-24 pt-8 border-t border-surface-border flex flex-col md:flex-row justify-between items-center opacity-50 text-sm font-mono text-gray-txt">
+                    <div>© 2024 EINSTECH. All systems operational.</div>
+                    <div class="mt-4 md:mt-0">SYS_BUILD_VER_9.0.4 // SECURE_CONNECTION_ESTABLISHED</div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav a");
+
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+
+                        navLinks.forEach(link => {
+                            link.querySelector('div').classList.remove('active');
+                            link.querySelector('span').classList.remove('text-cyan');
+                            link.querySelector('span').classList.add('text-cyan/0');
+                        });
+
+
+                        const id = entry.target.getAttribute("id");
+                        const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+                        if(activeLink) {
+                            activeLink.querySelector('div').classList.add('active');
+                            activeLink.querySelector('span').classList.remove('text-cyan/0');
+                            activeLink.querySelector('span').classList.add('text-cyan');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body></html>
