@@ -76,7 +76,7 @@
     <section>
       <h2>01 · Wordmark — Dark</h2>
       <div class="frame-dark">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" style="max-width:100%;height:auto;display:block;">
+        <svg id="svg-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" style="max-width:100%;height:auto;display:block;">
           <defs>
             <radialGradient id="dotGlow" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stop-color="#FF1744" stop-opacity="0.7"/>
@@ -93,7 +93,7 @@
       </div>
       <div class="files">
         <a href="/logo-preview/v4_dark.svg" download="EINSTECH_dark.svg">v4_dark.svg</a>
-        <a href="/logo-preview/v4_dark.png" download="EINSTECH_dark.png">v4_dark.png</a>
+        <a href="#" onclick="downloadPng('svg-dark','EINSTECH_dark.png');return false;">v4_dark.png</a>
       </div>
       <p class="note">사이트 헤더, 어두운 배너, 다크 모드 화면 등에 사용.</p>
     </section>
@@ -101,7 +101,7 @@
     <section>
       <h2>02 · Wordmark — Light</h2>
       <div class="frame-light">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" style="max-width:100%;height:auto;display:block;">
+        <svg id="svg-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" style="max-width:100%;height:auto;display:block;">
           <circle cx="222" cy="50" r="17" fill="#E53935"/>
           <text x="40" y="220" font-family="Space Grotesk,Arial Black,sans-serif" font-weight="700" font-size="200" letter-spacing="-6"><tspan fill="#E53935">EINS</tspan><tspan fill="#1A1A1A">TECH</tspan></text>
           <text x="44" y="280" font-family="Space Grotesk,Arial,sans-serif" font-weight="400" font-size="22" fill="#6E7787" letter-spacing="6">(주) 아인스테크  ·  SOLUTION LEADER</text>
@@ -109,7 +109,7 @@
       </div>
       <div class="files">
         <a href="/logo-preview/v4_light.svg" download="EINSTECH_light.svg">v4_light.svg</a>
-        <a href="/logo-preview/v4_light.png" download="EINSTECH_light.png">v4_light.png</a>
+        <a href="#" onclick="downloadPng('svg-light','EINSTECH_light.png');return false;">v4_light.png</a>
       </div>
       <p class="note">명함, 인쇄물, 라이트 배경 문서에 사용.</p>
     </section>
@@ -153,5 +153,26 @@
       </div>
     </section>
   </div>
+<script>
+function downloadPng(svgId, filename) {
+  const svg = document.getElementById(svgId);
+  const svgData = new XMLSerializer().serializeToString(svg);
+  const canvas = document.createElement('canvas');
+  canvas.width = 2200; canvas.height = 640;
+  const ctx = canvas.getContext('2d');
+  const img = new Image();
+  const blob = new Blob([svgData], {type: 'image/svg+xml'});
+  const url = URL.createObjectURL(blob);
+  img.onload = function() {
+    ctx.drawImage(img, 0, 0, 2200, 640);
+    URL.revokeObjectURL(url);
+    const a = document.createElement('a');
+    a.download = filename;
+    a.href = canvas.toDataURL('image/png');
+    a.click();
+  };
+  img.src = url;
+}
+</script>
 </body>
 </html>
