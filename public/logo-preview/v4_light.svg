@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" width="1100" height="320">
   <defs>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');</style>
+    <style><![CDATA[@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');]]></style>
   </defs>
   <circle cx="222" cy="50" r="17" fill="#E53935"/>
   <text x="40" y="220" font-family="'Space Grotesk',Arial Black,sans-serif" font-weight="700" font-size="200" letter-spacing="-6"><tspan fill="#E53935">EINS</tspan><tspan fill="#1A1A1A">TECH</tspan></text>

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" width="1100" height="320">
   <defs>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');</style>
+    <style><![CDATA[@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');]]></style>
     <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#FF5252"/>
       <stop offset="100%" stop-color="#C62828"/>
