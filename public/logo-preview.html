@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EINSTECH Logo Preview · v4</title>
 <meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -73,7 +76,20 @@
     <section>
       <h2>01 · Wordmark — Dark</h2>
       <div class="frame-dark">
-        <img src="/logo-preview/v4_dark.svg" alt="EINSTECH dark wordmark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" style="max-width:100%;height:auto;display:block;">
+          <defs>
+            <radialGradient id="dotGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FF1744" stop-opacity="0.7"/>
+              <stop offset="60%" stop-color="#FF1744" stop-opacity="0.15"/>
+              <stop offset="100%" stop-color="#FF1744" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="1100" height="320" fill="#030508"/>
+          <circle cx="222" cy="50" r="55" fill="url(#dotGlow)"/>
+          <circle cx="222" cy="50" r="17" fill="#FF1744"/>
+          <text x="40" y="220" font-family="Space Grotesk,Arial Black,sans-serif" font-weight="700" font-size="200" letter-spacing="-6"><tspan fill="#FF1744">EINS</tspan><tspan fill="#F5F5F5">TECH</tspan></text>
+          <text x="44" y="280" font-family="Space Grotesk,Arial,sans-serif" font-weight="400" font-size="22" fill="#8B94A7" letter-spacing="6">(주) 아인스테크  ·  SOLUTION LEADER</text>
+        </svg>
       </div>
       <div class="files">
         <a href="/logo-preview/v4_dark.svg" target="_blank">v4_dark.svg</a>
