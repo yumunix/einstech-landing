@@ -43,7 +43,7 @@ export default function Header() {
             <div className="font-mono text-[10px] text-muted">KRW / KO</div>
           </div>
           <a
-            href="#contact"
+            href="mailto:sungil.yum@einstech.kr?subject=%EB%8F%84%EC%9E%85%20%EB%AC%B8%EC%9D%98"
             className="px-4 py-2 bg-cyan/10 border border-cyan text-cyan hover:bg-cyan hover:text-void font-sans text-sm font-medium transition-all duration-300"
           >
             도입 문의
