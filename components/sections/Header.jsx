@@ -16,48 +16,29 @@ export default function Header() {
             >
               <defs>
                 <radialGradient id="hdr-halo" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="#FF1744" stopOpacity="0.95" />
-                  <stop offset="45%" stopColor="#FF1744" stopOpacity="0.4" />
+                  <stop offset="0%" stopColor="#FF1744" stopOpacity="0.55" />
+                  <stop offset="60%" stopColor="#FF1744" stopOpacity="0.12" />
                   <stop offset="100%" stopColor="#FF1744" stopOpacity="0" />
                 </radialGradient>
               </defs>
               <circle cx="8" cy="4" r="10" fill="url(#hdr-halo)">
                 <animate
-                  attributeName="r"
-                  values="9;12;9"
-                  dur="1.6s"
-                  repeatCount="indefinite"
-                />
-                <animate
                   attributeName="opacity"
-                  values="0.55;1;0.55"
-                  dur="1.6s"
+                  values="0.3;1;0.3"
+                  dur="1.2s"
                   repeatCount="indefinite"
                 />
               </circle>
-              <circle
-                cx="8"
-                cy="4"
-                r="3.4"
-                fill="#FF1744"
-                style={{ filter: "drop-shadow(0 0 6px #FF5252)" }}
-              >
+              <circle cx="8" cy="4" r="3.6" fill="#FF1744">
                 <animate
                   attributeName="opacity"
-                  values="1;0.35;1"
-                  dur="1.6s"
+                  values="1;1;0.15;1;1"
+                  keyTimes="0;0.42;0.5;0.58;1"
+                  dur="1.2s"
                   repeatCount="indefinite"
                 />
               </circle>
-              <rect
-                x="3.5"
-                y="9"
-                width="9"
-                height="15"
-                rx="1"
-                fill="#FF1744"
-                style={{ filter: "drop-shadow(0 0 4px #FF5252)" }}
-              />
+              <rect x="3.5" y="9" width="9" height="15" rx="1" fill="#FF1744" />
             </svg>
             EINSTECH
           </a>
