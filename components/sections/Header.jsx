@@ -3,12 +3,50 @@ export default function Header() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-void/80 backdrop-blur-md border-b border-surface-border h-16">
       <div className="max-w-page mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <a
-            href="/"
-            className="font-display font-bold text-xl tracking-widest text-white flex items-center gap-2"
-          >
-            <span className="w-3 h-3 bg-acid block animate-pulse-fast" />
-            EINSTECH
+          <a href="/" aria-label="EINSTECH 홈" className="flex items-center">
+            <svg
+              viewBox="0 0 1100 240"
+              className="h-9 w-auto"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="EINSTECH"
+            >
+              <defs>
+                <linearGradient id="hdr-redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#FF5252" />
+                  <stop offset="100%" stopColor="#C62828" />
+                </linearGradient>
+                <radialGradient id="hdr-dotGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#FF1744" stopOpacity="0.7" />
+                  <stop offset="60%" stopColor="#FF1744" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#FF1744" stopOpacity="0" />
+                </radialGradient>
+              </defs>
+              <circle cx="222" cy="50" r="55" fill="url(#hdr-dotGlow)" />
+              <circle cx="222" cy="50" r="17" fill="#FF1744" />
+              <text
+                x="40"
+                y="220"
+                fontFamily="'Space Grotesk', Inter, system-ui, sans-serif"
+                fontWeight="700"
+                fontSize="200"
+                fill="url(#hdr-redGrad)"
+                letterSpacing="-6"
+              >
+                EINS
+              </text>
+              <text
+                x="540"
+                y="220"
+                fontFamily="'Space Grotesk', Inter, system-ui, sans-serif"
+                fontWeight="500"
+                fontSize="200"
+                fill="#F5F5F5"
+                letterSpacing="-6"
+              >
+                TECH
+              </text>
+            </svg>
           </a>
           <div className="hidden md:flex items-center gap-6">
             <a

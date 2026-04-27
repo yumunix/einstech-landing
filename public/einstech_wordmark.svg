@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 240" width="1100" height="240">
+  <defs>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+    <radialGradient id="dotGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF1744" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#FF1744" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FF1744" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="222" cy="50" r="55" fill="url(#dotGlow)"/>
+  <circle cx="222" cy="50" r="17" fill="#FF1744"/>
+
+  <text x="40" y="220" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-weight="700" font-size="200" fill="url(#redGrad)" letter-spacing="-6">EINS</text>
+  <text x="540" y="220" font-family="Space Grotesk, Inter, system-ui, sans-serif" font-weight="500" font-size="200" fill="#F5F5F5" letter-spacing="-6">TECH</text>
+</svg>

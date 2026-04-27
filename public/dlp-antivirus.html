@@ -132,9 +132,24 @@
     <nav class="fixed top-0 left-0 right-0 z-50 bg-void/80 backdrop-blur-md border-b border-surface-border h-16">
         <div class="max-w-[1600px] mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
             <div class="flex items-center gap-8">
-                <a href="/" class="font-display font-bold text-xl tracking-widest text-white flex items-center gap-2">
-                    <span class="w-3 h-3 bg-acid block animate-pulse-fast"></span>
-                    EINSTECH
+                <a href="/" aria-label="EINSTECH 홈" class="flex items-center">
+                    <svg viewBox="0 0 1100 240" class="h-9 w-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EINSTECH">
+                        <defs>
+                            <linearGradient id="hdr-redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#FF5252"/>
+                                <stop offset="100%" stop-color="#C62828"/>
+                            </linearGradient>
+                            <radialGradient id="hdr-dotGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#FF1744" stop-opacity="0.7"/>
+                                <stop offset="60%" stop-color="#FF1744" stop-opacity="0.15"/>
+                                <stop offset="100%" stop-color="#FF1744" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                        <circle cx="222" cy="50" r="55" fill="url(#hdr-dotGlow)"/>
+                        <circle cx="222" cy="50" r="17" fill="#FF1744"/>
+                        <text x="40" y="220" font-family="'Space Grotesk', Inter, system-ui, sans-serif" font-weight="700" font-size="200" fill="url(#hdr-redGrad)" letter-spacing="-6">EINS</text>
+                        <text x="540" y="220" font-family="'Space Grotesk', Inter, system-ui, sans-serif" font-weight="500" font-size="200" fill="#F5F5F5" letter-spacing="-6">TECH</text>
+                    </svg>
                 </a>
                 <div class="hidden md:flex items-center gap-6">
                     <a href="#netwrix" class="text-sm font-sans text-white/70 hover:text-cyan transition-colors">Netwrix DLP</a>
