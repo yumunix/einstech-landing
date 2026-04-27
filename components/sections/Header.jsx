@@ -5,7 +5,7 @@ export default function Header() {
         <div className="flex items-center gap-8">
           <a
             href="/"
-            className="font-display font-bold text-xl tracking-widest text-white flex items-baseline gap-2 leading-none"
+            className="font-display font-bold text-xl tracking-normal text-white flex items-baseline gap-2 leading-none"
           >
             <svg
               width="16"

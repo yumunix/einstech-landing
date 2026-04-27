@@ -36,7 +36,7 @@ export default function Footer() {
             </circle>
             <rect x="3.5" y="9" width="9" height="15" rx="1" fill="#FF1744" />
           </svg>
-          <span className="font-display font-bold text-xl tracking-widest text-white">
+          <span className="font-display font-bold text-xl tracking-normal text-white">
             EINSTECH
           </span>
           <span className="font-mono text-[10px] text-muted ml-3 hidden sm:inline self-center">
