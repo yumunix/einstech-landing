@@ -5,6 +5,6 @@
   
   
   <circle cx="170" cy="52" r="19" fill="#E53935"/>
-  <text x="40" y="300" font-family="'Space Grotesk',Arial Black,sans-serif" font-weight="700" font-size="240" letter-spacing="-4" paint-order="stroke fill"><tspan fill="#E53935" stroke="#E53935" stroke-width="6" stroke-linejoin="round">EINS</tspan><tspan fill="#1A1A1A" stroke="#1A1A1A" stroke-width="6" stroke-linejoin="round">TECH</tspan></text>
+  <text x="40" y="300" font-family="'Space Grotesk',Arial Black,sans-serif" font-weight="700" font-size="240" letter-spacing="-4" paint-order="stroke fill"><tspan fill="#E53935" stroke="#E53935" stroke-width="14" stroke-linejoin="round">EINS</tspan><tspan fill="#1A1A1A" stroke="#1A1A1A" stroke-width="14" stroke-linejoin="round">TECH</tspan></text>
   <text x="44" y="358" font-family="'Space Grotesk',Arial,sans-serif" font-weight="400" font-size="24" fill="#6E7787" letter-spacing="6">(주) 아인스테크  ·  SOLUTION LEADER</text>
 </svg>
