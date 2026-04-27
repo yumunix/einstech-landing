@@ -1,3 +1,4 @@
+import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
 import Solution from "@/components/sections/Solution";
@@ -8,6 +9,7 @@ import Footer from "@/components/sections/Footer";
 export default function Home() {
   return (
     <>
+      <Header />
       <Hero />
       <Problem />
       <Solution />

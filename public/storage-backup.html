@@ -150,7 +150,33 @@
 <body class="antialiased selection:bg-acid selection:text-void relative flex flex-col w-full h-full">
 
 
-    <nav class="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden xl:flex flex-col gap-6 items-center">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-void/80 backdrop-blur-md border-b border-surface-border h-16">
+        <div class="max-w-[1600px] mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a href="/" class="font-display font-bold text-xl tracking-widest text-white flex items-center gap-2">
+                    <span class="w-3 h-3 bg-acid block animate-pulse-fast"></span>
+                    EINSTECH
+                </a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#sec-acronis" class="text-sm font-sans text-white/70 hover:text-cyan transition-colors">Acronis</a>
+                    <a href="#sec-veritas" class="text-sm font-sans text-white/70 hover:text-cyan transition-colors">Veritas</a>
+                    <a href="#sec-hitachi" class="text-sm font-sans text-white/70 hover:text-cyan transition-colors">Hitachi</a>
+                    <a href="#sec-unified" class="text-sm font-sans text-white/70 hover:text-cyan transition-colors">통합 아키텍처</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="/" class="hidden sm:flex items-center gap-2 text-xs font-mono text-cyan hover:text-acid transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    홈으로
+                </a>
+                <a href="/#contact" class="px-4 py-2 bg-cyan/10 border border-cyan text-cyan hover:bg-cyan hover:text-void font-sans text-sm font-medium transition-all duration-300">
+                    도입 문의
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="fixed left-6 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col gap-6 items-center">
         <div class="h-32 w-px bg-gradient-to-b from-transparent via-cyan/50 to-transparent"></div>
         <a href="#sec-acronis" class="group relative flex items-center justify-center w-6 h-6" title="Acronis Cyber Backup">
             <div class="w-1.5 h-1.5 rounded-full bg-cyan/40 transition-all duration-300 group-hover:bg-acid group-hover:scale-150 group-hover:shadow-[0_0_10px_#39FF14]"></div>

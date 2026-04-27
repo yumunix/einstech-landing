@@ -1,4 +1,3 @@
-import Header from "./Header";
 import HeroWebGL from "./HeroWebGL";
 import LossCounter from "./LossCounter";
 import GlassPanel from "../ds/GlassPanel";
@@ -11,9 +10,7 @@ export default function Hero() {
       <div className="ds-scanline-overlay" aria-hidden />
       <HeroWebGL />
 
-      <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12 w-full min-h-screen flex flex-col">
-        <Header />
-
+      <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12 w-full min-h-screen flex flex-col pt-16">
         <main className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8 relative items-center py-12 lg:py-0">
           {/* Left column — copy */}
           <div className="lg:col-span-7 xl:col-span-6 z-10 flex flex-col justify-center h-full pt-10 pb-20">
