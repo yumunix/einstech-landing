@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" width="1100" height="320">
+  <defs>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E53935"/>
+      <stop offset="100%" stop-color="#9C0F12"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1100" height="320" fill="#FFFFFF"/>
+
+  <!-- Red i-dot (brand signature) -->
+  <circle cx="222" cy="50" r="17" fill="#E53935"/>
+
+  <!-- "EINS" in red -->
+  <text x="40" y="220" font-family="Space Grotesk" font-weight="700" font-size="200" fill="url(#redGrad)" letter-spacing="-6">EINS</text>
+
+  <!-- "TECH" in dark -->
+  <text x="540" y="220" font-family="Space Grotesk" font-weight="500" font-size="200" fill="#1A1A1A" letter-spacing="-6">TECH</text>
+
+  <!-- Korean subtitle line -->
+  <text x="44" y="280" font-family="Noto Sans CJK KR" font-weight="400" font-size="22" fill="#6E7787" letter-spacing="6">(주) 아인스테크  ·  SOLUTION LEADER</text>
+</svg>

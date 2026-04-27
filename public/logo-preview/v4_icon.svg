@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+    <radialGradient id="dotGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF1744" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#FF1744" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FF1744" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="256" height="256" fill="#030508" rx="32"/>
+
+  <!-- Glow halo -->
+  <circle cx="128" cy="56" r="36" fill="url(#dotGlow)"/>
+  <!-- Red i-dot -->
+  <circle cx="128" cy="56" r="14" fill="#FF1744"/>
+
+  <!-- "i" stem (using rect for predictable rendering) -->
+  <rect x="116" y="92" width="24" height="116" rx="2" fill="url(#redGrad)"/>
+</svg>
