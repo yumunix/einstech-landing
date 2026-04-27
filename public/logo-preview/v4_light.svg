@@ -1,12 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" width="1100" height="320">
   <defs>
-    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#E53935"/>
-      <stop offset="100%" stop-color="#9C0F12"/>
-    </linearGradient>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');</style>
   </defs>
-
   <circle cx="222" cy="50" r="17" fill="#E53935"/>
-  <text x="40" y="220" font-family="Space Grotesk,Arial Black,sans-serif" font-weight="700" font-size="200" letter-spacing="-6"><tspan fill="#E53935">EINS</tspan><tspan fill="#1A1A1A">TECH</tspan></text>
-  <text x="44" y="280" font-family="Space Grotesk,Arial,sans-serif" font-weight="400" font-size="22" fill="#6E7787" letter-spacing="6">(주) 아인스테크  ·  SOLUTION LEADER</text>
+  <text x="40" y="220" font-family="'Space Grotesk',Arial Black,sans-serif" font-weight="700" font-size="200" letter-spacing="-6"><tspan fill="#E53935">EINS</tspan><tspan fill="#1A1A1A">TECH</tspan></text>
+  <text x="44" y="280" font-family="'Space Grotesk',Arial,sans-serif" font-weight="400" font-size="22" fill="#6E7787" letter-spacing="6">(주) 아인스테크  ·  SOLUTION LEADER</text>
 </svg>
