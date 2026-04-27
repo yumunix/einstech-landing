@@ -132,10 +132,18 @@
     <nav class="fixed top-0 left-0 right-0 z-50 bg-void/80 backdrop-blur-md border-b border-surface-border h-16">
         <div class="max-w-[1600px] mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
             <div class="flex items-center gap-8">
-                <a href="/" class="font-display font-bold text-xl tracking-widest text-white flex items-center gap-2">
-                    <svg width="12" height="18" viewBox="0 0 12 18" class="block" aria-hidden="true">
-                        <circle cx="6" cy="3" r="2.5" fill="#FF1744" class="animate-pulse-fast" style="filter: drop-shadow(0 0 4px #FF1744)"/>
-                        <rect x="4.5" y="7" width="3" height="11" rx="0.5" fill="#FF1744"/>
+                <a href="/" class="font-display font-bold text-xl tracking-widest text-white flex items-baseline gap-2 leading-none">
+                    <svg width="14" height="20" viewBox="0 0 14 22" class="block" aria-hidden="true">
+                        <defs>
+                            <radialGradient id="hdr-halo" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#FF1744" stop-opacity="0.9"/>
+                                <stop offset="45%" stop-color="#FF1744" stop-opacity="0.35"/>
+                                <stop offset="100%" stop-color="#FF1744" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                        <circle cx="7" cy="4" r="9" fill="url(#hdr-halo)" class="animate-pulse-fast"/>
+                        <circle cx="7" cy="4" r="3.2" fill="#FF1744" style="filter: drop-shadow(0 0 6px #FF5252)"/>
+                        <rect x="4" y="9" width="6" height="13" rx="0.8" fill="#FF1744" style="filter: drop-shadow(0 0 4px #FF5252)"/>
                     </svg>
                     EINSTECH
                 </a>

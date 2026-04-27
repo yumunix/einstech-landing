@@ -5,24 +5,45 @@ export default function Header() {
         <div className="flex items-center gap-8">
           <a
             href="/"
-            className="font-display font-bold text-xl tracking-widest text-white flex items-center gap-2"
+            className="font-display font-bold text-xl tracking-widest text-white flex items-baseline gap-2 leading-none"
           >
             <svg
-              width="12"
-              height="18"
-              viewBox="0 0 12 18"
+              width="14"
+              height="20"
+              viewBox="0 0 14 22"
               className="block"
               aria-hidden="true"
             >
+              <defs>
+                <radialGradient id="hdr-halo" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#FF1744" stopOpacity="0.9" />
+                  <stop offset="45%" stopColor="#FF1744" stopOpacity="0.35" />
+                  <stop offset="100%" stopColor="#FF1744" stopOpacity="0" />
+                </radialGradient>
+              </defs>
               <circle
-                cx="6"
-                cy="3"
-                r="2.5"
-                fill="#FF1744"
+                cx="7"
+                cy="4"
+                r="9"
+                fill="url(#hdr-halo)"
                 className="animate-pulse-fast"
-                style={{ filter: "drop-shadow(0 0 4px #FF1744)" }}
               />
-              <rect x="4.5" y="7" width="3" height="11" rx="0.5" fill="#FF1744" />
+              <circle
+                cx="7"
+                cy="4"
+                r="3.2"
+                fill="#FF1744"
+                style={{ filter: "drop-shadow(0 0 6px #FF5252)" }}
+              />
+              <rect
+                x="4"
+                y="9"
+                width="6"
+                height="13"
+                rx="0.8"
+                fill="#FF1744"
+                style={{ filter: "drop-shadow(0 0 4px #FF5252)" }}
+              />
             </svg>
             EINSTECH
           </a>
