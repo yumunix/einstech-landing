@@ -65,7 +65,7 @@ export default function Solution() {
               <br />
               따로 사면 여러 벤더,
               <br className="hidden lg:block" />
-              <span className="text-white"> 함께 사면 1개 책임자</span>
+              <span className="text-white"> 함께 사면 1개 파트너</span>
             </h3>
             <p className="font-sans text-muted-strong text-[17px] leading-relaxed ds-word-keep max-w-xl border-l-2 border-acid/30 pl-5 mb-2 lg:flex-1">
               EINSTECH 엔지니어가 직접 제안하는

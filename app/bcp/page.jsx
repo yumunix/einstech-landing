@@ -602,12 +602,12 @@ export default function BCPPage() {
             <SectionHeader
               badgeText="WHY_EINSTECH"
               badgeColor="cyan"
-              sectionLabel="7. Why — 단일 벤더 BCP 책임자"
+              sectionLabel="7. Why — 단일 벤더 BCP 파트너"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-5xl">
-                <span className="text-cyan">DLP · Veritas · Acronis · Hitachi · Dell · HP</span>
+                <span className="text-cyan">HP · Hitachi · Acronis · Brocade · Rose</span>
                 <br />
-                전 영역을 한 책임자가 설계합니다.
+                전 영역을 전문 컨설턴트가 설계합니다.
               </h2>
             </SectionHeader>
 
@@ -620,7 +620,7 @@ export default function BCPPage() {
                   전 영역 벤더 역량
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
-                  {["DLP", "Veritas", "Acronis", "Hitachi", "Dell", "HP"].map((v) => (
+                  {["HP", "Hitachi", "Acronis", "Brocade", "Rose"].map((v) => (
                     <div
                       key={v}
                       className="bg-black/40 border border-surface-border px-4 py-3 font-mono text-sm text-white text-center"
@@ -633,10 +633,10 @@ export default function BCPPage() {
 
               <GlassPanel className="p-8 lg:p-10 flex flex-col">
                 <div className="font-mono text-[10px] text-cyan uppercase tracking-widest mb-3">
-                  END_TO_END_OWNERSHIP
+                  END_TO_END_PARTNER
                 </div>
                 <h3 className="font-display text-2xl font-bold text-white mb-6 ds-word-keep">
-                  End-to-End 단일 책임
+                  End-to-End 단일 파트너
                 </h3>
                 <ol className="space-y-4">
                   {[
