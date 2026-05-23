@@ -103,6 +103,11 @@ header.telemetry {
 .data-point {
   display: flex;
   gap: var(--sp-sm);
+  align-items: center;
+}
+
+.data-point.sys-id {
+  gap: 10px;
 }
 
 .data-label {
@@ -201,17 +206,26 @@ h1 {
 }
 
 .alert-value {
-  font-size: 28px;
+  font-family: var(--font-sans);
+  font-size: clamp(64px, 6.5vw, 96px);
+  line-height: 1;
   color: var(--c-orange);
   font-weight: 700;
-  text-shadow: 0 0 15px rgba(242, 89, 30, 0.4);
+  text-shadow: 0 0 30px rgba(242, 89, 30, 0.55);
   display: flex;
   align-items: baseline;
-  gap: var(--sp-sm);
+  gap: var(--sp-md);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -2px;
+  margin-top: 8px;
 }
-.alert-value span {
-  font-size: 12px;
+.alert-value .alert-unit {
+  font-family: var(--font-mono);
+  font-size: 14px;
   color: var(--text-dim);
+  text-shadow: none;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 
 .desc {
@@ -453,7 +467,7 @@ a.module:hover .mod-link {
   justify-content: flex-end;
   align-items: flex-end;
   padding: var(--sp-lg);
-  opacity: 0.5;
+  opacity: 0.85;
   background: repeating-linear-gradient(
     -45deg,
     transparent,
@@ -461,4 +475,20 @@ a.module:hover .mod-link {
     rgba(255, 255, 255, 0.02) 10px,
     rgba(255, 255, 255, 0.02) 20px
   );
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.25));
+}
+
+.brand-wordmark {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-main);
 }

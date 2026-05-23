@@ -1,13 +1,15 @@
 import Oscilloscope from "@/components/landing/Oscilloscope";
 import UptimeCounter from "@/components/landing/UptimeCounter";
+import LossCounter from "@/components/landing/LossCounter";
+import Logo from "@/components/landing/Logo";
 
 export default function Home() {
   return (
     <div id="app">
       <header className="telemetry border-b">
         <div className="telemetry-group">
-          <div className="data-point">
-            <span className="data-label">SYS_ID</span>
+          <div className="data-point sys-id">
+            <Logo size={16} />
             <span className="data-value brand">EINSTECH_V.30</span>
           </div>
           <div className="data-point">
@@ -49,11 +51,12 @@ export default function Home() {
 
           <div className="alert-block">
             <div className="alert-header">
-              <span>[ WARN ] EST. DOWNTIME COST</span>
+              <span>[ LIVE ] DOWNTIME LOSS · 페이지 진입 후 누적</span>
               <span>FACTORY_LOSS_CALC</span>
             </div>
             <div className="alert-value">
-              ₩2,800,000 <span>/ MIN</span>
+              <LossCounter ratePerMin={2_800_000} />{" "}
+              <span className="alert-unit">+ ₩2.8M / MIN</span>
             </div>
           </div>
 
@@ -256,14 +259,9 @@ export default function Home() {
 
         <div className="brand-block">
           <div className="data-label">SYS_ARCHITECT</div>
-          <div
-            style={{
-              fontSize: 24,
-              fontWeight: 700,
-              letterSpacing: "-1px",
-            }}
-          >
-            EINSTECH
+          <div className="brand-mark">
+            <Logo size={28} />
+            <span className="brand-wordmark">EINSTECH</span>
           </div>
           <div style={{ fontSize: 10, opacity: 0.5, marginTop: 4 }}>
             EST. 1994 // 30YRS
