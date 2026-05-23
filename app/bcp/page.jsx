@@ -6,29 +6,29 @@ import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 
 export const metadata = {
-  title: "BCP 솔루션 — EINSTECH | Business Continuity Planning",
+  title: "DR 솔루션 — EINSTECH | Disaster Recovery · Cyber Resilience",
   description:
-    "해킹·서버 장애·화재·재난이 발생해도 생산은 멈추지 않습니다. 아인스테크는 제조 기업의 업무 연속성과 데이터 안전을 동시에 보장하는 BCP 체계를 설계·구축합니다.",
+    "랜섬웨어·서버 장애·재난이 발생해도 비즈니스는 멈추지 않습니다. 아인스테크는 Isolated Recovery, Immutable Vault, Active-Active 이중화를 통합해 사이버 회복탄력성(Cyber Resilience) 체계를 설계·구축합니다.",
 };
 
 const purposes = [
   {
     index: "01",
-    tag: "CONTINUITY",
-    title: "생산 업무 연속성 유지",
-    desc: "위기 상황에서도 핵심 생산·서비스가 멈추지 않도록 이중화·DR 체계로 가동률을 지킵니다.",
+    tag: "ASSUME_BREACH",
+    title: "예방이 아닌 회복",
+    desc: "공격은 언젠가 성공합니다. 침해를 전제로 한 설계로 핵심 생산·서비스가 멈추지 않도록 합니다.",
   },
   {
     index: "02",
-    tag: "LOSS_PROTECT",
-    title: "손실 최소화",
-    desc: "유·무형 경제적 손실과 대외 신인도 하락을 막아 사고가 경영 리스크로 번지는 것을 차단합니다.",
+    tag: "RAPID_CONTAIN",
+    title: "신속한 격리·복구",
+    desc: "Isolated Recovery Environment(IRE)에서 깨끗한 데이터만 검증 후 운영망에 복귀시켜 재감염을 차단합니다.",
   },
   {
     index: "03",
-    tag: "FAST_RECOVER",
-    title: "신속한 복구",
-    desc: "검증된 Runbook과 정기 모의훈련으로 장애 발생 시 평균 복구 시간을 대폭 단축합니다.",
+    tag: "RECOVERY_IN_HOURS",
+    title: "시간 단위 복구",
+    desc: "Automated Runbook + Orchestration으로 일(day) 단위가 아닌 시간(hour) 단위로 복구 시간을 단축합니다.",
   },
 ];
 
@@ -45,12 +45,12 @@ const risks = [
   },
   {
     index: "02",
-    tag: "DR_GAP",
-    title: "백업·DR 사각지대",
+    tag: "RECOVERY_GAP",
+    title: "복구 사각지대 (Recovery Gap)",
     points: [
-      "백업 솔루션 버전 미업그레이드",
-      "신규 워크로드 에이전트 미배포",
-      "콜드 DR만 존재 — 실복구 시간 미검증",
+      "백업은 있지만 Immutable·Air-gap 미적용",
+      "Clean Room/IRE 부재 — 감염 데이터 그대로 복원",
+      "RTO/RPO 실측 미검증 — 종이상의 약속만 존재",
     ],
   },
   {
@@ -58,7 +58,7 @@ const risks = [
     tag: "BLIND_SITE",
     title: "글로벌 거점 가시성 부재",
     points: [
-      "해외 공장 백업 정책 취약",
+      "해외 공장 백업·DR 정책 표준 부재",
       "본사에서 거점 상태를 실시간 파악 불가",
       "장애 발생 시 보고 라인 지연",
     ],
@@ -68,28 +68,28 @@ const risks = [
 const process = [
   {
     step: "01",
-    title: "프로젝트 범위 설정 및 기획",
-    desc: "BCP 적용 대상 시스템·조직·시나리오를 정의하고 거버넌스 체계를 수립합니다.",
+    title: "범위 정의 & 거버넌스 설계",
+    desc: "DR 적용 대상 시스템·조직·시나리오를 정의하고 Resilience Governance 체계를 수립합니다.",
   },
   {
     step: "02",
-    title: "사업영향분석 (BIA)",
-    desc: "각 업무의 중요도를 평가하고 RTO·RPO 목표치를 시스템별로 확정합니다.",
+    title: "Risk & Impact Analysis (BIA)",
+    desc: "각 업무의 중요도·의존성을 평가하고 RTO·RPO 목표치를 시스템별로 확정합니다.",
   },
   {
     step: "03",
-    title: "복구 전략 수립",
-    desc: "Hot / Warm / Cold DR 센터를 지정하고 비용·시간·리스크 트레이드오프를 설계합니다.",
+    title: "복구 아키텍처 설계",
+    desc: "Active-Active · Hot Standby · Cold DR · Cloud DR을 비용·시간·리스크 트레이드오프로 선택합니다.",
   },
   {
     step: "04",
-    title: "복구 계획 작성",
-    desc: "장애 유형별 Runbook을 작성하고 담당자·연락망·복구 순서를 문서화합니다.",
+    title: "자동화 Runbook 작성",
+    desc: "장애 유형별 절차를 SOAR/오케스트레이션으로 자동화하고 담당자·연락망을 코드화합니다.",
   },
   {
     step: "05",
-    title: "유지보수 및 테스트",
-    desc: "정기 모의훈련과 변경 관리로 BCP가 실제 작동하는 살아있는 체계로 운영됩니다.",
+    title: "정기 모의훈련 & 검증",
+    desc: "분기별 실제 복구 시연(Live Restore Drill)으로 DR이 실제 작동하는 살아있는 체계로 운영합니다.",
   },
 ];
 
@@ -99,55 +99,55 @@ const tiers = [
     priority: "최우선 — 생산 직결",
     color: "acid",
     systems: ["MES", "EICM", "QMS"],
-    site: "Hot Site",
-    rto: "≤ 30분",
-    desc: "생산 라인이 직접 의존하는 시스템. 무중단 실시간 복제와 자동 페일오버가 필수입니다.",
+    site: "Active-Active",
+    rto: "≤ 5분",
+    desc: "생산 라인이 직접 의존하는 시스템. 실시간 복제와 자동 페일오버가 필수이며 사실상 무중단 운영을 목표합니다.",
   },
   {
     tier: "Tier 1",
     priority: "우선 — 물류·구매",
     color: "cyan",
     systems: ["ERP", "SCM"],
-    site: "Warm Site",
-    rto: "≤ 2시간",
-    desc: "공급망과 거래에 직결되는 기간계 시스템. 수 시간 내 복구가 필요합니다.",
+    site: "Hot Standby",
+    rto: "≤ 1시간",
+    desc: "공급망과 거래에 직결되는 기간계 시스템. Isolated Recovery로 침해 시에도 1시간 내 클린 복구합니다.",
   },
   {
     tier: "Tier 2",
     priority: "지원 — 일반 행정",
     color: "muted",
     systems: ["그룹웨어", "메일", "회계"],
-    site: "Cold Site / Cloud",
-    rto: "≤ 24시간",
-    desc: "직접적인 생산 영향은 없지만 업무 효율과 컴플라이언스를 위해 보호합니다.",
+    site: "Cloud DR",
+    rto: "≤ 8시간",
+    desc: "직접적인 생산 영향은 없지만 업무 효율과 컴플라이언스를 위해 클라우드 DR로 보호합니다.",
   },
 ];
 
 const securityItems = [
   {
     index: "01",
-    title: "에어갭 (Air-Gap) 구성",
-    desc: "WORM(Write Once Read Many) 스토리지에 백업을 보관해 랜섬웨어 감염 경로를 물리적으로 차단합니다.",
+    title: "Immutable Vault (불변 백업)",
+    desc: "WORM·S3 Object Lock 기반의 변경 불가 백업으로 랜섬웨어가 백업까지 암호화하지 못하게 합니다.",
   },
   {
     index: "02",
-    title: "3-2-1 백업 법칙",
-    desc: "데이터 3개 사본, 2가지 매체, 1개 원격지(30km 이상)에 보관해 단일 사고에 모든 사본을 잃지 않도록 합니다.",
+    title: "Air-Gap (논리·물리적 격리)",
+    desc: "백업 저장소를 운영 네트워크와 차단해 측면 이동(lateral movement) 공격 경로를 끊습니다.",
   },
   {
     index: "03",
-    title: "데이터 + 이미지 백업 병행",
-    desc: "15분~1시간 단위 스냅샷과 풀 이미지 백업을 결합해 RPO와 복구 단순성을 동시에 확보합니다.",
+    title: "3-2-1-1-0 백업 규칙",
+    desc: "데이터 3개 사본, 2가지 매체, 1개 원격지, 1개 오프라인(Immutable), 0개 검증 오류 — 2026년 새 표준.",
   },
   {
     index: "04",
-    title: "가상화 즉시 복구",
-    desc: "DR 사이트에 가상 머신을 상시 대기시켜 장애 발생 시 RTO를 분 단위로 단축합니다.",
+    title: "Isolated Recovery Environment",
+    desc: "Clean Room에서 백업을 격리 복원·스캔·검증 후에만 운영망에 반입해 재감염을 원천 차단합니다.",
   },
   {
     index: "05",
-    title: "네트워크 세그먼트 분리",
-    desc: "생산망·사무망·관리망을 분리하고 측면 이동(lateral movement)을 차단해 장애 확산을 막습니다.",
+    title: "Zero Trust 데이터 회복탄력성",
+    desc: "복구 작업자도 신원 검증 후에만 접근. 권한 분리(SoD)와 MFA로 내부 위협까지 통제합니다.",
   },
 ];
 
@@ -156,35 +156,35 @@ const roadmap = [
     year: "Year 1",
     title: "본사 DR 시스템 구축",
     items: [
-      "Q1 — 현행 분석 및 BIA 수행",
-      "Q2 — DR 사이트 구축 및 회선 이중화",
-      "Q3 — Tier 0/1 시스템 복제 적용",
-      "Q4 — 1차 모의훈련 및 운영 매뉴얼 확정",
+      "Q1 — 현행 분석 및 Risk/Impact Analysis 수행",
+      "Q2 — IRE(Clean Room) + Immutable Vault 구축",
+      "Q3 — Tier 0/1 Active-Active 페일오버 적용",
+      "Q4 — 1차 실복구 모의훈련 (Live Restore Drill)",
     ],
   },
   {
     year: "Year 2",
-    title: "해외 기존 공장 확산",
+    title: "해외 거점 확산",
     items: [
       "Q1 — 거점별 영향 평가 및 우선순위 확정",
-      "Q2 — 거점 백업·복구 정책 표준화",
-      "Q3 — 본사-거점 통합 모니터링 구축",
-      "Q4 — 글로벌 합동 모의훈련",
+      "Q2 — 거점 Immutable Backup 정책 표준화",
+      "Q3 — 본사-거점 통합 가시성(Observability) 구축",
+      "Q4 — 글로벌 합동 사이버 회복 훈련",
     ],
   },
   {
     year: "Year 3",
-    title: "신규 공장 그린필드 & 전사 최적화",
+    title: "자동화 & 거버넌스 표준화",
     items: [
-      "신규 공장 구축 단계부터 BCP 표준 적용",
-      "Runbook 자동화 및 SOAR 연계",
-      "전사 BCP 거버넌스 정착",
-      "정기 외부 감사 및 인증 (ISO 22301 등)",
+      "신규 시스템 구축 단계부터 DR-by-Design 적용",
+      "SOAR 연계 자동화 Runbook 전사 표준화",
+      "Resilience Governance 정착 및 KPI 관리",
+      "ISO 27031 · ISO 22301 외부 인증",
     ],
   },
 ];
 
-export default function BCPPage() {
+export default function DRPage() {
   return (
     <>
       <Header />
@@ -200,36 +200,37 @@ export default function BCPPage() {
 
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-8">
-              <Badge color="cyan">BCP_SOLUTION</Badge>
+              <Badge color="cyan">DR_SOLUTION</Badge>
               <span className="font-mono text-xs text-muted uppercase tracking-widest">
-                ISO 22301 · Business Continuity Planning
+                ISO 27031 · Cyber Resilience · Assume Breach
               </span>
             </div>
 
             <h1 className="font-display leading-[0.95] mb-10">
               <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-white">
-                BCP 솔루션
+                DR 솔루션
               </span>
               <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-cyan mt-3">
-                BUSINESS CONTINUITY PLANNING
+                DISASTER RECOVERY
               </span>
             </h1>
 
             <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-white leading-tight ds-word-keep mb-8 max-w-4xl">
-              해킹, 서버 장애, 화재, 재난이 발생해도
+              위협은 예방이 아닌
               <br />
-              <span className="ds-text-glow-acid text-acid">생산은 멈추지 않습니다.</span>
+              <span className="ds-text-glow-acid text-acid">회복으로 답합니다.</span>
             </p>
 
             <p className="font-sans text-muted-strong text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-cyan/30 pl-5 ds-word-keep mb-12">
-              아인스테크는 제조 기업의 업무 연속성과 데이터 안전을 동시에 보장하는
-              <span className="text-white"> BCP 체계를 설계·구축</span>합니다.
+              랜섬웨어·서버 장애·재난이 발생해도 비즈니스는 멈추지 않습니다.
+              아인스테크는 <span className="text-white">Isolated Recovery, Immutable Vault, Active-Active 이중화</span>를
+              통합해 사이버 회복탄력성(Cyber Resilience) 체계를 설계·구축합니다.
               30년 인프라 운영 경험과 검증된 글로벌 벤더 솔루션을 한 묶음으로 제공합니다.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 max-w-xl">
               <PrimaryButton href="/contact" className="flex-1">
-                BCP 도입 문의하기
+                DR 솔루션 도입 문의
               </PrimaryButton>
               <SecondaryButton href="#process" className="flex-1">
                 5단계 프로세스 보기
@@ -238,7 +239,7 @@ export default function BCPPage() {
           </div>
         </section>
 
-        {/* BCP란? */}
+        {/* DR란? */}
         <section id="what" className="py-24 lg:py-32 relative">
           <div
             className="absolute left-12 top-0 bottom-0 w-px bg-gradient-to-b from-cyan/30 via-transparent to-transparent hidden lg:block -z-10"
@@ -249,12 +250,12 @@ export default function BCPPage() {
             <SectionHeader
               badgeText="DEFINITION"
               badgeColor="cyan"
-              sectionLabel="1. BCP — 멈추지 않는 비즈니스의 설계도"
+              sectionLabel="1. DR — 사이버 회복탄력성의 설계도"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
-                BCP는 <span className="text-cyan">국제 표준 ISO 22301</span> 기반의
+                현대 DR은 <span className="text-cyan">Assume Breach</span>를
                 <br />
-                업무 연속성 관리 체계입니다.
+                전제로 한 회복탄력성 체계입니다.
               </h2>
             </SectionHeader>
 
@@ -298,7 +299,7 @@ export default function BCPPage() {
             <SectionHeader
               badgeText="RISK_DIAG"
               badgeColor="acid"
-              sectionLabel="2. Diagnosis — 지금 우리 기업은 괜찮은가?"
+              sectionLabel="2. Diagnosis — 우리 기업의 Recovery Gap"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-5xl">
                 <span className="text-muted font-serif opacity-40 -ml-2 lg:-ml-6 mr-1">"</span>
@@ -358,10 +359,10 @@ export default function BCPPage() {
             <SectionHeader
               badgeText="PROCESS"
               badgeColor="cyan"
-              sectionLabel="3. Process — BCP 구축 5단계 타임라인"
+              sectionLabel="3. Process — DR 구축 5단계 타임라인"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
-                <span className="text-cyan">기획 → 분석 → 전략 → 계획 → 운영</span>
+                <span className="text-cyan">기획 → 분석 → 설계 → 자동화 → 검증</span>
                 <br />
                 단계별 정형화된 실행 모델
               </h2>
@@ -465,7 +466,7 @@ export default function BCPPage() {
                         <span className="text-white text-right">{t.systems.join(" · ")}</span>
                       </div>
                       <div className="flex justify-between font-mono text-[11px]">
-                        <span className="text-muted uppercase tracking-widest">DR_SITE</span>
+                        <span className="text-muted uppercase tracking-widest">DR_MODE</span>
                         <span className={accent}>{t.site}</span>
                       </div>
                       <div className="flex justify-between font-mono text-[11px]">
@@ -491,7 +492,7 @@ export default function BCPPage() {
             <SectionHeader
               badgeText="SEC_HARDENING"
               badgeColor="cyan"
-              sectionLabel="5. Security — 검증된 보안 강화 구성"
+              sectionLabel="5. Security — Cyber Resilience 핵심 구성"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
                 백업이 살아있어야
@@ -602,7 +603,7 @@ export default function BCPPage() {
             <SectionHeader
               badgeText="WHY_EINSTECH"
               badgeColor="cyan"
-              sectionLabel="7. Why — 단일 벤더 BCP 파트너"
+              sectionLabel="7. Why — 단일 DR 파트너"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-5xl">
                 <span className="text-cyan">HP · Hitachi · Acronis · Brocade · Rose</span>
@@ -640,10 +641,10 @@ export default function BCPPage() {
                 </h3>
                 <ol className="space-y-4">
                   {[
-                    { label: "BIA 분석", desc: "업무 영향도 평가부터 시작" },
-                    { label: "DR 센터 구축", desc: "Hot/Warm/Cold 사이트 설계" },
-                    { label: "운영 매뉴얼", desc: "장애 유형별 Runbook 작성" },
-                    { label: "정기 모의훈련", desc: "연 1회 이상 실복구 검증" },
+                    { label: "Risk & Impact Analysis", desc: "업무 영향도·의존성 평가" },
+                    { label: "IRE + Immutable Vault", desc: "Clean Room 복구 환경 구축" },
+                    { label: "Automated Runbook", desc: "SOAR 연계 절차 자동화" },
+                    { label: "정기 Live Restore Drill", desc: "분기별 실복구 검증" },
                   ].map((step, idx) => (
                     <li key={step.label} className="flex items-start gap-4">
                       <span className="w-7 h-7 border border-cyan/40 bg-cyan/5 text-cyan font-mono text-xs font-bold flex items-center justify-center flex-shrink-0">
@@ -672,15 +673,15 @@ export default function BCPPage() {
                 className="font-display text-[8rem] md:text-[12rem] font-bold ds-text-outline opacity-5 pointer-events-none absolute -top-10 md:-top-16 -right-4 md:-right-8 select-none"
                 aria-hidden
               >
-                BCP
+                DR
               </div>
 
               <Badge color="acid" className="mb-6">
-                BCP_READY
+                DR_READY
               </Badge>
 
               <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
-                지금이 BCP 설계를
+                지금이 DR 설계를
                 <br />
                 <span className="ds-text-glow-acid-strong text-acid">시작할 때</span>입니다.
               </h3>
@@ -688,7 +689,7 @@ export default function BCPPage() {
               <p className="font-sans text-muted-strong text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
                 현재 운영 인프라를 점검하고, 우리 회사에 맞는
                 <br className="hidden md:block" />
-                BCP 도입 시나리오를 무료로 컨설팅해 드립니다.
+                DR 도입 시나리오를 무료로 컨설팅해 드립니다.
               </p>
 
               <div className="w-full max-w-2xl mx-auto relative z-10 flex flex-col items-center mb-8">
@@ -698,7 +699,7 @@ export default function BCPPage() {
                     className="w-full bg-acid text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
                   >
                     <span className="relative z-10 tracking-tight ds-word-keep">
-                      BCP 도입 및 컨설팅 문의하기
+                      DR 솔루션 도입 및 컨설팅 문의
                     </span>
                     <svg
                       className="w-6 h-6 md:w-10 md:h-10 transform group-hover:translate-x-2 transition-transform relative z-10 flex-shrink-0"
@@ -718,7 +719,7 @@ export default function BCPPage() {
               </div>
 
               <a
-                href="mailto:sungil.yum@einstech.kr?subject=BCP%20%EB%8F%84%EC%9E%85%20%EB%AC%B8%EC%9D%98"
+                href="mailto:sungil.yum@einstech.kr?subject=DR%20%EC%86%94%EB%A3%A8%EC%85%98%20%EB%AC%B8%EC%9D%98"
                 className="font-mono text-sm text-cyan hover:text-white transition-colors"
               >
                 또는 sungil.yum@einstech.kr 로 직접 메일

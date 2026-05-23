@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const solutionItems = [
   { label: "HA Cluster", desc: "Rose HA — 무중단 페일오버", href: "/rose-ha.html" },
   { label: "Storage + Backup", desc: "Hitachi · Acronis · NetBackup", href: "/storage-backup.html" },
-  { label: "DLP", desc: "Netwrix Endpoint DLP", href: "/dlp-antivirus.html" },
+  { label: "Data Security", desc: "Netwrix · Kaspersky · Zero Trust", href: "/dlp-antivirus.html" },
 ];
 
 const companyItems = [
@@ -146,7 +146,7 @@ export default function Header() {
               href="/bcp"
               className="text-sm font-sans text-white/70 hover:text-cyan transition-colors"
             >
-              BCP
+              DR 솔루션
             </a>
             <a
               href="/contact"
@@ -207,7 +207,7 @@ export default function Header() {
               href="/bcp"
               className="block py-3 mt-2 text-sm text-white/80 hover:text-cyan border-t border-surface-border/60"
             >
-              BCP
+              DR 솔루션
             </a>
             <a
               href="/contact"
