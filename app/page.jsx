@@ -258,7 +258,7 @@ export default function Home() {
         </a>
 
         {/* ▼▼▼ 추가된 4번째 카드 — Acronis 전환 캠페인 ▼▼▼ */}
-        <a className="module border-r" href="/backup-modernization.html">
+        <a className="module border-r" href="/backup-modernization">
           <div className="mod-header">
             <svg className="mod-icon" viewBox="0 0 24 12">
               <path
