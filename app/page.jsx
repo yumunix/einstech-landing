@@ -257,6 +257,54 @@ export default function Home() {
           <span className="mod-link">VIEW →</span>
         </a>
 
+        {/* ▼▼▼ 추가된 4번째 카드 — Acronis 전환 캠페인 ▼▼▼ */}
+        <a className="module border-r" href="/backup-modernization.html">
+          <div className="mod-header">
+            <svg className="mod-icon" viewBox="0 0 24 12">
+              <path
+                d="M0,12 L0,3 L9,3 M6,0 L24,0 L24,9 L15,9 M18,12 L24,12"
+                fill="none"
+                stroke="#fff"
+                strokeWidth="1"
+              />
+            </svg>
+            <div className="mod-titles">
+              <span className="mod-cat">ACRONIS MIGRATION</span>
+              <span className="mod-title">BACKUP MODERNIZATION</span>
+            </div>
+          </div>
+          <div className="mod-shape-container">
+            <div className="shape shape-cube">
+              <div className="noise-overlay" />
+            </div>
+          </div>
+          <div className="mod-data">
+            <div className="hex-row">
+              <span
+                className="color-swatch"
+                style={{ background: "var(--c-cyan)" }}
+              />{" "}
+              #UNIFIED_PLATFORM
+            </div>
+            <div className="hex-row">
+              <span
+                className="color-swatch"
+                style={{ background: "var(--c-pink)" }}
+              />{" "}
+              #ZERO_DOWNTIME
+            </div>
+            <div className="hex-row">
+              <span
+                className="color-swatch"
+                style={{ background: "var(--c-orange)" }}
+              />{" "}
+              #LEGACY_ROLLOVER
+            </div>
+          </div>
+          <span className="mod-link">VIEW →</span>
+        </a>
+        {/* ▲▲▲ 추가된 4번째 카드 끝 ▲▲▲ */}
+
         <div className="brand-block">
           <div className="data-label">SYS_ARCHITECT</div>
           <div className="brand-mark">
@@ -264,10 +312,11 @@ export default function Home() {
             <span className="brand-wordmark">EINSTECH</span>
           </div>
           <div style={{ fontSize: 10, opacity: 0.5, marginTop: 4 }}>
-            EST. 1994 // 30YRS
+            EINSTECH EST.2014 // ENG.30YRS
           </div>
         </div>
       </footer>
     </div>
   );
 }
+
