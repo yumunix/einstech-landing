@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const solutionItems = [
   { label: "HA Cluster", desc: "Rose HA · MCCS — 무중단 페일오버", href: "/ha-cluster" },
   { label: "Storage + Backup", desc: "Hitachi · Acronis · NetBackup", href: "/storage-backup" },
+  { label: "Infrastructure", desc: "HP · Brocade · NVIDIA · TP-Link", href: "/infrastructure" },
   { label: "Data Security", desc: "Netwrix · Kaspersky · Zero Trust", href: "/dlp-antivirus" },
 ];
 

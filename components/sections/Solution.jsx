@@ -79,7 +79,11 @@ export default function Solution() {
 
         <div className="space-y-16 lg:pl-12">
           <div id="cat-infra" className="scroll-mt-24">
-            <CategoryHeader index="01" name="Infrastructure" summary="고가용성 · 스토리지 · 백업" />
+            <CategoryHeader
+              index="01"
+              name="Infrastructure"
+              summary="고가용성 · 스토리지 · 백업 · 하드웨어"
+            />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <SolutionCard
                 index="01"
@@ -98,7 +102,7 @@ export default function Solution() {
                     <br />
                     <br />
                     <a
-                      href="/rose-ha.html"
+                      href="/ha-cluster"
                       className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
                     >
                       Rose HA 자세히 보기 →
@@ -165,7 +169,7 @@ export default function Solution() {
                     <br />
                     <br />
                     <a
-                      href="/storage-backup.html"
+                      href="/storage-backup"
                       className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
                     >
                       Storage & Backup 자세히 보기 →
@@ -201,6 +205,50 @@ export default function Solution() {
                   </div>
                 }
               />
+
+              <SolutionCard
+                index="03"
+                tagLabel="HARDWARE_STACK"
+                title="Infrastructure HW"
+                subtitle="서버 · SAN · GPU · 네트워크"
+                description={
+                  <>
+                    HP 서버 · Brocade SAN · NVIDIA GPU 엔터프라이즈 표준 조합을 한 파트너로 설계·공급.
+                    사무 환경은 TP-Link Omada로 분리 운영.
+                    <br />
+                    <br />
+                    <span className="text-acid">벤더 책임 분산 → 단일 파트너 책임</span>
+                    <br />
+                    <br />
+                    <a
+                      href="/infrastructure"
+                      className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
+                    >
+                      Infrastructure 자세히 보기 →
+                    </a>
+                  </>
+                }
+                footer={
+                  <div className="grid grid-cols-2 gap-2">
+                    {[
+                      { name: "HP", tag: "SERVER" },
+                      { name: "Brocade", tag: "SAN" },
+                      { name: "NVIDIA", tag: "GPU/AI" },
+                      { name: "TP-Link", tag: "SMB_NET" },
+                    ].map((v) => (
+                      <div
+                        key={v.name}
+                        className="bg-black/40 border border-white/5 p-2.5 flex flex-col"
+                      >
+                        <span className="font-display text-sm text-white font-bold">{v.name}</span>
+                        <span className="font-mono text-[9px] text-cyan tracking-widest">
+                          {v.tag}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                }
+              />
             </div>
           </div>
 
@@ -208,7 +256,7 @@ export default function Solution() {
             <CategoryHeader index="02" name="Security" summary="DLP · 백신 · 감사 대응" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <SolutionCard
-                index="03"
+                index="04"
                 tagLabel="VERIFIED_PROCESS"
                 title="DLP + 백신"
                 subtitle="빠져나가지 않는 정보"
@@ -222,7 +270,7 @@ export default function Solution() {
                     <br />
                     <br />
                     <a
-                      href="/dlp-antivirus.html"
+                      href="/dlp-antivirus"
                       className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
                     >
                       DLP & 백신 자세히 보기 →
@@ -282,7 +330,7 @@ export default function Solution() {
             <CategoryHeader index="03" name="Continuity" summary="BCP · DRP · 정기 훈련" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <SolutionCard
-                index="04"
+                index="05"
                 tagLabel="CONTINUITY_FRAMEWORK"
                 title="BCP"
                 subtitle="비즈니스 연속성 계획"
