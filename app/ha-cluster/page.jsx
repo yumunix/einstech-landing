@@ -179,11 +179,18 @@ const references = [
     color: "acid",
   },
   {
+    industry: "배터리 소재 국내 거점",
+    customer: "E 배터리 소재 제조사",
+    solution: "Rose HA · 포항 공장",
+    desc: "포항 배터리 소재 생산 공장의 핵심 시스템에 Rose HA를 적용. 글로벌 표준 라이선스로 본사·해외 거점과 일관된 HA 정책 운영.",
+    color: "cyan",
+  },
+  {
     industry: "배터리 소재 글로벌 거점",
     customer: "E 배터리 소재 제조사",
     solution: "Mantech MCCS · 헝가리 공장",
-    desc: "헝가리 배터리 소재 생산 거점의 핵심 시스템 이중화에 MCCS를 적용. 국내 본사와 동일한 HA 표준을 해외 공장까지 일관되게 운영.",
-    color: "cyan",
+    desc: "헝가리 배터리 소재 생산 거점의 핵심 시스템 이중화에 MCCS를 적용. 국내 거점과 함께 Rose HA·MCCS 듀얼 라인업으로 환경별 최적화.",
+    color: "acid",
   },
   {
     industry: "공공·금융 기간계",
