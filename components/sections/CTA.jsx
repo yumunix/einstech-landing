@@ -4,7 +4,7 @@ import Badge from "../ds/Badge";
 const features = [
   {
     label: "EXPERIENCE_LVL",
-    text: "30년 기술력으로 1,000여 건 이상의 인프라 설계 경험",
+    text: "엔지니어 30년 경험으로 1,000여 건 이상의 인프라 설계",
   },
   {
     label: "VERIFIED_VENDOR",

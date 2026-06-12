@@ -126,7 +126,7 @@ export default function Home() {
       </main>
 
       <footer className="modules-bar">
-        <a className="module border-r" href="/rose-ha.html">
+        <a className="module border-r" href="/ha-cluster">
           <div className="mod-header">
             <svg className="mod-icon" viewBox="0 0 24 12">
               <path
@@ -137,7 +137,7 @@ export default function Home() {
               />
             </svg>
             <div className="mod-titles">
-              <span className="mod-cat">ROSE HA</span>
+              <span className="mod-cat">ROSE HA · MANTECH MCCS</span>
               <span className="mod-title">HA CLUSTER</span>
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function Home() {
           <span className="mod-link">VIEW →</span>
         </a>
 
-        <a className="module border-r" href="/storage-backup.html">
+        <a className="module border-r" href="/storage-backup">
           <div className="mod-header">
             <svg className="mod-icon" viewBox="0 0 24 12">
               <path
@@ -211,7 +211,7 @@ export default function Home() {
           <span className="mod-link">VIEW →</span>
         </a>
 
-        <a className="module border-r" href="/dlp-antivirus.html">
+        <a className="module border-r" href="/dlp-antivirus">
           <div className="mod-header">
             <svg className="mod-icon" viewBox="0 0 24 12">
               <path
@@ -312,7 +312,7 @@ export default function Home() {
             <span className="brand-wordmark">EINSTECH</span>
           </div>
           <div style={{ fontSize: 10, opacity: 0.5, marginTop: 4 }}>
-            EINSTECH EST.2014 // ENG.30YRS
+            EINSTECH EST.2014 // ENG.30Y LEGACY
           </div>
         </div>
       </footer>

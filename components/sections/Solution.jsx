@@ -57,11 +57,11 @@ export default function Solution() {
         <SectionHeader
           badgeText="SYS_SOLUTION"
           badgeColor="acid"
-          sectionLabel="3. Service — 30년 경험을 통해 다듬은 3가지 카테고리"
+          sectionLabel="3. Service — 엔지니어 30년 경험으로 다듬은 3가지 카테고리"
         >
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-end">
             <h3 className="font-display text-[clamp(2.5rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-3xl flex-1">
-              <span className="ds-text-glow-acid text-acid">30년의 기술력</span>으로 다듬은
+              <span className="ds-text-glow-acid text-acid">엔지니어 30년 경험</span>으로 다듬은
               <br />
               따로 사면 여러 벤더,
               <br className="hidden lg:block" />
