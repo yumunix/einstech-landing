@@ -159,7 +159,7 @@ export default function CTA() {
           </div>
 
           <div className="mt-16 pt-8 border-t border-surface-border w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 relative z-10">
-            <a href="tel:031-893-0015" className="flex items-center gap-4 group">
+            <a href="tel:+82-31-893-0015" className="flex items-center gap-4 group">
               <div className="w-10 h-10 border border-surface-border bg-void flex items-center justify-center group-hover:border-acid transition-colors">
                 <svg
                   className="w-5 h-5 text-muted group-hover:text-acid transition-colors"
@@ -180,7 +180,7 @@ export default function CTA() {
                   DIRECT_LINE
                 </span>
                 <span className="font-mono text-base md:text-lg text-white group-hover:text-acid transition-colors">
-                  031-893-0015
+                  +82-31-893-0015
                 </span>
               </div>
             </a>

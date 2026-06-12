@@ -82,7 +82,7 @@ export default function ContactPage() {
                 </h3>
 
                 <a
-                  href="tel:031-893-0015"
+                  href="tel:+82-31-893-0015"
                   className="flex items-start gap-4 group py-3 border-t border-surface-border/60"
                 >
                   <div className="w-9 h-9 border border-surface-border bg-void flex items-center justify-center group-hover:border-acid transition-colors flex-shrink-0">
@@ -105,7 +105,7 @@ export default function ContactPage() {
                       TEL
                     </span>
                     <span className="font-mono text-base text-white group-hover:text-acid transition-colors">
-                      031-893-0015
+                      +82-31-893-0015
                     </span>
                   </div>
                 </a>

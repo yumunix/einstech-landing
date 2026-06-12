@@ -526,10 +526,10 @@ export default function CompanyPage() {
                       PHONE
                     </div>
                     <a
-                      href="tel:070-4142-9990"
+                      href="tel:+82-31-893-0015"
                       className="font-display text-2xl font-bold text-cyan hover:text-white transition-colors"
                     >
-                      070-4142-9990
+                      +82-31-893-0015
                     </a>
                   </div>
                   <div>

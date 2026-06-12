@@ -48,7 +48,7 @@ export default function Footer() {
           © {new Date().getFullYear()} EINSTECH. All systems online.
           <br className="md:hidden" />
           <span className="ml-0 md:ml-3">
-            경기도 용인시 수지구 문인로54번길 2 · 070-4142-9990
+            경기도 용인시 수지구 문인로54번길 2 · +82-31-893-0015
           </span>
         </div>
       </div>
