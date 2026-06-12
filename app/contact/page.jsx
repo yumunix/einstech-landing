@@ -7,7 +7,7 @@ import ContactForm from "./ContactForm";
 export const metadata = {
   title: "문의하기 — EINSTECH",
   description:
-    "BCP · HA Cluster · 스토리지 · 백업 · DLP 도입 문의를 보내주세요. 30년 인프라 경험의 엔지니어가 직접 응답합니다.",
+    "BCP · HA Cluster · 스토리지 · 백업 · DLP 도입 문의를 보내주세요. 30년 경력의 인프라 엔지니어가 직접 응답합니다.",
 };
 
 export default function ContactPage() {

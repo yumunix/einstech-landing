@@ -150,7 +150,7 @@ export default function BackupModernizationPage() {
               백업 따로, 보안 따로. 콘솔도 둘, 라이선스도 둘. 그렇게 운영하던 레거시 백업을{" "}
               <span className="text-white">단일 플랫폼 Acronis Cyber Protect</span>로 전환합니다.
               AI 랜섬웨어 차단·즉각 복구·이뮤터블 백업을 하나의 에이전트에 통합해
-              운영 중단 없이 옮겨 드립니다. 30년 인프라 운영 경험으로 전 과정을 책임집니다.
+              운영 중단 없이 옮겨 드립니다. 엔지니어의 30년 인프라 운영 경험으로 전 과정을 책임집니다.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 max-w-xl">

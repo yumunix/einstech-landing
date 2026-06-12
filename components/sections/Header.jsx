@@ -3,14 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 
 const solutionItems = [
-  { label: "HA Cluster", desc: "Rose HA — 무중단 페일오버", href: "/rose-ha.html" },
-  { label: "Storage + Backup", desc: "Hitachi · Acronis · NetBackup", href: "/storage-backup.html" },
-  { label: "Data Security", desc: "Netwrix · Kaspersky · Zero Trust", href: "/dlp-antivirus.html" },
+  { label: "HA Cluster", desc: "Rose HA · MCCS — 무중단 페일오버", href: "/ha-cluster" },
+  { label: "Storage + Backup", desc: "Hitachi · Acronis · NetBackup", href: "/storage-backup" },
+  { label: "Data Security", desc: "Netwrix · Kaspersky · Zero Trust", href: "/dlp-antivirus" },
 ];
 
 const companyItems = [
-  { label: "회사 소개", desc: "EINSTECH 30년의 기록", href: "/company.html" },
-  { label: "회사 연혁", desc: "Since 1994", href: "/company.html#history" },
+  { label: "회사 소개", desc: "EINSTECH 2014 설립 · 엔지니어 30년", href: "/company" },
+  { label: "회사 연혁", desc: "Since 2014", href: "/company#history" },
 ];
 
 function NavDropdown({ label, items, openId, setOpenId, id }) {

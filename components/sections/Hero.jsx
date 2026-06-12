@@ -39,7 +39,7 @@ export default function Hero() {
             <p className="font-sans text-muted-strong text-base sm:text-lg max-w-xl leading-relaxed mb-10 border-l-2 border-cyan/30 pl-4 ds-word-keep">
               시스템 한 대가 다운되면 공장 라인은 분당{" "}
               <span className="text-white font-medium">280만 원</span>씩 손실을 봅니다.
-              EINSTECH는 30년 기술력을 바탕으로 HA Cluster(Rose) · 스토리지(Hitachi) ·
+              EINSTECH(2014 설립)는 30년 경력 엔지니어가 HA Cluster(Rose · MCCS) · 스토리지(Hitachi) ·
               백업(Acronis · NetBackup)을 한 번에 설계해 그 손실 자체가 발생하지 않도록
               만듭니다.
             </p>

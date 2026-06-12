@@ -225,7 +225,7 @@ export default function DRPage() {
               랜섬웨어·서버 장애·재난이 발생해도 비즈니스는 멈추지 않습니다.
               아인스테크는 <span className="text-white">Isolated Recovery, Immutable Vault, Active-Active 이중화</span>를
               통합해 사이버 회복탄력성(Cyber Resilience) 체계를 설계·구축합니다.
-              30년 인프라 운영 경험과 검증된 글로벌 벤더 솔루션을 한 묶음으로 제공합니다.
+              엔지니어의 30년 인프라 운영 경험과 검증된 글로벌 벤더 솔루션을 한 묶음으로 제공합니다.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 max-w-xl">

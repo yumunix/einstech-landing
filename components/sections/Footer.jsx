@@ -40,7 +40,7 @@ export default function Footer() {
             EINSTECH
           </span>
           <span className="font-mono text-[10px] text-muted ml-3 hidden sm:inline self-center">
-            EST. 1994 · 30 YEARS
+            EINSTECH EST. 2014 · ENG.30Y
           </span>
         </div>
 

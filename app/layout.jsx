@@ -6,7 +6,7 @@ const siteUrl = "https://www.einstech.kr";
 const siteName = "EINSTECH";
 const siteTitle = "EINSTECH | Non Stop System, Lossless Data";
 const siteDescription =
-  "30년 기술경험 기반 HA Cluster · 스토리지 · 백업 · DLP 통합 인프라 파트너. 멈추지 않는 시스템과 사라지지 않는 데이터를 설계합니다.";
+  "엔지니어 30년 경험 기반의 HA Cluster · 스토리지 · 백업 · DLP 통합 인프라 파트너. 2014년 설립된 EINSTECH가 멈추지 않는 시스템과 사라지지 않는 데이터를 설계합니다.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
