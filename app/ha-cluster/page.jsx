@@ -66,7 +66,7 @@ const lineup = [
       "외부 스토리지 없이 SANless 이중화 가능",
     ],
     fitFor: [
-      "심텍 등 국내 대형 제조 핵심 시스템",
+      "국내 대형 PCB 제조사 핵심 생산 시스템",
       "구축·운영·장애 대응 모두 한국어 일원화",
       "Core 단위 외산 라이선스 비용 절감",
     ],
@@ -173,16 +173,16 @@ const process = [
 const references = [
   {
     industry: "반도체 PCB 제조",
-    customer: "심텍",
+    customer: "S PCB 제조사",
     solution: "Mantech MCCS",
     desc: "국내 대형 반도체 PCB 제조사가 핵심 생산 시스템 이중화에 MCCS를 운영 중. 외산 솔루션 대비 즉시 지원과 영구 라이선스의 안정성을 확보.",
     color: "acid",
   },
   {
-    industry: "글로벌 제조 거점",
-    customer: "다국적 제조 고객사",
-    solution: "Rose HA · 헝가리/시안 등 해외 구축",
-    desc: "국내 본사와 해외 생산 거점을 동일한 HA 표준으로 통합 구축. 본사 IT 정책을 글로벌 전 거점에 일관 적용.",
+    industry: "배터리 소재 글로벌 거점",
+    customer: "E 배터리 소재 제조사",
+    solution: "Mantech MCCS · 헝가리 공장",
+    desc: "헝가리 배터리 소재 생산 거점의 핵심 시스템 이중화에 MCCS를 적용. 국내 본사와 동일한 HA 표준을 해외 공장까지 일관되게 운영.",
     color: "cyan",
   },
   {

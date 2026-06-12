@@ -178,7 +178,7 @@ const references = [
   },
   {
     industry: "반도체 / 제조",
-    customer: "심텍",
+    customer: "S PCB 제조사",
     solution: "Hitachi + 백업 통합",
     desc: "PCB 생산 핵심 시스템의 운영 스토리지와 백업을 통합 운영. 생산 라인 정지 없는 데이터 보호 체계 확보.",
     color: "cyan",
