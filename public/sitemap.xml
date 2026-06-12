@@ -6,22 +6,27 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.einstech.kr/company.html</loc>
+    <loc>https://www.einstech.kr/company</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.einstech.kr/rose-ha.html</loc>
+    <loc>https://www.einstech.kr/ha-cluster</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.einstech.kr/storage-backup.html</loc>
+    <loc>https://www.einstech.kr/storage-backup</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.einstech.kr/dlp-antivirus.html</loc>
+    <loc>https://www.einstech.kr/dlp-antivirus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/backup-modernization</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
