@@ -511,23 +511,22 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center">
             <div>
               <h2 className="text-4xl lg:text-5xl font-black text-navy leading-tight mb-10">
-                업무는 멈추지 않고,
+                장애를 상상하고,
                 <br />
-                데이터는 되살아납니다
+                이미 대비해 두었습니다
               </h2>
               <p className="text-xl text-slate-500 leading-relaxed mb-16 font-medium">
-                HA Cluster가 서비스 중단을 막고, 이중 백업이 어떤 사고에도
-                원본을 지킵니다. 아인스테크는 이 두 축을 하나의 아키텍처로 통합
-                설계합니다.
+                HA · 백업 · 실시간 감시. 아인스테크는 세 축을 하나의 아키텍처로
+                묶어 서비스 중단, 데이터 손실, 대응 지연을 동시에 제거합니다.
               </p>
 
-              <div className="space-y-10">
-                <div className="flex gap-8">
-                  <div className="w-16 h-16 bg-emerald/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-emerald/20">
-                    <i className="ph-bold ph-arrows-clockwise text-emerald text-3xl"></i>
+              <div className="space-y-8">
+                <div className="flex gap-6">
+                  <div className="w-14 h-14 bg-emerald/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-emerald/20">
+                    <i className="ph-bold ph-arrows-clockwise text-emerald text-2xl"></i>
                   </div>
                   <div>
-                    <h4 className="text-2xl font-bold text-navy mb-3">
+                    <h4 className="text-xl font-bold text-navy mb-2">
                       HA Cluster · 자동 페일오버
                     </h4>
                     <p className="text-slate-500 leading-relaxed font-medium">
@@ -536,18 +535,32 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-8">
-                  <div className="w-16 h-16 bg-emerald/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-emerald/20">
-                    <i className="ph-bold ph-shield-check text-emerald text-3xl"></i>
+                <div className="flex gap-6">
+                  <div className="w-14 h-14 bg-emerald/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-emerald/20">
+                    <i className="ph-bold ph-shield-check text-emerald text-2xl"></i>
                   </div>
                   <div>
-                    <h4 className="text-2xl font-bold text-navy mb-3">
+                    <h4 className="text-xl font-bold text-navy mb-2">
                       불변 백업 + 즉시 복구
                     </h4>
                     <p className="text-slate-500 leading-relaxed font-medium">
-                      Acronis · Hitachi 이중 백업 + 불변(Immutable) 스토리지로
+                      Acronis · Hitachi 이중 백업과 불변(Immutable) 스토리지로
                       랜섬웨어에도 원본이 남습니다. 필요 시 즉시 마운트해 RTO를
                       최소화합니다.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-6">
+                  <div className="w-14 h-14 bg-emerald/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-emerald/20">
+                    <i className="ph-bold ph-eye text-emerald text-2xl"></i>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-navy mb-2">
+                      24/7 실시간 감시 · 즉시 대응
+                    </h4>
+                    <p className="text-slate-500 leading-relaxed font-medium">
+                      30년 경력의 인프라 엔지니어가 실시간 모니터링과 위협 대응을
+                      상시 담당합니다. 장애 리포트는 자동, 판단은 사람이 합니다.
                     </p>
                   </div>
                 </div>
