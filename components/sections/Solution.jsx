@@ -5,30 +5,30 @@ function SolutionCard({ index, tagLabel, title, subtitle, description, footer })
   return (
     <GlassPanel
       hoverColor="acid"
-      className="p-8 lg:p-10 flex flex-col group hover:-translate-y-2 transition-all duration-500 hover:bg-surface-border/10 hover:border-acid/30"
+      className="p-8 lg:p-10 flex flex-col group hover:-translate-y-2 transition-all duration-500 hover:bg-slate-50-border/10 hover:border-emerald/30"
     >
       <div className="flex justify-between items-start mb-10 relative">
         <div className="flex flex-col gap-1">
-          <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+          <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
             MODULE_{index}
           </span>
-          <span className="font-mono text-[10px] text-acid">{tagLabel}</span>
+          <span className="font-mono text-[10px] text-emerald">{tagLabel}</span>
         </div>
-        <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none group-hover:text-acid group-hover:opacity-20 transition-all duration-500 absolute -top-4 -right-2">
+        <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none group-hover:text-emerald group-hover:opacity-20 transition-all duration-500 absolute -top-4 -right-2">
           {index}
         </div>
       </div>
 
       <div className="mb-6">
-        <h4 className="font-display text-2xl font-bold text-white mb-2 ds-word-keep">{title}</h4>
-        <div className="text-sm font-sans text-cyan ds-word-keep font-medium">{subtitle}</div>
+        <h4 className="font-display text-2xl font-bold text-slate-900 mb-2 ds-word-keep">{title}</h4>
+        <div className="text-sm font-sans text-navy ds-word-keep font-medium">{subtitle}</div>
       </div>
 
-      <div className="font-sans text-muted-strong text-[15px] leading-relaxed mb-10 ds-word-keep flex-grow">
+      <div className="font-sans text-slate-600 text-[15px] leading-relaxed mb-10 ds-word-keep flex-grow">
         {description}
       </div>
 
-      <div className="pt-6 border-t border-surface-border/50">{footer}</div>
+      <div className="pt-6 border-t border-slate-200/50">{footer}</div>
     </GlassPanel>
   );
 }
@@ -36,11 +36,11 @@ function SolutionCard({ index, tagLabel, title, subtitle, description, footer })
 function CategoryHeader({ index, name, summary }) {
   return (
     <div className="mb-6 flex items-baseline gap-4 flex-wrap">
-      <span className="font-mono text-[10px] text-acid tracking-widest">
+      <span className="font-mono text-[10px] text-emerald tracking-widest">
         CATEGORY_{index}
       </span>
-      <h3 className="font-display text-2xl text-white font-bold">{name}</h3>
-      <span className="font-mono text-[11px] text-muted">— {summary}</span>
+      <h3 className="font-display text-2xl text-slate-900 font-bold">{name}</h3>
+      <span className="font-mono text-[11px] text-slate-500">— {summary}</span>
     </div>
   );
 }
@@ -60,19 +60,19 @@ export default function Solution() {
           sectionLabel="3. Service — 엔지니어 30년 경험으로 다듬은 3가지 카테고리"
         >
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-end">
-            <h3 className="font-display text-[clamp(2.5rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-3xl flex-1">
-              <span className="ds-text-glow-acid text-acid">엔지니어 30년 경험</span>으로 다듬은
+            <h3 className="font-display text-[clamp(2.5rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-3xl flex-1">
+              <span className="ds-text-glow-acid text-emerald">엔지니어 30년 경험</span>으로 다듬은
               <br />
               따로 사면 여러 벤더,
               <br className="hidden lg:block" />
-              <span className="text-white"> 함께 사면 1개 파트너</span>
+              <span className="text-slate-900"> 함께 사면 1개 파트너</span>
             </h3>
-            <p className="font-sans text-muted-strong text-[17px] leading-relaxed ds-word-keep max-w-xl border-l-2 border-acid/30 pl-5 mb-2 lg:flex-1">
+            <p className="font-sans text-slate-600 text-[17px] leading-relaxed ds-word-keep max-w-xl border-l-2 border-emerald/30 pl-5 mb-2 lg:flex-1">
               EINSTECH 엔지니어가 직접 제안하는
               <br />
               인프라 · 보안 · 연속성 솔루션을
               <br />
-              <span className="text-white font-medium">한 번에 설계하고 구축합니다.</span>
+              <span className="text-slate-900 font-medium">한 번에 설계하고 구축합니다.</span>
             </p>
           </div>
         </SectionHeader>
@@ -92,18 +92,18 @@ export default function Solution() {
                 subtitle="단일 장애점을 제거합니다"
                 description={
                   <>
-                    서버 장애 시 평균 <span className="text-white">30초</span> 안에 자동 페일오버.
+                    서버 장애 시 평균 <span className="text-slate-900">30초</span> 안에 자동 페일오버.
                     경쟁 클러스터 대비 라이선스 비용 최대 60% 절감.
                     <br />
                     <br />
-                    <span className="text-acid">
+                    <span className="text-emerald">
                       연간 계획되지 않은 다운타임 평균 92% 감소
                     </span>
                     <br />
                     <br />
                     <a
                       href="/ha-cluster"
-                      className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
+                      className="inline-flex items-center gap-1.5 text-navy hover:text-emerald transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-navy/30 hover:border-emerald pb-0.5"
                     >
                       Rose HA 자세히 보기 →
                     </a>
@@ -114,19 +114,19 @@ export default function Solution() {
                     <div className="absolute inset-0 bg-gradient-to-r from-acid/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="flex items-center justify-between relative z-10">
                       <div className="flex flex-col gap-1 items-center">
-                        <div className="w-2.5 h-2.5 rounded-full bg-acid shadow-[0_0_10px_rgba(57,255,20,0.6)] animate-pulse-fast" />
-                        <span className="font-mono text-[10px] text-white">NODE_A</span>
+                        <div className="w-2.5 h-2.5 rounded-full bg-emerald shadow-[0_0_10px_rgba(57,255,20,0.6)] animate-pulse-fast" />
+                        <span className="font-mono text-[10px] text-slate-900">NODE_A</span>
                       </div>
 
                       <div className="flex-1 px-4 flex items-center justify-center relative">
-                        <div className="h-px w-full bg-surface-border relative overflow-hidden">
+                        <div className="h-px w-full bg-slate-50-border relative overflow-hidden">
                           <div
                             className="absolute left-0 top-0 h-full w-full bg-gradient-to-r from-acid via-cyan to-transparent"
                             style={{ animation: "scanlineX 2s linear infinite" }}
                           />
                         </div>
                         <svg
-                          className="w-4 h-4 text-cyan absolute bg-black/40 rounded-full"
+                          className="w-4 h-4 text-navy absolute bg-black/40 rounded-full"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -141,13 +141,13 @@ export default function Solution() {
                       </div>
 
                       <div className="flex flex-col gap-1 items-center">
-                        <div className="w-2.5 h-2.5 rounded-full bg-cyan/40" />
-                        <span className="font-mono text-[10px] text-muted">NODE_B</span>
+                        <div className="w-2.5 h-2.5 rounded-full bg-navy/40" />
+                        <span className="font-mono text-[10px] text-slate-500">NODE_B</span>
                       </div>
                     </div>
                     <div className="flex justify-between mt-3 pt-3 border-t border-white/5 font-mono text-[9px]">
-                      <span className="text-acid">STATUS: ACTIVE</span>
-                      <span className="text-muted">STATUS: STANDBY</span>
+                      <span className="text-emerald">STATUS: ACTIVE</span>
+                      <span className="text-slate-500">STATUS: STANDBY</span>
                     </div>
                   </div>
                 }
@@ -161,16 +161,16 @@ export default function Solution() {
                 description={
                   <>
                     Acronis · NetBackup · Hitachi Storage를 묶어 3-2-1 백업 정책으로 설계.
-                    랜섬웨어 감염 시 평균 <span className="text-white">1시간</span> 안에 깨끗한
+                    랜섬웨어 감염 시 평균 <span className="text-slate-900">1시간</span> 안에 깨끗한
                     시점으로 복구.
                     <br />
                     <br />
-                    <span className="text-acid">RTO 4시간 → 1시간 · RPO 24시간 → 30분</span>
+                    <span className="text-emerald">RTO 4시간 → 1시간 · RPO 24시간 → 30분</span>
                     <br />
                     <br />
                     <a
                       href="/storage-backup"
-                      className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
+                      className="inline-flex items-center gap-1.5 text-navy hover:text-emerald transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-navy/30 hover:border-emerald pb-0.5"
                     >
                       Storage & Backup 자세히 보기 →
                     </a>
@@ -180,26 +180,26 @@ export default function Solution() {
                   <div className="space-y-4">
                     <div className="flex flex-col gap-2">
                       <div className="flex justify-between font-mono text-[10px] uppercase">
-                        <span className="text-white flex items-center gap-1.5">
-                          <span className="w-1 h-1 bg-acid block" /> NVMe All-Flash
+                        <span className="text-slate-900 flex items-center gap-1.5">
+                          <span className="w-1 h-1 bg-emerald block" /> NVMe All-Flash
                         </span>
-                        <span className="text-acid tracking-widest">MAX_IOPS</span>
+                        <span className="text-emerald tracking-widest">MAX_IOPS</span>
                       </div>
-                      <div className="h-1.5 w-full bg-void border border-surface-border overflow-hidden">
-                        <div className="h-full bg-acid w-[90%] relative">
+                      <div className="h-1.5 w-full bg-white border border-slate-200 overflow-hidden">
+                        <div className="h-full bg-emerald w-[90%] relative">
                           <div className="absolute inset-0 bg-white/20" />
                         </div>
                       </div>
                     </div>
                     <div className="flex flex-col gap-2">
                       <div className="flex justify-between font-mono text-[10px] uppercase">
-                        <span className="text-muted flex items-center gap-1.5">
-                          <span className="w-1 h-1 bg-cyan/50 block" /> Hybrid SAS/SATA
+                        <span className="text-slate-500 flex items-center gap-1.5">
+                          <span className="w-1 h-1 bg-navy/50 block" /> Hybrid SAS/SATA
                         </span>
-                        <span className="text-cyan tracking-widest">CAPACITY</span>
+                        <span className="text-navy tracking-widest">CAPACITY</span>
                       </div>
-                      <div className="h-1.5 w-full bg-void border border-surface-border/50 overflow-hidden">
-                        <div className="h-full bg-cyan/60 w-[60%]" />
+                      <div className="h-1.5 w-full bg-white border border-slate-200/50 overflow-hidden">
+                        <div className="h-full bg-navy/60 w-[60%]" />
                       </div>
                     </div>
                   </div>
@@ -217,12 +217,12 @@ export default function Solution() {
                     사무 환경은 TP-Link Omada로 분리 운영.
                     <br />
                     <br />
-                    <span className="text-acid">벤더 책임 분산 → 단일 파트너 책임</span>
+                    <span className="text-emerald">벤더 책임 분산 → 단일 파트너 책임</span>
                     <br />
                     <br />
                     <a
                       href="/infrastructure"
-                      className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
+                      className="inline-flex items-center gap-1.5 text-navy hover:text-emerald transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-navy/30 hover:border-emerald pb-0.5"
                     >
                       Infrastructure 자세히 보기 →
                     </a>
@@ -240,8 +240,8 @@ export default function Solution() {
                         key={v.name}
                         className="bg-black/40 border border-white/5 p-2.5 flex flex-col"
                       >
-                        <span className="font-display text-sm text-white font-bold">{v.name}</span>
-                        <span className="font-mono text-[9px] text-cyan tracking-widest">
+                        <span className="font-display text-sm text-slate-900 font-bold">{v.name}</span>
+                        <span className="font-mono text-[9px] text-navy tracking-widest">
                           {v.tag}
                         </span>
                       </div>
@@ -266,12 +266,12 @@ export default function Solution() {
                     단일 정책으로 통제. ISMS-P · 전자금융감독규정 감사 리포트 자동 생성.
                     <br />
                     <br />
-                    <span className="text-acid">감사 대응 준비시간 평균 3주 → 2일</span>
+                    <span className="text-emerald">감사 대응 준비시간 평균 3주 → 2일</span>
                     <br />
                     <br />
                     <a
                       href="/dlp-antivirus"
-                      className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
+                      className="inline-flex items-center gap-1.5 text-navy hover:text-emerald transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-navy/30 hover:border-emerald pb-0.5"
                     >
                       DLP & 백신 자세히 보기 →
                     </a>
@@ -279,10 +279,10 @@ export default function Solution() {
                 }
                 footer={
                   <div className="space-y-3">
-                    <div className="flex items-center justify-between bg-surface-border/5 p-3 border border-white/5">
+                    <div className="flex items-center justify-between bg-slate-50-border/5 p-3 border border-white/5">
                       <div className="flex items-center gap-3">
                         <svg
-                          className="w-4 h-4 text-cyan"
+                          className="w-4 h-4 text-navy"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -294,15 +294,15 @@ export default function Solution() {
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
-                        <span className="font-mono text-xs text-muted-strong">SCHEDULE_CONFIG</span>
+                        <span className="font-mono text-xs text-slate-600">SCHEDULE_CONFIG</span>
                       </div>
-                      <span className="font-mono text-[10px] text-cyan">DONE</span>
+                      <span className="font-mono text-[10px] text-navy">DONE</span>
                     </div>
-                    <div className="flex items-center justify-between bg-acid/5 p-3 border border-acid/20 relative overflow-hidden group-hover:bg-acid/10 transition-colors">
-                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-acid" />
+                    <div className="flex items-center justify-between bg-emerald/5 p-3 border border-emerald/20 relative overflow-hidden group-hover:bg-emerald/10 transition-colors">
+                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-emerald" />
                       <div className="flex items-center gap-3 pl-2">
                         <svg
-                          className="w-4 h-4 text-acid"
+                          className="w-4 h-4 text-emerald"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -314,9 +314,9 @@ export default function Solution() {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                           />
                         </svg>
-                        <span className="font-mono text-xs text-white font-bold">RESTORE_DRILL</span>
+                        <span className="font-mono text-xs text-slate-900 font-bold">RESTORE_DRILL</span>
                       </div>
-                      <span className="font-mono text-[10px] text-acid animate-pulse-fast bg-acid/10 px-2 py-1 rounded">
+                      <span className="font-mono text-[10px] text-emerald animate-pulse-fast bg-emerald/10 px-2 py-1 rounded">
                         VERIFIED_100%
                       </span>
                     </div>
@@ -340,12 +340,12 @@ export default function Solution() {
                     BIA · 복구 전략 · Runbook · 정기 모의훈련까지 BCP 체계를 설계·구축.
                     <br />
                     <br />
-                    <span className="text-acid">Tier 0 시스템 평균 복구 시간 분 단위로 단축</span>
+                    <span className="text-emerald">Tier 0 시스템 평균 복구 시간 분 단위로 단축</span>
                     <br />
                     <br />
                     <a
                       href="/bcp"
-                      className="inline-flex items-center gap-1.5 text-cyan hover:text-acid transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-cyan/30 hover:border-acid pb-0.5"
+                      className="inline-flex items-center gap-1.5 text-navy hover:text-emerald transition-colors font-mono text-[11px] tracking-widest uppercase border-b border-navy/30 hover:border-emerald pb-0.5"
                     >
                       BCP 자세히 보기 →
                     </a>
@@ -354,12 +354,12 @@ export default function Solution() {
                 footer={
                   <div className="bg-black/40 rounded border border-white/5 p-4 relative overflow-hidden">
                     <div className="flex items-center justify-between font-mono text-[10px] uppercase">
-                      <span className="text-cyan tracking-widest">BCP_TIER</span>
-                      <span className="text-acid">0 · 1 · 2</span>
+                      <span className="text-navy tracking-widest">BCP_TIER</span>
+                      <span className="text-emerald">0 · 1 · 2</span>
                     </div>
                     <div className="mt-3 pt-3 border-t border-white/5 flex items-center justify-between font-mono text-[9px]">
-                      <span className="text-muted">DRILL_CYCLE</span>
-                      <span className="text-white">QUARTERLY</span>
+                      <span className="text-slate-500">DRILL_CYCLE</span>
+                      <span className="text-slate-900">QUARTERLY</span>
                     </div>
                   </div>
                 }

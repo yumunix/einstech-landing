@@ -201,29 +201,29 @@ export default function DRPage() {
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">DR_SOLUTION</Badge>
-              <span className="font-mono text-xs text-muted uppercase tracking-widest">
+              <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
                 ISO 27031 · Cyber Resilience · Assume Breach
               </span>
             </div>
 
             <h1 className="font-display leading-[0.95] mb-10">
-              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-white">
+              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
                 DR 솔루션
               </span>
-              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-cyan mt-3">
+              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-navy mt-3">
                 DISASTER RECOVERY
               </span>
             </h1>
 
-            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-white leading-tight ds-word-keep mb-8 max-w-4xl">
+            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-slate-900 leading-tight ds-word-keep mb-8 max-w-4xl">
               위협은 예방이 아닌
               <br />
-              <span className="ds-text-glow-acid text-acid">회복으로 답합니다.</span>
+              <span className="ds-text-glow-acid text-emerald">회복으로 답합니다.</span>
             </p>
 
-            <p className="font-sans text-muted-strong text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-cyan/30 pl-5 ds-word-keep mb-12">
+            <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
               랜섬웨어·서버 장애·재난이 발생해도 비즈니스는 멈추지 않습니다.
-              아인스테크는 <span className="text-white">Isolated Recovery, Immutable Vault, Active-Active 이중화</span>를
+              아인스테크는 <span className="text-slate-900">Isolated Recovery, Immutable Vault, Active-Active 이중화</span>를
               통합해 사이버 회복탄력성(Cyber Resilience) 체계를 설계·구축합니다.
               엔지니어의 30년 인프라 운영 경험과 검증된 글로벌 벤더 솔루션을 한 묶음으로 제공합니다.
             </p>
@@ -252,8 +252,8 @@ export default function DRPage() {
               badgeColor="cyan"
               sectionLabel="1. DR — 사이버 회복탄력성의 설계도"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
-                현대 DR은 <span className="text-cyan">Assume Breach</span>를
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
+                현대 DR은 <span className="text-navy">Assume Breach</span>를
                 <br />
                 전제로 한 회복탄력성 체계입니다.
               </h2>
@@ -267,19 +267,19 @@ export default function DRPage() {
                 >
                   <div className="flex justify-between items-start mb-10 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                      <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                         GOAL_{p.index}
                       </span>
-                      <span className="font-mono text-[10px] text-acid">{p.tag}</span>
+                      <span className="font-mono text-[10px] text-emerald">{p.tag}</span>
                     </div>
                     <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none absolute -top-4 -right-2 group-hover:opacity-30 transition-opacity">
                       {p.index}
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                     {p.title}
                   </h3>
-                  <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep flex-grow">
+                  <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep flex-grow">
                     {p.desc}
                   </p>
                 </GlassPanel>
@@ -301,12 +301,12 @@ export default function DRPage() {
               badgeColor="acid"
               sectionLabel="2. Diagnosis — 우리 기업의 Recovery Gap"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-5xl">
-                <span className="text-muted font-serif opacity-40 -ml-2 lg:-ml-6 mr-1">"</span>
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-5xl">
+                <span className="text-slate-500 font-serif opacity-40 -ml-2 lg:-ml-6 mr-1">"</span>
                 백업은 돌고 있는데,
                 <br />
-                <span className="ds-text-glow-acid text-acid">막상 복구가 안 됩니다.</span>
-                <span className="text-muted font-serif opacity-40 ml-2">"</span>
+                <span className="ds-text-glow-acid text-emerald">막상 복구가 안 됩니다.</span>
+                <span className="text-slate-500 font-serif opacity-40 ml-2">"</span>
               </h2>
             </SectionHeader>
 
@@ -318,7 +318,7 @@ export default function DRPage() {
                 >
                   <div className="flex justify-between items-start mb-10 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-cyan tracking-widest uppercase">
+                      <span className="font-mono text-[10px] text-navy tracking-widest uppercase">
                         RISK_{r.index}
                       </span>
                       <span className="font-mono text-[10px] text-alert animate-pulse-fast">
@@ -329,14 +329,14 @@ export default function DRPage() {
                       {r.index}
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-6 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-6 ds-word-keep">
                     {r.title}
                   </h3>
                   <ul className="space-y-3 mb-2">
                     {r.points.map((point) => (
                       <li key={point} className="flex items-start gap-3">
-                        <span className="mt-2 w-1.5 h-1.5 bg-cyan flex-shrink-0" />
-                        <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                        <span className="mt-2 w-1.5 h-1.5 bg-navy flex-shrink-0" />
+                        <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                           {point}
                         </span>
                       </li>
@@ -361,8 +361,8 @@ export default function DRPage() {
               badgeColor="cyan"
               sectionLabel="3. Process — DR 구축 5단계 타임라인"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
-                <span className="text-cyan">기획 → 분석 → 설계 → 자동화 → 검증</span>
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
+                <span className="text-navy">기획 → 분석 → 설계 → 자동화 → 검증</span>
                 <br />
                 단계별 정형화된 실행 모델
               </h2>
@@ -375,23 +375,23 @@ export default function DRPage() {
                   className="p-6 lg:p-8 flex flex-col md:flex-row gap-6 md:items-center group hover:-translate-y-1 transition-all duration-500"
                 >
                   <div className="flex items-center gap-4 md:w-72 flex-shrink-0">
-                    <div className="font-display text-5xl md:text-6xl font-bold ds-text-outline opacity-30 group-hover:text-cyan group-hover:opacity-100 transition-all duration-500">
+                    <div className="font-display text-5xl md:text-6xl font-bold ds-text-outline opacity-30 group-hover:text-navy group-hover:opacity-100 transition-all duration-500">
                       {p.step}
                     </div>
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                      <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                         STEP_{p.step}
                       </span>
                       {idx < process.length - 1 && (
-                        <span className="font-mono text-[10px] text-cyan">→ NEXT</span>
+                        <span className="font-mono text-[10px] text-navy">→ NEXT</span>
                       )}
                     </div>
                   </div>
-                  <div className="flex-1 border-l border-surface-border/40 md:pl-6">
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-2 ds-word-keep">
+                  <div className="flex-1 border-l border-slate-200/40 md:pl-6">
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-slate-900 mb-2 ds-word-keep">
                       {p.title}
                     </h3>
-                    <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep">
+                    <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep">
                       {p.desc}
                     </p>
                   </div>
@@ -414,10 +414,10 @@ export default function DRPage() {
               badgeColor="acid"
               sectionLabel="4. Architecture — 3-Tier 계층 복구 모델"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 중요도에 따라 시스템을 분류하고
                 <br />
-                <span className="ds-text-glow-acid text-acid">투자 효율을 극대화</span>합니다.
+                <span className="ds-text-glow-acid text-emerald">투자 효율을 극대화</span>합니다.
               </h2>
             </SectionHeader>
 
@@ -425,16 +425,16 @@ export default function DRPage() {
               {tiers.map((t) => {
                 const accent =
                   t.color === "acid"
-                    ? "text-acid"
+                    ? "text-emerald"
                     : t.color === "cyan"
-                      ? "text-cyan"
-                      : "text-muted";
+                      ? "text-navy"
+                      : "text-slate-500";
                 const bg =
                   t.color === "acid"
-                    ? "bg-acid"
+                    ? "bg-emerald"
                     : t.color === "cyan"
-                      ? "bg-cyan"
-                      : "bg-muted";
+                      ? "bg-navy"
+                      : "bg-slate-100";
                 return (
                   <GlassPanel
                     key={t.tier}
@@ -442,7 +442,7 @@ export default function DRPage() {
                   >
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex flex-col">
-                        <span className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                        <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                           PRIORITY_TIER
                         </span>
                         <span className={`font-display text-3xl font-bold ${accent}`}>
@@ -452,25 +452,25 @@ export default function DRPage() {
                       <span className={`w-3 h-3 ${bg} animate-pulse-fast`} />
                     </div>
 
-                    <div className="font-mono text-[11px] text-cyan uppercase tracking-widest mb-4">
+                    <div className="font-mono text-[11px] text-navy uppercase tracking-widest mb-4">
                       {t.priority}
                     </div>
 
-                    <p className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep mb-6 flex-grow">
+                    <p className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep mb-6 flex-grow">
                       {t.desc}
                     </p>
 
-                    <div className="space-y-3 pt-6 border-t border-surface-border/50">
+                    <div className="space-y-3 pt-6 border-t border-slate-200/50">
                       <div className="flex justify-between font-mono text-[11px]">
-                        <span className="text-muted uppercase tracking-widest">SYSTEMS</span>
-                        <span className="text-white text-right">{t.systems.join(" · ")}</span>
+                        <span className="text-slate-500 uppercase tracking-widest">SYSTEMS</span>
+                        <span className="text-slate-900 text-right">{t.systems.join(" · ")}</span>
                       </div>
                       <div className="flex justify-between font-mono text-[11px]">
-                        <span className="text-muted uppercase tracking-widest">DR_MODE</span>
+                        <span className="text-slate-500 uppercase tracking-widest">DR_MODE</span>
                         <span className={accent}>{t.site}</span>
                       </div>
                       <div className="flex justify-between font-mono text-[11px]">
-                        <span className="text-muted uppercase tracking-widest">RTO_TARGET</span>
+                        <span className="text-slate-500 uppercase tracking-widest">RTO_TARGET</span>
                         <span className={accent}>{t.rto}</span>
                       </div>
                     </div>
@@ -494,10 +494,10 @@ export default function DRPage() {
               badgeColor="cyan"
               sectionLabel="5. Security — Cyber Resilience 핵심 구성"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 백업이 살아있어야
                 <br />
-                <span className="text-cyan">복구가 의미가 있습니다.</span>
+                <span className="text-navy">복구가 의미가 있습니다.</span>
               </h2>
             </SectionHeader>
 
@@ -508,14 +508,14 @@ export default function DRPage() {
                   className="p-7 lg:p-8 flex flex-col group hover:-translate-y-2 transition-all duration-500"
                 >
                   <div className="flex items-start gap-4 mb-5">
-                    <div className="w-10 h-10 border border-cyan/40 bg-cyan/5 flex items-center justify-center flex-shrink-0">
-                      <span className="font-mono text-cyan text-sm font-bold">{s.index}</span>
+                    <div className="w-10 h-10 border border-navy/40 bg-navy/5 flex items-center justify-center flex-shrink-0">
+                      <span className="font-mono text-navy text-sm font-bold">{s.index}</span>
                     </div>
-                    <h3 className="font-display text-lg lg:text-xl font-bold text-white ds-word-keep leading-snug">
+                    <h3 className="font-display text-lg lg:text-xl font-bold text-slate-900 ds-word-keep leading-snug">
                       {s.title}
                     </h3>
                   </div>
-                  <p className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                  <p className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                     {s.desc}
                   </p>
                 </GlassPanel>
@@ -537,10 +537,10 @@ export default function DRPage() {
               badgeColor="acid"
               sectionLabel="6. Roadmap — 3년 단계별 확산 계획"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 본사 → 해외 거점 → 전사 표준
                 <br />
-                <span className="ds-text-glow-acid text-acid">3년 로드맵</span>
+                <span className="ds-text-glow-acid text-emerald">3년 로드맵</span>
               </h2>
             </SectionHeader>
 
@@ -552,23 +552,23 @@ export default function DRPage() {
                 >
                   <div className="flex items-center justify-between mb-6">
                     <div>
-                      <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-1">
+                      <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-1">
                         TIMELINE_{idx + 1}
                       </div>
-                      <div className="font-display text-3xl font-bold text-cyan">{r.year}</div>
+                      <div className="font-display text-3xl font-bold text-navy">{r.year}</div>
                     </div>
-                    <span className="font-mono text-[10px] text-acid">
+                    <span className="font-mono text-[10px] text-emerald">
                       {idx === 0 ? "FOUNDATION" : idx === 1 ? "EXPANSION" : "OPTIMIZE"}
                     </span>
                   </div>
-                  <h3 className="font-display text-xl font-bold text-white mb-6 ds-word-keep">
+                  <h3 className="font-display text-xl font-bold text-slate-900 mb-6 ds-word-keep">
                     {r.title}
                   </h3>
                   <ul className="space-y-3">
                     {r.items.map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <svg
-                          className="w-4 h-4 text-cyan flex-shrink-0 mt-0.5"
+                          className="w-4 h-4 text-navy flex-shrink-0 mt-0.5"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -580,7 +580,7 @@ export default function DRPage() {
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
-                        <span className="font-sans text-[14px] text-muted-strong leading-relaxed ds-word-keep">
+                        <span className="font-sans text-[14px] text-slate-600 leading-relaxed ds-word-keep">
                           {item}
                         </span>
                       </li>
@@ -605,8 +605,8 @@ export default function DRPage() {
               badgeColor="cyan"
               sectionLabel="7. Why — 단일 DR 파트너"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-5xl">
-                <span className="text-cyan">HP · Hitachi · Acronis · Brocade · Rose</span>
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-5xl">
+                <span className="text-navy">HP · Hitachi · Acronis · Brocade · Rose</span>
                 <br />
                 전 영역을 전문 컨설턴트가 설계합니다.
               </h2>
@@ -614,17 +614,17 @@ export default function DRPage() {
 
             <div className="lg:pl-12 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
               <GlassPanel className="p-8 lg:p-10 flex flex-col">
-                <div className="font-mono text-[10px] text-acid uppercase tracking-widest mb-3">
+                <div className="font-mono text-[10px] text-emerald uppercase tracking-widest mb-3">
                   ALL_VENDOR_CAPABILITY
                 </div>
-                <h3 className="font-display text-2xl font-bold text-white mb-6 ds-word-keep">
+                <h3 className="font-display text-2xl font-bold text-slate-900 mb-6 ds-word-keep">
                   전 영역 벤더 역량
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
                   {["HP", "Hitachi", "Acronis", "Brocade", "Rose"].map((v) => (
                     <div
                       key={v}
-                      className="bg-black/40 border border-surface-border px-4 py-3 font-mono text-sm text-white text-center"
+                      className="bg-black/40 border border-slate-200 px-4 py-3 font-mono text-sm text-slate-900 text-center"
                     >
                       {v}
                     </div>
@@ -633,10 +633,10 @@ export default function DRPage() {
               </GlassPanel>
 
               <GlassPanel className="p-8 lg:p-10 flex flex-col">
-                <div className="font-mono text-[10px] text-cyan uppercase tracking-widest mb-3">
+                <div className="font-mono text-[10px] text-navy uppercase tracking-widest mb-3">
                   END_TO_END_PARTNER
                 </div>
-                <h3 className="font-display text-2xl font-bold text-white mb-6 ds-word-keep">
+                <h3 className="font-display text-2xl font-bold text-slate-900 mb-6 ds-word-keep">
                   End-to-End 단일 파트너
                 </h3>
                 <ol className="space-y-4">
@@ -647,12 +647,12 @@ export default function DRPage() {
                     { label: "정기 Live Restore Drill", desc: "분기별 실복구 검증" },
                   ].map((step, idx) => (
                     <li key={step.label} className="flex items-start gap-4">
-                      <span className="w-7 h-7 border border-cyan/40 bg-cyan/5 text-cyan font-mono text-xs font-bold flex items-center justify-center flex-shrink-0">
+                      <span className="w-7 h-7 border border-navy/40 bg-navy/5 text-navy font-mono text-xs font-bold flex items-center justify-center flex-shrink-0">
                         {String(idx + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <div className="font-display text-white font-bold">{step.label}</div>
-                        <div className="font-sans text-muted-strong text-sm">{step.desc}</div>
+                        <div className="font-display text-slate-900 font-bold">{step.label}</div>
+                        <div className="font-sans text-slate-600 text-sm">{step.desc}</div>
                       </div>
                     </li>
                   ))}
@@ -680,13 +680,13 @@ export default function DRPage() {
                 DR_READY
               </Badge>
 
-              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
+              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
                 지금이 DR 설계를
                 <br />
-                <span className="ds-text-glow-acid-strong text-acid">시작할 때</span>입니다.
+                <span className="ds-text-glow-acid-strong text-emerald">시작할 때</span>입니다.
               </h3>
 
-              <p className="font-sans text-muted-strong text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
+              <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
                 현재 운영 인프라를 점검하고, 우리 회사에 맞는
                 <br className="hidden md:block" />
                 DR 도입 시나리오를 무료로 컨설팅해 드립니다.
@@ -696,7 +696,7 @@ export default function DRPage() {
                 <div className="ds-cta-btn-wrapper w-full">
                   <a
                     href="/contact"
-                    className="w-full bg-acid text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
+                    className="w-full bg-emerald text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
                   >
                     <span className="relative z-10 tracking-tight ds-word-keep">
                       DR 솔루션 도입 및 컨설팅 문의
@@ -720,7 +720,7 @@ export default function DRPage() {
 
               <a
                 href="mailto:sungil.yum@einstech.kr?subject=DR%20%EC%86%94%EB%A3%A8%EC%85%98%20%EB%AC%B8%EC%9D%98"
-                className="font-mono text-sm text-cyan hover:text-white transition-colors"
+                className="font-mono text-sm text-navy hover:text-slate-900 transition-colors"
               >
                 또는 sungil.yum@einstech.kr 로 직접 메일
               </a>

@@ -237,31 +237,31 @@ export default function StorageBackupPage() {
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">STORAGE_BACKUP</Badge>
-              <span className="font-mono text-xs text-muted uppercase tracking-widest">
+              <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
                 Hitachi · Acronis · Veritas · Atempo TINA
               </span>
             </div>
 
             <h1 className="font-display leading-[0.95] mb-10">
-              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-white">
+              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
                 Storage + Backup
               </span>
-              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-cyan mt-3">
+              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-navy mt-3">
                 FROM SOURCE TO LAST COPY
               </span>
             </h1>
 
-            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-white leading-tight ds-word-keep mb-8 max-w-4xl">
+            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-slate-900 leading-tight ds-word-keep mb-8 max-w-4xl">
               원본의 첫 쓰기부터
               <br />
-              <span className="ds-text-glow-acid text-acid">마지막 사본까지 한 책임으로.</span>
+              <span className="ds-text-glow-acid text-emerald">마지막 사본까지 한 책임으로.</span>
             </p>
 
-            <p className="font-sans text-muted-strong text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-cyan/30 pl-5 ds-word-keep mb-12">
-              운영 스토리지(<span className="text-white">Hitachi</span>)부터 통합 사이버 보호(
-              <span className="text-white">Acronis</span>), 엔터프라이즈 표준 백업(
-              <span className="text-white">Veritas</span>), 시점 복구 특화(
-              <span className="text-white">Atempo TINA</span>)까지 — 데이터의 전 수명주기를 단일
+            <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
+              운영 스토리지(<span className="text-slate-900">Hitachi</span>)부터 통합 사이버 보호(
+              <span className="text-slate-900">Acronis</span>), 엔터프라이즈 표준 백업(
+              <span className="text-slate-900">Veritas</span>), 시점 복구 특화(
+              <span className="text-slate-900">Atempo TINA</span>)까지 — 데이터의 전 수명주기를 단일
               파트너가 통합 책임집니다. 3-2-1-1-0 규칙과 이뮤터블 볼트로 랜섬웨어 시대의
               회복탄력성을 확보합니다.
             </p>
@@ -290,10 +290,10 @@ export default function StorageBackupPage() {
               badgeColor="cyan"
               sectionLabel="1. Why — 통합 설계가 필요한 이유"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 스토리지와 백업이
                 <br />
-                <span className="text-cyan">따로 설계되면 안 됩니다.</span>
+                <span className="text-navy">따로 설계되면 안 됩니다.</span>
               </h2>
             </SectionHeader>
 
@@ -305,19 +305,19 @@ export default function StorageBackupPage() {
                 >
                   <div className="flex justify-between items-start mb-10 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                      <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                         WHY_{c.index}
                       </span>
-                      <span className="font-mono text-[10px] text-acid">{c.tag}</span>
+                      <span className="font-mono text-[10px] text-emerald">{c.tag}</span>
                     </div>
                     <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none absolute -top-4 -right-2 group-hover:opacity-30 transition-opacity">
                       {c.index}
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                     {c.title}
                   </h3>
-                  <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep flex-grow">
+                  <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep flex-grow">
                     {c.desc}
                   </p>
                 </GlassPanel>
@@ -339,19 +339,19 @@ export default function StorageBackupPage() {
               badgeColor="acid"
               sectionLabel="2. Lineup — 4가지 제품, 1개 책임"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 운영 → 백업 → 보호 → 시점 복구
                 <br />
-                <span className="ds-text-glow-acid text-acid">전 영역을 단일 파트너로.</span>
+                <span className="ds-text-glow-acid text-emerald">전 영역을 단일 파트너로.</span>
               </h2>
             </SectionHeader>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:pl-12">
               {lineup.map((p) => {
-                const accent = p.color === "acid" ? "text-acid" : "text-cyan";
-                const bg = p.color === "acid" ? "bg-acid" : "bg-cyan";
-                const border = p.color === "acid" ? "border-acid/40" : "border-cyan/40";
-                const tint = p.color === "acid" ? "bg-acid/5" : "bg-cyan/5";
+                const accent = p.color === "acid" ? "text-emerald" : "text-navy";
+                const bg = p.color === "acid" ? "bg-emerald" : "bg-navy";
+                const border = p.color === "acid" ? "border-emerald/40" : "border-navy/40";
+                const tint = p.color === "acid" ? "bg-emerald/5" : "bg-navy/5";
                 return (
                   <GlassPanel
                     key={p.name}
@@ -362,10 +362,10 @@ export default function StorageBackupPage() {
                         <div className={`font-mono text-[10px] ${accent} uppercase tracking-widest mb-2`}>
                           {p.badge}
                         </div>
-                        <div className="font-display text-3xl font-bold text-white mb-1">
+                        <div className="font-display text-3xl font-bold text-slate-900 mb-1">
                           {p.name}
                         </div>
-                        <div className="font-mono text-[11px] text-muted">{p.vendor}</div>
+                        <div className="font-mono text-[11px] text-slate-500">{p.vendor}</div>
                       </div>
                       <span className={`w-3 h-3 ${bg} animate-pulse-fast`} />
                     </div>
@@ -375,32 +375,32 @@ export default function StorageBackupPage() {
                     >
                       {p.tag}
                     </div>
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-6">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-6">
                       ROLE · {p.role}
                     </div>
 
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-3">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-3">
                       핵심 강점
                     </div>
                     <ul className="space-y-3 mb-6">
                       {p.strengths.map((s) => (
                         <li key={s} className="flex items-start gap-3">
                           <span className={`mt-2 w-1.5 h-1.5 ${bg} flex-shrink-0`} />
-                          <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                          <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                             {s}
                           </span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-3 pt-6 border-t border-surface-border/50">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-3 pt-6 border-t border-slate-200/50">
                       적용 환경
                     </div>
                     <ul className="space-y-2 mb-2">
                       {p.fitFor.map((f) => (
                         <li key={f} className="flex items-start gap-3">
-                          <span className="font-mono text-cyan flex-shrink-0">→</span>
-                          <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                          <span className="font-mono text-navy flex-shrink-0">→</span>
+                          <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                             {f}
                           </span>
                         </li>
@@ -410,7 +410,7 @@ export default function StorageBackupPage() {
                     {p.linkHref && (
                       <a
                         href={p.linkHref}
-                        className={`mt-4 font-mono text-[11px] ${accent} hover:text-white transition-colors tracking-widest uppercase`}
+                        className={`mt-4 font-mono text-[11px] ${accent} hover:text-slate-900 transition-colors tracking-widest uppercase`}
                       >
                         {p.linkLabel}
                       </a>
@@ -435,8 +435,8 @@ export default function StorageBackupPage() {
               badgeColor="cyan"
               sectionLabel="3. Standard — 3-2-1-1-0 백업 규칙"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
-                <span className="text-cyan">3-2-1-1-0</span>
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
+                <span className="text-navy">3-2-1-1-0</span>
                 <br />
                 2026년 백업의 새 표준
               </h2>
@@ -448,13 +448,13 @@ export default function StorageBackupPage() {
                   key={r.label}
                   className="p-6 lg:p-8 flex flex-col items-center text-center group hover:-translate-y-2 transition-all duration-500"
                 >
-                  <div className="font-display text-6xl md:text-7xl font-bold text-cyan ds-text-glow-cyan mb-3 group-hover:text-acid group-hover:ds-text-glow-acid transition-all">
+                  <div className="font-display text-6xl md:text-7xl font-bold text-navy ds-text-glow-cyan mb-3 group-hover:text-emerald group-hover:ds-text-glow-acid transition-all">
                     {r.n}
                   </div>
-                  <div className="font-mono text-[11px] text-muted uppercase tracking-widest mb-3">
+                  <div className="font-mono text-[11px] text-slate-500 uppercase tracking-widest mb-3">
                     {r.label}
                   </div>
-                  <p className="font-sans text-muted-strong text-[13px] leading-relaxed ds-word-keep">
+                  <p className="font-sans text-slate-600 text-[13px] leading-relaxed ds-word-keep">
                     {r.desc}
                   </p>
                 </GlassPanel>
@@ -476,10 +476,10 @@ export default function StorageBackupPage() {
               badgeColor="acid"
               sectionLabel="4. Architecture — 4계층 통합 아키텍처"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 운영 · 백업 · 이뮤터블 · 격리복구
                 <br />
-                <span className="ds-text-glow-acid text-acid">4계층 통합 구조</span>
+                <span className="ds-text-glow-acid text-emerald">4계층 통합 구조</span>
               </h2>
             </SectionHeader>
 
@@ -491,19 +491,19 @@ export default function StorageBackupPage() {
                 >
                   <div className="flex justify-between items-start mb-8 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                      <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                         LAYER_{a.index}
                       </span>
-                      <span className="font-mono text-[10px] text-acid">{a.tag}</span>
+                      <span className="font-mono text-[10px] text-emerald">{a.tag}</span>
                     </div>
                     <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none absolute -top-4 -right-2 group-hover:opacity-30 transition-opacity">
                       {a.index}
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                     {a.title}
                   </h3>
-                  <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep flex-grow">
+                  <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep flex-grow">
                     {a.desc}
                   </p>
                 </GlassPanel>
@@ -525,8 +525,8 @@ export default function StorageBackupPage() {
               badgeColor="cyan"
               sectionLabel="5. References — 운영 중인 현장"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
-                <span className="text-cyan">의료 · 반도체 · 엔터프라이즈</span>
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
+                <span className="text-navy">의료 · 반도체 · 엔터프라이즈</span>
                 <br />
                 현장에서 운영 중인 구성
               </h2>
@@ -534,8 +534,8 @@ export default function StorageBackupPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 lg:pl-12">
               {references.map((r) => {
-                const accent = r.color === "acid" ? "text-acid" : "text-cyan";
-                const bg = r.color === "acid" ? "bg-acid" : "bg-cyan";
+                const accent = r.color === "acid" ? "text-emerald" : "text-navy";
+                const bg = r.color === "acid" ? "bg-emerald" : "bg-navy";
                 return (
                   <GlassPanel
                     key={r.industry}
@@ -547,11 +547,11 @@ export default function StorageBackupPage() {
                       </span>
                       <span className={`w-2 h-2 ${bg} animate-pulse-fast`} />
                     </div>
-                    <h3 className="font-display text-xl font-bold text-white mb-2 ds-word-keep">
+                    <h3 className="font-display text-xl font-bold text-slate-900 mb-2 ds-word-keep">
                       {r.customer}
                     </h3>
-                    <div className="font-mono text-[11px] text-cyan mb-5">{r.solution}</div>
-                    <p className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                    <div className="font-mono text-[11px] text-navy mb-5">{r.solution}</div>
+                    <p className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                       {r.desc}
                     </p>
                   </GlassPanel>
@@ -559,7 +559,7 @@ export default function StorageBackupPage() {
               })}
             </div>
 
-            <p className="font-mono text-[10px] text-muted leading-relaxed mt-6 ds-word-keep lg:pl-12">
+            <p className="font-mono text-[10px] text-slate-500 leading-relaxed mt-6 ds-word-keep lg:pl-12">
               ※ 일부 고객사는 보안·NDA 정책에 따라 비공개로 표기. 상세 레퍼런스는 도입 검토 단계에서 별도 공유합니다.
             </p>
           </div>
@@ -578,10 +578,10 @@ export default function StorageBackupPage() {
               badgeColor="cyan"
               sectionLabel="6. Process — 도입 5단계"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 자산 분석 → Tier 정의 → 통합 설계
                 <br />
-                <span className="text-cyan">→ 검증 → 운영 인계</span>
+                <span className="text-navy">→ 검증 → 운영 인계</span>
               </h2>
             </SectionHeader>
 
@@ -592,23 +592,23 @@ export default function StorageBackupPage() {
                   className="p-6 lg:p-8 flex flex-col md:flex-row gap-6 md:items-center group hover:-translate-y-1 transition-all duration-500"
                 >
                   <div className="flex items-center gap-4 md:w-72 flex-shrink-0">
-                    <div className="font-display text-5xl md:text-6xl font-bold ds-text-outline opacity-30 group-hover:text-cyan group-hover:opacity-100 transition-all duration-500">
+                    <div className="font-display text-5xl md:text-6xl font-bold ds-text-outline opacity-30 group-hover:text-navy group-hover:opacity-100 transition-all duration-500">
                       {p.step}
                     </div>
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                      <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                         STEP_{p.step}
                       </span>
                       {idx < process.length - 1 && (
-                        <span className="font-mono text-[10px] text-cyan">→ NEXT</span>
+                        <span className="font-mono text-[10px] text-navy">→ NEXT</span>
                       )}
                     </div>
                   </div>
-                  <div className="flex-1 border-l border-surface-border/40 md:pl-6">
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-2 ds-word-keep">
+                  <div className="flex-1 border-l border-slate-200/40 md:pl-6">
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-slate-900 mb-2 ds-word-keep">
                       {p.title}
                     </h3>
-                    <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep">
+                    <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep">
                       {p.desc}
                     </p>
                   </div>
@@ -636,13 +636,13 @@ export default function StorageBackupPage() {
                 STORAGE_READY
               </Badge>
 
-              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
+              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
                 백업이 살아있어야
                 <br />
-                <span className="ds-text-glow-acid-strong text-acid">복구가 의미가 있습니다.</span>
+                <span className="ds-text-glow-acid-strong text-emerald">복구가 의미가 있습니다.</span>
               </h3>
 
-              <p className="font-sans text-muted-strong text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
+              <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
                 현재 운영 스토리지·백업 구성을 무료로 진단해
                 <br className="hidden md:block" />
                 최적의 통합 설계안과 RPO/RTO 실측 목표를 제시해 드립니다.
@@ -652,7 +652,7 @@ export default function StorageBackupPage() {
                 <div className="ds-cta-btn-wrapper w-full">
                   <a
                     href="/contact"
-                    className="w-full bg-acid text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
+                    className="w-full bg-emerald text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
                   >
                     <span className="relative z-10 tracking-tight ds-word-keep">
                       통합 무료 진단 신청
@@ -676,7 +676,7 @@ export default function StorageBackupPage() {
 
               <a
                 href="mailto:sungil.yum@einstech.kr?subject=Storage%20%2B%20Backup%20%EB%AC%B8%EC%9D%98"
-                className="font-mono text-sm text-cyan hover:text-white transition-colors"
+                className="font-mono text-sm text-navy hover:text-slate-900 transition-colors"
               >
                 또는 sungil.yum@einstech.kr 로 직접 메일
               </a>

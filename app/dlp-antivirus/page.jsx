@@ -188,31 +188,31 @@ export default function DLPPage() {
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">DATA_SECURITY</Badge>
-              <span className="font-mono text-xs text-muted uppercase tracking-widest">
+              <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
                 Netwrix DLP · Kaspersky EDR · Zero Trust
               </span>
             </div>
 
             <h1 className="font-display leading-[0.95] mb-10">
-              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-white">
+              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
                 Data Security
               </span>
-              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-cyan mt-3">
+              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-navy mt-3">
                 FROM PERIMETER TO DATA
               </span>
             </h1>
 
-            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-white leading-tight ds-word-keep mb-8 max-w-4xl">
+            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-slate-900 leading-tight ds-word-keep mb-8 max-w-4xl">
               방화벽이 막지 못하는
               <br />
-              <span className="ds-text-glow-acid text-acid">내부 유출을 막습니다.</span>
+              <span className="ds-text-glow-acid text-emerald">내부 유출을 막습니다.</span>
             </p>
 
-            <p className="font-sans text-muted-strong text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-cyan/30 pl-5 ds-word-keep mb-12">
+            <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
               데이터는 점점 더 안쪽에서 빠져나갑니다. 퇴사자의 USB, 협력사 PC, 그리고 직원이
               ChatGPT에 붙여넣는 한 줄. 아인스테크는{" "}
-              <span className="text-white">Netwrix Endpoint Protector(DLP)</span>와{" "}
-              <span className="text-white">Kaspersky Endpoint Security(EDR)</span>를 Zero Trust
+              <span className="text-slate-900">Netwrix Endpoint Protector(DLP)</span>와{" "}
+              <span className="text-slate-900">Kaspersky Endpoint Security(EDR)</span>를 Zero Trust
               원칙 위에 통합 설계해 데이터·엔드포인트·내부자 위협을 한 체계로 통제합니다.
             </p>
 
@@ -240,10 +240,10 @@ export default function DLPPage() {
               badgeColor="cyan"
               sectionLabel="1. Shift — 보안 패러다임의 변화"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 위협은 더 이상
                 <br />
-                <span className="text-cyan">바깥에서만 오지 않습니다.</span>
+                <span className="text-navy">바깥에서만 오지 않습니다.</span>
               </h2>
             </SectionHeader>
 
@@ -255,19 +255,19 @@ export default function DLPPage() {
                 >
                   <div className="flex justify-between items-start mb-10 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                      <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                         SHIFT_{c.index}
                       </span>
-                      <span className="font-mono text-[10px] text-acid">{c.tag}</span>
+                      <span className="font-mono text-[10px] text-emerald">{c.tag}</span>
                     </div>
                     <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none absolute -top-4 -right-2 group-hover:opacity-30 transition-opacity">
                       {c.index}
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                     {c.title}
                   </h3>
-                  <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep flex-grow">
+                  <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep flex-grow">
                     {c.desc}
                   </p>
                 </GlassPanel>
@@ -289,19 +289,19 @@ export default function DLPPage() {
               badgeColor="acid"
               sectionLabel="2. Lineup — DLP + EDR 통합"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 데이터 유출 방지와 엔드포인트 보호,
                 <br />
-                <span className="ds-text-glow-acid text-acid">하나의 정책으로.</span>
+                <span className="ds-text-glow-acid text-emerald">하나의 정책으로.</span>
               </h2>
             </SectionHeader>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:pl-12">
               {lineup.map((p) => {
-                const accent = p.color === "acid" ? "text-acid" : "text-cyan";
-                const bg = p.color === "acid" ? "bg-acid" : "bg-cyan";
-                const border = p.color === "acid" ? "border-acid/40" : "border-cyan/40";
-                const tint = p.color === "acid" ? "bg-acid/5" : "bg-cyan/5";
+                const accent = p.color === "acid" ? "text-emerald" : "text-navy";
+                const bg = p.color === "acid" ? "bg-emerald" : "bg-navy";
+                const border = p.color === "acid" ? "border-emerald/40" : "border-navy/40";
+                const tint = p.color === "acid" ? "bg-emerald/5" : "bg-navy/5";
                 return (
                   <GlassPanel
                     key={p.name}
@@ -312,10 +312,10 @@ export default function DLPPage() {
                         <div className={`font-mono text-[10px] ${accent} uppercase tracking-widest mb-2`}>
                           {p.badge}
                         </div>
-                        <div className="font-display text-2xl lg:text-3xl font-bold text-white mb-1">
+                        <div className="font-display text-2xl lg:text-3xl font-bold text-slate-900 mb-1">
                           {p.name}
                         </div>
-                        <div className="font-mono text-[11px] text-muted">{p.vendor}</div>
+                        <div className="font-mono text-[11px] text-slate-500">{p.vendor}</div>
                       </div>
                       <span className={`w-3 h-3 ${bg} animate-pulse-fast`} />
                     </div>
@@ -325,32 +325,32 @@ export default function DLPPage() {
                     >
                       {p.tag}
                     </div>
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-6">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-6">
                       ROLE · {p.role}
                     </div>
 
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-3">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-3">
                       핵심 기능
                     </div>
                     <ul className="space-y-3 mb-6">
                       {p.strengths.map((s) => (
                         <li key={s} className="flex items-start gap-3">
                           <span className={`mt-2 w-1.5 h-1.5 ${bg} flex-shrink-0`} />
-                          <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                          <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                             {s}
                           </span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-3 pt-6 border-t border-surface-border/50">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-3 pt-6 border-t border-slate-200/50">
                       적용 환경
                     </div>
                     <ul className="space-y-2">
                       {p.fitFor.map((f) => (
                         <li key={f} className="flex items-start gap-3">
-                          <span className="font-mono text-cyan flex-shrink-0">→</span>
-                          <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                          <span className="font-mono text-navy flex-shrink-0">→</span>
+                          <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                             {f}
                           </span>
                         </li>
@@ -376,10 +376,10 @@ export default function DLPPage() {
               badgeColor="cyan"
               sectionLabel="3. Architecture — 4계층 Zero Trust 모델"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 Discover → Protect → Detect → Respond
                 <br />
-                <span className="text-cyan">4계층 통합 데이터 보호</span>
+                <span className="text-navy">4계층 통합 데이터 보호</span>
               </h2>
             </SectionHeader>
 
@@ -391,19 +391,19 @@ export default function DLPPage() {
                 >
                   <div className="flex justify-between items-start mb-8 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                      <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                         LAYER_{l.index}
                       </span>
-                      <span className="font-mono text-[10px] text-acid">{l.tag}</span>
+                      <span className="font-mono text-[10px] text-emerald">{l.tag}</span>
                     </div>
                     <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none absolute -top-4 -right-2 group-hover:opacity-30 transition-opacity">
                       {l.index}
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                     {l.title}
                   </h3>
-                  <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep flex-grow">
+                  <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep flex-grow">
                     {l.desc}
                   </p>
                 </GlassPanel>
@@ -425,17 +425,17 @@ export default function DLPPage() {
               badgeColor="acid"
               sectionLabel="4. Use Cases — 실제 운영 시나리오"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 실제 운영에서
                 <br />
-                <span className="ds-text-glow-acid text-acid">이런 위협을 막습니다.</span>
+                <span className="ds-text-glow-acid text-emerald">이런 위협을 막습니다.</span>
               </h2>
             </SectionHeader>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 lg:pl-12">
               {useCases.map((u) => {
-                const accent = u.color === "acid" ? "text-acid" : "text-cyan";
-                const bg = u.color === "acid" ? "bg-acid" : "bg-cyan";
+                const accent = u.color === "acid" ? "text-emerald" : "text-navy";
+                const bg = u.color === "acid" ? "bg-emerald" : "bg-navy";
                 return (
                   <GlassPanel
                     key={u.title}
@@ -447,10 +447,10 @@ export default function DLPPage() {
                         SCENARIO
                       </span>
                     </div>
-                    <h3 className="font-display text-lg font-bold text-white mb-3 ds-word-keep leading-snug">
+                    <h3 className="font-display text-lg font-bold text-slate-900 mb-3 ds-word-keep leading-snug">
                       {u.title}
                     </h3>
-                    <p className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                    <p className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                       {u.desc}
                     </p>
                   </GlassPanel>
@@ -473,10 +473,10 @@ export default function DLPPage() {
               badgeColor="cyan"
               sectionLabel="5. Process — 도입 5단계"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 분류 → 시나리오 → 설계
                 <br />
-                <span className="text-cyan">→ 단계적 적용 → 운영 인계</span>
+                <span className="text-navy">→ 단계적 적용 → 운영 인계</span>
               </h2>
             </SectionHeader>
 
@@ -487,23 +487,23 @@ export default function DLPPage() {
                   className="p-6 lg:p-8 flex flex-col md:flex-row gap-6 md:items-center group hover:-translate-y-1 transition-all duration-500"
                 >
                   <div className="flex items-center gap-4 md:w-72 flex-shrink-0">
-                    <div className="font-display text-5xl md:text-6xl font-bold ds-text-outline opacity-30 group-hover:text-cyan group-hover:opacity-100 transition-all duration-500">
+                    <div className="font-display text-5xl md:text-6xl font-bold ds-text-outline opacity-30 group-hover:text-navy group-hover:opacity-100 transition-all duration-500">
                       {p.step}
                     </div>
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                      <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                         STEP_{p.step}
                       </span>
                       {idx < process.length - 1 && (
-                        <span className="font-mono text-[10px] text-cyan">→ NEXT</span>
+                        <span className="font-mono text-[10px] text-navy">→ NEXT</span>
                       )}
                     </div>
                   </div>
-                  <div className="flex-1 border-l border-surface-border/40 md:pl-6">
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-2 ds-word-keep">
+                  <div className="flex-1 border-l border-slate-200/40 md:pl-6">
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-slate-900 mb-2 ds-word-keep">
                       {p.title}
                     </h3>
-                    <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep">
+                    <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep">
                       {p.desc}
                     </p>
                   </div>
@@ -513,14 +513,14 @@ export default function DLPPage() {
 
             <div className="lg:pl-12">
               <GlassPanel className="p-8 lg:p-10 flex flex-col">
-                <div className="font-mono text-[10px] text-cyan uppercase tracking-widest mb-5">
+                <div className="font-mono text-[10px] text-navy uppercase tracking-widest mb-5">
                   EINSTECH 보안 보장
                 </div>
                 <ul className="space-y-3">
                   {guarantees.map((g) => (
                     <li key={g} className="flex items-start gap-3">
                       <svg
-                        className="w-4 h-4 text-cyan flex-shrink-0 mt-0.5"
+                        className="w-4 h-4 text-navy flex-shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -532,7 +532,7 @@ export default function DLPPage() {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                      <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                         {g}
                       </span>
                     </li>
@@ -561,13 +561,13 @@ export default function DLPPage() {
                 SECURITY_READY
               </Badge>
 
-              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
+              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
                 데이터는 이미
                 <br />
-                <span className="ds-text-glow-acid-strong text-acid">밖으로 새고 있습니다.</span>
+                <span className="ds-text-glow-acid-strong text-emerald">밖으로 새고 있습니다.</span>
               </h3>
 
-              <p className="font-sans text-muted-strong text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
+              <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
                 현재 데이터 유출 경로와 엔드포인트 보안 상태를 무료로 진단해
                 <br className="hidden md:block" />
                 Zero Trust 기반 통합 보안 설계안을 제시해 드립니다.
@@ -577,7 +577,7 @@ export default function DLPPage() {
                 <div className="ds-cta-btn-wrapper w-full">
                   <a
                     href="/contact"
-                    className="w-full bg-acid text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
+                    className="w-full bg-emerald text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
                   >
                     <span className="relative z-10 tracking-tight ds-word-keep">
                       데이터 보안 무료 진단 신청
@@ -601,7 +601,7 @@ export default function DLPPage() {
 
               <a
                 href="mailto:sungil.yum@einstech.kr?subject=Data%20Security%20%EB%AC%B8%EC%9D%98"
-                className="font-mono text-sm text-cyan hover:text-white transition-colors"
+                className="font-mono text-sm text-navy hover:text-slate-900 transition-colors"
               >
                 또는 sungil.yum@einstech.kr 로 직접 메일
               </a>

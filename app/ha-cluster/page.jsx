@@ -218,29 +218,29 @@ export default function HAClusterPage() {
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">HA_CLUSTER</Badge>
-              <span className="font-mono text-xs text-muted uppercase tracking-widest">
+              <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
                 Rose HA · Mantech MCCS · Dual Lineup
               </span>
             </div>
 
             <h1 className="font-display leading-[0.95] mb-10">
-              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-white">
+              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
                 HA Cluster
               </span>
-              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-cyan mt-3">
+              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-navy mt-3">
                 NEVER STOP RUNNING
               </span>
             </h1>
 
-            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-white leading-tight ds-word-keep mb-8 max-w-4xl">
+            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-slate-900 leading-tight ds-word-keep mb-8 max-w-4xl">
               단일 장애가
               <br />
-              <span className="ds-text-glow-acid text-acid">비즈니스를 멈추지 않게.</span>
+              <span className="ds-text-glow-acid text-emerald">비즈니스를 멈추지 않게.</span>
             </p>
 
-            <p className="font-sans text-muted-strong text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-cyan/30 pl-5 ds-word-keep mb-12">
-              아인스테크는 글로벌 표준 <span className="text-white">Rose HA</span>와 국내 1위{" "}
-              <span className="text-white">맨텍 MCCS</span> 두 제품을 환경·예산·운영 인력에 맞춰
+            <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
+              아인스테크는 글로벌 표준 <span className="text-slate-900">Rose HA</span>와 국내 1위{" "}
+              <span className="text-slate-900">맨텍 MCCS</span> 두 제품을 환경·예산·운영 인력에 맞춰
               선택·혼용 설계합니다. Active-Standby부터 Active-Active·SANless·다중 사이트 DR까지,
               초 단위 페일오버를 단일 파트너 책임으로 제공합니다.
             </p>
@@ -269,10 +269,10 @@ export default function HAClusterPage() {
               badgeColor="cyan"
               sectionLabel="1. Why — 왜 HA Cluster인가"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 백업은 "복구"입니다.
                 <br />
-                <span className="text-cyan">HA는 "멈추지 않음"입니다.</span>
+                <span className="text-navy">HA는 "멈추지 않음"입니다.</span>
               </h2>
             </SectionHeader>
 
@@ -284,19 +284,19 @@ export default function HAClusterPage() {
                 >
                   <div className="flex justify-between items-start mb-10 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                      <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                         REASON_{c.index}
                       </span>
-                      <span className="font-mono text-[10px] text-acid">{c.tag}</span>
+                      <span className="font-mono text-[10px] text-emerald">{c.tag}</span>
                     </div>
                     <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none absolute -top-4 -right-2 group-hover:opacity-30 transition-opacity">
                       {c.index}
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                     {c.title}
                   </h3>
-                  <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep flex-grow">
+                  <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep flex-grow">
                     {c.desc}
                   </p>
                 </GlassPanel>
@@ -318,19 +318,19 @@ export default function HAClusterPage() {
               badgeColor="acid"
               sectionLabel="2. Lineup — Rose HA · Mantech MCCS"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 글로벌 표준과 국내 1위,
                 <br />
-                <span className="ds-text-glow-acid text-acid">두 라인업을 동시에.</span>
+                <span className="ds-text-glow-acid text-emerald">두 라인업을 동시에.</span>
               </h2>
             </SectionHeader>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:pl-12">
               {lineup.map((p) => {
-                const accent = p.color === "acid" ? "text-acid" : "text-cyan";
-                const bg = p.color === "acid" ? "bg-acid" : "bg-cyan";
-                const border = p.color === "acid" ? "border-acid/40" : "border-cyan/40";
-                const tint = p.color === "acid" ? "bg-acid/5" : "bg-cyan/5";
+                const accent = p.color === "acid" ? "text-emerald" : "text-navy";
+                const bg = p.color === "acid" ? "bg-emerald" : "bg-navy";
+                const border = p.color === "acid" ? "border-emerald/40" : "border-navy/40";
+                const tint = p.color === "acid" ? "bg-emerald/5" : "bg-navy/5";
                 return (
                   <GlassPanel
                     key={p.name}
@@ -341,10 +341,10 @@ export default function HAClusterPage() {
                         <div className={`font-mono text-[10px] ${accent} uppercase tracking-widest mb-2`}>
                           {p.badge}
                         </div>
-                        <div className="font-display text-3xl font-bold text-white mb-1">
+                        <div className="font-display text-3xl font-bold text-slate-900 mb-1">
                           {p.name}
                         </div>
-                        <div className="font-mono text-[11px] text-muted">{p.vendor}</div>
+                        <div className="font-mono text-[11px] text-slate-500">{p.vendor}</div>
                       </div>
                       <span className={`w-3 h-3 ${bg} animate-pulse-fast`} />
                     </div>
@@ -355,28 +355,28 @@ export default function HAClusterPage() {
                       {p.tag}
                     </div>
 
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-3">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-3">
                       핵심 강점
                     </div>
                     <ul className="space-y-3 mb-6">
                       {p.strengths.map((s) => (
                         <li key={s} className="flex items-start gap-3">
                           <span className={`mt-2 w-1.5 h-1.5 ${bg} flex-shrink-0`} />
-                          <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                          <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                             {s}
                           </span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-3 pt-6 border-t border-surface-border/50">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-3 pt-6 border-t border-slate-200/50">
                       적용 환경
                     </div>
                     <ul className="space-y-2">
                       {p.fitFor.map((f) => (
                         <li key={f} className="flex items-start gap-3">
-                          <span className="font-mono text-cyan flex-shrink-0">→</span>
-                          <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                          <span className="font-mono text-navy flex-shrink-0">→</span>
+                          <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                             {f}
                           </span>
                         </li>
@@ -402,23 +402,23 @@ export default function HAClusterPage() {
               badgeColor="cyan"
               sectionLabel="3. Comparison — 환경별 선택 가이드"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 Rose HA
                 <br />
-                <span className="text-cyan">vs Mantech MCCS</span>
+                <span className="text-navy">vs Mantech MCCS</span>
               </h2>
             </SectionHeader>
 
             <div className="lg:pl-12">
               <GlassPanel className="overflow-hidden">
-                <div className="hidden md:grid grid-cols-[1fr_1fr_1fr] border-b border-surface-border/50">
-                  <div className="p-5 font-mono text-[11px] text-muted uppercase tracking-widest">
+                <div className="hidden md:grid grid-cols-[1fr_1fr_1fr] border-b border-slate-200/50">
+                  <div className="p-5 font-mono text-[11px] text-slate-500 uppercase tracking-widest">
                     CRITERIA
                   </div>
-                  <div className="p-5 font-mono text-[11px] text-cyan uppercase tracking-widest border-l border-surface-border/40 bg-cyan/5">
+                  <div className="p-5 font-mono text-[11px] text-navy uppercase tracking-widest border-l border-slate-200/40 bg-navy/5">
                     Rose HA (글로벌)
                   </div>
-                  <div className="p-5 font-mono text-[11px] text-acid uppercase tracking-widest border-l border-surface-border/40 bg-acid/5">
+                  <div className="p-5 font-mono text-[11px] text-emerald uppercase tracking-widest border-l border-slate-200/40 bg-emerald/5">
                     Mantech MCCS (국내 1위)
                   </div>
                 </div>
@@ -426,14 +426,14 @@ export default function HAClusterPage() {
                 {compareRows.map((row) => (
                   <div
                     key={row.crit}
-                    className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr] border-b border-surface-border/30 last:border-b-0"
+                    className="grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr] border-b border-slate-200/30 last:border-b-0"
                   >
-                    <div className="p-5 font-mono text-[13px] text-white bg-black/20 md:bg-transparent">
+                    <div className="p-5 font-mono text-[13px] text-slate-900 bg-black/20 md:bg-transparent">
                       {row.crit}
                     </div>
-                    <div className="p-5 flex items-start gap-3 border-l border-surface-border/40 bg-cyan/[0.04]">
+                    <div className="p-5 flex items-start gap-3 border-l border-slate-200/40 bg-navy/[0.04]">
                       <svg
-                        className="w-4 h-4 text-cyan flex-shrink-0 mt-0.5"
+                        className="w-4 h-4 text-navy flex-shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -445,13 +445,13 @@ export default function HAClusterPage() {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="font-sans text-[14px] text-white leading-relaxed ds-word-keep">
+                      <span className="font-sans text-[14px] text-slate-900 leading-relaxed ds-word-keep">
                         {row.rose}
                       </span>
                     </div>
-                    <div className="p-5 flex items-start gap-3 border-l border-surface-border/40 bg-acid/[0.04]">
+                    <div className="p-5 flex items-start gap-3 border-l border-slate-200/40 bg-emerald/[0.04]">
                       <svg
-                        className="w-4 h-4 text-acid flex-shrink-0 mt-0.5"
+                        className="w-4 h-4 text-emerald flex-shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -463,7 +463,7 @@ export default function HAClusterPage() {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="font-sans text-[14px] text-white leading-relaxed ds-word-keep">
+                      <span className="font-sans text-[14px] text-slate-900 leading-relaxed ds-word-keep">
                         {row.mccs}
                       </span>
                     </div>
@@ -471,7 +471,7 @@ export default function HAClusterPage() {
                 ))}
               </GlassPanel>
 
-              <p className="font-mono text-[10px] text-muted leading-relaxed mt-4 ds-word-keep">
+              <p className="font-mono text-[10px] text-slate-500 leading-relaxed mt-4 ds-word-keep">
                 ※ 비교 항목은 각 벤더 공식 제품 문서를 기준으로 작성되었으며, 에디션·구성에 따라 차이가 있을 수 있습니다.
                 실제 환경에 맞는 최적 구성은 도입 진단 시 정밀 산출해 드립니다.
               </p>
@@ -492,10 +492,10 @@ export default function HAClusterPage() {
               badgeColor="acid"
               sectionLabel="4. Scenarios — 4가지 구축 시나리오"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 같은 HA여도,
                 <br />
-                <span className="ds-text-glow-acid text-acid">설계가 다릅니다.</span>
+                <span className="ds-text-glow-acid text-emerald">설계가 다릅니다.</span>
               </h2>
             </SectionHeader>
 
@@ -507,22 +507,22 @@ export default function HAClusterPage() {
                 >
                   <div className="flex justify-between items-start mb-8 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                      <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                         SCENARIO_{s.index}
                       </span>
-                      <span className="font-mono text-[10px] text-acid">{s.tag}</span>
+                      <span className="font-mono text-[10px] text-emerald">{s.tag}</span>
                     </div>
                     <div className="text-right">
-                      <div className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                      <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                         RTO_TARGET
                       </div>
-                      <div className="font-display text-2xl font-bold text-cyan">{s.rto}</div>
+                      <div className="font-display text-2xl font-bold text-navy">{s.rto}</div>
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                     {s.title}
                   </h3>
-                  <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep flex-grow">
+                  <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep flex-grow">
                     {s.desc}
                   </p>
                 </GlassPanel>
@@ -544,8 +544,8 @@ export default function HAClusterPage() {
               badgeColor="cyan"
               sectionLabel="5. References — 실제 운영 중인 현장"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
-                <span className="text-cyan">반도체 · 글로벌 제조 · 공공</span>
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
+                <span className="text-navy">반도체 · 글로벌 제조 · 공공</span>
                 <br />
                 현장에서 검증된 구성
               </h2>
@@ -553,8 +553,8 @@ export default function HAClusterPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 lg:pl-12">
               {references.map((r) => {
-                const accent = r.color === "acid" ? "text-acid" : "text-cyan";
-                const bg = r.color === "acid" ? "bg-acid" : "bg-cyan";
+                const accent = r.color === "acid" ? "text-emerald" : "text-navy";
+                const bg = r.color === "acid" ? "bg-emerald" : "bg-navy";
                 return (
                   <GlassPanel
                     key={r.industry}
@@ -566,11 +566,11 @@ export default function HAClusterPage() {
                       </span>
                       <span className={`w-2 h-2 ${bg} animate-pulse-fast`} />
                     </div>
-                    <h3 className="font-display text-xl font-bold text-white mb-2 ds-word-keep">
+                    <h3 className="font-display text-xl font-bold text-slate-900 mb-2 ds-word-keep">
                       {r.customer}
                     </h3>
-                    <div className="font-mono text-[11px] text-cyan mb-5">{r.solution}</div>
-                    <p className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                    <div className="font-mono text-[11px] text-navy mb-5">{r.solution}</div>
+                    <p className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                       {r.desc}
                     </p>
                   </GlassPanel>
@@ -578,7 +578,7 @@ export default function HAClusterPage() {
               })}
             </div>
 
-            <p className="font-mono text-[10px] text-muted leading-relaxed mt-6 ds-word-keep lg:pl-12">
+            <p className="font-mono text-[10px] text-slate-500 leading-relaxed mt-6 ds-word-keep lg:pl-12">
               ※ 일부 고객사는 보안·NDA 정책에 따라 비공개로 표기. 상세 레퍼런스는 도입 검토 단계에서 별도 공유합니다.
             </p>
           </div>
@@ -597,10 +597,10 @@ export default function HAClusterPage() {
               badgeColor="cyan"
               sectionLabel="6. Process — 도입 5단계"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 분석 → 선정 → 설계 → 무중단 구축
                 <br />
-                <span className="text-cyan">→ 인계까지 단일 책임</span>
+                <span className="text-navy">→ 인계까지 단일 책임</span>
               </h2>
             </SectionHeader>
 
@@ -611,23 +611,23 @@ export default function HAClusterPage() {
                   className="p-6 lg:p-8 flex flex-col md:flex-row gap-6 md:items-center group hover:-translate-y-1 transition-all duration-500"
                 >
                   <div className="flex items-center gap-4 md:w-72 flex-shrink-0">
-                    <div className="font-display text-5xl md:text-6xl font-bold ds-text-outline opacity-30 group-hover:text-cyan group-hover:opacity-100 transition-all duration-500">
+                    <div className="font-display text-5xl md:text-6xl font-bold ds-text-outline opacity-30 group-hover:text-navy group-hover:opacity-100 transition-all duration-500">
                       {p.step}
                     </div>
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                      <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                         STEP_{p.step}
                       </span>
                       {idx < process.length - 1 && (
-                        <span className="font-mono text-[10px] text-cyan">→ NEXT</span>
+                        <span className="font-mono text-[10px] text-navy">→ NEXT</span>
                       )}
                     </div>
                   </div>
-                  <div className="flex-1 border-l border-surface-border/40 md:pl-6">
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-2 ds-word-keep">
+                  <div className="flex-1 border-l border-slate-200/40 md:pl-6">
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-slate-900 mb-2 ds-word-keep">
                       {p.title}
                     </h3>
-                    <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep">
+                    <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep">
                       {p.desc}
                     </p>
                   </div>
@@ -655,14 +655,14 @@ export default function HAClusterPage() {
                 CLUSTER_READY
               </Badge>
 
-              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
+              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
                 Rose HA냐, MCCS냐가 아니라
                 <br />
-                <span className="ds-text-glow-acid-strong text-acid">우리 환경에 무엇이 맞는가</span>
+                <span className="ds-text-glow-acid-strong text-emerald">우리 환경에 무엇이 맞는가</span>
                 입니다.
               </h3>
 
-              <p className="font-sans text-muted-strong text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
+              <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
                 현재 운영 인프라·예산·운영 인력을 무료로 진단해
                 <br className="hidden md:block" />
                 최적의 HA 라인업과 구성안을 제안해 드립니다.
@@ -672,7 +672,7 @@ export default function HAClusterPage() {
                 <div className="ds-cta-btn-wrapper w-full">
                   <a
                     href="/contact"
-                    className="w-full bg-acid text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
+                    className="w-full bg-emerald text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
                   >
                     <span className="relative z-10 tracking-tight ds-word-keep">
                       HA Cluster 무료 진단 신청
@@ -696,7 +696,7 @@ export default function HAClusterPage() {
 
               <a
                 href="mailto:sungil.yum@einstech.kr?subject=HA%20Cluster%20%EB%AC%B8%EC%9D%98"
-                className="font-mono text-sm text-cyan hover:text-white transition-colors"
+                className="font-mono text-sm text-navy hover:text-slate-900 transition-colors"
               >
                 또는 sungil.yum@einstech.kr 로 직접 메일
               </a>

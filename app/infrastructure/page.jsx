@@ -150,31 +150,31 @@ export default function InfrastructurePage() {
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">INFRASTRUCTURE</Badge>
-              <span className="font-mono text-xs text-muted uppercase tracking-widest">
+              <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
                 HP · Brocade · NVIDIA · TP-Link
               </span>
             </div>
 
             <h1 className="font-display leading-[0.95] mb-10">
-              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-white">
+              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
                 Infrastructure
               </span>
-              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-cyan mt-3">
+              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-navy mt-3">
                 ONE PARTNER · FULL STACK
               </span>
             </h1>
 
-            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-white leading-tight ds-word-keep mb-8 max-w-4xl">
+            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-slate-900 leading-tight ds-word-keep mb-8 max-w-4xl">
               서버 · SAN · GPU · 네트워크,
               <br />
-              <span className="ds-text-glow-acid text-acid">한 손으로 묶어 설계합니다.</span>
+              <span className="ds-text-glow-acid text-emerald">한 손으로 묶어 설계합니다.</span>
             </p>
 
-            <p className="font-sans text-muted-strong text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-cyan/30 pl-5 ds-word-keep mb-12">
-              아인스테크는 데이터센터 하드웨어를 <span className="text-white">HP 서버</span> ·{" "}
-              <span className="text-white">Brocade SAN</span> ·{" "}
-              <span className="text-white">NVIDIA GPU</span> 표준 조합으로 설계·공급합니다. 사무 환경
-              네트워크는 <span className="text-white">TP-Link Omada</span> 라인업으로 분리해, 환경별로
+            <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
+              아인스테크는 데이터센터 하드웨어를 <span className="text-slate-900">HP 서버</span> ·{" "}
+              <span className="text-slate-900">Brocade SAN</span> ·{" "}
+              <span className="text-slate-900">NVIDIA GPU</span> 표준 조합으로 설계·공급합니다. 사무 환경
+              네트워크는 <span className="text-slate-900">TP-Link Omada</span> 라인업으로 분리해, 환경별로
               과·소투자 없이 균형 잡힌 인프라를 구축합니다.
             </p>
 
@@ -202,10 +202,10 @@ export default function InfrastructurePage() {
               badgeColor="cyan"
               sectionLabel="1. Why — 왜 한 파트너로 묶어야 하는가"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 벤더가 갈리면
                 <br />
-                <span className="text-cyan">장애 시 책임이 갈립니다.</span>
+                <span className="text-navy">장애 시 책임이 갈립니다.</span>
               </h2>
             </SectionHeader>
 
@@ -217,19 +217,19 @@ export default function InfrastructurePage() {
                 >
                   <div className="flex justify-between items-start mb-10 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                      <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                         REASON_{c.index}
                       </span>
-                      <span className="font-mono text-[10px] text-acid">{c.tag}</span>
+                      <span className="font-mono text-[10px] text-emerald">{c.tag}</span>
                     </div>
                     <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none absolute -top-4 -right-2 group-hover:opacity-30 transition-opacity">
                       {c.index}
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                     {c.title}
                   </h3>
-                  <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep flex-grow">
+                  <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep flex-grow">
                     {c.desc}
                   </p>
                 </GlassPanel>
@@ -251,17 +251,17 @@ export default function InfrastructurePage() {
               badgeColor="acid"
               sectionLabel="2. Lineup — 엔터프라이즈 데이터센터 표준"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 Server · SAN · GPU
                 <br />
-                <span className="text-acid">검증된 글로벌 표준</span>
+                <span className="text-emerald">검증된 글로벌 표준</span>
               </h2>
             </SectionHeader>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 lg:pl-12">
               {enterpriseLineup.map((p) => {
-                const accent = p.color === "acid" ? "text-acid" : "text-cyan";
-                const accentBorder = p.color === "acid" ? "border-acid/40" : "border-cyan/40";
+                const accent = p.color === "acid" ? "text-emerald" : "text-navy";
+                const accentBorder = p.color === "acid" ? "border-emerald/40" : "border-navy/40";
                 return (
                   <GlassPanel
                     key={p.name}
@@ -272,18 +272,18 @@ export default function InfrastructurePage() {
                         <span className={`font-mono text-[10px] ${accent} tracking-widest`}>
                           {p.badge}
                         </span>
-                        <span className="font-mono text-[10px] text-muted uppercase">{p.tag}</span>
+                        <span className="font-mono text-[10px] text-slate-500 uppercase">{p.tag}</span>
                       </div>
                     </div>
 
-                    <h3 className="font-display text-3xl font-bold text-white mb-1 ds-word-keep">
+                    <h3 className="font-display text-3xl font-bold text-slate-900 mb-1 ds-word-keep">
                       {p.name}
                     </h3>
                     <div className={`font-mono text-[11px] ${accent} mb-6 tracking-wide`}>
                       {p.vendor}
                     </div>
 
-                    <p className="font-sans text-muted-strong text-[13px] uppercase tracking-widest mb-4 border-l-2 border-surface-border pl-3">
+                    <p className="font-sans text-slate-600 text-[13px] uppercase tracking-widest mb-4 border-l-2 border-slate-200 pl-3">
                       FIT — {p.fit}
                     </p>
 
@@ -291,7 +291,7 @@ export default function InfrastructurePage() {
                       {p.strengths.map((s) => (
                         <li
                           key={s}
-                          className="font-sans text-[14px] text-muted-strong ds-word-keep flex gap-2"
+                          className="font-sans text-[14px] text-slate-600 ds-word-keep flex gap-2"
                         >
                           <span className={`${accent} flex-shrink-0`}>▸</span>
                           <span>{s}</span>
@@ -299,17 +299,17 @@ export default function InfrastructurePage() {
                       ))}
                     </ul>
 
-                    <div className="pt-5 border-t border-surface-border/50">
-                      <div className="font-mono text-[10px] text-muted tracking-widest uppercase mb-3">
+                    <div className="pt-5 border-t border-slate-200/50">
+                      <div className="font-mono text-[10px] text-slate-500 tracking-widest uppercase mb-3">
                         USE_CASES
                       </div>
                       <ul className="space-y-1.5">
                         {p.fitFor.map((f) => (
                           <li
                             key={f}
-                            className="font-sans text-[13px] text-white/80 ds-word-keep flex gap-2"
+                            className="font-sans text-[13px] text-slate-900/80 ds-word-keep flex gap-2"
                           >
-                            <span className="text-muted">·</span>
+                            <span className="text-slate-500">·</span>
                             <span>{f}</span>
                           </li>
                         ))}
@@ -330,47 +330,47 @@ export default function InfrastructurePage() {
               badgeColor="cyan"
               sectionLabel="3. SMB Network — 사무 환경 네트워크는 분리해서 합리적으로"
             >
-              <h2 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 지사·매장·사무실 네트워크는
                 <br />
-                <span className="text-cyan">엔터프라이즈와 분리해서 구축합니다.</span>
+                <span className="text-navy">엔터프라이즈와 분리해서 구축합니다.</span>
               </h2>
             </SectionHeader>
 
             <div className="lg:pl-12">
-              <GlassPanel className="p-8 lg:p-12 border border-cyan/20">
+              <GlassPanel className="p-8 lg:p-12 border border-navy/20">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
                   <div className="lg:col-span-1">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="font-mono text-[10px] text-cyan tracking-widest">
+                      <span className="font-mono text-[10px] text-navy tracking-widest">
                         {smbLineup.badge}
                       </span>
-                      <span className="font-mono text-[10px] text-muted uppercase">
+                      <span className="font-mono text-[10px] text-slate-500 uppercase">
                         {smbLineup.tag}
                       </span>
                     </div>
-                    <h3 className="font-display text-3xl font-bold text-white mb-2 ds-word-keep">
+                    <h3 className="font-display text-3xl font-bold text-slate-900 mb-2 ds-word-keep">
                       {smbLineup.name}
                     </h3>
-                    <div className="font-mono text-[11px] text-cyan mb-6 tracking-wide">
+                    <div className="font-mono text-[11px] text-navy mb-6 tracking-wide">
                       {smbLineup.vendor}
                     </div>
-                    <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep">
+                    <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep">
                       {smbLineup.desc}
                     </p>
                   </div>
 
                   <div className="lg:col-span-1">
-                    <div className="font-mono text-[10px] text-muted tracking-widest uppercase mb-4">
+                    <div className="font-mono text-[10px] text-slate-500 tracking-widest uppercase mb-4">
                       STRENGTHS
                     </div>
                     <ul className="space-y-2.5">
                       {smbLineup.strengths.map((s) => (
                         <li
                           key={s}
-                          className="font-sans text-[14px] text-muted-strong ds-word-keep flex gap-2"
+                          className="font-sans text-[14px] text-slate-600 ds-word-keep flex gap-2"
                         >
-                          <span className="text-cyan flex-shrink-0">▸</span>
+                          <span className="text-navy flex-shrink-0">▸</span>
                           <span>{s}</span>
                         </li>
                       ))}
@@ -378,16 +378,16 @@ export default function InfrastructurePage() {
                   </div>
 
                   <div className="lg:col-span-1">
-                    <div className="font-mono text-[10px] text-muted tracking-widest uppercase mb-4">
+                    <div className="font-mono text-[10px] text-slate-500 tracking-widest uppercase mb-4">
                       USE_CASES
                     </div>
                     <ul className="space-y-2.5">
                       {smbLineup.fitFor.map((f) => (
                         <li
                           key={f}
-                          className="font-sans text-[14px] text-white/80 ds-word-keep flex gap-2"
+                          className="font-sans text-[14px] text-slate-900/80 ds-word-keep flex gap-2"
                         >
-                          <span className="text-muted">·</span>
+                          <span className="text-slate-500">·</span>
                           <span>{f}</span>
                         </li>
                       ))}
@@ -396,7 +396,7 @@ export default function InfrastructurePage() {
                 </div>
               </GlassPanel>
 
-              <p className="font-mono text-[11px] text-muted tracking-wide uppercase mt-6 ds-word-keep">
+              <p className="font-mono text-[11px] text-slate-500 tracking-wide uppercase mt-6 ds-word-keep">
                 ※ TP-Link는 SMB·사무 환경 전용 라인업입니다. 엔터프라이즈 데이터센터 코어 네트워크는
                 별도 표준 제품군으로 설계합니다.
               </p>
@@ -412,33 +412,33 @@ export default function InfrastructurePage() {
               badgeColor="cyan"
               sectionLabel="4. Use Cases — 실제 적용 시나리오"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 환경별 최적 조합을
                 <br />
-                <span className="text-cyan">한 번에 설계합니다.</span>
+                <span className="text-navy">한 번에 설계합니다.</span>
               </h2>
             </SectionHeader>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 lg:pl-12">
               {useCases.map((u) => {
-                const accent = u.color === "acid" ? "text-acid" : "text-cyan";
-                const bg = u.color === "acid" ? "bg-acid" : "bg-cyan";
+                const accent = u.color === "acid" ? "text-emerald" : "text-navy";
+                const bg = u.color === "acid" ? "bg-emerald" : "bg-navy";
                 return (
                   <GlassPanel
                     key={u.industry}
                     className="p-8 lg:p-10 flex flex-col group hover:-translate-y-2 transition-all duration-500"
                   >
                     <div className={`w-10 h-1 ${bg} mb-6`} />
-                    <div className="font-mono text-[10px] text-muted tracking-widest uppercase mb-2">
+                    <div className="font-mono text-[10px] text-slate-500 tracking-widest uppercase mb-2">
                       INDUSTRY
                     </div>
-                    <h3 className="font-display text-xl font-bold text-white mb-4 ds-word-keep">
+                    <h3 className="font-display text-xl font-bold text-slate-900 mb-4 ds-word-keep">
                       {u.industry}
                     </h3>
                     <div className={`font-mono text-[12px] ${accent} mb-4 tracking-wide`}>
                       {u.stack}
                     </div>
-                    <p className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep flex-grow">
+                    <p className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep flex-grow">
                       {u.desc}
                     </p>
                   </GlassPanel>
@@ -466,13 +466,13 @@ export default function InfrastructurePage() {
                 INFRA_READY
               </Badge>
 
-              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
+              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
                 벤더 선택부터 통합 설계까지
                 <br />
-                <span className="ds-text-glow-acid-strong text-acid">단일 파트너로</span>
+                <span className="ds-text-glow-acid-strong text-emerald">단일 파트너로</span>
               </h3>
 
-              <p className="font-sans text-muted-strong text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
+              <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
                 서버·SAN·GPU·네트워크 구성을 한 번에 상담받고
                 <br className="hidden md:block" />
                 환경에 맞는 최적 조합을 제안받으세요.
@@ -482,7 +482,7 @@ export default function InfrastructurePage() {
                 <div className="ds-cta-btn-wrapper w-full">
                   <a
                     href="/contact"
-                    className="w-full bg-acid text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
+                    className="w-full bg-emerald text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
                   >
                     <span className="relative z-10 tracking-tight ds-word-keep">
                       인프라 구성 무료 상담
@@ -506,7 +506,7 @@ export default function InfrastructurePage() {
 
               <a
                 href="mailto:sungil.yum@einstech.kr?subject=Infrastructure%20%EB%AC%B8%EC%9D%98"
-                className="font-mono text-sm text-cyan hover:text-white transition-colors"
+                className="font-mono text-sm text-navy hover:text-slate-900 transition-colors"
               >
                 또는 sungil.yum@einstech.kr 로 직접 메일
               </a>

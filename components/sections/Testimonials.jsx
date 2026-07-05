@@ -15,35 +15,35 @@ export default function Testimonials() {
           badgeColor="cyan"
           sectionLabel="4. Testimonials — 실제 운영 중인 현장의 목소리"
         >
-          <h3 className="font-display text-[clamp(2rem,3.5vw,4.5rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-5xl">
-            <span className="text-muted font-serif opacity-40 -ml-2 lg:-ml-6 mr-1">"</span>
+          <h3 className="font-display text-[clamp(2rem,3.5vw,4.5rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-5xl">
+            <span className="text-slate-500 font-serif opacity-40 -ml-2 lg:-ml-6 mr-1">"</span>
             사고 나기 전에는 비싸 보였고,
             <br />
-            사고 안 나니까 <span className="ds-text-glow-cyan text-cyan">싸 보입니다</span>
-            <span className="text-muted font-serif opacity-40 ml-2">"</span>
+            사고 안 나니까 <span className="ds-text-glow-cyan text-navy">싸 보입니다</span>
+            <span className="text-slate-500 font-serif opacity-40 ml-2">"</span>
           </h3>
         </SectionHeader>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 lg:pl-12">
           {/* CASE 01 */}
-          <GlassPanel className="p-8 lg:p-12 flex flex-col group hover:-translate-y-2 transition-all duration-500 hover:bg-surface-border/10">
+          <GlassPanel className="p-8 lg:p-12 flex flex-col group hover:-translate-y-2 transition-all duration-500 hover:bg-slate-50-border/10">
             <div className="flex justify-between items-start mb-10 relative">
               <div className="flex flex-col gap-1">
-                <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                   CASE_01
                 </span>
-                <span className="font-mono text-[10px] text-cyan">LOGISTICS_SYSTEM</span>
+                <span className="font-mono text-[10px] text-navy">LOGISTICS_SYSTEM</span>
               </div>
-              <div className="font-display text-7xl lg:text-8xl font-bold ds-text-outline opacity-5 pointer-events-none group-hover:text-cyan group-hover:opacity-20 transition-all duration-500 absolute -top-6 -right-2">
+              <div className="font-display text-7xl lg:text-8xl font-bold ds-text-outline opacity-5 pointer-events-none group-hover:text-navy group-hover:opacity-20 transition-all duration-500 absolute -top-6 -right-2">
                 01
               </div>
             </div>
 
             <div className="mb-8">
-              <h4 className="font-display text-2xl lg:text-3xl font-bold text-white mb-2 ds-word-keep">
+              <h4 className="font-display text-2xl lg:text-3xl font-bold text-slate-900 mb-2 ds-word-keep">
                 E 물류시스템
               </h4>
-              <div className="font-mono text-[11px] text-muted tracking-wider uppercase flex items-center gap-2">
+              <div className="font-mono text-[11px] text-slate-500 tracking-wider uppercase flex items-center gap-2">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="square"
@@ -56,62 +56,62 @@ export default function Testimonials() {
               </div>
             </div>
 
-            <div className="relative pl-6 border-l-2 border-cyan/30 mb-10 flex-grow">
-              <p className="font-sans text-muted-strong text-[16px] leading-relaxed ds-word-keep">
+            <div className="relative pl-6 border-l-2 border-navy/30 mb-10 flex-grow">
+              <p className="font-sans text-slate-600 text-[16px] leading-relaxed ds-word-keep">
                 "MES가 하루만 멈춰도 완성차 3사 라인에 페널티가 들어옵니다.
                 <br />
                 EINSTECH에서{" "}
-                <span className="text-white font-medium">Rose HA + Acronis</span>로 재설계한 뒤
+                <span className="text-slate-900 font-medium">Rose HA + Acronis</span>로 재설계한 뒤
                 <br />
                 4년 동안 계획되지 않은 다운타임이 1분 미만이었어요.
                 <br />
-                <span className="text-cyan">
+                <span className="text-navy">
                   무엇보다 새벽에 전화 받을 일이 없어진 게 가장 큽니다.
                 </span>
                 "
               </p>
-              <div className="mt-6 font-mono text-[11px] text-muted flex items-center gap-2">
-                <span className="w-4 h-px bg-cyan/50 block" />
+              <div className="mt-6 font-mono text-[11px] text-slate-500 flex items-center gap-2">
+                <span className="w-4 h-px bg-navy/50 block" />
                 E 물류시스템 S 수석
               </div>
             </div>
 
-            <div className="pt-8 border-t border-surface-border/40 bg-void/50 -mx-8 -mb-8 p-8 lg:-mx-12 lg:-mb-12 lg:p-12">
+            <div className="pt-8 border-t border-slate-200/40 bg-white/50 -mx-8 -mb-8 p-8 lg:-mx-12 lg:-mb-12 lg:p-12">
               <div className="flex justify-between items-end mb-6">
-                <div className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                   Unplanned Downtime
                 </div>
-                <div className="font-mono text-[10px] text-cyan bg-cyan/10 px-2 py-1 border border-cyan/20">
+                <div className="font-mono text-[10px] text-navy bg-navy/10 px-2 py-1 border border-navy/20">
                   DURATION: 4Y
                 </div>
               </div>
 
               <div className="flex items-center gap-6 mb-8">
-                <div className="font-display text-6xl sm:text-7xl font-bold text-acid ds-text-glow-acid tracking-tighter leading-none">
+                <div className="font-display text-6xl sm:text-7xl font-bold text-emerald ds-text-glow-acid tracking-tighter leading-none">
                   &lt;1
-                  <span className="text-2xl ml-1 font-mono tracking-normal text-acid/80">MIN</span>
+                  <span className="text-2xl ml-1 font-mono tracking-normal text-emerald/80">MIN</span>
                 </div>
                 <div className="flex-1 relative">
-                  <div className="h-[2px] w-full bg-surface-border relative overflow-hidden">
+                  <div className="h-[2px] w-full bg-slate-50-border relative overflow-hidden">
                     <div
                       className="absolute inset-0 bg-gradient-to-r from-acid via-cyan to-transparent w-[200%]"
                       style={{ animation: "scanlineX 3s linear infinite" }}
                     />
                   </div>
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-acid rounded-full animate-pulse-fast shadow-[0_0_12px_rgba(57,255,20,0.8)] border-2 border-void" />
-                  <div className="absolute right-0 top-full mt-2 font-mono text-[9px] text-muted">
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-emerald rounded-full animate-pulse-fast shadow-[0_0_12px_rgba(57,255,20,0.8)] border-2 border-void" />
+                  <div className="absolute right-0 top-full mt-2 font-mono text-[9px] text-slate-500">
                     SYS_OPTIMAL
                   </div>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-2">
-                <div className="px-3 py-1.5 bg-surface border border-surface-border/50 font-mono text-[10px] text-white flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-cyan rounded-full" />
+                <div className="px-3 py-1.5 bg-slate-50 border border-slate-200/50 font-mono text-[10px] text-slate-900 flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-navy rounded-full" />
                   SOL: ROSE_HA
                 </div>
-                <div className="px-3 py-1.5 bg-surface border border-surface-border/50 font-mono text-[10px] text-white flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-cyan rounded-full" />
+                <div className="px-3 py-1.5 bg-slate-50 border border-slate-200/50 font-mono text-[10px] text-slate-900 flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-navy rounded-full" />
                   BAK: ACRONIS
                 </div>
               </div>
@@ -121,25 +121,25 @@ export default function Testimonials() {
           {/* CASE 02 */}
           <GlassPanel
             hoverColor="acid"
-            className="p-8 lg:p-12 flex flex-col group hover:-translate-y-2 transition-all duration-500 hover:bg-surface-border/10"
+            className="p-8 lg:p-12 flex flex-col group hover:-translate-y-2 transition-all duration-500 hover:bg-slate-50-border/10"
           >
             <div className="flex justify-between items-start mb-10 relative">
               <div className="flex flex-col gap-1">
-                <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-acid transition-colors">
+                <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-emerald transition-colors">
                   CASE_02
                 </span>
-                <span className="font-mono text-[10px] text-acid">GENERAL_HOSPITAL</span>
+                <span className="font-mono text-[10px] text-emerald">GENERAL_HOSPITAL</span>
               </div>
-              <div className="font-display text-7xl lg:text-8xl font-bold ds-text-outline opacity-5 pointer-events-none group-hover:text-acid group-hover:opacity-20 transition-all duration-500 absolute -top-6 -right-2">
+              <div className="font-display text-7xl lg:text-8xl font-bold ds-text-outline opacity-5 pointer-events-none group-hover:text-emerald group-hover:opacity-20 transition-all duration-500 absolute -top-6 -right-2">
                 02
               </div>
             </div>
 
             <div className="mb-8">
-              <h4 className="font-display text-2xl lg:text-3xl font-bold text-white mb-2 ds-word-keep">
+              <h4 className="font-display text-2xl lg:text-3xl font-bold text-slate-900 mb-2 ds-word-keep">
                 S 종합병원 (국내 1위 병원)
               </h4>
-              <div className="font-mono text-[11px] text-muted tracking-wider uppercase flex items-center gap-2">
+              <div className="font-mono text-[11px] text-slate-500 tracking-wider uppercase flex items-center gap-2">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="square"
@@ -152,48 +152,48 @@ export default function Testimonials() {
               </div>
             </div>
 
-            <div className="relative pl-6 border-l-2 border-acid/30 mb-10 flex-grow">
-              <p className="font-sans text-muted-strong text-[16px] leading-relaxed ds-word-keep">
+            <div className="relative pl-6 border-l-2 border-emerald/30 mb-10 flex-grow">
+              <p className="font-sans text-slate-600 text-[16px] leading-relaxed ds-word-keep">
                 "파킨슨 영상 데이터가 매년 20TB씩 늘어나는데
                 <br />
                 기존 백업은 백업할 수도 없고 복구 검증도 할 수 없었습니다.
                 <br />
-                <span className="text-white font-medium">
+                <span className="text-slate-900 font-medium">
                   EINSTECH의 Storage 이중화 솔루션 도입 후 백업은 실시간,
                 </span>
                 <br />
                 복구 시간은 2시간에서 10분 이내로 줄었고, 매일 자동 실시간 동기화가
                 돌아갑니다."
               </p>
-              <div className="mt-6 font-mono text-[11px] text-muted flex items-center gap-2">
-                <span className="w-4 h-px bg-acid/50 block" />
+              <div className="mt-6 font-mono text-[11px] text-slate-500 flex items-center gap-2">
+                <span className="w-4 h-px bg-emerald/50 block" />
                 파킨슨센터 운영담당자
               </div>
             </div>
 
-            <div className="pt-8 border-t border-surface-border/40 bg-void/50 -mx-8 -mb-8 p-8 lg:-mx-12 lg:-mb-12 lg:p-12">
+            <div className="pt-8 border-t border-slate-200/40 bg-white/50 -mx-8 -mb-8 p-8 lg:-mx-12 lg:-mb-12 lg:p-12">
               <div className="flex justify-between items-end mb-6">
-                <div className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                   Recovery Time
                 </div>
-                <div className="font-mono text-[10px] text-acid bg-acid/10 px-2 py-1 border border-acid/20">
+                <div className="font-mono text-[10px] text-emerald bg-emerald/10 px-2 py-1 border border-emerald/20">
                   DATA_GROWTH: 20TB/YR
                 </div>
               </div>
 
               <div className="space-y-5 mb-8">
                 <div className="flex flex-col gap-2">
-                  <div className="flex justify-between items-center font-mono text-[10px] text-muted">
+                  <div className="flex justify-between items-center font-mono text-[10px] text-slate-500">
                     <span className="uppercase">Before (Legacy)</span>
                     <span className="font-bold">2h 00m</span>
                   </div>
-                  <div className="h-2 w-full bg-surface border border-surface-border/30 overflow-hidden">
-                    <div className="h-full bg-muted/40 w-[95%]" />
+                  <div className="h-2 w-full bg-slate-50 border border-slate-200/30 overflow-hidden">
+                    <div className="h-full bg-slate-100/40 w-[95%]" />
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <div className="flex justify-between items-center font-mono text-[10px] text-acid">
+                  <div className="flex justify-between items-center font-mono text-[10px] text-emerald">
                     <span className="uppercase flex items-center gap-1.5">
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path
@@ -207,8 +207,8 @@ export default function Testimonials() {
                     </span>
                     <span className="font-bold text-[12px] ds-text-glow-acid">&lt; 10m</span>
                   </div>
-                  <div className="h-2 w-full bg-surface border border-acid/30 overflow-hidden">
-                    <div className="h-full bg-acid w-[8%] relative">
+                  <div className="h-2 w-full bg-slate-50 border border-emerald/30 overflow-hidden">
+                    <div className="h-full bg-emerald w-[8%] relative">
                       <div className="absolute inset-0 bg-white/30 animate-pulse-fast" />
                     </div>
                   </div>
@@ -217,7 +217,7 @@ export default function Testimonials() {
 
               <div className="grid grid-cols-2 gap-4 border-t border-white/5 pt-4">
                 <div className="flex items-start gap-2">
-                  <svg className="w-3.5 h-3.5 mt-0.5 text-acid" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-3.5 h-3.5 mt-0.5 text-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="square"
                       strokeLinejoin="miter"
@@ -226,12 +226,12 @@ export default function Testimonials() {
                     />
                   </svg>
                   <div className="flex flex-col">
-                    <span className="font-mono text-[9px] text-muted mb-0.5">SYNC</span>
-                    <span className="font-mono text-[10px] text-white">DAILY_REALTIME</span>
+                    <span className="font-mono text-[9px] text-slate-500 mb-0.5">SYNC</span>
+                    <span className="font-mono text-[10px] text-slate-900">DAILY_REALTIME</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-2">
-                  <svg className="w-3.5 h-3.5 mt-0.5 text-acid" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-3.5 h-3.5 mt-0.5 text-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="square"
                       strokeLinejoin="miter"
@@ -240,8 +240,8 @@ export default function Testimonials() {
                     />
                   </svg>
                   <div className="flex flex-col">
-                    <span className="font-mono text-[9px] text-muted mb-0.5">COMPLIANCE</span>
-                    <span className="font-mono text-[10px] text-white">MEDICAL_LAW_OK</span>
+                    <span className="font-mono text-[9px] text-slate-500 mb-0.5">COMPLIANCE</span>
+                    <span className="font-mono text-[10px] text-slate-900">MEDICAL_LAW_OK</span>
                   </div>
                 </div>
               </div>

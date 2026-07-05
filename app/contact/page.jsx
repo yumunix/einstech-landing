@@ -26,22 +26,22 @@ export default function ContactPage() {
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <Badge color="cyan">CONTACT</Badge>
-              <span className="font-mono text-xs text-muted uppercase tracking-widest">
+              <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
                 Direct line to engineer
               </span>
             </div>
 
             <h1 className="font-display leading-[0.95] mb-6">
-              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-white">
+              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
                 도입 문의
               </span>
-              <span className="block text-[clamp(1.5rem,3vw,3rem)] font-light tracking-widest ds-text-glow-cyan text-cyan mt-2">
+              <span className="block text-[clamp(1.5rem,3vw,3rem)] font-light tracking-widest ds-text-glow-cyan text-navy mt-2">
                 CONTACT EINSTECH
               </span>
             </h1>
 
-            <p className="font-sans text-muted-strong text-base sm:text-lg leading-relaxed max-w-2xl border-l-2 border-cyan/30 pl-5 ds-word-keep">
-              영업 담당이 아닌 <span className="text-white">현직 엔지니어가 직접 회신</span>합니다.
+            <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl border-l-2 border-navy/30 pl-5 ds-word-keep">
+              영업 담당이 아닌 <span className="text-slate-900">현직 엔지니어가 직접 회신</span>합니다.
               현재 환경과 도입 목적을 알려주시면, 첫 회신부터 구체적인 다음 단계를 안내해 드립니다.
             </p>
           </div>
@@ -54,15 +54,15 @@ export default function ContactPage() {
               <GlassPanel className="p-6 md:p-10">
                 <div className="flex items-center justify-between mb-8">
                   <div>
-                    <div className="font-mono text-[10px] text-cyan uppercase tracking-widest mb-1">
+                    <div className="font-mono text-[10px] text-navy uppercase tracking-widest mb-1">
                       INQUIRY_FORM
                     </div>
-                    <h2 className="font-display text-2xl md:text-3xl font-bold text-white ds-word-keep">
+                    <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-900 ds-word-keep">
                       문의 양식
                     </h2>
                   </div>
-                  <div className="font-mono text-[10px] text-acid hidden sm:flex items-center gap-2">
-                    <span className="w-2 h-2 bg-acid animate-pulse-fast" />
+                  <div className="font-mono text-[10px] text-emerald hidden sm:flex items-center gap-2">
+                    <span className="w-2 h-2 bg-emerald animate-pulse-fast" />
                     SECURE_CHANNEL
                   </div>
                 </div>
@@ -74,20 +74,20 @@ export default function ContactPage() {
             {/* Contact info */}
             <div className="lg:col-span-4 space-y-6">
               <GlassPanel className="p-6 md:p-8">
-                <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-2">
+                <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-2">
                   DIRECT_CHANNEL
                 </div>
-                <h3 className="font-display text-xl font-bold text-white mb-6 ds-word-keep">
+                <h3 className="font-display text-xl font-bold text-slate-900 mb-6 ds-word-keep">
                   바로 연락
                 </h3>
 
                 <a
                   href="tel:+82-31-893-0015"
-                  className="flex items-start gap-4 group py-3 border-t border-surface-border/60"
+                  className="flex items-start gap-4 group py-3 border-t border-slate-200/60"
                 >
-                  <div className="w-9 h-9 border border-surface-border bg-void flex items-center justify-center group-hover:border-acid transition-colors flex-shrink-0">
+                  <div className="w-9 h-9 border border-slate-200 bg-white flex items-center justify-center group-hover:border-emerald transition-colors flex-shrink-0">
                     <svg
-                      className="w-4 h-4 text-muted group-hover:text-acid transition-colors"
+                      className="w-4 h-4 text-slate-500 group-hover:text-emerald transition-colors"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -101,10 +101,10 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-0.5">
+                    <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">
                       TEL
                     </span>
-                    <span className="font-mono text-base text-white group-hover:text-acid transition-colors">
+                    <span className="font-mono text-base text-slate-900 group-hover:text-emerald transition-colors">
                       +82-31-893-0015
                     </span>
                   </div>
@@ -112,11 +112,11 @@ export default function ContactPage() {
 
                 <a
                   href="mailto:sungil.yum@einstech.kr"
-                  className="flex items-start gap-4 group py-3 border-t border-surface-border/60"
+                  className="flex items-start gap-4 group py-3 border-t border-slate-200/60"
                 >
-                  <div className="w-9 h-9 border border-surface-border bg-void flex items-center justify-center group-hover:border-cyan transition-colors flex-shrink-0">
+                  <div className="w-9 h-9 border border-slate-200 bg-white flex items-center justify-center group-hover:border-navy transition-colors flex-shrink-0">
                     <svg
-                      className="w-4 h-4 text-muted group-hover:text-cyan transition-colors"
+                      className="w-4 h-4 text-slate-500 group-hover:text-navy transition-colors"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -130,19 +130,19 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-0.5">
+                    <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">
                       MAIL
                     </span>
-                    <span className="font-mono text-sm text-white group-hover:text-cyan transition-colors break-all">
+                    <span className="font-mono text-sm text-slate-900 group-hover:text-navy transition-colors break-all">
                       sungil.yum@einstech.kr
                     </span>
                   </div>
                 </a>
 
-                <div className="flex items-start gap-4 py-3 border-t border-surface-border/60">
-                  <div className="w-9 h-9 border border-surface-border bg-void flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 py-3 border-t border-slate-200/60">
+                  <div className="w-9 h-9 border border-slate-200 bg-white flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-4 h-4 text-muted"
+                      className="w-4 h-4 text-slate-500"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -162,10 +162,10 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-0.5">
+                    <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">
                       OFFICE
                     </span>
-                    <span className="font-sans text-sm text-white leading-relaxed">
+                    <span className="font-sans text-sm text-slate-900 leading-relaxed">
                       경기도 용인시 수지구
                       <br />
                       문인로54번길 2
@@ -175,23 +175,23 @@ export default function ContactPage() {
               </GlassPanel>
 
               <GlassPanel className="p-6 md:p-8">
-                <div className="font-mono text-[10px] text-acid uppercase tracking-widest mb-3">
+                <div className="font-mono text-[10px] text-emerald uppercase tracking-widest mb-3">
                   RESPONSE_SLA
                 </div>
-                <h3 className="font-display text-xl font-bold text-white mb-4 ds-word-keep">
+                <h3 className="font-display text-xl font-bold text-slate-900 mb-4 ds-word-keep">
                   응답 기준
                 </h3>
-                <ul className="space-y-3 font-sans text-sm text-muted-strong">
+                <ul className="space-y-3 font-sans text-sm text-slate-600">
                   <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 bg-cyan flex-shrink-0" />
+                    <span className="mt-2 w-1.5 h-1.5 bg-navy flex-shrink-0" />
                     평일 영업시간 내 — 평균 30분 이내
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 bg-cyan flex-shrink-0" />
+                    <span className="mt-2 w-1.5 h-1.5 bg-navy flex-shrink-0" />
                     평일 영업시간 외 — 익일 오전 회신
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 bg-cyan flex-shrink-0" />
+                    <span className="mt-2 w-1.5 h-1.5 bg-navy flex-shrink-0" />
                     긴급 장애 — 전화로 즉시 연결
                   </li>
                 </ul>

@@ -219,32 +219,32 @@ export default function CompanyPage() {
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">COMPANY</Badge>
-              <span className="font-mono text-xs text-muted uppercase tracking-widest">
+              <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
                 EINSTECH · EST. 2014 · ENG.30Y · 1,000+ PROJECTS
               </span>
             </div>
 
             <h1 className="font-display leading-[0.95] mb-10">
-              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-white">
+              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
                 안 멈추는 시스템을
               </span>
-              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-cyan mt-3">
+              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-navy mt-3">
                 설계해 온 12년
               </span>
             </h1>
 
-            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-white leading-tight ds-word-keep mb-8 max-w-4xl">
+            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-slate-900 leading-tight ds-word-keep mb-8 max-w-4xl">
               우리는 솔루션을 파는 회사가 아니라,
               <br />
-              <span className="ds-text-glow-acid text-acid">멈추지 않는 시스템을 설계하는 회사</span>
+              <span className="ds-text-glow-acid text-emerald">멈추지 않는 시스템을 설계하는 회사</span>
               입니다.
             </p>
 
-            <p className="font-sans text-muted-strong text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-cyan/30 pl-5 ds-word-keep mb-12">
+            <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
               EINSTECH는 2014년 5월 1일 설립된 인프라 전문 SI 기업입니다.{" "}
-              <span className="text-white">엔지니어 30년 경험</span>으로 HA Cluster · 스토리지 ·
+              <span className="text-slate-900">엔지니어 30년 경험</span>으로 HA Cluster · 스토리지 ·
               백업 · 데이터 보안을 단일 책임으로 통합 설계해 왔으며,{" "}
-              <span className="text-white">누적 1,000건 이상의 프로젝트</span>와 헝가리·시안·말레이시아 등 글로벌 거점 구축 경험을 보유합니다.
+              <span className="text-slate-900">누적 1,000건 이상의 프로젝트</span>와 헝가리·시안·말레이시아 등 글로벌 거점 구축 경험을 보유합니다.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 max-w-xl">
@@ -267,13 +267,13 @@ export default function CompanyPage() {
                   key={m.label}
                   className="p-5 lg:p-6 flex flex-col items-center text-center group hover:-translate-y-1 transition-all duration-500"
                 >
-                  <div className="font-mono text-[10px] text-cyan tracking-widest uppercase mb-2">
+                  <div className="font-mono text-[10px] text-navy tracking-widest uppercase mb-2">
                     {m.unit}
                   </div>
-                  <div className="font-display text-2xl lg:text-3xl font-bold text-white mb-2 ds-word-keep">
+                  <div className="font-display text-2xl lg:text-3xl font-bold text-slate-900 mb-2 ds-word-keep">
                     {m.value}
                   </div>
-                  <div className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                  <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                     {m.label}
                   </div>
                 </GlassPanel>
@@ -295,10 +295,10 @@ export default function CompanyPage() {
               badgeColor="cyan"
               sectionLabel="1. Why — 다른 SI와 무엇이 다른가"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 영업이 아닌
                 <br />
-                <span className="text-cyan">엔지니어가 책임지는 SI</span>
+                <span className="text-navy">엔지니어가 책임지는 SI</span>
               </h2>
             </SectionHeader>
 
@@ -310,19 +310,19 @@ export default function CompanyPage() {
                 >
                   <div className="flex justify-between items-start mb-10 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                      <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                         WHY_{c.index}
                       </span>
-                      <span className="font-mono text-[10px] text-acid">{c.tag}</span>
+                      <span className="font-mono text-[10px] text-emerald">{c.tag}</span>
                     </div>
                     <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none absolute -top-4 -right-2 group-hover:opacity-30 transition-opacity">
                       {c.index}
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                     {c.title}
                   </h3>
-                  <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep flex-grow">
+                  <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep flex-grow">
                     {c.desc}
                   </p>
                 </GlassPanel>
@@ -344,10 +344,10 @@ export default function CompanyPage() {
               badgeColor="acid"
               sectionLabel="2. Business — 사업 영역"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 4개 카테고리,
                 <br />
-                <span className="ds-text-glow-acid text-acid">한 파트너의 단일 책임.</span>
+                <span className="ds-text-glow-acid text-emerald">한 파트너의 단일 책임.</span>
               </h2>
             </SectionHeader>
 
@@ -360,17 +360,17 @@ export default function CompanyPage() {
                 >
                   <GlassPanel className="p-8 lg:p-10 flex flex-col h-full hover:-translate-y-2 transition-all duration-500">
                     <div className="flex items-center justify-between mb-5">
-                      <span className="font-mono text-[10px] text-cyan tracking-widest uppercase">
+                      <span className="font-mono text-[10px] text-navy tracking-widest uppercase">
                         {b.cat}
                       </span>
-                      <span className="font-mono text-cyan group-hover:translate-x-1 transition-transform">
+                      <span className="font-mono text-navy group-hover:translate-x-1 transition-transform">
                         →
                       </span>
                     </div>
-                    <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                    <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                       {b.title}
                     </h3>
-                    <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep">
+                    <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep">
                       {b.desc}
                     </p>
                   </GlassPanel>
@@ -393,8 +393,8 @@ export default function CompanyPage() {
               badgeColor="cyan"
               sectionLabel="3. Partners — 공식 파트너 벤더"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
-                <span className="text-cyan">8개 글로벌 벤더</span>
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
+                <span className="text-navy">8개 글로벌 벤더</span>
                 <br />
                 전 영역 정식 파트너십
               </h2>
@@ -402,16 +402,16 @@ export default function CompanyPage() {
 
             <div className="lg:pl-12">
               <GlassPanel className="p-8 lg:p-10">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-surface-border/40">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-slate-50-border/40">
                   {vendors.map((v) => (
                     <div
                       key={v.name}
-                      className="bg-void/60 p-5 flex flex-col gap-1 hover:bg-cyan/5 transition-colors"
+                      className="bg-white/60 p-5 flex flex-col gap-1 hover:bg-navy/5 transition-colors"
                     >
-                      <div className="font-display text-base font-bold text-white ds-word-keep">
+                      <div className="font-display text-base font-bold text-slate-900 ds-word-keep">
                         {v.name}
                       </div>
-                      <div className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                      <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                         {v.role}
                       </div>
                     </div>
@@ -419,7 +419,7 @@ export default function CompanyPage() {
                 </div>
               </GlassPanel>
 
-              <p className="font-mono text-[10px] text-muted leading-relaxed mt-4 ds-word-keep">
+              <p className="font-mono text-[10px] text-slate-500 leading-relaxed mt-4 ds-word-keep">
                 ※ 위 외에도 Cycros · Brocade · Cisco · DELL · APC · 피앤피시큐어 등과 프로젝트 단위 파트너십을 운영합니다.
               </p>
             </div>
@@ -439,10 +439,10 @@ export default function CompanyPage() {
               badgeColor="acid"
               sectionLabel="4. History — 12년의 기록 (2014 — 2026)"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 국내에서 시작해
                 <br />
-                <span className="ds-text-glow-acid text-acid">글로벌로 확장한 12년</span>
+                <span className="ds-text-glow-acid text-emerald">글로벌로 확장한 12년</span>
               </h2>
             </SectionHeader>
 
@@ -453,24 +453,24 @@ export default function CompanyPage() {
                   className="p-6 lg:p-8 flex flex-col md:flex-row gap-6 group hover:-translate-y-1 transition-all duration-500"
                 >
                   <div className="flex items-start gap-4 md:w-64 flex-shrink-0">
-                    <div className="font-display text-4xl md:text-5xl font-bold ds-text-outline opacity-30 group-hover:text-cyan group-hover:opacity-100 transition-all duration-500">
+                    <div className="font-display text-4xl md:text-5xl font-bold ds-text-outline opacity-30 group-hover:text-navy group-hover:opacity-100 transition-all duration-500">
                       {h.year}
                     </div>
                     <div className="flex flex-col gap-1 pt-2">
-                      <span className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                      <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                         Y_{String(idx + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-mono text-[10px] text-cyan uppercase tracking-widest">
+                      <span className="font-mono text-[10px] text-navy uppercase tracking-widest">
                         {h.title}
                       </span>
                     </div>
                   </div>
-                  <div className="flex-1 border-l border-surface-border/40 md:pl-6">
+                  <div className="flex-1 border-l border-slate-200/40 md:pl-6">
                     <ul className="space-y-2">
                       {h.items.map((item) => (
                         <li key={item} className="flex items-start gap-3">
-                          <span className="mt-2 w-1.5 h-1.5 bg-cyan flex-shrink-0" />
-                          <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                          <span className="mt-2 w-1.5 h-1.5 bg-navy flex-shrink-0" />
+                          <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                             {item}
                           </span>
                         </li>
@@ -481,7 +481,7 @@ export default function CompanyPage() {
               ))}
             </div>
 
-            <p className="font-mono text-[10px] text-muted leading-relaxed mt-6 ds-word-keep lg:pl-12">
+            <p className="font-mono text-[10px] text-slate-500 leading-relaxed mt-6 ds-word-keep lg:pl-12">
               ※ 일부 고객사·프로젝트는 NDA 정책에 따라 익명·약어로 표기. 상세 레퍼런스는 도입 검토 단계에서 별도 공유합니다.
             </p>
           </div>
@@ -500,45 +500,45 @@ export default function CompanyPage() {
               badgeColor="cyan"
               sectionLabel="5. Contact — 연락처"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 현직 엔지니어가
                 <br />
-                <span className="text-cyan">직접 회신합니다.</span>
+                <span className="text-navy">직접 회신합니다.</span>
               </h2>
             </SectionHeader>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:pl-12">
               <GlassPanel className="p-8 lg:p-10 flex flex-col">
-                <div className="font-mono text-[10px] text-cyan uppercase tracking-widest mb-5">
+                <div className="font-mono text-[10px] text-navy uppercase tracking-widest mb-5">
                   HEADQUARTERS · 본사
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-1">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-1">
                       ADDRESS
                     </div>
-                    <div className="font-sans text-white text-[15px] leading-relaxed ds-word-keep">
+                    <div className="font-sans text-slate-900 text-[15px] leading-relaxed ds-word-keep">
                       경기도 용인시 수지구 문인로54번길 2
                     </div>
                   </div>
                   <div>
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-1">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-1">
                       PHONE
                     </div>
                     <a
                       href="tel:+82-31-893-0015"
-                      className="font-display text-2xl font-bold text-cyan hover:text-white transition-colors"
+                      className="font-display text-2xl font-bold text-navy hover:text-slate-900 transition-colors"
                     >
                       +82-31-893-0015
                     </a>
                   </div>
                   <div>
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-1">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-1">
                       E-MAIL
                     </div>
                     <a
                       href="mailto:sungil.yum@einstech.kr"
-                      className="font-mono text-base text-cyan hover:text-white transition-colors"
+                      className="font-mono text-base text-navy hover:text-slate-900 transition-colors"
                     >
                       sungil.yum@einstech.kr
                     </a>
@@ -547,31 +547,31 @@ export default function CompanyPage() {
               </GlassPanel>
 
               <GlassPanel className="p-8 lg:p-10 flex flex-col">
-                <div className="font-mono text-[10px] text-acid uppercase tracking-widest mb-5">
+                <div className="font-mono text-[10px] text-emerald uppercase tracking-widest mb-5">
                   OVERSEAS · 해외 거점
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-1">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-1">
                       ENTITY
                     </div>
-                    <div className="font-display text-xl font-bold text-white ds-word-keep">
+                    <div className="font-display text-xl font-bold text-slate-900 ds-word-keep">
                       EINSTECHMT SDN. BHD.
                     </div>
                   </div>
                   <div>
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-1">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-1">
                       LOCATION
                     </div>
-                    <div className="font-sans text-white text-[15px] leading-relaxed ds-word-keep">
+                    <div className="font-sans text-slate-900 text-[15px] leading-relaxed ds-word-keep">
                       Malaysia · 2021년 설립
                     </div>
                   </div>
                   <div>
-                    <div className="font-mono text-[10px] text-muted uppercase tracking-widest mb-1">
+                    <div className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-1">
                       PARTNERS
                     </div>
-                    <div className="font-mono text-[12px] text-muted-strong leading-relaxed">
+                    <div className="font-mono text-[12px] text-slate-600 leading-relaxed">
                       HP · Acronis · APC · DELL Malaysia · Cisco · Samsung Display
                     </div>
                   </div>
@@ -599,13 +599,13 @@ export default function CompanyPage() {
                 READY_TO_TALK
               </Badge>
 
-              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
+              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
                 인프라 진단부터
                 <br />
-                <span className="ds-text-glow-acid-strong text-acid">엔지니어가 직접</span>.
+                <span className="ds-text-glow-acid-strong text-emerald">엔지니어가 직접</span>.
               </h3>
 
-              <p className="font-sans text-muted-strong text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
+              <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
                 12년의 운영 경험과 30년의 엔지니어링 노하우로
                 <br className="hidden md:block" />
                 우리 회사에 맞는 안 멈추는 시스템을 설계해 드립니다.
@@ -615,7 +615,7 @@ export default function CompanyPage() {
                 <div className="ds-cta-btn-wrapper w-full">
                   <a
                     href="/contact"
-                    className="w-full bg-acid text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
+                    className="w-full bg-emerald text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
                   >
                     <span className="relative z-10 tracking-tight ds-word-keep">
                       인프라 무료 진단 신청
@@ -639,7 +639,7 @@ export default function CompanyPage() {
 
               <a
                 href="mailto:sungil.yum@einstech.kr?subject=EINSTECH%20%EB%AC%B8%EC%9D%98"
-                className="font-mono text-sm text-cyan hover:text-white transition-colors"
+                className="font-mono text-sm text-navy hover:text-slate-900 transition-colors"
               >
                 또는 sungil.yum@einstech.kr 로 직접 메일
               </a>

@@ -7,7 +7,7 @@ export default function SectionHeader({
   children,
   className = "",
 }) {
-  const lineColor = badgeColor === "acid" ? "bg-acid/40" : "bg-cyan/40";
+  const lineColor = badgeColor === "acid" ? "bg-emerald/40" : "bg-navy/40";
 
   return (
     <div className={`mb-16 lg:mb-20 pl-0 lg:pl-12 relative ${className}`.trim()}>
@@ -15,7 +15,7 @@ export default function SectionHeader({
 
       <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
         <Badge color={badgeColor}>{badgeText}</Badge>
-        <h2 className="font-mono text-sm md:text-base text-muted tracking-widest ds-word-keep">
+        <h2 className="font-mono text-sm md:text-base text-slate-500 tracking-widest ds-word-keep">
           {sectionLabel}
         </h2>
       </div>

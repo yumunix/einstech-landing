@@ -60,21 +60,21 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="border border-acid/40 bg-acid/5 p-8 md:p-10">
-        <div className="font-mono text-[10px] text-acid uppercase tracking-widest mb-3">
+      <div className="border border-emerald/40 bg-emerald/5 p-8 md:p-10">
+        <div className="font-mono text-[10px] text-emerald uppercase tracking-widest mb-3">
           STATUS_OK · MESSAGE_DELIVERED
         </div>
-        <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4 ds-word-keep">
+        <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4 ds-word-keep">
           문의가 정상적으로 전송되었습니다.
         </h3>
-        <p className="font-sans text-muted-strong text-base leading-relaxed ds-word-keep mb-6">
+        <p className="font-sans text-slate-600 text-base leading-relaxed ds-word-keep mb-6">
           빠른 시일 내에 담당 엔지니어가 회신드리겠습니다. 평일 기준 1영업일 이내에
           연락드리는 것을 원칙으로 합니다.
         </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="font-mono text-sm text-cyan hover:text-white border-b border-cyan/40 hover:border-white pb-0.5 transition-colors"
+          className="font-mono text-sm text-navy hover:text-slate-900 border-b border-navy/40 hover:border-white pb-0.5 transition-colors"
         >
           새 문의 작성하기 →
         </button>
@@ -83,13 +83,13 @@ export default function ContactForm() {
   }
 
   const baseInput =
-    "w-full bg-black/40 border border-surface-border focus:border-cyan/70 outline-none px-4 py-3 font-sans text-sm text-white placeholder:text-muted/60 transition-colors";
+    "w-full bg-black/40 border border-slate-200 focus:border-navy/70 outline-none px-4 py-3 font-sans text-sm text-slate-900 placeholder:text-slate-500/60 transition-colors";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" noValidate>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col gap-2">
-          <label htmlFor="company" className="font-mono text-[10px] text-muted uppercase tracking-widest">
+          <label htmlFor="company" className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
             회사명 *
           </label>
           <input
@@ -103,7 +103,7 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="name" className="font-mono text-[10px] text-muted uppercase tracking-widest">
+          <label htmlFor="name" className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
             담당자명 *
           </label>
           <input
@@ -117,7 +117,7 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="phone" className="font-mono text-[10px] text-muted uppercase tracking-widest">
+          <label htmlFor="phone" className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
             연락처
           </label>
           <input
@@ -130,7 +130,7 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="font-mono text-[10px] text-muted uppercase tracking-widest">
+          <label htmlFor="email" className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
             이메일 *
           </label>
           <input
@@ -145,7 +145,7 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="inquiry" className="font-mono text-[10px] text-muted uppercase tracking-widest">
+        <label htmlFor="inquiry" className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
           문의 유형 *
         </label>
         <select
@@ -167,7 +167,7 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="font-mono text-[10px] text-muted uppercase tracking-widest">
+        <label htmlFor="message" className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
           문의 내용 *
         </label>
         <textarea
@@ -190,7 +190,7 @@ export default function ContactForm() {
       )}
 
       <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-between pt-2">
-        <p className="font-mono text-[10px] text-muted leading-relaxed">
+        <p className="font-mono text-[10px] text-slate-500 leading-relaxed">
           제출 시 입력하신 정보는 문의 응대 목적으로만 사용되며 별도 보관/마케팅에 활용되지 않습니다.
         </p>
 

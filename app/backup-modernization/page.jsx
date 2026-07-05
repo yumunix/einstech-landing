@@ -126,29 +126,29 @@ export default function BackupModernizationPage() {
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">BACKUP_MODERNIZATION</Badge>
-              <span className="font-mono text-xs text-muted uppercase tracking-widest">
+              <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
                 Acronis Migration · Unified Platform · Immutable
               </span>
             </div>
 
             <h1 className="font-display leading-[0.95] mb-10">
-              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-white">
+              <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
                 백업 현대화
               </span>
-              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-cyan mt-3">
+              <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-navy mt-3">
                 ACRONIS MIGRATION
               </span>
             </h1>
 
-            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-white leading-tight ds-word-keep mb-8 max-w-4xl">
+            <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-slate-900 leading-tight ds-word-keep mb-8 max-w-4xl">
               백업과 보안이 따로 노는 시대는 끝났습니다.
               <br />
-              <span className="ds-text-glow-acid text-acid">하나로 합치세요.</span>
+              <span className="ds-text-glow-acid text-emerald">하나로 합치세요.</span>
             </p>
 
-            <p className="font-sans text-muted-strong text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-cyan/30 pl-5 ds-word-keep mb-12">
+            <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
               백업 따로, 보안 따로. 콘솔도 둘, 라이선스도 둘. 그렇게 운영하던 레거시 백업을{" "}
-              <span className="text-white">단일 플랫폼 Acronis Cyber Protect</span>로 전환합니다.
+              <span className="text-slate-900">단일 플랫폼 Acronis Cyber Protect</span>로 전환합니다.
               AI 랜섬웨어 차단·즉각 복구·이뮤터블 백업을 하나의 에이전트에 통합해
               운영 중단 없이 옮겨 드립니다. 엔지니어의 30년 인프라 운영 경험으로 전 과정을 책임집니다.
             </p>
@@ -172,26 +172,26 @@ export default function BackupModernizationPage() {
                 <span className="font-mono text-[10px] text-alert tracking-widest uppercase mb-4 animate-pulse-fast">
                   LEGACY_STACK
                 </span>
-                <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-3 ds-word-keep">
+                <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-3 ds-word-keep">
                   백업 + 별도 보안 SW
                 </h3>
-                <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep">
+                <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep">
                   백업 엔진과 랜섬웨어 보호가 분리된 두 시스템. 콘솔·라이선스·관리 포인트가 이중화됩니다.
                 </p>
               </GlassPanel>
 
               <div className="flex items-center justify-center">
-                <span className="font-mono text-3xl text-acid rotate-90 md:rotate-0">→</span>
+                <span className="font-mono text-3xl text-emerald rotate-90 md:rotate-0">→</span>
               </div>
 
               <GlassPanel className="p-8 lg:p-10 flex flex-col">
-                <span className="font-mono text-[10px] text-cyan tracking-widest uppercase mb-4">
+                <span className="font-mono text-[10px] text-navy tracking-widest uppercase mb-4">
                   ACRONIS_UNIFIED
                 </span>
-                <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-3 ds-word-keep">
+                <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-3 ds-word-keep">
                   단일 사이버 보호 플랫폼
                 </h3>
-                <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep">
+                <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep">
                   백업·안티랜섬웨어·복구를 하나의 에이전트, 하나의 콘솔에서. 관리 단순화와 보호 강화를 동시에 달성합니다.
                 </p>
               </GlassPanel>
@@ -212,10 +212,10 @@ export default function BackupModernizationPage() {
               badgeColor="cyan"
               sectionLabel="1. Why — 레거시 백업의 한계"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 레거시 백업의 한계,
                 <br />
-                <span className="text-cyan">통합 플랫폼이 메웁니다.</span>
+                <span className="text-navy">통합 플랫폼이 메웁니다.</span>
               </h2>
             </SectionHeader>
 
@@ -227,19 +227,19 @@ export default function BackupModernizationPage() {
                 >
                   <div className="flex justify-between items-start mb-10 relative">
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted tracking-widest uppercase group-hover:text-cyan transition-colors">
+                      <span className="font-mono text-[10px] text-slate-500 tracking-widest uppercase group-hover:text-navy transition-colors">
                         CAP_{c.index}
                       </span>
-                      <span className="font-mono text-[10px] text-acid">{c.tag}</span>
+                      <span className="font-mono text-[10px] text-emerald">{c.tag}</span>
                     </div>
                     <div className="font-display text-7xl font-bold ds-text-outline opacity-10 pointer-events-none absolute -top-4 -right-2 group-hover:opacity-30 transition-opacity">
                       {c.index}
                     </div>
                   </div>
-                  <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-4 ds-word-keep">
+                  <h3 className="font-display text-xl lg:text-2xl font-bold text-slate-900 mb-4 ds-word-keep">
                     {c.title}
                   </h3>
-                  <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep flex-grow">
+                  <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep flex-grow">
                     {c.desc}
                   </p>
                 </GlassPanel>
@@ -261,24 +261,24 @@ export default function BackupModernizationPage() {
               badgeColor="acid"
               sectionLabel="2. Comparison — 사실 기반 비교"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 레거시 백업
                 <br />
-                <span className="ds-text-glow-acid text-acid">vs Acronis Cyber Protect</span>
+                <span className="ds-text-glow-acid text-emerald">vs Acronis Cyber Protect</span>
               </h2>
             </SectionHeader>
 
             <div className="lg:pl-12">
               <GlassPanel className="overflow-hidden">
                 {/* 헤더 행 */}
-                <div className="hidden md:grid grid-cols-[1.3fr_1fr_1fr] border-b border-surface-border/50">
-                  <div className="p-5 font-mono text-[11px] text-muted uppercase tracking-widest">
+                <div className="hidden md:grid grid-cols-[1.3fr_1fr_1fr] border-b border-slate-200/50">
+                  <div className="p-5 font-mono text-[11px] text-slate-500 uppercase tracking-widest">
                     CRITERIA
                   </div>
-                  <div className="p-5 font-mono text-[11px] text-alert uppercase tracking-widest border-l border-surface-border/40 bg-alert/5">
+                  <div className="p-5 font-mono text-[11px] text-alert uppercase tracking-widest border-l border-slate-200/40 bg-alert/5">
                     레거시 백업 (백업 + 별도 보안)
                   </div>
-                  <div className="p-5 font-mono text-[11px] text-cyan uppercase tracking-widest border-l border-surface-border/40 bg-cyan/5">
+                  <div className="p-5 font-mono text-[11px] text-navy uppercase tracking-widest border-l border-slate-200/40 bg-navy/5">
                     Acronis Cyber Protect
                   </div>
                 </div>
@@ -286,12 +286,12 @@ export default function BackupModernizationPage() {
                 {compareRows.map((row) => (
                   <div
                     key={row.crit}
-                    className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr] border-b border-surface-border/30 last:border-b-0"
+                    className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr] border-b border-slate-200/30 last:border-b-0"
                   >
-                    <div className="p-5 font-mono text-[13px] text-white bg-black/20 md:bg-transparent">
+                    <div className="p-5 font-mono text-[13px] text-slate-900 bg-black/20 md:bg-transparent">
                       {row.crit}
                     </div>
-                    <div className="p-5 flex items-start gap-3 border-l border-surface-border/40 bg-alert/[0.03]">
+                    <div className="p-5 flex items-start gap-3 border-l border-slate-200/40 bg-alert/[0.03]">
                       <svg
                         className="w-4 h-4 text-alert flex-shrink-0 mt-0.5"
                         fill="none"
@@ -304,13 +304,13 @@ export default function BackupModernizationPage() {
                           d="M6 18L18 6M6 6l12 12"
                         />
                       </svg>
-                      <span className="font-sans text-[14px] text-muted-strong leading-relaxed ds-word-keep">
+                      <span className="font-sans text-[14px] text-slate-600 leading-relaxed ds-word-keep">
                         {row.legacy}
                       </span>
                     </div>
-                    <div className="p-5 flex items-start gap-3 border-l border-surface-border/40 bg-cyan/[0.04]">
+                    <div className="p-5 flex items-start gap-3 border-l border-slate-200/40 bg-navy/[0.04]">
                       <svg
-                        className="w-4 h-4 text-cyan flex-shrink-0 mt-0.5"
+                        className="w-4 h-4 text-navy flex-shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -322,7 +322,7 @@ export default function BackupModernizationPage() {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="font-sans text-[14px] text-white leading-relaxed ds-word-keep">
+                      <span className="font-sans text-[14px] text-slate-900 leading-relaxed ds-word-keep">
                         {row.acronis}
                       </span>
                     </div>
@@ -330,7 +330,7 @@ export default function BackupModernizationPage() {
                 ))}
               </GlassPanel>
 
-              <p className="font-mono text-[10px] text-muted leading-relaxed mt-4 ds-word-keep">
+              <p className="font-mono text-[10px] text-slate-500 leading-relaxed mt-4 ds-word-keep">
                 ※ 비교 항목은 각 벤더의 공식 제품 문서 기준으로 작성되었으며, 실제 구성·에디션에 따라 차이가 있을 수 있습니다.
                 최신 사양은 도입 진단 시 정밀 확인해 드립니다.
               </p>
@@ -351,10 +351,10 @@ export default function BackupModernizationPage() {
               badgeColor="cyan"
               sectionLabel="3. Process — 무중단 전환 5단계"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 무중단 전환,
                 <br />
-                <span className="text-cyan">5단계로 안전하게.</span>
+                <span className="text-navy">5단계로 안전하게.</span>
               </h2>
             </SectionHeader>
 
@@ -365,23 +365,23 @@ export default function BackupModernizationPage() {
                   className="p-6 lg:p-8 flex flex-col md:flex-row gap-6 md:items-center group hover:-translate-y-1 transition-all duration-500"
                 >
                   <div className="flex items-center gap-4 md:w-72 flex-shrink-0">
-                    <div className="font-display text-5xl md:text-6xl font-bold ds-text-outline opacity-30 group-hover:text-cyan group-hover:opacity-100 transition-all duration-500">
+                    <div className="font-display text-5xl md:text-6xl font-bold ds-text-outline opacity-30 group-hover:text-navy group-hover:opacity-100 transition-all duration-500">
                       {p.step}
                     </div>
                     <div className="flex flex-col gap-1">
-                      <span className="font-mono text-[10px] text-muted uppercase tracking-widest">
+                      <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest">
                         STEP_{p.step}
                       </span>
                       {idx < process.length - 1 && (
-                        <span className="font-mono text-[10px] text-cyan">→ NEXT</span>
+                        <span className="font-mono text-[10px] text-navy">→ NEXT</span>
                       )}
                     </div>
                   </div>
-                  <div className="flex-1 border-l border-surface-border/40 md:pl-6">
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-2 ds-word-keep">
+                  <div className="flex-1 border-l border-slate-200/40 md:pl-6">
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-slate-900 mb-2 ds-word-keep">
                       {p.title}
                     </h3>
-                    <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep">
+                    <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep">
                       {p.desc}
                     </p>
                   </div>
@@ -392,11 +392,11 @@ export default function BackupModernizationPage() {
             {/* Zero-downtime 강조 배너 */}
             <div className="lg:pl-12 mt-8">
               <GlassPanel className="p-6 lg:p-8 flex flex-col md:flex-row md:items-center gap-5">
-                <span className="font-mono text-[11px] text-cyan border border-cyan/40 bg-cyan/5 px-3 py-2 tracking-widest uppercase flex-shrink-0 self-start">
+                <span className="font-mono text-[11px] text-navy border border-navy/40 bg-navy/5 px-3 py-2 tracking-widest uppercase flex-shrink-0 self-start">
                   ● ZERO_DOWNTIME
                 </span>
-                <p className="font-sans text-muted-strong text-[15px] leading-relaxed ds-word-keep">
-                  <span className="text-white font-bold">핵심은 "병행 운영 후 전환"</span>입니다.
+                <p className="font-sans text-slate-600 text-[15px] leading-relaxed ds-word-keep">
+                  <span className="text-slate-900 font-bold">핵심은 "병행 운영 후 전환"</span>입니다.
                   기존 백업을 먼저 끄고 옮기는 게 아니라, 새 백업이 검증될 때까지 양쪽을 함께 돌립니다.
                   전환 실패 리스크를 구조적으로 제거합니다.
                 </p>
@@ -418,23 +418,23 @@ export default function BackupModernizationPage() {
               badgeColor="acid"
               sectionLabel="4. Target — 지금이 전환 타이밍"
             >
-              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep max-w-4xl">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 하나라도 해당된다면,
                 <br />
-                <span className="ds-text-glow-acid text-acid">지금이 전환 타이밍</span>입니다.
+                <span className="ds-text-glow-acid text-emerald">지금이 전환 타이밍</span>입니다.
               </h2>
             </SectionHeader>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:pl-12">
               <GlassPanel className="p-8 lg:p-10 flex flex-col">
-                <div className="font-mono text-[10px] text-acid uppercase tracking-widest mb-5">
+                <div className="font-mono text-[10px] text-emerald uppercase tracking-widest mb-5">
                   전환을 검토할 신호
                 </div>
                 <ul className="space-y-3">
                   {signals.map((s) => (
                     <li key={s} className="flex items-start gap-3">
-                      <span className="font-mono text-cyan flex-shrink-0">→</span>
-                      <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                      <span className="font-mono text-navy flex-shrink-0">→</span>
+                      <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                         {s}
                       </span>
                     </li>
@@ -443,14 +443,14 @@ export default function BackupModernizationPage() {
               </GlassPanel>
 
               <GlassPanel className="p-8 lg:p-10 flex flex-col">
-                <div className="font-mono text-[10px] text-cyan uppercase tracking-widest mb-5">
+                <div className="font-mono text-[10px] text-navy uppercase tracking-widest mb-5">
                   EINSTECH 전환 보장
                 </div>
                 <ul className="space-y-3">
                   {guarantees.map((g) => (
                     <li key={g} className="flex items-start gap-3">
                       <svg
-                        className="w-4 h-4 text-cyan flex-shrink-0 mt-0.5"
+                        className="w-4 h-4 text-navy flex-shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -462,7 +462,7 @@ export default function BackupModernizationPage() {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="font-sans text-muted-strong text-[14px] leading-relaxed ds-word-keep">
+                      <span className="font-sans text-slate-600 text-[14px] leading-relaxed ds-word-keep">
                         {g}
                       </span>
                     </li>
@@ -491,13 +491,13 @@ export default function BackupModernizationPage() {
                 MIGRATION_READY
               </Badge>
 
-              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
+              <h3 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep mb-8 max-w-4xl relative z-10">
                 레거시 백업,
                 <br />
-                <span className="ds-text-glow-acid-strong text-acid">더 미루지 마세요.</span>
+                <span className="ds-text-glow-acid-strong text-emerald">더 미루지 마세요.</span>
               </h3>
 
-              <p className="font-sans text-muted-strong text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
+              <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
                 현재 백업 구성을 점검하고, 우리 회사에 맞는
                 <br className="hidden md:block" />
                 Acronis 전환 시나리오와 예상 일정을 무료로 진단해 드립니다.
@@ -507,7 +507,7 @@ export default function BackupModernizationPage() {
                 <div className="ds-cta-btn-wrapper w-full">
                   <a
                     href="/contact"
-                    className="w-full bg-acid text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
+                    className="w-full bg-emerald text-void font-display font-bold text-[clamp(1.1rem,2.5vw,2rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
                   >
                     <span className="relative z-10 tracking-tight ds-word-keep">
                       전환 무료 진단 신청
@@ -531,7 +531,7 @@ export default function BackupModernizationPage() {
 
               <a
                 href="mailto:sungil.yum@einstech.kr?subject=Acronis%20%EC%A0%84%ED%99%98%20%EB%AC%B8%EC%9D%98"
-                className="font-mono text-sm text-cyan hover:text-white transition-colors"
+                className="font-mono text-sm text-navy hover:text-slate-900 transition-colors"
               >
                 또는 sungil.yum@einstech.kr 로 직접 메일
               </a>

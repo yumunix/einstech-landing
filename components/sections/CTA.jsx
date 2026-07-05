@@ -26,12 +26,12 @@ export default function CTA() {
 
       <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         <div className="mb-12 pl-0 lg:pl-12 relative flex justify-center lg:justify-start">
-          <div className="absolute left-0 top-3 w-8 h-px bg-acid/40 hidden lg:block" />
+          <div className="absolute left-0 top-3 w-8 h-px bg-emerald/40 hidden lg:block" />
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-center lg:text-left">
             <Badge color="acid" className="mx-auto lg:mx-0 shadow-[0_0_15px_rgba(57,255,20,0.2)]">
               SYS_ACTION
             </Badge>
-            <h2 className="font-mono text-sm md:text-base text-muted tracking-widest ds-word-keep">
+            <h2 className="font-mono text-sm md:text-base text-slate-500 tracking-widest ds-word-keep">
               5. CTA — 마지막 행동 유도
             </h2>
           </div>
@@ -48,25 +48,25 @@ export default function CTA() {
             05
           </div>
 
-          <h3 className="font-display text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-white leading-[1.1] ds-word-keep mb-12 max-w-4xl relative z-10">
+          <h3 className="font-display text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep mb-12 max-w-4xl relative z-10">
             견적서 받기 전에,
             <br />
-            <span className="ds-text-glow-acid-strong text-acid block mt-2">
+            <span className="ds-text-glow-acid-strong text-emerald block mt-2">
               우리는 시스템부터 봐드립니다
             </span>
           </h3>
 
-          <div className="font-sans text-muted-strong text-base md:text-xl leading-relaxed ds-word-keep max-w-3xl mx-auto space-y-6 mb-16 relative z-10">
+          <div className="font-sans text-slate-600 text-base md:text-xl leading-relaxed ds-word-keep max-w-3xl mx-auto space-y-6 mb-16 relative z-10">
             <p>
               대부분의 IT 견적은 "무엇을 팔지" 정해놓고 시작합니다.
               <br />
-              <span className="text-white font-medium">EINSTECH는 반대로 시작합니다.</span>
+              <span className="text-slate-900 font-medium">EINSTECH는 반대로 시작합니다.</span>
             </p>
 
-            <div className="bg-black/30 border border-surface-border/50 p-6 md:p-8 text-left relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-1 h-full bg-cyan" />
+            <div className="bg-black/30 border border-slate-200/50 p-6 md:p-8 text-left relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-navy" />
               <div className="absolute inset-0 bg-gradient-to-r from-cyan/5 to-transparent pointer-events-none" />
-              <p className="text-white leading-loose relative z-10">
+              <p className="text-slate-900 leading-loose relative z-10">
                 엔지니어가 직접 1일간 현장에 방문해
                 <br className="hidden md:block" />
                 지금 운영 중인 서버·스토리지·백업·엔드포인트를 점검하고,
@@ -77,19 +77,19 @@ export default function CTA() {
 
             <p>
               진단 자체는{" "}
-              <span className="text-white font-medium border-b border-acid/50 pb-1">무료</span>
+              <span className="text-slate-900 font-medium border-b border-emerald/50 pb-1">무료</span>
               이고, 결과 리포트만 받고 끝내셔도 됩니다.
               <br />
               실제 도입을 결정하시면{" "}
-              <span className="text-cyan font-mono text-sm md:text-base bg-cyan/10 px-2 py-0.5">
+              <span className="text-navy font-mono text-sm md:text-base bg-navy/10 px-2 py-0.5">
                 Rose HA 무료 체험
               </span>
               ,{" "}
-              <span className="text-cyan font-mono text-sm md:text-base bg-cyan/10 px-2 py-0.5">
+              <span className="text-navy font-mono text-sm md:text-base bg-navy/10 px-2 py-0.5">
                 백신 30일 무료
               </span>
               ,{" "}
-              <span className="text-cyan font-mono text-sm md:text-base bg-cyan/10 px-2 py-0.5">
+              <span className="text-navy font-mono text-sm md:text-base bg-navy/10 px-2 py-0.5">
                 Hitachi Storage 15일 PoC
               </span>
               를 그대로 이어서 진행해 드립니다.
@@ -100,10 +100,10 @@ export default function CTA() {
             {features.map((f) => (
               <div
                 key={f.label}
-                className="bg-void border border-surface-border p-5 text-left flex items-start gap-4"
+                className="bg-white border border-slate-200 p-5 text-left flex items-start gap-4"
               >
                 <svg
-                  className="w-5 h-5 text-cyan flex-shrink-0 mt-1"
+                  className="w-5 h-5 text-navy flex-shrink-0 mt-1"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -116,10 +116,10 @@ export default function CTA() {
                   />
                 </svg>
                 <div>
-                  <div className="font-mono text-[10px] text-muted uppercase tracking-wider mb-1">
+                  <div className="font-mono text-[10px] text-slate-500 uppercase tracking-wider mb-1">
                     {f.label}
                   </div>
-                  <div className="font-sans text-sm text-white ds-word-keep leading-relaxed">
+                  <div className="font-sans text-sm text-slate-900 ds-word-keep leading-relaxed">
                     {f.text}
                   </div>
                 </div>
@@ -128,15 +128,15 @@ export default function CTA() {
           </div>
 
           <div className="w-full max-w-3xl mx-auto relative z-10 flex flex-col items-center">
-            <div className="font-mono text-xs text-acid mb-3 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-acid animate-pulse-fast" />
+            <div className="font-mono text-xs text-emerald mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald animate-pulse-fast" />
               SYSTEM_READY_FOR_DIAGNOSIS
             </div>
 
             <div className="ds-cta-btn-wrapper w-full">
               <a
                 href="mailto:sungil.yum@einstech.kr?subject=무료%20인프라%20진단%20신청"
-                className="w-full bg-acid text-void font-display font-bold text-[clamp(1.25rem,3vw,2.5rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
+                className="w-full bg-emerald text-void font-display font-bold text-[clamp(1.25rem,3vw,2.5rem)] py-6 md:py-8 px-6 md:px-8 flex items-center justify-center gap-4 group hover:bg-white transition-colors duration-300 relative overflow-hidden"
               >
                 <span className="relative z-10 tracking-tight ds-word-keep">
                   무료 인프라 진단 신청하기
@@ -158,11 +158,11 @@ export default function CTA() {
             </div>
           </div>
 
-          <div className="mt-16 pt-8 border-t border-surface-border w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 relative z-10">
+          <div className="mt-16 pt-8 border-t border-slate-200 w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 relative z-10">
             <a href="tel:+82-31-893-0015" className="flex items-center gap-4 group">
-              <div className="w-10 h-10 border border-surface-border bg-void flex items-center justify-center group-hover:border-acid transition-colors">
+              <div className="w-10 h-10 border border-slate-200 bg-white flex items-center justify-center group-hover:border-emerald transition-colors">
                 <svg
-                  className="w-5 h-5 text-muted group-hover:text-acid transition-colors"
+                  className="w-5 h-5 text-slate-500 group-hover:text-emerald transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -176,24 +176,24 @@ export default function CTA() {
                 </svg>
               </div>
               <div className="flex flex-col text-left">
-                <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-0.5">
+                <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">
                   DIRECT_LINE
                 </span>
-                <span className="font-mono text-base md:text-lg text-white group-hover:text-acid transition-colors">
+                <span className="font-mono text-base md:text-lg text-slate-900 group-hover:text-emerald transition-colors">
                   +82-31-893-0015
                 </span>
               </div>
             </a>
 
-            <div className="hidden md:block w-px h-10 bg-surface-border" />
+            <div className="hidden md:block w-px h-10 bg-slate-50-border" />
 
             <a
               href="mailto:sungil.yum@einstech.kr"
               className="flex items-center gap-4 group"
             >
-              <div className="w-10 h-10 border border-surface-border bg-void flex items-center justify-center group-hover:border-cyan transition-colors">
+              <div className="w-10 h-10 border border-slate-200 bg-white flex items-center justify-center group-hover:border-navy transition-colors">
                 <svg
-                  className="w-5 h-5 text-muted group-hover:text-cyan transition-colors"
+                  className="w-5 h-5 text-slate-500 group-hover:text-navy transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -207,10 +207,10 @@ export default function CTA() {
                 </svg>
               </div>
               <div className="flex flex-col text-left">
-                <span className="font-mono text-[10px] text-muted uppercase tracking-widest mb-0.5">
+                <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">
                   ENGINEER_MAIL
                 </span>
-                <span className="font-mono text-base md:text-lg text-white group-hover:text-cyan transition-colors break-all">
+                <span className="font-mono text-base md:text-lg text-slate-900 group-hover:text-navy transition-colors break-all">
                   sungil.yum@einstech.kr
                 </span>
               </div>

@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./page.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -94,7 +95,7 @@ export default function RootLayout({ children }) {
         />
         <script src="https://unpkg.com/@phosphor-icons/web" async></script>
       </head>
-      <body>
+      <body className="einstech-white-body">
         {children}
         <Analytics />
         <SpeedInsights />

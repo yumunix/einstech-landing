@@ -1,8 +1,8 @@
 export default function Badge({ children, color = "cyan", className = "" }) {
   const palette =
     color === "acid"
-      ? "border-acid/30 bg-acid/5 text-acid"
-      : "border-cyan/30 bg-cyan/5 text-cyan";
+      ? "border-emerald/30 bg-emerald/5 text-emerald"
+      : "border-navy/30 bg-navy/5 text-navy";
 
   return (
     <div
@@ -10,7 +10,7 @@ export default function Badge({ children, color = "cyan", className = "" }) {
     >
       <span
         className={`inline-block w-2 h-2 ${
-          color === "acid" ? "bg-acid" : "bg-cyan"
+          color === "acid" ? "bg-emerald" : "bg-navy"
         } animate-pulse-fast`}
       />
       {children}

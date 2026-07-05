@@ -1,55 +1,41 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-surface-border">
-      <div className="max-w-page mx-auto px-6 lg:px-12 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-baseline gap-2 leading-none">
+    <footer className="bg-white border-t border-slate-100">
+      <div className="max-w-page mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex items-baseline gap-3 leading-none">
           <svg
-            width="16"
-            height="22"
-            viewBox="0 0 16 24"
-            className="block"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            className="block self-center"
             aria-hidden="true"
           >
-            <defs>
-              <radialGradient id="ftr-halo" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#FF1744" stopOpacity="0.55" />
-                <stop offset="60%" stopColor="#FF1744" stopOpacity="0.12" />
-                <stop offset="100%" stopColor="#FF1744" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-            <circle cx="8" cy="4" r="10" fill="url(#ftr-halo)">
-              <animate
-                attributeName="opacity"
-                values="0.3;1;0.3"
-                dur="1.2s"
-                repeatCount="indefinite"
-              />
-            </circle>
-            <circle cx="8" cy="4" r="3.6" fill="#FF1744">
-              <animate
-                attributeName="opacity"
-                values="1;1;0.15;1;1"
-                keyTimes="0;0.42;0.5;0.58;1"
-                dur="1.2s"
-                repeatCount="indefinite"
-              />
-            </circle>
-            <rect x="3.5" y="9" width="9" height="15" rx="1" fill="#FF1744" />
+            <rect
+              x="2.5"
+              y="2.5"
+              width="19"
+              height="19"
+              rx="3.5"
+              fill="none"
+              stroke="#0A3D62"
+              strokeWidth="2"
+            />
+            <circle cx="7.5" cy="7.5" r="1.6" fill="#0A3D62" />
           </svg>
-          <span className="font-display font-bold text-xl tracking-normal text-white">
+          <span className="font-display font-black text-xl tracking-normal text-navy">
             EINSTECH
           </span>
-          <span className="font-mono text-[10px] text-muted ml-3 hidden sm:inline self-center">
-            EINSTECH EST. 2014 · ENG.30Y
+          <span className="font-mono text-[10px] text-slate-400 ml-3 hidden sm:inline self-center">
+            EST. 2014 · ENG.30Y
           </span>
         </div>
 
-        <div className="font-mono text-[10px] text-muted text-center md:text-right">
-          © {new Date().getFullYear()} EINSTECH. All systems online.
-          <br className="md:hidden" />
-          <span className="ml-0 md:ml-3">
-            경기도 용인시 수지구 문인로54번길 2 · +82-31-893-0015
-          </span>
+        <div className="font-mono text-[10px] text-slate-500 text-center md:text-right leading-relaxed">
+          © {new Date().getFullYear()} EINSTECH Co., Ltd. All rights reserved.
+          <br />
+          사업자등록번호: 142-81-71526 &nbsp;|&nbsp; 대표이사: 염성일
+          <br />
+          경기도 용인시 수지구 문인로 54번길 2, 수지하우비 409호
         </div>
       </div>
     </footer>
