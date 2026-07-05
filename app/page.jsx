@@ -511,42 +511,43 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center">
             <div>
               <h2 className="text-4xl lg:text-5xl font-black text-navy leading-tight mb-10">
-                단순히 '저장'하지 않고,
+                업무는 멈추지 않고,
                 <br />
-                매일 밤 '부활'을 연습합니다
+                데이터는 되살아납니다
               </h2>
               <p className="text-xl text-slate-500 leading-relaxed mb-16 font-medium">
-                아인스테크의 백업 아키텍처는 매일 밤 가상화 환경에서 실제 복구
-                시뮬레이션을 자동 수행합니다. 아침마다 제공되는 '복구 보장
-                리포트'로 안전을 수치로 확인하세요.
+                HA Cluster가 서비스 중단을 막고, 이중 백업이 어떤 사고에도
+                원본을 지킵니다. 아인스테크는 이 두 축을 하나의 아키텍처로 통합
+                설계합니다.
               </p>
 
               <div className="space-y-10">
                 <div className="flex gap-8">
                   <div className="w-16 h-16 bg-emerald/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-emerald/20">
-                    <i className="ph-bold ph-lock-key-open text-emerald text-3xl"></i>
+                    <i className="ph-bold ph-arrows-clockwise text-emerald text-3xl"></i>
                   </div>
                   <div>
                     <h4 className="text-2xl font-bold text-navy mb-3">
-                      Immutable Backup
+                      HA Cluster · 자동 페일오버
                     </h4>
                     <p className="text-slate-500 leading-relaxed font-medium">
-                      랜섬웨어로도 변경 불가능한 '불변 데이터 레이어'로 원본
-                      훼손을 근본 차단합니다.
+                      Rose HA · MCCS 이중화로 장애 감지 30초 이내 자동 절체. 사용자
+                      알림도 없이 업무 시스템이 계속 흐릅니다.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-8">
                   <div className="w-16 h-16 bg-emerald/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-emerald/20">
-                    <i className="ph-bold ph-gauge text-emerald text-3xl"></i>
+                    <i className="ph-bold ph-shield-check text-emerald text-3xl"></i>
                   </div>
                   <div>
                     <h4 className="text-2xl font-bold text-navy mb-3">
-                      Instant Restore
+                      불변 백업 + 즉시 복구
                     </h4>
                     <p className="text-slate-500 leading-relaxed font-medium">
-                      TB급 데이터도 백업 서버에서 즉시 마운트하여 RTO를 제로에
-                      가깝게 단축합니다.
+                      Acronis · Hitachi 이중 백업 + 불변(Immutable) 스토리지로
+                      랜섬웨어에도 원본이 남습니다. 필요 시 즉시 마운트해 RTO를
+                      최소화합니다.
                     </p>
                   </div>
                 </div>

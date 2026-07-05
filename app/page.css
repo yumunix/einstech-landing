@@ -45,15 +45,15 @@ body:has(.einstech-white) button {
 .einstech-white * {
   box-sizing: border-box;
 }
-.einstech-white h1 {
+.einstech-white :where(h1) {
   font-family: inherit;
   word-break: normal;
 }
-.einstech-white a {
+.einstech-white :where(a) {
   text-decoration: none;
   color: inherit;
 }
-.einstech-white button {
+.einstech-white :where(button) {
   background: transparent;
   border: 0;
   font-family: inherit;
@@ -61,7 +61,7 @@ body:has(.einstech-white) button {
   text-transform: none;
   box-shadow: none;
 }
-.einstech-white button:hover {
+.einstech-white :where(button):hover {
   background: transparent;
   box-shadow: none;
 }
