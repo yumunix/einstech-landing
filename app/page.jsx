@@ -10,7 +10,25 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
           <a href="/" className="flex items-center gap-4 group cursor-pointer">
             <div className="w-11 h-11 bg-white border border-slate-200 rounded-xl flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-              <i className="ph-fill ph-shield-star text-navy text-2xl"></i>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                className="block"
+                aria-hidden="true"
+              >
+                <rect
+                  x="2.5"
+                  y="2.5"
+                  width="19"
+                  height="19"
+                  rx="3.5"
+                  fill="none"
+                  stroke="#0A3D62"
+                  strokeWidth="2"
+                />
+                <circle cx="7.5" cy="7.5" r="1.6" fill="#0A3D62" />
+              </svg>
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-black text-navy tracking-tighter leading-none">
@@ -659,7 +677,25 @@ export default function Home() {
             <div className="md:col-span-4">
               <div className="flex items-center gap-4 mb-10">
                 <div className="w-10 h-10 bg-white border border-slate-200 rounded-xl flex items-center justify-center shadow-sm">
-                  <i className="ph-fill ph-shield-star text-navy text-xl"></i>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    className="block"
+                    aria-hidden="true"
+                  >
+                    <rect
+                      x="2.5"
+                      y="2.5"
+                      width="19"
+                      height="19"
+                      rx="3.5"
+                      fill="none"
+                      stroke="#0A3D62"
+                      strokeWidth="2"
+                    />
+                    <circle cx="7.5" cy="7.5" r="1.6" fill="#0A3D62" />
+                  </svg>
                 </div>
                 <span className="text-2xl font-black text-navy tracking-tighter">
                   EINSTECH
