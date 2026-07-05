@@ -51,13 +51,11 @@ body:has(.einstech-white) button {
 }
 .einstech-white :where(a) {
   text-decoration: none;
-  color: inherit;
 }
 .einstech-white :where(button) {
   background: transparent;
   border: 0;
   font-family: inherit;
-  color: inherit;
   text-transform: none;
   box-shadow: none;
 }
