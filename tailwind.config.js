@@ -15,6 +15,8 @@ module.exports = {
         "surface-border": "rgba(0, 229, 255, 0.15)",
         muted: "#6E7787",
         "muted-strong": "#8B94A7",
+        navy: "#0A3D62",
+        emerald: "#10B981",
       },
       fontFamily: {
         display: ['"Space Grotesk"', "Pretendard", "sans-serif"],

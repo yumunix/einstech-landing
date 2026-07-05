@@ -71,7 +71,7 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#030508",
+  themeColor: "#FFFFFF",
 };
 
 export default function RootLayout({ children }) {
@@ -88,6 +88,11 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&family=Noto+Sans+KR:wght@300;500;700&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        />
+        <script src="https://unpkg.com/@phosphor-icons/web" async></script>
       </head>
       <body>
         {children}

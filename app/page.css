@@ -1,0 +1,142 @@
+/* ====================================================================
+   EINSTECH Landing — White tone (scoped)
+   Overrides globals.css dark theme when .einstech-white-body class
+   is applied to html/body (via BodyClass client component).
+   ==================================================================== */
+
+html.einstech-white-body,
+html:has(.einstech-white),
+body.einstech-white-body,
+body:has(.einstech-white) {
+  background: #ffffff !important;
+  color: #0F172A !important;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  letter-spacing: -0.025em;
+}
+
+html.einstech-white-body *,
+html:has(.einstech-white) *,
+body.einstech-white-body *,
+body:has(.einstech-white) * {
+  cursor: auto;
+}
+html.einstech-white-body a,
+html.einstech-white-body button,
+html:has(.einstech-white) a,
+html:has(.einstech-white) button,
+body.einstech-white-body a,
+body.einstech-white-body button,
+body:has(.einstech-white) a,
+body:has(.einstech-white) button {
+  cursor: pointer;
+}
+
+/* Reset only the properties globals.css sets on elements
+   (avoid touching font-size / line-height / letter-spacing — Tailwind owns those) */
+.einstech-white,
+.einstech-white * {
+  box-sizing: border-box;
+}
+.einstech-white h1 {
+  font-family: inherit;
+  word-break: normal;
+}
+.einstech-white a {
+  text-decoration: none;
+  color: inherit;
+}
+.einstech-white button {
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  color: inherit;
+  text-transform: none;
+  box-shadow: none;
+}
+.einstech-white button:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+.einstech-white {
+  background: #ffffff;
+  color: #0F172A;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  letter-spacing: -0.025em;
+}
+
+.einstech-white .glass-nav {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.einstech-white .gradient-text {
+  background: linear-gradient(135deg, #0A3D62 0%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.einstech-white .hero-glow {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(10, 61, 98, 0.06) 0%,
+    rgba(16, 185, 129, 0.04) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  filter: blur(60px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.einstech-white .card-premium {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02),
+    0 2px 4px -1px rgba(0, 0, 0, 0.01);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.einstech-white .card-premium:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  border-color: rgba(10, 61, 98, 0.2);
+}
+
+@keyframes einstech-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+.einstech-white .animate-float {
+  animation: einstech-float 6s ease-in-out infinite;
+}
+
+@keyframes einstech-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.einstech-white .animate-marquee {
+  animation: einstech-marquee 35s linear infinite;
+}
+
+.einstech-white .scroll-indicator {
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(to bottom, #0A3D62, transparent);
+}
