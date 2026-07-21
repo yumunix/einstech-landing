@@ -505,11 +505,13 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-black text-navy mb-4">보안</h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                내부정보 유출 방지부터 백신·Zero Trust까지 통합 공급합니다.
+                내부정보 유출 방지부터 백신·방화벽 어플라이언스까지 통합
+                공급합니다.
               </p>
               <ul className="space-y-3 text-[13px] font-bold text-slate-700">
                 <li>Netwrix DLP</li>
                 <li>Kaspersky 백신</li>
+                <li>EINSTECH E-Gate (OPNsense 방화벽)</li>
               </ul>
             </div>
 
