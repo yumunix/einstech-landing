@@ -11,7 +11,7 @@ export default function Home() {
         <div className="hero-glow top-0 -left-1/4"></div>
         <div className="hero-glow bottom-0 -right-1/4"></div>
 
-        <div className="max-w-page mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center relative z-10">
+        <div className="w-full max-w-page mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center relative z-10">
           <div>
             <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-slate-200 text-navy text-[13px] font-bold mb-10 shadow-sm">
               <span className="flex h-2.5 w-2.5 relative">

@@ -103,30 +103,13 @@ export default function Header() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 h-16">
       <div className="max-w-page mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
         <div className="flex items-center gap-14">
-          <a
-            href="/"
-            className="font-display font-black text-xl tracking-normal text-navy flex items-center gap-2 leading-none"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              className="block"
-              aria-hidden="true"
-            >
-              <rect
-                x="2.5"
-                y="2.5"
-                width="19"
-                height="19"
-                rx="3.5"
-                fill="none"
-                stroke="#0A3D62"
-                strokeWidth="2"
-              />
-              <circle cx="7.5" cy="7.5" r="1.6" fill="#0A3D62" />
-            </svg>
-            EINSTECH
+          <a href="/" className="flex items-center leading-none">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/einstech-logo.png"
+              alt="EINSTECH"
+              className="h-8 w-auto block"
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-6">
