@@ -7,6 +7,7 @@ const solutionItems = [
   { label: "Storage + Backup", desc: "Hitachi · Acronis · NetBackup", href: "/storage-backup" },
   { label: "Infrastructure", desc: "HP · Brocade · NVIDIA · TP-Link", href: "/infrastructure" },
   { label: "Data Security", desc: "Netwrix · Kaspersky · Zero Trust", href: "/dlp-antivirus" },
+  { label: "DR 솔루션", desc: "재해복구 · BCP 설계", href: "/bcp" },
 ];
 
 const companyItems = [
@@ -137,12 +138,6 @@ export default function Header() {
               setOpenId={setOpenId}
             />
             <a
-              href="/bcp"
-              className="text-sm font-bold text-slate-600 hover:text-navy transition-colors"
-            >
-              DR 솔루션
-            </a>
-            <a
               href="/contact"
               className="text-sm font-bold text-slate-600 hover:text-navy transition-colors"
             >
@@ -206,14 +201,8 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="/bcp"
-              className="block py-3 mt-2 text-sm text-slate-700 hover:text-navy border-t border-slate-100"
-            >
-              DR 솔루션
-            </a>
-            <a
               href="/contact"
-              className="block py-3 text-sm text-slate-700 hover:text-navy border-t border-slate-100"
+              className="block py-3 mt-2 text-sm text-slate-700 hover:text-navy border-t border-slate-100"
             >
               문의하기
             </a>

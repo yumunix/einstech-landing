@@ -1,85 +1,12 @@
 import "./page.css";
 import BodyClass from "@/components/landing/BodyClass";
+import Header from "@/components/sections/Header";
 
 export default function Home() {
   return (
     <div className="einstech-white w-full relative">
       <BodyClass />
-      {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-[60] glass-nav border-b border-slate-100">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-4 group cursor-pointer">
-            <div className="w-11 h-11 bg-white border border-slate-200 rounded-xl flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                className="block"
-                aria-hidden="true"
-              >
-                <rect
-                  x="2.5"
-                  y="2.5"
-                  width="19"
-                  height="19"
-                  rx="3.5"
-                  fill="none"
-                  stroke="#0A3D62"
-                  strokeWidth="2"
-                />
-                <circle cx="7.5" cy="7.5" r="1.6" fill="#0A3D62" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-black text-navy tracking-tighter leading-none">
-                EINSTECH
-              </span>
-              <span className="text-[9px] font-extrabold text-slate-400 tracking-[0.3em] mt-1">
-                NON STOP · LOSSLESS
-              </span>
-            </div>
-          </a>
-
-          <div className="hidden lg:flex items-center gap-12">
-            <div className="flex items-center gap-10 text-[15px] font-bold text-slate-600">
-              <a
-                href="/company"
-                className="hover:text-navy transition-colors relative group py-2"
-              >
-                회사소개
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-navy transition-all group-hover:w-full"></span>
-              </a>
-              <a
-                href="#solutions"
-                className="hover:text-navy transition-colors relative group py-2"
-              >
-                솔루션
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-navy transition-all group-hover:w-full"></span>
-              </a>
-              <a
-                href="/bcp"
-                className="hover:text-navy transition-colors relative group py-2"
-              >
-                DR 솔루션
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-navy transition-all group-hover:w-full"></span>
-              </a>
-              <a
-                href="/contact"
-                className="hover:text-navy transition-colors relative group py-2"
-              >
-                문의하기
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-navy transition-all group-hover:w-full"></span>
-              </a>
-            </div>
-            <a
-              href="/contact"
-              className="bg-white text-navy border border-navy px-8 py-3 rounded-full text-sm font-bold hover:bg-navy hover:text-white transition-all hover:-translate-y-0.5 active:scale-95"
-            >
-              무료 인프라 진단
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* HERO */}
       <section className="relative pt-48 pb-32 overflow-hidden min-h-screen flex items-center bg-white">
@@ -518,6 +445,89 @@ export default function Home() {
                 VIEW <i className="ph-bold ph-arrow-right"></i>
               </span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* PRODUCT LINEUP */}
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
+          <div className="max-w-2xl mb-20">
+            <span className="text-navy font-black text-sm tracking-[0.2em] uppercase mb-4 block">
+              Product Lineup
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-black text-navy mb-8">
+              취급 품목
+            </h2>
+            <p className="text-xl text-slate-500 leading-relaxed font-medium">
+              서버·스토리지·보안·소프트웨어를 글로벌 벤더 라인업으로 직접
+              공급하고, 설계부터 구축·운영까지 EINSTECH가 책임집니다.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {/* 서버 */}
+            <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
+              <div className="w-14 h-14 bg-navy/5 rounded-[20px] flex items-center justify-center mb-8">
+                <i className="ph-fill ph-hard-drives text-2xl text-navy"></i>
+              </div>
+              <h3 className="text-xl font-black text-navy mb-4">서버</h3>
+              <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
+                기간계·가상화·DB부터 AI/HPC 컴퓨트까지 전 영역 서버를
+                공급합니다.
+              </p>
+              <ul className="space-y-3 text-[13px] font-bold text-slate-700">
+                <li>HP ProLiant · Apollo</li>
+                <li>NVIDIA DGX · HGX (AI/GPU 서버)</li>
+              </ul>
+            </div>
+
+            {/* 스토리지 */}
+            <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
+              <div className="w-14 h-14 bg-emerald/5 rounded-[20px] flex items-center justify-center mb-8">
+                <i className="ph-fill ph-database text-2xl text-emerald"></i>
+              </div>
+              <h3 className="text-xl font-black text-navy mb-4">스토리지</h3>
+              <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
+                NVMe All-Flash 스토리지와 SAN 스위치를 표준 구성으로
+                공급합니다.
+              </p>
+              <ul className="space-y-3 text-[13px] font-bold text-slate-700">
+                <li>Hitachi 스토리지</li>
+                <li>Brocade Fibre Channel SAN 스위치</li>
+              </ul>
+            </div>
+
+            {/* 보안 */}
+            <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
+              <div className="w-14 h-14 bg-navy/5 rounded-[20px] flex items-center justify-center mb-8">
+                <i className="ph-fill ph-shield-check text-2xl text-navy"></i>
+              </div>
+              <h3 className="text-xl font-black text-navy mb-4">보안</h3>
+              <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
+                내부정보 유출 방지부터 백신·Zero Trust까지 통합 공급합니다.
+              </p>
+              <ul className="space-y-3 text-[13px] font-bold text-slate-700">
+                <li>Netwrix DLP</li>
+                <li>Kaspersky 백신</li>
+              </ul>
+            </div>
+
+            {/* S/W */}
+            <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
+              <div className="w-14 h-14 bg-emerald/5 rounded-[20px] flex items-center justify-center mb-8">
+                <i className="ph-fill ph-cube text-2xl text-emerald"></i>
+              </div>
+              <h3 className="text-xl font-black text-navy mb-4">S/W</h3>
+              <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
+                이중화 클러스터와 백업 소프트웨어를 라이선스·구축까지
+                공급합니다.
+              </p>
+              <ul className="space-y-3 text-[13px] font-bold text-slate-700">
+                <li>Rose HA · MANTECH MCCS</li>
+                <li>Acronis · Veritas NetBackup</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

@@ -76,12 +76,6 @@ body:has(.einstech-white) button {
   letter-spacing: -0.025em;
 }
 
-.einstech-white .glass-nav {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
 .einstech-white .gradient-text {
   background: linear-gradient(135deg, #0A3D62 0%, #10B981 100%);
   -webkit-background-clip: text;
