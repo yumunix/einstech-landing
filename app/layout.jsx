@@ -77,7 +77,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className="einstech-white-body">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

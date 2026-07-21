@@ -1,11 +1,9 @@
 import "./page.css";
-import BodyClass from "@/components/landing/BodyClass";
 import Header from "@/components/sections/Header";
 
 export default function Home() {
   return (
     <div className="einstech-white w-full relative">
-      <BodyClass />
       <Header />
 
       {/* HERO */}

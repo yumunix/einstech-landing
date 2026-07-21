@@ -1,7 +1,7 @@
 /* ====================================================================
    EINSTECH Landing — White tone (scoped)
-   Overrides globals.css dark theme when .einstech-white-body class
-   is applied to html/body (via BodyClass client component).
+   Overrides globals.css dark theme; einstech-white-body is applied to
+   html/body directly in app/layout.jsx on every route.
    ==================================================================== */
 
 html.einstech-white-body,
