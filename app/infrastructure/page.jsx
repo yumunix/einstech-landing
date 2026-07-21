@@ -450,7 +450,7 @@ export default function InfrastructurePage() {
 
         {/* CTA */}
         <section id="cta" className="py-24 lg:py-32 relative">
-          <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="w-full max-w-page mx-auto px-6 lg:px-12 relative z-10">
             <GlassPanel
               ctaFrame
               className="w-full lg:ml-12 p-8 md:p-16 lg:p-20 flex flex-col items-center text-center shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden"
