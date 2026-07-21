@@ -42,24 +42,30 @@ body:has(.einstech-white) button {
 /* Reset only the properties globals.css sets on elements
    (avoid touching font-size / line-height / letter-spacing — Tailwind owns those) */
 .einstech-white,
-.einstech-white * {
+.einstech-white *,
+body.einstech-white-body,
+body.einstech-white-body * {
   box-sizing: border-box;
 }
-.einstech-white :where(h1) {
+.einstech-white :where(h1),
+body.einstech-white-body :where(h1) {
   font-family: inherit;
   word-break: normal;
 }
-.einstech-white :where(a) {
+.einstech-white :where(a),
+body.einstech-white-body :where(a) {
   text-decoration: none;
 }
-.einstech-white :where(button) {
+.einstech-white :where(button),
+body.einstech-white-body :where(button) {
   background: transparent;
   border: 0;
   font-family: inherit;
   text-transform: none;
   box-shadow: none;
 }
-.einstech-white :where(button):hover {
+.einstech-white :where(button):hover,
+body.einstech-white-body :where(button):hover {
   background: transparent;
   box-shadow: none;
 }

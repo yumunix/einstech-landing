@@ -42,7 +42,7 @@ function NavDropdown({ label, items, openId, setOpenId, id }) {
         onClick={() => setOpenId(open ? null : id)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className={`flex items-center gap-1.5 text-sm font-bold transition-colors ${
+        className={`flex items-center gap-1.5 text-base font-bold transition-colors ${
           open ? "text-navy" : "text-slate-600 hover:text-navy"
         }`}
       >
@@ -102,7 +102,7 @@ export default function Header() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 h-16">
       <div className="max-w-page mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-14">
           <a
             href="/"
             className="font-display font-black text-xl tracking-normal text-navy flex items-center gap-2 leading-none"
@@ -139,7 +139,7 @@ export default function Header() {
             />
             <a
               href="/contact"
-              className="text-sm font-bold text-slate-600 hover:text-navy transition-colors"
+              className="text-base font-bold text-slate-600 hover:text-navy transition-colors"
             >
               문의하기
             </a>

@@ -11,7 +11,7 @@ export default function Home() {
         <div className="hero-glow top-0 -left-1/4"></div>
         <div className="hero-glow bottom-0 -right-1/4"></div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-20 items-center relative z-10">
+        <div className="max-w-page mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center relative z-10">
           <div>
             <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-slate-200 text-navy text-[13px] font-bold mb-10 shadow-sm">
               <span className="flex h-2.5 w-2.5 relative">
@@ -191,7 +191,7 @@ export default function Home() {
 
       {/* WHY SECTION */}
       <section className="py-32 bg-white">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="max-w-page mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
               <span className="text-navy font-black text-sm tracking-[0.2em] uppercase mb-6 block">
@@ -285,7 +285,7 @@ export default function Home() {
         id="solutions"
         className="py-32 bg-slate-50/60 relative overflow-hidden"
       >
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
+        <div className="max-w-page mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-10">
             <div className="max-w-2xl">
               <span className="text-emerald font-black text-sm tracking-[0.2em] uppercase mb-4 block">
@@ -449,7 +449,7 @@ export default function Home() {
 
       {/* PRODUCT LINEUP */}
       <section className="py-32 bg-white relative overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
+        <div className="max-w-page mx-auto px-6 lg:px-12 relative z-10">
           <div className="max-w-2xl mb-20">
             <span className="text-navy font-black text-sm tracking-[0.2em] uppercase mb-4 block">
               Product Lineup
@@ -509,7 +509,11 @@ export default function Home() {
               <ul className="space-y-3 text-[13px] font-bold text-slate-700">
                 <li>Netwrix DLP</li>
                 <li>Kaspersky 백신</li>
-                <li>EINSTECH E-Gate (OPNsense 방화벽)</li>
+                <li>
+                  <a href="/e-gate" className="hover:text-navy underline decoration-slate-300">
+                    EINSTECH E-Gate (방화벽 게이트웨이)
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -535,7 +539,7 @@ export default function Home() {
       {/* IMMUTABLE / INSTANT RESTORE */}
       <section className="py-40 bg-white relative overflow-hidden border-y border-slate-100">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 -skew-x-12 translate-x-1/4"></div>
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
+        <div className="max-w-page mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center">
             <div>
               <h2 className="text-4xl lg:text-5xl font-black text-navy leading-tight mb-10">
@@ -682,7 +686,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="bg-white text-slate-700 pt-32 pb-20 border-t border-slate-100">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="max-w-page mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-32">
             <div className="md:col-span-4">
               <div className="flex items-center gap-4 mb-10">
