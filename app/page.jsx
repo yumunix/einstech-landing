@@ -30,7 +30,7 @@ export default function Home() {
             <p className="text-xl text-slate-500 mb-14 leading-relaxed max-w-xl font-medium">
               위협은 예방이 아닌 회복으로 답합니다. 아인스테크는{" "}
               <span className="text-navy font-bold">HA Cluster</span>,{" "}
-              <span className="text-navy font-bold">Storage + Backup</span>,{" "}
+              <span className="text-navy font-bold">Backup</span>,{" "}
               <span className="text-navy font-bold">Data Security</span>를 단일
               파트너로 통합해 사이버 회복탄력성(Cyber Resilience)을 설계합니다.
             </p>
@@ -331,7 +331,7 @@ export default function Home() {
               </span>
             </a>
 
-            {/* STORAGE + BACKUP */}
+            {/* BACKUP */}
             <a
               href="/storage-backup"
               className="card-premium p-10 rounded-[40px] bg-white group flex flex-col h-full relative"
@@ -343,19 +343,19 @@ export default function Home() {
                 <i className="ph-fill ph-database text-2xl text-emerald group-hover:text-white transition-colors"></i>
               </div>
               <div className="text-[10px] font-black text-slate-400 tracking-widest mb-2">
-                HITACHI · ACRONIS
+                ACRONIS · NETBACKUP
               </div>
               <h3 className="text-xl font-black text-navy mb-4">
-                STORAGE + BACKUP
+                BACKUP
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                NVMe All-Flash 스토리지 + 불변(Immutable) 백업으로 원본 데이터를
-                완벽 보존합니다.
+                불변 백업과 격리 복구 구성으로 랜섬웨어에도 복구 가능한 데이터
+                보호 체계를 구축합니다.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-2 text-[13px] font-bold text-slate-700">
                   <i className="ph-bold ph-check-circle text-emerald"></i>{" "}
-                  NVME_ALL_FLASH
+                  ACRONIS_BACKUP
                 </li>
                 <li className="flex items-center gap-2 text-[13px] font-bold text-slate-700">
                   <i className="ph-bold ph-check-circle text-emerald"></i>{" "}
@@ -737,7 +737,7 @@ export default function Home() {
                     href="/storage-backup"
                     className="hover:text-navy transition-colors"
                   >
-                    Storage + Backup
+                    Backup
                   </a>
                 </li>
                 <li>

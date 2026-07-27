@@ -10,7 +10,7 @@ const productItems = [
 
 const solutionItems = [
   { label: "HA Cluster", desc: "Rose HA · MCCS — 무중단 페일오버", href: "/ha-cluster" },
-  { label: "Storage + Backup", desc: "Hitachi · Acronis · NetBackup", href: "/storage-backup" },
+  { label: "Backup", desc: "Acronis · NetBackup · Immutable Backup", href: "/storage-backup" },
   { label: "Data Security", desc: "Netwrix · Kaspersky · Zero Trust", href: "/dlp-antivirus" },
   { label: "DR 솔루션", desc: "재해복구 · BCP 설계", href: "/bcp" },
 ];
