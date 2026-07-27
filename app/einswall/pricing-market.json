@@ -1,0 +1,14 @@
+{
+  "effectiveMonth": "2026.07",
+  "nextReviewDate": "2026-08-01",
+  "memory16": 333000,
+  "memory32": 547000,
+  "storage512": 308000,
+  "storage1tb": 420000,
+  "sources": {
+    "memory16": "삼성전자 DDR5-4800 SO-DIMM 16GB",
+    "memory32": "삼성전자 DDR5-4800 SO-DIMM 32GB",
+    "storage512": "삼성전자 980 / SK하이닉스 P41 500GB",
+    "storage1tb": "삼성전자 990 EVO Plus / SK하이닉스 P41 1TB"
+  }
+}

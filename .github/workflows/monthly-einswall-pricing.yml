@@ -1,0 +1,41 @@
+name: Monthly EINSWALL pricing
+
+on:
+  schedule:
+    - cron: "15 0 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monthly-einswall-pricing
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: node scripts/update-einswall-pricing.mjs
+      - run: npm run build
+
+      - name: Commit verified monthly prices
+        run: |
+          if git diff --quiet; then
+            echo "No pricing change."
+            exit 0
+          fi
+          git config user.name "einstech-pricing-bot"
+          git config user.email "pricing-bot@einstech.kr"
+          git add app/einswall/pricing-market.json data/einswall-pricing-history
+          git commit -m "chore: update EINSWALL monthly pricing"
+          git push

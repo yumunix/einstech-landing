@@ -1,6 +1,10 @@
+import market from "./pricing-market.json";
+
+const roundUp10000 = (value) => Math.ceil(value / 10000) * 10000;
+
 export const pricingPolicy = {
-  effectiveMonth: "2026.07",
-  nextReviewDate: "2026-08-01",
+  effectiveMonth: market.effectiveMonth,
+  nextReviewDate: market.nextReviewDate,
   fixedUsdKrw: 1600,
   importTaxRate: 0.18,
   reviewCycle: "매월 1일 검토·갱신",
@@ -12,9 +16,9 @@ export const pricingPolicy = {
 
 export const einswallPrices = {
   cpu: {
-    "8505": 1690000,
-    i5: 1890000,
-    i7: 2090000,
+    "8505": roundUp10000(1037000 + market.memory16 + market.storage512),
+    i5: roundUp10000(1237000 + market.memory16 + market.storage512),
+    i7: roundUp10000(1437000 + market.memory16 + market.storage512),
   },
   network: {
     none: 0,
@@ -23,12 +27,12 @@ export const einswallPrices = {
   },
   memory: {
     "16": 0,
-    "32": 350000,
-    "64": 950000,
+    "32": roundUp10000(market.memory32 - market.memory16 + 95000),
+    "64": roundUp10000(market.memory32 * 2 - market.memory16 + 105000),
   },
   storage: {
     "512": 0,
-    "1tb": 280000,
+    "1tb": roundUp10000(market.storage1tb - market.storage512 + 170000),
   },
   sfpModule: {
     none: 0,
