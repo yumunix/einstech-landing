@@ -17,6 +17,10 @@ export const pricingPolicy = {
   exclusions: "중고·해외구매·병행수입·렌탈·품절 상품 제외",
 };
 
+const rackEntryUsd = 366.63;
+const rackAdvancedUsd = 763.88;
+const rackFlagshipUsd = 651.9;
+
 export const einswallPrices = {
   cpu: {
     "8505": roundUp10000(
@@ -48,5 +52,25 @@ export const einswallPrices = {
     "1": 50000,
     "2": 120000,
     "4": 240000,
+  },
+  rack: {
+    entryBarebone: roundUp10000(
+      rackEntryUsd * pricingPolicy.fixedUsdKrw * (1 + pricingPolicy.importTaxRate),
+    ),
+    entryConfigured: roundUp10000(
+      rackEntryUsd * pricingPolicy.fixedUsdKrw * (1 + pricingPolicy.importTaxRate) +
+        market.memory16 +
+        market.storage512,
+    ),
+    advancedConfigured: roundUp10000(
+      rackAdvancedUsd * pricingPolicy.fixedUsdKrw * (1 + pricingPolicy.importTaxRate) +
+        market.memory16 +
+        market.storage512,
+    ),
+    flagshipConfigured: roundUp10000(
+      rackFlagshipUsd * pricingPolicy.fixedUsdKrw * (1 + pricingPolicy.importTaxRate) +
+        market.memory16 +
+        market.storage512,
+    ),
   },
 };

@@ -5,16 +5,19 @@ import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 import PricingConfigurator from "./PricingConfigurator";
+import RackEntryConfigurator from "./RackEntryConfigurator";
+import RackAdvancedConfigurator from "./RackAdvancedConfigurator";
+import RackFlagshipConfigurator from "./RackFlagshipConfigurator";
 
 export const metadata = {
   title: "TP-Link Network Switch + EINSWALL Firewall | EINSTECH",
   description:
-    "TP-Link Network Switch와 EINSWALL Firewall을 함께 구성합니다. EINSWALL은 1G·10G 사양을 선택할 수 있는 맞춤형 방화벽 서버입니다.",
+    "TP-Link Network Switch와 EINSWALL Firewall을 함께 구성합니다. 데스크톱 팬리스형과 19형 1U 랙형 방화벽 서버를 선택할 수 있습니다.",
 };
 
 const specs = [
   { label: "CPU", value: "Intel Pentium 8505 / Core i5-12450H / Core i7-13620H (모델 선택)" },
-  { label: "폼팩터", value: "팬리스 알루미늄 방열판 인클로저 (무소음·무진동)" },
+  { label: "폼팩터", value: "팬리스 데스크톱형 / 19형 1U 랙마운트형 (모델 선택)" },
   { label: "메모리", value: "DDR5 SO-DIMM ×2 슬롯" },
   { label: "스토리지", value: "M.2 NVMe ×2 슬롯" },
   { label: "고정 LAN", value: "2.5G (Intel i226-V) ×4" },
@@ -26,6 +29,7 @@ const specs = [
 const models = [
   {
     name: "EINSWALL 1G",
+    category: "MINI PC",
     level: "ESSENTIAL",
     network: "1G 회선 운용 · 4×2.5GbE RJ45",
     desc: "SFP+가 필요 없는 사무실·매장·소규모 사업장용 경제형",
@@ -33,7 +37,35 @@ const models = [
     imageAlt: "EINSWALL 1G 모델의 4개 2.5GbE 네트워크 포트",
   },
   {
+    name: "EINSWALL RACK ENTRY",
+    category: "RACK · 보급형",
+    level: "RACK ESSENTIAL",
+    network: "19형 1U · 6×1GbE + 4×2.5GbE + 4×SFP",
+    desc: "통신실·서버실 표준 랙에 장착하는 Intel Atom C3758 기반 보급형",
+    image: "/products/e-gate/einswall-rack-entry.webp",
+    imageAlt: "EINSWALL RACK ENTRY 19형 1U 랙마운트 방화벽 서버",
+  },
+  {
+    name: "EINSWALL RACK ADVANCED",
+    category: "RACK · 고급형",
+    level: "RACK PERFORMANCE",
+    network: "19형 1U · 8×2.5GbE + 4×10G SFP+",
+    desc: "Core i5-13400 기반으로 10G 트래픽·VPN·IDS/IPS를 처리하는 고급형",
+    image: "/products/e-gate/einswall-rack-advanced.webp",
+    imageAlt: "EINSWALL RACK ADVANCED 19형 1U 고급형 방화벽 서버",
+  },
+  {
+    name: "EINSWALL RACK FLAGSHIP",
+    category: "RACK · 최고급형",
+    level: "RACK FLAGSHIP",
+    network: "19형 2U · 최대 16×RJ45 + 8×10G SFP+",
+    desc: "LGA1700 CPU와 대규모 네트워크 확장을 지원하는 데이터센터급 최고급형",
+    image: "/products/e-gate/einswall-rack-flagship.webp",
+    imageAlt: "EINSWALL RACK FLAGSHIP 19형 2U 최고급형 방화벽 서버",
+  },
+  {
     name: "EINSWALL 10G2",
+    category: "MINI PC",
     level: "PRO",
     network: "4×2.5GbE RJ45 + 2×10G SFP+",
     desc: "10G 업링크, 다중 VPN과 IDS/IPS를 사용하는 기업용",
@@ -42,6 +74,7 @@ const models = [
   },
   {
     name: "EINSWALL 10G4",
+    category: "MINI PC",
     level: "ENTERPRISE",
     network: "4×2.5GbE RJ45 + 4×10G SFP+",
     desc: "다수의 10G 구간과 고부하 보안 정책을 위한 고급형",
@@ -51,6 +84,10 @@ const models = [
 ];
 
 const gatewayFeatures = [
+  {
+    title: "TP-Link VLAN 네트워크 분할",
+    desc: "TP-Link 관리형 스위치와 VLAN Trunk로 연동해 업무망·서버망·게스트망·CCTV망을 논리적으로 분리하고, 망 간 접근은 EINSWALL 보안 정책으로 통제합니다.",
+  },
   {
     title: "상태 기반 방화벽",
     desc: "룰 기반 트래픽 제어와 상태 추적(Stateful Inspection)으로 인바운드·아웃바운드 트래픽을 세밀하게 통제합니다.",
@@ -113,8 +150,7 @@ export default function EinswallPage() {
                 </h1>
 
                 <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl border-l-2 border-navy/30 pl-5 mb-12">
-                  TP-Link Network Switch로 내부 네트워크를 구성하고 EINSWALL Firewall로
-                  인터넷 경계를 보호합니다. EINSWALL은 경제적인 1G 운용형부터 10G SFP+
+                  TP-Link 관리형 Network Switch와 EINSWALL Firewall을 VLAN Trunk로 연동해 업무망·서버망·게스트망·CCTV망을 분리하고, 인터넷 경계와 망 간 접근을 함께 보호합니다. EINSWALL은 경제적인 1G 운용형부터 10G SFP+
                   고급형까지 필요한 사양을 선택할 수 있으며, 현장 네트워크 및 방화벽
                   정책 설정은 별도 견적입니다.
                 </p>
@@ -195,18 +231,19 @@ export default function EinswallPage() {
             <SectionHeader
               badgeText="MODEL_LINEUP"
               badgeColor="acid"
-              sectionLabel="2. Models — 1G 경제형 · 10G 고급형"
+              sectionLabel="2. Models — 미니PC · 랙 보급형 · 랙 고급형 · 랙 최고급형"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] max-w-4xl">
                 트래픽 규모에 맞는
                 <br />
-                <span className="text-emerald">모델을 선택하세요.</span>
+                <span className="text-emerald">폼팩터와 등급을 선택하세요.</span>
               </h2>
             </SectionHeader>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:pl-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 lg:pl-12">
               {models.map((m) => (
                 <GlassPanel key={m.name} className="overflow-hidden flex flex-col">
+                  <div className="border-b border-slate-100 bg-navy px-4 py-2 font-mono text-[9px] font-bold tracking-widest text-white">{m.category}</div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={m.image}
@@ -248,6 +285,16 @@ export default function EinswallPage() {
             </SectionHeader>
 
             <PricingConfigurator />
+
+            <div className="mt-10">
+              <RackEntryConfigurator />
+            </div>
+            <div className="mt-10">
+              <RackAdvancedConfigurator />
+            </div>
+            <div className="mt-10">
+              <RackFlagshipConfigurator />
+            </div>
           </div>
         </section>
 
