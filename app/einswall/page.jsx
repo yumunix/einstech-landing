@@ -29,18 +29,24 @@ const models = [
     level: "ESSENTIAL",
     network: "1G 회선 운용 · 4×2.5GbE RJ45",
     desc: "SFP+가 필요 없는 사무실·매장·소규모 사업장용 경제형",
+    image: "/products/e-gate/einswall-1g.jpg",
+    imageAlt: "EINSWALL 1G 모델의 4개 2.5GbE 네트워크 포트",
   },
   {
     name: "EINSWALL 10G2",
     level: "PRO",
     network: "4×2.5GbE RJ45 + 2×10G SFP+",
     desc: "10G 업링크, 다중 VPN과 IDS/IPS를 사용하는 기업용",
+    image: "/products/e-gate/einswall-10g2.jpg",
+    imageAlt: "EINSWALL 10G2 모델의 4개 2.5GbE 및 2개 10G SFP+ 포트",
   },
   {
     name: "EINSWALL 10G4",
     level: "ENTERPRISE",
     network: "4×2.5GbE RJ45 + 4×10G SFP+",
     desc: "다수의 10G 구간과 고부하 보안 정책을 위한 고급형",
+    image: "/products/e-gate/einswall-10g4.jpg",
+    imageAlt: "EINSWALL 10G4 모델의 4개 2.5GbE 및 4개 10G SFP+ 포트",
   },
 ];
 
@@ -123,13 +129,25 @@ export default function EinswallPage() {
               </div>
 
               <div className="relative">
-                <div className="bg-slate-50 rounded-[40px] border border-slate-100 p-10 lg:p-14">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/products/e-gate/e-gate-6.jpg"
-                    alt="EINSWALL by EINSTECH 맞춤형 방화벽 서버"
-                    className="w-full h-auto rounded-3xl"
-                  />
+                <div className="grid grid-cols-2 gap-3 rounded-[40px] border border-slate-100 bg-slate-50 p-4 sm:p-6">
+                  {models.map((model, index) => (
+                    <figure
+                      key={model.name}
+                      className={`overflow-hidden rounded-2xl border border-slate-100 bg-white ${
+                        index === 0 ? "col-span-2 sm:col-span-1" : ""
+                      }`}
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={model.image}
+                        alt={model.imageAlt}
+                        className="aspect-square w-full object-cover"
+                      />
+                      <figcaption className="px-3 py-2 text-center font-mono text-[10px] font-bold text-navy">
+                        {model.name}
+                      </figcaption>
+                    </figure>
+                  ))}
                 </div>
               </div>
             </div>
@@ -167,14 +185,6 @@ export default function EinswallPage() {
               </dl>
             </GlassPanel>
 
-            <div className="mt-10 lg:ml-12">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/products/e-gate/e-gate-5.jpg"
-                alt="EINSWALL 포트 구성 (USB · Type-C · SIM · Console)"
-                className="w-full max-w-md rounded-3xl border border-slate-100"
-              />
-            </div>
           </div>
         </section>
 
@@ -195,13 +205,21 @@ export default function EinswallPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:pl-12">
               {models.map((m) => (
-                <GlassPanel key={m.name} className="p-7 flex flex-col gap-3">
+                <GlassPanel key={m.name} className="overflow-hidden flex flex-col">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={m.image}
+                    alt={m.imageAlt}
+                    className="aspect-square w-full border-b border-slate-100 bg-white object-cover"
+                  />
+                  <div className="p-7 flex flex-col gap-3">
                   <div className="font-mono text-[10px] font-bold tracking-widest text-emerald">
                     {m.level}
                   </div>
                   <div className="font-display text-xl font-bold text-slate-900">{m.name}</div>
                   <div className="font-mono text-[11px] text-navy">{m.network}</div>
                   <p className="font-sans text-sm leading-relaxed text-slate-500">{m.desc}</p>
+                  </div>
                 </GlassPanel>
               ))}
             </div>
