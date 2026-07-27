@@ -458,80 +458,112 @@ export default function Home() {
               취급 품목
             </h2>
             <p className="text-xl text-slate-500 leading-relaxed font-medium">
-              서버·스토리지·보안·소프트웨어를 글로벌 벤더 라인업으로 직접
+              서버·스토리지·SAN·네트워크·방화벽을 검증된 벤더 라인업으로
               공급하고, 설계부터 구축·운영까지 EINSTECH가 책임집니다.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
-            {/* 서버 */}
+          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6">
+            {/* HP Server */}
             <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
               <div className="w-14 h-14 bg-navy/5 rounded-[20px] flex items-center justify-center mb-8">
                 <i className="ph-fill ph-hard-drives text-2xl text-navy"></i>
               </div>
-              <h3 className="text-xl font-black text-navy mb-4">서버</h3>
+              <div className="text-[10px] font-black text-slate-400 tracking-[0.16em] mb-2">
+                ENTERPRISE SERVER
+              </div>
+              <h3 className="text-xl font-black text-navy mb-4">HP Server</h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                기간계·가상화·DB부터 AI/HPC 컴퓨트까지 전 영역 서버를
+                기간계·가상화·DB 업무를 위한 엔터프라이즈 서버를 설계하고
                 공급합니다.
               </p>
               <ul className="space-y-3 text-[13px] font-bold text-slate-700">
-                <li>HP ProLiant · Apollo</li>
-                <li>NVIDIA DGX · HGX (AI/GPU 서버)</li>
+                <li>HP ProLiant</li>
+                <li>Rack · Tower Server</li>
               </ul>
             </div>
 
-            {/* 스토리지 */}
+            {/* Hitachi Storage */}
             <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
               <div className="w-14 h-14 bg-emerald/5 rounded-[20px] flex items-center justify-center mb-8">
                 <i className="ph-fill ph-database text-2xl text-emerald"></i>
               </div>
-              <h3 className="text-xl font-black text-navy mb-4">스토리지</h3>
+              <div className="text-[10px] font-black text-slate-400 tracking-[0.16em] mb-2">
+                ENTERPRISE STORAGE
+              </div>
+              <h3 className="text-xl font-black text-navy mb-4">Hitachi</h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                NVMe All-Flash 스토리지와 SAN 스위치를 표준 구성으로
+                핵심 데이터를 위한 고가용성 엔터프라이즈 스토리지를
                 공급합니다.
               </p>
               <ul className="space-y-3 text-[13px] font-bold text-slate-700">
-                <li>Hitachi 스토리지</li>
-                <li>Brocade Fibre Channel SAN 스위치</li>
+                <li>Hitachi VSP</li>
+                <li>All-Flash · Hybrid</li>
               </ul>
             </div>
 
-            {/* 보안 */}
+            {/* SAN Switch */}
             <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
               <div className="w-14 h-14 bg-navy/5 rounded-[20px] flex items-center justify-center mb-8">
-                <i className="ph-fill ph-shield-check text-2xl text-navy"></i>
+                <i className="ph-fill ph-git-branch text-2xl text-navy"></i>
               </div>
-              <h3 className="text-xl font-black text-navy mb-4">보안</h3>
+              <div className="text-[10px] font-black text-slate-400 tracking-[0.16em] mb-2">
+                STORAGE NETWORK
+              </div>
+              <h3 className="text-xl font-black text-navy mb-4">SAN Switch</h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                내부정보 유출 방지부터 백신·방화벽 어플라이언스까지 통합
-                공급합니다.
+                서버와 스토리지를 안정적으로 연결하는 Fibre Channel SAN
+                패브릭을 구축합니다.
               </p>
               <ul className="space-y-3 text-[13px] font-bold text-slate-700">
-                <li>Netwrix DLP</li>
-                <li>Kaspersky 백신</li>
-                <li>
-                  <a href="/e-gate" className="hover:text-navy underline decoration-slate-300">
-                    EINSTECH E-Gate (방화벽 게이트웨이)
-                  </a>
-                </li>
+                <li>Brocade SAN Switch</li>
+                <li>Fibre Channel Fabric</li>
               </ul>
             </div>
 
-            {/* S/W */}
+            {/* TP-Link Network Switch */}
             <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
               <div className="w-14 h-14 bg-emerald/5 rounded-[20px] flex items-center justify-center mb-8">
-                <i className="ph-fill ph-cube text-2xl text-emerald"></i>
+                <i className="ph-fill ph-network text-2xl text-emerald"></i>
               </div>
-              <h3 className="text-xl font-black text-navy mb-4">S/W</h3>
+              <div className="text-[10px] font-black text-slate-400 tracking-[0.16em] mb-2">
+                NETWORK SWITCH
+              </div>
+              <h3 className="text-xl font-black text-navy mb-4">TP-Link</h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                이중화 클러스터와 백업 소프트웨어를 라이선스·구축까지
-                공급합니다.
+                사무실·매장·중소 규모 사업장의 유무선 네트워크를 통합
+                구성합니다.
               </p>
               <ul className="space-y-3 text-[13px] font-bold text-slate-700">
-                <li>Rose HA · MANTECH MCCS</li>
-                <li>Acronis · Veritas NetBackup</li>
+                <li>TP-Link Omada</li>
+                <li>JetStream Switch</li>
               </ul>
             </div>
+
+            {/* Firewall Server */}
+            <a
+              href="/e-gate"
+              className="group p-10 rounded-[40px] bg-navy text-white border border-navy flex flex-col h-full transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(10,61,98,0.2)]"
+            >
+              <div className="w-14 h-14 bg-white/10 rounded-[20px] flex items-center justify-center mb-8">
+                <i className="ph-fill ph-shield-check text-2xl text-white"></i>
+              </div>
+              <div className="text-[10px] font-black text-white/50 tracking-[0.16em] mb-2">
+                SECURITY GATEWAY
+              </div>
+              <h3 className="text-xl font-black mb-4">Firewall Server</h3>
+              <p className="text-white/65 font-medium leading-relaxed mb-8 flex-grow text-sm">
+                환경에 맞춘 하드웨어와 보안 정책을 사전 구성한 방화벽 서버를
+                공급합니다.
+              </p>
+              <ul className="space-y-3 text-[13px] font-bold text-white/85">
+                <li>EINSTECH E-Gate</li>
+                <li className="flex items-center gap-2">
+                  제품 보기
+                  <i className="ph-bold ph-arrow-right transition-transform group-hover:translate-x-1"></i>
+                </li>
+              </ul>
+            </a>
           </div>
         </div>
       </section>
