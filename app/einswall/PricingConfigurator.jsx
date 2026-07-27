@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { einswallPrices, pricingPolicy } from "./pricing";
 
 const cpuOptions = [
   {
@@ -8,34 +9,34 @@ const cpuOptions = [
     label: "Pentium 8505",
     detail: "중소 사업장 · 1G 운용형",
     users: "약 20~100명",
-    price: 1690000,
+    price: einswallPrices.cpu["8505"],
   },
   {
     id: "i5",
     label: "Core i5-12450H",
     detail: "다중 VPN · IDS/IPS",
     users: "약 50~200명",
-    price: 1890000,
+    price: einswallPrices.cpu.i5,
   },
   {
     id: "i7",
     label: "Core i7-13620H",
     detail: "10G · 고부하 보안 정책",
     users: "약 100~300명",
-    price: 2090000,
+    price: einswallPrices.cpu.i7,
   },
 ];
 
 const sfpOptions = [
-  { id: "none", label: "1G 경제형", detail: "4×2.5GbE RJ45 · SFP+ 없음", price: 0, suffix: "-1G" },
-  { id: "2s", label: "10G 고급형", detail: "4×2.5GbE + 2×10G SFP+", price: 300000, suffix: "-10G2" },
-  { id: "4s", label: "10G 확장형", detail: "4×2.5GbE + 4×10G SFP+", price: 500000, suffix: "-10G4" },
+  { id: "none", label: "1G 경제형", detail: "4×2.5GbE RJ45 · SFP+ 없음", price: einswallPrices.network.none, suffix: "-1G" },
+  { id: "2s", label: "10G 고급형", detail: "4×2.5GbE + 2×10G SFP+", price: einswallPrices.network["2s"], suffix: "-10G2" },
+  { id: "4s", label: "10G 확장형", detail: "4×2.5GbE + 4×10G SFP+", price: einswallPrices.network["4s"], suffix: "-10G4" },
 ];
 
 const memoryOptions = [
-  { id: "16", label: "16GB DDR5 SO-DIMM", detail: "삼성전자·SK하이닉스", price: 0 },
-  { id: "32", label: "32GB DDR5 SO-DIMM", detail: "삼성전자·SK하이닉스", price: 350000 },
-  { id: "64", label: "64GB DDR5 SO-DIMM", detail: "32GB×2 · 삼성전자·SK하이닉스", price: 950000 },
+  { id: "16", label: "16GB DDR5 SO-DIMM", detail: "삼성전자·SK하이닉스", price: einswallPrices.memory["16"] },
+  { id: "32", label: "32GB DDR5 SO-DIMM", detail: "삼성전자·SK하이닉스", price: einswallPrices.memory["32"] },
+  { id: "64", label: "64GB DDR5 SO-DIMM", detail: "32GB×2 · 삼성전자·SK하이닉스", price: einswallPrices.memory["64"] },
 ];
 
 const storageOptions = [
@@ -43,35 +44,35 @@ const storageOptions = [
     id: "512",
     label: "500/512GB NVMe",
     detail: "삼성전자·SK하이닉스 정품",
-    price: 0,
+    price: einswallPrices.storage["512"],
   },
   {
     id: "1tb",
     label: "1TB NVMe",
     detail: "삼성전자·SK하이닉스 정품",
-    price: 280000,
+    price: einswallPrices.storage["1tb"],
   },
 ];
 
 const moduleOptions = [
-  { id: "none", label: "모듈 미포함", detail: "보유 모듈 사용", price: 0 },
+  { id: "none", label: "모듈 미포함", detail: "보유 모듈 사용", price: einswallPrices.sfpModule.none },
   {
     id: "1",
     label: "TP-Link 10G SR 1개",
     detail: "TL-SM5110-SR · 장착·호환성 검수",
-    price: 50000,
+    price: einswallPrices.sfpModule["1"],
   },
   {
     id: "2",
     label: "TP-Link 10G SR 2개",
     detail: "TL-SM5110-SR · 장착·호환성 검수",
-    price: 120000,
+    price: einswallPrices.sfpModule["2"],
   },
   {
     id: "4",
     label: "TP-Link 10G SR 4개",
     detail: "TL-SM5110-SR · 장착·호환성 검수",
-    price: 240000,
+    price: einswallPrices.sfpModule["4"],
   },
 ];
 
@@ -209,6 +210,9 @@ export default function PricingConfigurator() {
         <div className="mt-7">
           <div className="text-xs text-white/50 mb-1">예상 공급가 · VAT 별도</div>
           <div className="font-display text-3xl font-black">{won.format(total)}원</div>
+          <div className="mt-2 font-mono text-[10px] text-white/40">
+            가격 기준 {pricingPolicy.effectiveMonth} · 매월 정기 갱신
+          </div>
         </div>
 
         <div className="mt-6 text-[11px] leading-relaxed text-white/55">
@@ -217,11 +221,14 @@ export default function PricingConfigurator() {
           설정·초기 불량 대응·국내 보증충당금·판매마진을 포함합니다.
           메모리는 삼성전자·SK하이닉스 DDR5 SO-DIMM, NVMe는 삼성전자·SK하이닉스
           국내 유통 제품의 현재 판매가를 기준으로 산정합니다.
+          부품 시세는 {pricingPolicy.sourceSummary} 방식으로 확인하며,
+          {pricingPolicy.componentRule}합니다.
           현장 구축, HA 이중화 및 연간 운영지원은 별도 견적입니다.
           기본 모듈은 TP-Link TL-SM5110-SR 10G 멀티모드이며 장착·호환성 검수를 포함합니다.
           장거리 싱글모드 LR 모듈은 전송거리에 따라 별도 견적입니다.
-          수입 하드웨어는 기준환율 1 USD = 1,600원으로 환산한 상품가와 배송비에
-          관부가세 18%를 적용해 산정했습니다.
+          수입 하드웨어는 기준환율 1 USD = {won.format(pricingPolicy.fixedUsdKrw)}원으로
+          환산한 상품가와 배송비에 관부가세 {pricingPolicy.importTaxRate * 100}%를
+          적용해 산정했습니다.
           실제 수용 규모는 회선 사용량, 동시 세션, VPN 암호화와 보안 규칙에 따라 달라집니다.
         </div>
 
