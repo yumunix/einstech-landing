@@ -155,6 +155,7 @@ export default function PricingConfigurator() {
     selected.memory.price +
     selected.storage.price +
     selected.modules.price;
+  const annualMaintenance = Math.ceil((total * 0.15) / 10000) * 10000;
   const modelName = `EINSWALL ${selected.cpu.id === "8505" ? "8505" : selected.cpu.id}${selected.sfp.suffix}`;
   const inquiry = encodeURIComponent(
     `${modelName} / ${selected.memory.label} / ${selected.storage.label} / ${selected.modules.label} 구성 견적 문의`,
@@ -215,6 +216,21 @@ export default function PricingConfigurator() {
           </div>
         </div>
 
+        <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-white/45">
+            Optional Support
+          </div>
+          <div className="mt-2 flex items-end justify-between gap-3">
+            <span className="text-xs text-white/70">연간 장애 대응 유지보수</span>
+            <strong className="font-display text-base text-emerald-200">
+              {won.format(annualMaintenance)}원
+            </strong>
+          </div>
+          <p className="mt-2 text-[10px] leading-relaxed text-white/45">
+            선택 제품가의 15% · 장애 발생 시 기술지원 · 출장비 별도
+          </p>
+        </div>
+
         <div className="mt-6 space-y-3 text-[11px] leading-relaxed text-white/55">
           <p>
             <strong className="text-white/75">포함 내용:</strong>{" "}
@@ -236,6 +252,12 @@ export default function PricingConfigurator() {
             기본 모듈은 10G GBIC 멀티모드이며 장착·호환성 검수를 포함합니다. 장거리
             싱글모드 LR 모듈은 전송거리에 따라 별도 견적입니다. 실제 수용 규모는 회선
             사용량, 동시 세션, VPN 암호화와 보안 규칙에 따라 달라집니다.
+          </p>
+          <p>
+            <strong className="text-white/75">유지보수·출장 기준:</strong>{" "}
+            연간 유지보수는 제품가의 15%이며 장애 발생 시에만 기술지원합니다. 현장
+            출장은 1회 300,000원으로 별도 산정하며, 연간 기준 4회(총 1,200,000원)까지
+            이용할 수 있습니다. 매월 정기 출장은 포함하지 않습니다.
           </p>
         </div>
 
