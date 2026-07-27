@@ -8,21 +8,21 @@ const cpuOptions = [
     label: "Pentium 8505",
     detail: "중소 사업장 · 1G 운용형",
     users: "약 20~100명",
-    price: 690000,
+    price: 1090000,
   },
   {
     id: "i5",
     label: "Core i5-12450H",
     detail: "다중 VPN · IDS/IPS",
     users: "약 50~200명",
-    price: 890000,
+    price: 1290000,
   },
   {
     id: "i7",
     label: "Core i7-13620H",
     detail: "10G · 고부하 보안 정책",
     users: "약 100~300명",
-    price: 1090000,
+    price: 1490000,
   },
 ];
 
@@ -33,15 +33,24 @@ const sfpOptions = [
 ];
 
 const memoryOptions = [
-  { id: "16", label: "16GB DDR5", price: 0 },
-  { id: "32", label: "32GB DDR5", price: 150000 },
-  { id: "64", label: "64GB DDR5", price: 350000 },
+  { id: "16", label: "16GB DDR5 SO-DIMM", detail: "삼성전자·SK하이닉스", price: 0 },
+  { id: "32", label: "32GB DDR5 SO-DIMM", detail: "삼성전자·SK하이닉스", price: 350000 },
+  { id: "64", label: "64GB DDR5 SO-DIMM", detail: "32GB×2 · 삼성전자·SK하이닉스", price: 950000 },
 ];
 
 const storageOptions = [
-  { id: "256", label: "256GB NVMe", price: 0 },
-  { id: "512", label: "512GB NVMe", price: 70000 },
-  { id: "1tb", label: "1TB NVMe", price: 170000 },
+  {
+    id: "512",
+    label: "500/512GB NVMe",
+    detail: "삼성전자·SK하이닉스 정품",
+    price: 0,
+  },
+  {
+    id: "1tb",
+    label: "1TB NVMe",
+    detail: "삼성전자·SK하이닉스 정품",
+    price: 280000,
+  },
 ];
 
 const moduleOptions = [
@@ -112,7 +121,7 @@ export default function PricingConfigurator() {
   const [cpu, setCpu] = useState("8505");
   const [sfp, setSfp] = useState("none");
   const [memory, setMemory] = useState("16");
-  const [storage, setStorage] = useState("256");
+  const [storage, setStorage] = useState("512");
   const [modules, setModules] = useState("none");
 
   const availableModuleOptions =
@@ -204,6 +213,8 @@ export default function PricingConfigurator() {
 
         <div className="mt-6 text-[11px] leading-relaxed text-white/55">
           하드웨어 조립·기본 검수·방화벽 OS 설치·기본 네트워크 설정을 포함합니다.
+          메모리는 삼성전자·SK하이닉스 DDR5 SO-DIMM, NVMe는 삼성전자·SK하이닉스
+          국내 유통 제품의 현재 판매가를 기준으로 산정합니다.
           현장 구축, HA 이중화 및 연간 운영지원은 별도 견적입니다.
           기본 모듈은 TP-Link TL-SM5110-SR 10G 멀티모드이며 장착·호환성 검수를 포함합니다.
           장거리 싱글모드 LR 모듈은 전송거리에 따라 별도 견적입니다.
