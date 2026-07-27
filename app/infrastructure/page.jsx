@@ -8,7 +8,7 @@ import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 export const metadata = {
   title: "Infrastructure — HP Server · NVIDIA GPU · Hitachi · Brocade SAN | EINSTECH",
   description:
-    "데이터센터 하드웨어를 한 파트너로. HP 서버·NVIDIA GPU와 Hitachi 스토리지·Brocade SAN 스위치를 표준 조합으로 설계·공급·구축합니다.",
+    "HP 서버·NVIDIA GPU, Hitachi 스토리지·Brocade SAN, TP-Link 네트워크 스위치·EINSWALL 방화벽을 표준 조합으로 설계·공급·구축합니다.",
 };
 
 const whyCards = [
@@ -77,17 +77,17 @@ const enterpriseLineup = [
 ];
 
 const smbLineup = {
-  badge: "SMB_NETWORK",
-  name: "TP-Link",
-  vendor: "TP-Link · Omada · Jetstream",
+  badge: "NETWORK_FIREWALL",
+  name: "TP-Link + EINSWALL",
+  vendor: "TP-Link Network Switch · EINSWALL Firewall",
   color: "cyan",
-  tag: "사무 환경 네트워크",
-  desc: "사무실·매장·소형 사옥 등 SMB 환경의 유무선 네트워크는 TP-Link Omada 컨트롤러 기반으로 통합 설계. 엔터프라이즈 데이터센터 라인업과 분리해 합리적인 예산으로 안정적인 네트워크를 구축합니다.",
+  tag: "네트워크 스위치 · 방화벽",
+  desc: "TP-Link 네트워크 스위치와 EINSWALL 방화벽 서버를 함께 구성해 사무실·매장·사업장의 내부 네트워크부터 인터넷 경계 보안까지 통합 설계합니다.",
   strengths: [
     "Omada SDN — 무선 AP·스위치·게이트웨이 통합 관리",
     "Jetstream L2/L3 매니지드 스위치",
     "PoE+ 카메라·전화·AP 통합 전원",
-    "원격 클라우드 컨트롤러 운영 지원",
+    "EINSWALL 1G·10G 맞춤형 방화벽 서버",
   ],
   fitFor: [
     "본사 데이터센터와 분리된 지사·매장 네트워크",
@@ -135,7 +135,7 @@ export default function InfrastructurePage() {
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">INFRASTRUCTURE</Badge>
               <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
-                HP Server · NVIDIA GPU · Hitachi · Brocade SAN · TP-Link
+                HP Server · NVIDIA GPU · Hitachi · Brocade SAN · TP-Link · EINSWALL
               </span>
             </div>
 
@@ -157,7 +157,7 @@ export default function InfrastructurePage() {
             <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
               아인스테크는 데이터센터 하드웨어를 <span className="text-slate-900">HP 서버 + NVIDIA GPU</span>와{" "}
               <span className="text-slate-900">Hitachi 스토리지 + Brocade SAN</span> 표준 조합으로 설계·공급합니다. 사무 환경
-              네트워크는 <span className="text-slate-900">TP-Link Omada</span> 라인업으로 분리해, 환경별로
+              네트워크와 방화벽은 <span className="text-slate-900">TP-Link + EINSWALL</span>로 묶어, 환경별로
               과·소투자 없이 균형 잡힌 인프라를 구축합니다.
             </p>
 
@@ -305,18 +305,18 @@ export default function InfrastructurePage() {
           </div>
         </section>
 
-        {/* SMB NETWORK */}
+        {/* NETWORK SWITCH + FIREWALL */}
         <section id="smb" className="py-24 lg:py-32 relative">
           <div className="w-full max-w-page mx-auto px-6 lg:px-12 relative z-10">
             <SectionHeader
-              badgeText="SMB_TIER"
+              badgeText="NETWORK_FIREWALL"
               badgeColor="cyan"
-              sectionLabel="3. SMB Network — 사무 환경 네트워크는 분리해서 합리적으로"
+              sectionLabel="3. Network + Firewall — 스위치와 방화벽 통합 구성"
             >
               <h2 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
-                지사·매장·사무실 네트워크는
+                지사·매장·사무실 네트워크와 방화벽을
                 <br />
-                <span className="text-navy">엔터프라이즈와 분리해서 구축합니다.</span>
+                <span className="text-navy">TP-Link + EINSWALL로 구성합니다.</span>
               </h2>
             </SectionHeader>
 
@@ -380,8 +380,7 @@ export default function InfrastructurePage() {
               </GlassPanel>
 
               <p className="font-mono text-[11px] text-slate-500 tracking-wide uppercase mt-6 ds-word-keep">
-                ※ TP-Link는 SMB·사무 환경 전용 라인업입니다. 엔터프라이즈 데이터센터 코어 네트워크는
-                별도 표준 제품군으로 설계합니다.
+                ※ TP-Link Network Switch와 EINSWALL Firewall은 환경과 처리량에 맞춰 함께 구성합니다.
               </p>
             </div>
           </div>

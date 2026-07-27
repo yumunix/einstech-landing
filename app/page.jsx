@@ -463,7 +463,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {/* HP Server + NVIDIA GPU */}
             <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
               <div className="w-14 h-14 bg-navy/5 rounded-[20px] flex items-center justify-center mb-8">
@@ -502,26 +502,7 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* TP-Link Network Switch */}
-            <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
-              <div className="w-14 h-14 bg-emerald/5 rounded-[20px] flex items-center justify-center mb-8">
-                <i className="ph-fill ph-network text-2xl text-emerald"></i>
-              </div>
-              <div className="text-[10px] font-black text-slate-400 tracking-[0.16em] mb-2">
-                NETWORK SWITCH
-              </div>
-              <h3 className="text-xl font-black text-navy mb-4">TP-Link</h3>
-              <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                사무실·매장·중소 규모 사업장의 유무선 네트워크를 통합
-                구성합니다.
-              </p>
-              <ul className="space-y-3 text-[13px] font-bold text-slate-700">
-                <li>TP-Link Omada</li>
-                <li>JetStream Switch</li>
-              </ul>
-            </div>
-
-            {/* Firewall Server */}
+            {/* TP-Link Network Switch + EINSWALL Firewall */}
             <a
               href="/einswall"
               className="group p-10 rounded-[40px] bg-navy text-white border border-navy flex flex-col h-full transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(10,61,98,0.2)]"
@@ -530,15 +511,16 @@ export default function Home() {
                 <i className="ph-fill ph-shield-check text-2xl text-white"></i>
               </div>
               <div className="text-[10px] font-black text-white/50 tracking-[0.16em] mb-2">
-                SECURITY GATEWAY
+                NETWORK SWITCH + FIREWALL
               </div>
-              <h3 className="text-xl font-black mb-4">Firewall Server</h3>
+              <h3 className="text-xl font-black mb-4">TP-Link + EINSWALL</h3>
               <p className="text-white/65 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                환경에 맞춘 하드웨어와 보안 정책을 사전 구성한 방화벽 서버를
-                공급합니다.
+                TP-Link 네트워크 스위치와 EINSWALL 방화벽 서버를 하나의 네트워크
+                보안 구성으로 공급합니다.
               </p>
               <ul className="space-y-3 text-[13px] font-bold text-white/85">
-                <li>EINSWALL by EINSTECH</li>
+                <li>TP-Link Network Switch</li>
+                <li>EINSWALL Firewall</li>
                 <li className="flex items-center gap-2">
                   제품 보기
                   <i className="ph-bold ph-arrow-right transition-transform group-hover:translate-x-1"></i>

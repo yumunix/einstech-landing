@@ -7,9 +7,9 @@ import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 import PricingConfigurator from "./PricingConfigurator";
 
 export const metadata = {
-  title: "EINSWALL — 맞춤형 방화벽 서버 | EINSTECH",
+  title: "TP-Link Network Switch + EINSWALL Firewall | EINSTECH",
   description:
-    "EINSWALL by EINSTECH. 팬리스 산업용 하드웨어에 방화벽·VPN·IDS/IPS·다중 WAN을 맞춤 구성해 공급하는 기업용 방화벽 서버입니다.",
+    "TP-Link Network Switch와 EINSWALL Firewall을 함께 구성합니다. EINSWALL은 1G·10G 사양을 선택할 수 있는 맞춤형 방화벽 서버입니다.",
 };
 
 const specs = [
@@ -97,25 +97,26 @@ export default function EinswallPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <div className="flex flex-wrap items-center gap-3 mb-8">
-                  <Badge color="cyan">EINSWALL</Badge>
+                  <Badge color="cyan">TP-LINK + EINSWALL</Badge>
                   <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
-                    Security Gateway Appliance
+                    Network Switch + Firewall
                   </span>
                 </div>
 
                 <h1 className="font-display leading-[0.95] mb-10">
                   <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
-                    EINSWALL
+                    TP-Link + EINSWALL
                   </span>
                   <span className="block text-[clamp(1.5rem,3vw,2.5rem)] font-light tracking-widest text-navy mt-3">
-                    기업 환경 맞춤형 방화벽 서버
+                    Network Switch + Firewall
                   </span>
                 </h1>
 
                 <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl border-l-2 border-navy/30 pl-5 mb-12">
-                  EINSTECH가 하드웨어 선정부터 방화벽 정책·VPN·침입 탐지까지
-                  환경에 맞춰 구성하는 통합 보안 어플라이언스입니다. 경제적인
-                  1G 운용형부터 10G SFP+ 고급형까지 필요한 사양을 선택할 수 있습니다.
+                  TP-Link Network Switch로 내부 네트워크를 구성하고 EINSWALL Firewall로
+                  인터넷 경계를 보호합니다. EINSWALL은 경제적인 1G 운용형부터 10G SFP+
+                  고급형까지 필요한 사양을 선택할 수 있으며, 현장 네트워크 및 방화벽
+                  정책 설정은 별도 견적입니다.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 max-w-xl">
