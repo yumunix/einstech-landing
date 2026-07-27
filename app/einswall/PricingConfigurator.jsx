@@ -58,20 +58,20 @@ const moduleOptions = [
   { id: "none", label: "모듈 미포함", detail: "보유 모듈 사용", price: einswallPrices.sfpModule.none },
   {
     id: "1",
-    label: "TP-Link 10G SR 1개",
-    detail: "TL-SM5110-SR · 장착·호환성 검수",
+    label: "10G GBIC 1개",
+    detail: "멀티모드 · 장착·호환성 검수",
     price: einswallPrices.sfpModule["1"],
   },
   {
     id: "2",
-    label: "TP-Link 10G SR 2개",
-    detail: "TL-SM5110-SR · 장착·호환성 검수",
+    label: "10G GBIC 2개",
+    detail: "멀티모드 · 장착·호환성 검수",
     price: einswallPrices.sfpModule["2"],
   },
   {
     id: "4",
-    label: "TP-Link 10G SR 4개",
-    detail: "TL-SM5110-SR · 장착·호환성 검수",
+    label: "10G GBIC 4개",
+    detail: "멀티모드 · 장착·호환성 검수",
     price: einswallPrices.sfpModule["4"],
   },
 ];
@@ -168,7 +168,7 @@ export default function PricingConfigurator() {
         <OptionGroup label="3. Memory" options={memoryOptions} value={memory} onChange={setMemory} />
         <OptionGroup label="4. Storage" options={storageOptions} value={storage} onChange={setStorage} />
         <OptionGroup
-          label="5. SFP+ GBIC Module"
+          label="5. 10G GBIC Module"
           options={availableModuleOptions}
           value={modules}
           onChange={setModules}
@@ -215,18 +215,28 @@ export default function PricingConfigurator() {
           </div>
         </div>
 
-        <div className="mt-6 text-[11px] leading-relaxed text-white/55">
-          표시 가격은 단순 H/W 원가가 아닌 완제품 예상 공급가입니다.
-          하드웨어 조립·부품 호환성 검수·방화벽 OS 설치·기본 네트워크 및 보안 정책
-          설정·초기 불량 대응·국내 보증충당금·판매마진을 포함합니다.
-          메모리는 삼성전자·SK하이닉스 DDR5 SO-DIMM, NVMe는 삼성전자·SK하이닉스
-          국내 유통 제품의 현재 판매가를 기준으로 산정합니다.
-          부품 시세는 {pricingPolicy.sourceSummary} 방식으로 확인하며,
-          {pricingPolicy.componentRule}합니다. {pricingPolicy.exclusions} 기준입니다.
-          현장 구축, HA 이중화 및 연간 운영지원은 별도 견적입니다.
-          기본 모듈은 TP-Link TL-SM5110-SR 10G 멀티모드이며 장착·호환성 검수를 포함합니다.
-          장거리 싱글모드 LR 모듈은 전송거리에 따라 별도 견적입니다.
-          실제 수용 규모는 회선 사용량, 동시 세션, VPN 암호화와 보안 규칙에 따라 달라집니다.
+        <div className="mt-6 space-y-3 text-[11px] leading-relaxed text-white/55">
+          <p>
+            <strong className="text-white/75">포함 내용:</strong>{" "}
+            하드웨어, 조립, 부품 호환성 검수, 방화벽 OS 설치, 기본 네트워크·보안 정책
+            설정, 초기 불량 대응, 국내 보증충당금 및 판매마진
+          </p>
+          <p>
+            <strong className="text-white/75">불포함 내용:</strong>{" "}
+            부가가치세(VAT), 인터넷 회선, 현장 설치·배선 공사, 랙·UPS·스위치 등 주변
+            장비, HA 이중화, 유료 보안 구독·라이선스 및 연간 운영지원
+          </p>
+          <p>
+            메모리는 삼성전자·SK하이닉스 DDR5 SO-DIMM, NVMe는 삼성전자·SK하이닉스
+            국내 유통 제품의 현재 판매가를 기준으로 산정합니다. 부품 시세는{" "}
+            {pricingPolicy.sourceSummary} 방식으로 확인하며, {pricingPolicy.componentRule}
+            합니다. {pricingPolicy.exclusions} 기준입니다.
+          </p>
+          <p>
+            기본 모듈은 10G GBIC 멀티모드이며 장착·호환성 검수를 포함합니다. 장거리
+            싱글모드 LR 모듈은 전송거리에 따라 별도 견적입니다. 실제 수용 규모는 회선
+            사용량, 동시 세션, VPN 암호화와 보안 규칙에 따라 달라집니다.
+          </p>
         </div>
 
         <a
