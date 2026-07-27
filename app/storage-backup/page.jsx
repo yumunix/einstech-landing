@@ -6,9 +6,9 @@ import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 
 export const metadata = {
-  title: "Storage + Backup — Hitachi · Acronis · Veritas · TINA | EINSTECH",
+  title: "Storage + Backup — Hitachi · Acronis · Veritas | EINSTECH",
   description:
-    "운영 스토리지부터 백업·복구까지 단일 파트너로. Hitachi NVMe All-Flash, Acronis Cyber Protect, Veritas NetBackup, Atempo TINA를 환경에 맞춰 통합 설계합니다. 3-2-1-1-0 백업 규칙과 이뮤터블 백업으로 사이버 회복탄력성을 확보합니다.",
+    "운영 스토리지부터 백업·복구까지 단일 파트너로. Hitachi NVMe All-Flash, Acronis Cyber Protect, Veritas NetBackup을 환경에 맞춰 통합 설계합니다. 3-2-1-1-0 백업 규칙과 이뮤터블 백업으로 사이버 회복탄력성을 확보합니다.",
 };
 
 const whyCards = [
@@ -92,25 +92,6 @@ const lineup = [
       "공공·금융 엔터프라이즈 기간계",
     ],
   },
-  {
-    badge: "DEEP_RECOVERY",
-    name: "Atempo TINA",
-    vendor: "Atempo · Time Navigator",
-    color: "acid",
-    tag: "Point-in-Time 복구 · 의료/공공 특화",
-    role: "장기 보존·시점 복구",
-    strengths: [
-      "Time Navigator — 과거 시점으로 정밀 복구",
-      "Source-based 글로벌 중복제거",
-      "Oracle · SAP · MS SQL · Sybase 라이브 백업",
-      "테이프·VTL·디둡 스토리지 다중 타겟",
-    ],
-    fitFor: [
-      "의료기관 — 분당서울대병원 운영 중",
-      "장기 보존이 필요한 연구·공공 데이터",
-      "법적 감사·증빙용 시점 복원",
-    ],
-  },
 ];
 
 const rule = [
@@ -151,8 +132,8 @@ const architecture = [
   {
     index: "02",
     tag: "BACKUP_TIER",
-    title: "백업 계층 (Acronis / Veritas / TINA)",
-    desc: "워크로드 특성에 맞춰 통합 보호(Acronis)·대규모 표준(Veritas)·장기 시점 복구(TINA)를 선택. 단일 정책으로 통합 관리합니다.",
+    title: "백업 계층 (Acronis / Veritas)",
+    desc: "워크로드 특성에 맞춰 통합 보호(Acronis)와 대규모 표준 백업(Veritas)을 선택해 단일 정책으로 통합 관리합니다.",
   },
   {
     index: "03",
@@ -169,13 +150,6 @@ const architecture = [
 ];
 
 const references = [
-  {
-    industry: "의료 / 종합병원",
-    customer: "분당서울대학교병원",
-    solution: "Atempo TINA — 백업 유지보수",
-    desc: "환자 진료·연구 데이터의 장기 시점 복구 요건을 TINA로 운영. 의료 데이터 보존 법규와 감사 증빙을 안정적으로 충족.",
-    color: "acid",
-  },
   {
     industry: "반도체 / 제조",
     customer: "S PCB 제조사",
@@ -206,7 +180,7 @@ const process = [
   {
     step: "03",
     title: "스토리지·백업 통합 설계",
-    desc: "Hitachi 운영 스토리지 + Acronis/Veritas/TINA 중 적합 조합을 설계. 3-2-1-1-0 규칙을 적용합니다.",
+    desc: "Hitachi 운영 스토리지 + Acronis/Veritas 중 적합 조합을 설계. 3-2-1-1-0 규칙을 적용합니다.",
   },
   {
     step: "04",
@@ -238,7 +212,7 @@ export default function StorageBackupPage() {
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">STORAGE_BACKUP</Badge>
               <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
-                Hitachi · Acronis · Veritas · Atempo TINA
+                Hitachi · Acronis · Veritas
               </span>
             </div>
 
@@ -260,8 +234,7 @@ export default function StorageBackupPage() {
             <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
               운영 스토리지(<span className="text-slate-900">Hitachi</span>)부터 통합 사이버 보호(
               <span className="text-slate-900">Acronis</span>), 엔터프라이즈 표준 백업(
-              <span className="text-slate-900">Veritas</span>), 시점 복구 특화(
-              <span className="text-slate-900">Atempo TINA</span>)까지 — 데이터의 전 수명주기를 단일
+              <span className="text-slate-900">Veritas</span>)까지 — 데이터의 전 수명주기를 단일
               파트너가 통합 책임집니다. 3-2-1-1-0 규칙과 이뮤터블 볼트로 랜섬웨어 시대의
               회복탄력성을 확보합니다.
             </p>

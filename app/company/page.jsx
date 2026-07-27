@@ -36,8 +36,8 @@ const whyCards = [
   {
     index: "03",
     tag: "VENDOR_NEUTRAL",
-    title: "8개 글로벌 벤더 멀티 라인업",
-    desc: "특정 벤더에 종속되지 않고 환경에 가장 맞는 조합을 설계합니다. Rose · MCCS · Hitachi · Acronis · Veritas · TINA · Netwrix · Kaspersky 전 영역 정식 파트너.",
+    title: "글로벌 벤더 멀티 라인업",
+    desc: "특정 벤더에 종속되지 않고 환경에 가장 맞는 조합을 설계합니다. Rose · MCCS · Hitachi · Acronis · Veritas · Netwrix · Kaspersky 전 영역 정식 파트너.",
   },
   {
     index: "04",
@@ -57,7 +57,7 @@ const businessAreas = [
   {
     cat: "STORAGE_BACKUP",
     title: "Storage + Backup",
-    desc: "Hitachi NVMe All-Flash + Acronis · Veritas · Atempo TINA. 운영부터 시점 복구까지 통합 보호.",
+    desc: "Hitachi NVMe All-Flash + Acronis · Veritas. 운영부터 백업·복구까지 통합 보호.",
     href: "/storage-backup",
   },
   {
@@ -81,7 +81,6 @@ const vendors = [
   { name: "Rose Datasystems", role: "Rose HA Cluster" },
   { name: "Acronis", role: "Cyber Protect" },
   { name: "Veritas", role: "NetBackup" },
-  { name: "Atempo", role: "TINA Time Navigator" },
   { name: "Netwrix", role: "Endpoint DLP" },
   { name: "Kaspersky", role: "Endpoint EDR" },
   { name: "Brocade", role: "SAN Fabric" },
@@ -105,7 +104,7 @@ const history = [
     items: [
       "Hitachi Storage 마이그레이션 · VTL 백업솔루션 · Acronis 도입 확대",
       "중국 시안 NAS 복제솔루션 공급",
-      "TINA · NetApp · Virbak Abio 신규 파트너 추가",
+      "NetApp · Virbak Abio 신규 파트너 추가",
     ],
   },
   {
