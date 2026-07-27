@@ -2,13 +2,27 @@
 
 import { useEffect, useRef, useState } from "react";
 
+const productItems = [
+  { label: "HPE Server", desc: "기업용 랙·타워 서버", href: "/infrastructure" },
+  { label: "Hitachi Storage", desc: "VSP 스토리지 플랫폼", href: "/storage-backup" },
+  { label: "Brocade SAN Switch", desc: "Fibre Channel SAN 패브릭", href: "/infrastructure" },
+  { label: "TP-Link Network", desc: "기업용 유·무선 네트워크", href: "/infrastructure" },
+  { label: "EINSWALL", desc: "1G·10G 맞춤형 방화벽 서버", href: "/einswall" },
+];
+
 const solutionItems = [
   { label: "HA Cluster", desc: "Rose HA · MCCS — 무중단 페일오버", href: "/ha-cluster" },
   { label: "Storage + Backup", desc: "Hitachi · Acronis · NetBackup", href: "/storage-backup" },
-  { label: "Infrastructure", desc: "HP · Brocade · NVIDIA · TP-Link", href: "/infrastructure" },
-  { label: "EINSWALL", desc: "맞춤형 방화벽 서버 · VPN · IDS/IPS", href: "/einswall" },
+  { label: "Infrastructure", desc: "서버 · 스토리지 · 네트워크 통합 구축", href: "/infrastructure" },
   { label: "Data Security", desc: "Netwrix · Kaspersky · Zero Trust", href: "/dlp-antivirus" },
   { label: "DR 솔루션", desc: "재해복구 · BCP 설계", href: "/bcp" },
+];
+
+const supportItems = [
+  { label: "구축 및 마이그레이션", desc: "신규 구축 · 시스템 전환", href: "/contact" },
+  { label: "유지보수", desc: "정기점검 · 예방정비", href: "/contact" },
+  { label: "장애 대응", desc: "원인 분석 · 복구 지원", href: "/contact" },
+  { label: "원격 기술지원", desc: "신속한 비대면 기술지원", href: "/contact" },
 ];
 
 const companyItems = [
@@ -115,21 +129,29 @@ export default function Header() {
 
           <div className="hidden md:flex items-center gap-6">
             <NavDropdown
+              id="product"
+              label="제품"
+              items={productItems}
+              openId={openId}
+              setOpenId={setOpenId}
+            />
+            <NavDropdown
               id="solution"
               label="솔루션"
               items={solutionItems}
               openId={openId}
               setOpenId={setOpenId}
             />
-            <a
-              href="/contact"
-              className="text-base font-bold text-slate-600 hover:text-navy transition-colors"
-            >
-              문의하기
-            </a>
+            <NavDropdown
+              id="support"
+              label="기술지원"
+              items={supportItems}
+              openId={openId}
+              setOpenId={setOpenId}
+            />
             <NavDropdown
               id="company"
-              label="Company"
+              label="회사소개"
               items={companyItems}
               openId={openId}
               setOpenId={setOpenId}
@@ -173,6 +195,18 @@ export default function Header() {
         <div className="md:hidden bg-white border-b border-slate-100">
           <div className="px-6 py-4 flex flex-col gap-1">
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
+              제품
+            </div>
+            {productItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="block py-2 text-sm text-slate-700 hover:text-navy"
+              >
+                {item.label}
+              </a>
+            ))}
+            <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
               솔루션
             </div>
             {solutionItems.map((item) => (
@@ -184,14 +218,20 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href="/contact"
-              className="block py-3 mt-2 text-sm text-slate-700 hover:text-navy border-t border-slate-100"
-            >
-              문의하기
-            </a>
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-3 pb-1 border-t border-slate-100">
-              Company
+              기술지원
+            </div>
+            {supportItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="block py-2 text-sm text-slate-700 hover:text-navy"
+              >
+                {item.label}
+              </a>
+            ))}
+            <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-3 pb-1 border-t border-slate-100">
+              회사소개
             </div>
             {companyItems.map((item) => (
               <a
