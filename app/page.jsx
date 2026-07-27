@@ -380,13 +380,13 @@ export default function Home() {
                 <i className="ph-fill ph-shield-check text-2xl text-navy group-hover:text-white transition-colors"></i>
               </div>
               <div className="text-[10px] font-black text-slate-400 tracking-widest mb-2">
-                NETWRIX · KASPERSKY
+                NETWRIX · KASPERSKY · ESET
               </div>
               <h3 className="text-xl font-black text-navy mb-4">
                 DATA SECURITY
               </h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                DLP · 백신 · Zero Trust 통합으로 내부자 위협까지 완벽
+                DLP · EDR · 백신 통합으로 내부자 위협과 랜섬웨어를
                 차단합니다.
               </p>
               <ul className="space-y-3 mb-8">

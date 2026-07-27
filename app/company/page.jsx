@@ -37,7 +37,7 @@ const whyCards = [
     index: "03",
     tag: "VENDOR_NEUTRAL",
     title: "글로벌 벤더 멀티 라인업",
-    desc: "특정 벤더에 종속되지 않고 환경에 가장 맞는 조합을 설계합니다. Rose · MCCS · Hitachi · Acronis · Veritas · Netwrix · Kaspersky 전 영역 정식 파트너.",
+    desc: "특정 벤더에 종속되지 않고 환경에 가장 맞는 조합을 설계합니다. Rose · MCCS · Hitachi · Acronis · Veritas · Netwrix · Kaspersky · ESET 라인업을 제공합니다.",
   },
   {
     index: "04",
@@ -63,7 +63,7 @@ const businessAreas = [
   {
     cat: "DATA_SECURITY",
     title: "Data Security",
-    desc: "Netwrix DLP + Kaspersky EDR. 내부자 위협·AI/LLM 유출까지 Zero Trust로 통제.",
+    desc: "Netwrix DLP + Kaspersky · ESET Endpoint Security. 내부자 위협과 랜섬웨어를 통제.",
     href: "/dlp-antivirus",
   },
   {
@@ -83,6 +83,7 @@ const vendors = [
   { name: "Veritas", role: "NetBackup" },
   { name: "Netwrix", role: "Endpoint DLP" },
   { name: "Kaspersky", role: "Endpoint EDR" },
+  { name: "ESET", role: "Endpoint Security · EDR/XDR" },
   { name: "Brocade", role: "SAN Fabric" },
   { name: "NetApp", role: "NAS / Storage" },
   { name: "APC", role: "Power · UPS" },

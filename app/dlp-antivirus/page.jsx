@@ -6,9 +6,9 @@ import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 
 export const metadata = {
-  title: "Data Security — Netwrix DLP · Kaspersky Endpoint | EINSTECH",
+  title: "Data Security — Netwrix DLP · Kaspersky · ESET PROTECT | EINSTECH",
   description:
-    "외부 침입만이 아닌 내부 유출까지. 아인스테크는 Netwrix Endpoint Protector(DLP)와 Kaspersky Endpoint Security(EDR)를 통합 설계해 데이터·엔드포인트·내부자 위협을 한 체계로 통제합니다. Zero Trust 기반 데이터 보호 아키텍처.",
+    "Netwrix DLP, Kaspersky Endpoint Security와 ESET PROTECT를 통합 설계해 데이터 유출, 엔드포인트 위협과 랜섬웨어를 한 체계로 통제합니다.",
 };
 
 const shiftCards = [
@@ -71,6 +71,26 @@ const lineup = [
       "랜섬웨어·APT 공격 대응 강화 필요 환경",
       "분산된 다지점·해외 거점 통합 관리",
       "엔드포인트 EDR/XDR 표준화",
+    ],
+  },
+  {
+    badge: "ENDPOINT_PROTECT",
+    name: "ESET PROTECT",
+    vendor: "ESET",
+    color: "cyan",
+    tag: "Endpoint Security · EDR/XDR · Ransomware Shield",
+    role: "다계층 엔드포인트 보호",
+    strengths: [
+      "Ransomware Shield — 행위·평판 기반 랜섬웨어 탐지",
+      "ESET PROTECT — 클라우드·온프레미스 통합 관리",
+      "파일리스 공격·표적 공격·APT 대응",
+      "Windows · macOS · Linux · Android 지원",
+      "상위 구독 등급의 EDR/XDR·Advanced Threat Defense",
+    ],
+    fitFor: [
+      "가벼운 엔드포인트 보안이 필요한 기업",
+      "멀티 OS 단말과 서버의 통합 보안 관리",
+      "랜섬웨어·제로데이·파일리스 공격 대응",
     ],
   },
 ];
@@ -148,8 +168,8 @@ const process = [
   },
   {
     step: "03",
-    title: "DLP + EDR 통합 설계",
-    desc: "Netwrix DLP와 Kaspersky EDR을 단일 정책 체계로 통합 설계. 정상 업무 영향은 최소화합니다.",
+    title: "DLP + Endpoint Security 통합 설계",
+    desc: "Netwrix DLP와 Kaspersky 또는 ESET 엔드포인트 보안을 환경에 맞춰 통합 설계합니다.",
   },
   {
     step: "04",
@@ -189,7 +209,7 @@ export default function DLPPage() {
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">DATA_SECURITY</Badge>
               <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
-                Netwrix DLP · Kaspersky EDR · Zero Trust
+                Netwrix DLP · Kaspersky · ESET PROTECT
               </span>
             </div>
 
@@ -212,8 +232,9 @@ export default function DLPPage() {
               데이터는 점점 더 안쪽에서 빠져나갑니다. 퇴사자의 USB, 협력사 PC, 그리고 직원이
               ChatGPT에 붙여넣는 한 줄. 아인스테크는{" "}
               <span className="text-slate-900">Netwrix Endpoint Protector(DLP)</span>와{" "}
-              <span className="text-slate-900">Kaspersky Endpoint Security(EDR)</span>를 Zero Trust
-              원칙 위에 통합 설계해 데이터·엔드포인트·내부자 위협을 한 체계로 통제합니다.
+              <span className="text-slate-900">Kaspersky Endpoint Security</span> 또는{" "}
+              <span className="text-slate-900">ESET PROTECT</span>를 Zero Trust 원칙 위에 통합
+              설계해 데이터·엔드포인트·내부자 위협을 한 체계로 통제합니다.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 max-w-xl">
@@ -287,7 +308,7 @@ export default function DLPPage() {
             <SectionHeader
               badgeText="LINEUP"
               badgeColor="acid"
-              sectionLabel="2. Lineup — DLP + EDR 통합"
+              sectionLabel="2. Lineup — DLP + Endpoint Security"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 데이터 유출 방지와 엔드포인트 보호,
@@ -296,7 +317,7 @@ export default function DLPPage() {
               </h2>
             </SectionHeader>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:pl-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 lg:pl-12">
               {lineup.map((p) => {
                 const accent = p.color === "acid" ? "text-emerald" : "text-navy";
                 const bg = p.color === "acid" ? "bg-emerald" : "bg-navy";
