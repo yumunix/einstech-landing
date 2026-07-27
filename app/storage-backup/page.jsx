@@ -6,17 +6,17 @@ import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 
 export const metadata = {
-  title: "Storage + Backup — Hitachi · Acronis · Veritas | EINSTECH",
+  title: "Backup + WORM Storage — Hitachi HCP · Acronis · NetBackup | EINSTECH",
   description:
-    "운영 스토리지부터 백업·복구까지 단일 파트너로. Hitachi NVMe All-Flash, Acronis Cyber Protect, Veritas NetBackup을 환경에 맞춰 통합 설계합니다. 3-2-1-1-0 백업 규칙과 이뮤터블 백업으로 사이버 회복탄력성을 확보합니다.",
+    "Acronis와 NetBackup 백업 데이터를 Hitachi Content Platform(HCP) WORM Storage에 보관합니다. S3 Object Lock과 Compliance Mode로 보존기간 동안 삭제와 덮어쓰기를 방지합니다.",
 };
 
 const whyCards = [
   {
     index: "01",
     tag: "ONE_RESPONSIBILITY",
-    title: "스토리지·백업 단일 책임",
-    desc: "스토리지 따로, 백업 따로 도입하면 장애 시 책임 떠넘기기가 일어납니다. 아인스테크는 원본부터 마지막 사본까지 한 파트너가 통합 책임집니다.",
+    title: "백업·WORM 보관소 단일 책임",
+    desc: "백업 소프트웨어와 불변 보관소를 따로 도입하면 장애 시 책임이 갈립니다. 아인스테크는 백업 생성부터 마지막 WORM 사본까지 통합 설계합니다.",
   },
   {
     index: "02",
@@ -34,23 +34,25 @@ const whyCards = [
 
 const lineup = [
   {
-    badge: "PRIMARY_STORAGE",
-    name: "Hitachi VSP",
+    badge: "WORM_STORAGE",
+    name: "Hitachi Content Platform",
     vendor: "Hitachi Vantara",
     color: "cyan",
-    tag: "NVMe All-Flash · 99.999% 가동률",
-    role: "운영 스토리지",
+    tag: "WORM · S3 Object Lock · Compliance Mode",
+    role: "랜섬웨어 불변 백업 보관소",
     strengths: [
-      "NVMe All-Flash 기반 마이크로초 응답",
-      "Active-Active 메트로 클러스터 무중단",
-      "글로벌 액티브 디바이스 (GAD) 사이트 이중화",
-      "Hitachi Data Reduction으로 용량 최적화",
+      "WORM — 저장된 객체의 수정·덮어쓰기 방지",
+      "S3 Object Lock — 보존기간 기반 삭제 방지",
+      "Compliance Mode — 관리자도 보존기간 단축 불가",
+      "Legal Hold·버전 관리·콘텐츠 무결성 검증",
     ],
     fitFor: [
-      "Tier 0 핵심 DB · MES · ERP 운영 저장소",
-      "사이트 단위 무중단 메트로 구성",
-      "엔터프라이즈 SAN 표준화",
+      "랜섬웨어로부터 백업 사본 격리",
+      "감사·법규에 따른 장기 데이터 보존",
+      "Acronis·NetBackup의 S3 불변 백업 타깃",
     ],
+    linkLabel: "→ Hitachi HCP 공식 자료 보기",
+    linkHref: "https://www.hitachivantara.com/en-us/products/storage-platforms/object-storage",
   },
   {
     badge: "UNIFIED_PROTECT",
@@ -125,21 +127,21 @@ const rule = [
 const architecture = [
   {
     index: "01",
-    tag: "PRIMARY_TIER",
-    title: "운영 계층 (Hitachi VSP)",
-    desc: "MES·ERP·DB 등 핵심 시스템 운영. NVMe All-Flash + Active-Active 메트로 클러스터로 사실상 무중단을 구현합니다.",
+    tag: "BACKUP_SOURCE",
+    title: "백업 원본 계층",
+    desc: "서버·DB·가상화 환경의 데이터를 Acronis 또는 NetBackup 정책에 따라 백업합니다.",
   },
   {
     index: "02",
     tag: "BACKUP_TIER",
-    title: "백업 계층 (Acronis / Veritas)",
-    desc: "워크로드 특성에 맞춰 통합 보호(Acronis)와 대규모 표준 백업(Veritas)을 선택해 단일 정책으로 통합 관리합니다.",
+    title: "백업 소프트웨어 계층 (Acronis / NetBackup)",
+    desc: "워크로드 특성에 맞춰 통합 보호(Acronis)와 대규모 표준 백업(NetBackup)을 선택해 관리합니다.",
   },
   {
     index: "03",
     tag: "IMMUTABLE_VAULT",
-    title: "이뮤터블 볼트 (Object Lock / WORM)",
-    desc: "백업 자체를 변경 불가 상태로 보관. 관리자 계정이 탈취돼도 보존 기간 동안 삭제·암호화가 불가합니다.",
+    title: "Hitachi HCP WORM Storage",
+    desc: "S3 Object Lock과 Compliance Mode를 적용해 보존기간 동안 백업 객체의 삭제·덮어쓰기를 방지합니다.",
   },
   {
     index: "04",
@@ -153,8 +155,8 @@ const references = [
   {
     industry: "반도체 / 제조",
     customer: "S PCB 제조사",
-    solution: "Hitachi + 백업 통합",
-    desc: "PCB 생산 핵심 시스템의 운영 스토리지와 백업을 통합 운영. 생산 라인 정지 없는 데이터 보호 체계 확보.",
+    solution: "백업 + WORM 보관소",
+    desc: "생산 핵심 시스템의 백업 사본을 불변 보관소에 분리해 랜섬웨어 감염 시에도 복구 가능한 체계를 확보.",
     color: "cyan",
   },
   {
@@ -179,8 +181,8 @@ const process = [
   },
   {
     step: "03",
-    title: "스토리지·백업 통합 설계",
-    desc: "Hitachi 운영 스토리지 + Acronis/Veritas 중 적합 조합을 설계. 3-2-1-1-0 규칙을 적용합니다.",
+    title: "백업·WORM 통합 설계",
+    desc: "Acronis/NetBackup + Hitachi HCP WORM Storage 조합을 설계하고 3-2-1-1-0 규칙을 적용합니다.",
   },
   {
     step: "04",
@@ -210,15 +212,15 @@ export default function StorageBackupPage() {
 
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap items-center gap-3 mb-8">
-              <Badge color="cyan">STORAGE_BACKUP</Badge>
+              <Badge color="cyan">BACKUP_WORM</Badge>
               <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
-                Hitachi · Acronis · Veritas
+                Hitachi HCP · Acronis · NetBackup
               </span>
             </div>
 
             <h1 className="font-display leading-[0.95] mb-10">
               <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
-                Storage + Backup
+                Backup + WORM Storage
               </span>
               <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-navy mt-3">
                 FROM SOURCE TO LAST COPY
@@ -232,11 +234,10 @@ export default function StorageBackupPage() {
             </p>
 
             <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
-              운영 스토리지(<span className="text-slate-900">Hitachi</span>)부터 통합 사이버 보호(
-              <span className="text-slate-900">Acronis</span>), 엔터프라이즈 표준 백업(
-              <span className="text-slate-900">Veritas</span>)까지 — 데이터의 전 수명주기를 단일
-              파트너가 통합 책임집니다. 3-2-1-1-0 규칙과 이뮤터블 볼트로 랜섬웨어 시대의
-              회복탄력성을 확보합니다.
+              통합 사이버 보호(<span className="text-slate-900">Acronis</span>), 엔터프라이즈
+              표준 백업(<span className="text-slate-900">NetBackup</span>)과 Hitachi HCP
+              WORM Storage를 결합합니다. S3 Object Lock과 Compliance Mode로 보존기간
+              동안 백업 사본의 삭제·덮어쓰기를 방지해 랜섬웨어 복구 기반을 확보합니다.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 max-w-xl">
@@ -616,7 +617,7 @@ export default function StorageBackupPage() {
               </h3>
 
               <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed ds-word-keep max-w-2xl mx-auto mb-12 relative z-10">
-                현재 운영 스토리지·백업 구성을 무료로 진단해
+                현재 백업·불변 보관 구성을 무료로 진단해
                 <br className="hidden md:block" />
                 최적의 통합 설계안과 RPO/RTO 실측 목표를 제시해 드립니다.
               </p>
