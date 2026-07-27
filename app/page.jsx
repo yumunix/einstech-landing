@@ -542,7 +542,7 @@ export default function Home() {
 
             {/* Firewall Server */}
             <a
-              href="/e-gate"
+              href="/einswall"
               className="group p-10 rounded-[40px] bg-navy text-white border border-navy flex flex-col h-full transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(10,61,98,0.2)]"
             >
               <div className="w-14 h-14 bg-white/10 rounded-[20px] flex items-center justify-center mb-8">
@@ -557,7 +557,7 @@ export default function Home() {
                 공급합니다.
               </p>
               <ul className="space-y-3 text-[13px] font-bold text-white/85">
-                <li>EINSTECH E-Gate</li>
+                <li>EINSWALL by EINSTECH</li>
                 <li className="flex items-center gap-2">
                   제품 보기
                   <i className="ph-bold ph-arrow-right transition-transform group-hover:translate-x-1"></i>
