@@ -3,9 +3,11 @@ export const pricingPolicy = {
   nextReviewDate: "2026-08-01",
   fixedUsdKrw: 1600,
   importTaxRate: 0.18,
-  sourceSummary: "네이버 쇼핑 1차 확인 · 다나와 가격비교 교차 검증",
+  reviewCycle: "매월 1일 검토·갱신",
+  sourceSummary: "네이버 쇼핑 직접 조사 · 다나와 가격비교 교차 검증",
   componentRule:
-    "삼성전자·SK하이닉스 국내 신품 배송포함 판매가 중 높은 가격을 기준으로 산정",
+    "정확한 모델의 국내 신품 배송포함 최저 3개 중 중간값을 구하고, 삼성전자·SK하이닉스 중 높은 값을 기준으로 산정",
+  exclusions: "중고·해외구매·병행수입·렌탈·품절 상품 제외",
 };
 
 export const einswallPrices = {

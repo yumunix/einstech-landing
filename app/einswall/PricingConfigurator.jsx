@@ -211,7 +211,7 @@ export default function PricingConfigurator() {
           <div className="text-xs text-white/50 mb-1">예상 공급가 · VAT 별도</div>
           <div className="font-display text-3xl font-black">{won.format(total)}원</div>
           <div className="mt-2 font-mono text-[10px] text-white/40">
-            가격 기준 {pricingPolicy.effectiveMonth} · 매월 정기 갱신
+            가격 기준 {pricingPolicy.effectiveMonth} · {pricingPolicy.reviewCycle}
           </div>
         </div>
 
@@ -222,7 +222,7 @@ export default function PricingConfigurator() {
           메모리는 삼성전자·SK하이닉스 DDR5 SO-DIMM, NVMe는 삼성전자·SK하이닉스
           국내 유통 제품의 현재 판매가를 기준으로 산정합니다.
           부품 시세는 {pricingPolicy.sourceSummary} 방식으로 확인하며,
-          {pricingPolicy.componentRule}합니다.
+          {pricingPolicy.componentRule}합니다. {pricingPolicy.exclusions} 기준입니다.
           현장 구축, HA 이중화 및 연간 운영지원은 별도 견적입니다.
           기본 모듈은 TP-Link TL-SM5110-SR 10G 멀티모드이며 장착·호환성 검수를 포함합니다.
           장거리 싱글모드 LR 모듈은 전송거리에 따라 별도 견적입니다.
