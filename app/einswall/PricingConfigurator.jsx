@@ -46,8 +46,24 @@ const storageOptions = [
 
 const moduleOptions = [
   { id: "none", label: "모듈 미포함", detail: "보유 모듈 사용", price: 0 },
-  { id: "2", label: "SFP+ 모듈 2개", detail: "모듈·호환성 검수 포함", price: 120000 },
-  { id: "4", label: "SFP+ 모듈 4개", detail: "모듈·호환성 검수 포함", price: 240000 },
+  {
+    id: "1",
+    label: "TP-Link 10G SR 1개",
+    detail: "TL-SM5110-SR · 장착·호환성 검수",
+    price: 50000,
+  },
+  {
+    id: "2",
+    label: "TP-Link 10G SR 2개",
+    detail: "TL-SM5110-SR · 장착·호환성 검수",
+    price: 120000,
+  },
+  {
+    id: "4",
+    label: "TP-Link 10G SR 4개",
+    detail: "TL-SM5110-SR · 장착·호환성 검수",
+    price: 240000,
+  },
 ];
 
 const won = new Intl.NumberFormat("ko-KR");
@@ -189,7 +205,8 @@ export default function PricingConfigurator() {
         <div className="mt-6 text-[11px] leading-relaxed text-white/55">
           하드웨어 조립·기본 검수·방화벽 OS 설치·기본 네트워크 설정을 포함합니다.
           현장 구축, HA 이중화 및 연간 운영지원은 별도 견적입니다.
-          SFP+ 모듈은 선택한 수량만 포함되며 종류·전송거리·싱글/멀티모드에 따라 달라질 수 있습니다.
+          기본 모듈은 TP-Link TL-SM5110-SR 10G 멀티모드이며 장착·호환성 검수를 포함합니다.
+          장거리 싱글모드 LR 모듈은 전송거리에 따라 별도 견적입니다.
           수입 하드웨어 원가는 상품가와 배송비에 관부가세 18%를 적용해 산정했습니다.
           실제 수용 규모는 회선 사용량, 동시 세션, VPN 암호화와 보안 규칙에 따라 달라집니다.
         </div>
