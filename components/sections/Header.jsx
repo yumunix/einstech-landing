@@ -3,9 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 
 const productItems = [
-  { label: "HPE Server", desc: "기업용 랙·타워 서버", href: "/infrastructure" },
-  { label: "Hitachi Storage", desc: "VSP 스토리지 플랫폼", href: "/storage-backup" },
-  { label: "Brocade SAN Switch", desc: "Fibre Channel SAN 패브릭", href: "/infrastructure" },
+  { label: "HP Server + NVIDIA GPU", desc: "기업용 서버 · AI/HPC 컴퓨팅", href: "/infrastructure" },
+  { label: "Hitachi + Brocade SAN", desc: "VSP 스토리지 · Fibre Channel 패브릭", href: "/storage-backup" },
   { label: "TP-Link Network", desc: "기업용 유·무선 네트워크", href: "/infrastructure" },
   { label: "EINSWALL", desc: "1G·10G 맞춤형 방화벽 서버", href: "/einswall" },
 ];

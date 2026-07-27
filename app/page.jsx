@@ -463,8 +463,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6">
-            {/* HP Server */}
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {/* HP Server + NVIDIA GPU */}
             <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
               <div className="w-14 h-14 bg-navy/5 rounded-[20px] flex items-center justify-center mb-8">
                 <i className="ph-fill ph-hard-drives text-2xl text-navy"></i>
@@ -472,18 +472,18 @@ export default function Home() {
               <div className="text-[10px] font-black text-slate-400 tracking-[0.16em] mb-2">
                 ENTERPRISE SERVER
               </div>
-              <h3 className="text-xl font-black text-navy mb-4">HP Server</h3>
+              <h3 className="text-xl font-black text-navy mb-4">HP Server + NVIDIA GPU</h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                기간계·가상화·DB 업무를 위한 엔터프라이즈 서버를 설계하고
+                기간계·가상화·DB 서버부터 AI 학습·추론용 GPU 시스템까지 설계하고
                 공급합니다.
               </p>
               <ul className="space-y-3 text-[13px] font-bold text-slate-700">
                 <li>HP ProLiant</li>
-                <li>Rack · Tower Server</li>
+                <li>NVIDIA GPU · AI/HPC</li>
               </ul>
             </div>
 
-            {/* Hitachi Storage */}
+            {/* Hitachi Storage + Brocade SAN Switch */}
             <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
               <div className="w-14 h-14 bg-emerald/5 rounded-[20px] flex items-center justify-center mb-8">
                 <i className="ph-fill ph-database text-2xl text-emerald"></i>
@@ -491,33 +491,14 @@ export default function Home() {
               <div className="text-[10px] font-black text-slate-400 tracking-[0.16em] mb-2">
                 ENTERPRISE STORAGE
               </div>
-              <h3 className="text-xl font-black text-navy mb-4">Hitachi</h3>
+              <h3 className="text-xl font-black text-navy mb-4">Hitachi + Brocade</h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                핵심 데이터를 위한 고가용성 엔터프라이즈 스토리지를
-                공급합니다.
+                고가용성 엔터프라이즈 스토리지와 Fibre Channel SAN 패브릭을 통합
+                구성합니다.
               </p>
               <ul className="space-y-3 text-[13px] font-bold text-slate-700">
                 <li>Hitachi VSP</li>
-                <li>All-Flash · Hybrid</li>
-              </ul>
-            </div>
-
-            {/* SAN Switch */}
-            <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
-              <div className="w-14 h-14 bg-navy/5 rounded-[20px] flex items-center justify-center mb-8">
-                <i className="ph-fill ph-git-branch text-2xl text-navy"></i>
-              </div>
-              <div className="text-[10px] font-black text-slate-400 tracking-[0.16em] mb-2">
-                STORAGE NETWORK
-              </div>
-              <h3 className="text-xl font-black text-navy mb-4">SAN Switch</h3>
-              <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
-                서버와 스토리지를 안정적으로 연결하는 Fibre Channel SAN
-                패브릭을 구축합니다.
-              </p>
-              <ul className="space-y-3 text-[13px] font-bold text-slate-700">
                 <li>Brocade SAN Switch</li>
-                <li>Fibre Channel Fabric</li>
               </ul>
             </div>
 

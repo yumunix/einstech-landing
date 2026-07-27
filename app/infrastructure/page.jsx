@@ -6,9 +6,9 @@ import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 
 export const metadata = {
-  title: "Infrastructure — Server · SAN · GPU · Network | EINSTECH",
+  title: "Infrastructure — HP Server · NVIDIA GPU · Hitachi · Brocade SAN | EINSTECH",
   description:
-    "데이터센터 하드웨어를 한 파트너로. HP 서버·Brocade SAN 스위치·NVIDIA GPU/AI 컴퓨트를 설계·공급·구축. SMB 사무 환경 네트워크는 TP-Link 라인업으로 별도 대응.",
+    "데이터센터 하드웨어를 한 파트너로. HP 서버·NVIDIA GPU와 Hitachi 스토리지·Brocade SAN 스위치를 표준 조합으로 설계·공급·구축합니다.",
 };
 
 const whyCards = [
@@ -16,7 +16,7 @@ const whyCards = [
     index: "01",
     tag: "SINGLE_RESPONSIBILITY",
     title: "서버·스토리지·네트워크·GPU 한 파트너",
-    desc: "벤더가 갈리면 장애 시 책임 핑퐁이 시작됩니다. EINSTECH는 HP 서버부터 Brocade SAN, NVIDIA GPU까지 한 손으로 묶어 설계·공급·운영해 갈등을 없앱니다.",
+    desc: "벤더가 갈리면 장애 시 책임 핑퐁이 시작됩니다. EINSTECH는 HP 서버·NVIDIA GPU와 Hitachi 스토리지·Brocade SAN을 한 손으로 묶어 설계·공급·운영합니다.",
   },
   {
     index: "02",
@@ -34,32 +34,35 @@ const whyCards = [
 
 const enterpriseLineup = [
   {
-    badge: "ENTERPRISE_SERVER",
-    name: "HP",
-    vendor: "Hewlett Packard Enterprise · ProLiant · Synergy",
+    badge: "SERVER_GPU",
+    name: "HP Server + NVIDIA GPU",
+    vendor: "Hewlett Packard Enterprise · NVIDIA",
     color: "cyan",
-    tag: "글로벌 표준 서버",
-    fit: "기간계·가상화·HPC·DB 서버 전 영역",
+    tag: "서버 · AI/HPC 컴퓨트",
+    fit: "기간계·가상화·DB·AI 학습 및 추론",
     strengths: [
       "ProLiant DL/ML 시리즈 — 범용 엔터프라이즈",
       "Synergy — 컴포저블 인프라",
       "Apollo — HPC/AI 컴퓨트",
+      "NVIDIA GPU — AI 학습·추론 가속",
       "iLO 원격 관리 · 글로벌 부품 공급망",
     ],
     fitFor: [
       "가상화·DB·ERP 핵심 시스템",
       "Rose HA·MCCS 클러스터 노드 표준",
       "글로벌 거점 동일 SKU 통일",
+      "기업용 AI/LLM·GPU 워크로드",
     ],
   },
   {
-    badge: "SAN_FABRIC",
-    name: "Brocade",
-    vendor: "Broadcom Brocade · Fibre Channel SAN",
+    badge: "STORAGE_SAN",
+    name: "Hitachi + Brocade SAN Switch",
+    vendor: "Hitachi Vantara · Broadcom Brocade",
     color: "acid",
-    tag: "SAN 패브릭 1위",
-    fit: "엔터프라이즈 스토리지 패브릭",
+    tag: "스토리지 · SAN 패브릭",
+    fit: "엔터프라이즈 스토리지와 Fibre Channel SAN",
     strengths: [
+      "Hitachi VSP All-Flash·Hybrid 스토리지",
       "Gen 6/7 FC — 32G·64G SAN 스위치",
       "Fabric OS 무중단 펌웨어 업그레이드",
       "Hitachi·Dell·NetApp 스토리지와 검증된 호환성",
@@ -69,25 +72,6 @@ const enterpriseLineup = [
       "Hitachi 스토리지 + Brocade SAN 표준 구성",
       "다중 사이트 SAN 확장·DR",
       "FC 기반 가상화 인프라",
-    ],
-  },
-  {
-    badge: "GPU_AI_COMPUTE",
-    name: "NVIDIA",
-    vendor: "NVIDIA · GPU · AI Compute",
-    color: "cyan",
-    tag: "AI/HPC 컴퓨트",
-    fit: "AI 학습·추론·HPC·가상 워크스테이션",
-    strengths: [
-      "H100·H200·L40S — 학습/추론 GPU",
-      "DGX·HGX — Turn-key AI 서버 플랫폼",
-      "vGPU — VDI 그래픽 가상화",
-      "InfiniBand·NVLink 고속 인터커넥트 설계",
-    ],
-    fitFor: [
-      "기업 내부 AI/LLM 학습·추론 인프라",
-      "엔지니어링·시뮬레이션 HPC",
-      "그래픽 집약 VDI(설계·영상)",
     ],
   },
 ];
@@ -151,7 +135,7 @@ export default function InfrastructurePage() {
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">INFRASTRUCTURE</Badge>
               <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
-                HP · Brocade · NVIDIA · TP-Link
+                HP Server · NVIDIA GPU · Hitachi · Brocade SAN · TP-Link
               </span>
             </div>
 
@@ -171,9 +155,8 @@ export default function InfrastructurePage() {
             </p>
 
             <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
-              아인스테크는 데이터센터 하드웨어를 <span className="text-slate-900">HP 서버</span> ·{" "}
-              <span className="text-slate-900">Brocade SAN</span> ·{" "}
-              <span className="text-slate-900">NVIDIA GPU</span> 표준 조합으로 설계·공급합니다. 사무 환경
+              아인스테크는 데이터센터 하드웨어를 <span className="text-slate-900">HP 서버 + NVIDIA GPU</span>와{" "}
+              <span className="text-slate-900">Hitachi 스토리지 + Brocade SAN</span> 표준 조합으로 설계·공급합니다. 사무 환경
               네트워크는 <span className="text-slate-900">TP-Link Omada</span> 라인업으로 분리해, 환경별로
               과·소투자 없이 균형 잡힌 인프라를 구축합니다.
             </p>
@@ -252,13 +235,13 @@ export default function InfrastructurePage() {
               sectionLabel="2. Lineup — 엔터프라이즈 데이터센터 표준"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
-                Server · SAN · GPU
+                HP Server + NVIDIA GPU
                 <br />
-                <span className="text-emerald">검증된 글로벌 표준</span>
+                <span className="text-emerald">Hitachi + Brocade SAN Switch</span>
               </h2>
             </SectionHeader>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 lg:pl-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 lg:pl-12">
               {enterpriseLineup.map((p) => {
                 const accent = p.color === "acid" ? "text-emerald" : "text-navy";
                 const accentBorder = p.color === "acid" ? "border-emerald/40" : "border-navy/40";
