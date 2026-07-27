@@ -226,9 +226,6 @@ export default function PricingConfigurator() {
           현장 구축, HA 이중화 및 연간 운영지원은 별도 견적입니다.
           기본 모듈은 TP-Link TL-SM5110-SR 10G 멀티모드이며 장착·호환성 검수를 포함합니다.
           장거리 싱글모드 LR 모듈은 전송거리에 따라 별도 견적입니다.
-          수입 하드웨어는 기준환율 1 USD = {won.format(pricingPolicy.fixedUsdKrw)}원으로
-          환산한 상품가와 배송비에 관부가세 {pricingPolicy.importTaxRate * 100}%를
-          적용해 산정했습니다.
           실제 수용 규모는 회선 사용량, 동시 세션, VPN 암호화와 보안 규칙에 따라 달라집니다.
         </div>
 
