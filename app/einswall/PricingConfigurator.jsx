@@ -3,9 +3,27 @@
 import { useMemo, useState } from "react";
 
 const cpuOptions = [
-  { id: "8505", label: "Pentium 8505", detail: "중소 사업장 · 1G 운용형", price: 690000 },
-  { id: "i5", label: "Core i5-12450H", detail: "다중 VPN · IDS/IPS", price: 890000 },
-  { id: "i7", label: "Core i7-13620H", detail: "10G · 고부하 보안 정책", price: 1090000 },
+  {
+    id: "8505",
+    label: "Pentium 8505",
+    detail: "중소 사업장 · 1G 운용형",
+    users: "약 20~100명",
+    price: 690000,
+  },
+  {
+    id: "i5",
+    label: "Core i5-12450H",
+    detail: "다중 VPN · IDS/IPS",
+    users: "약 50~200명",
+    price: 890000,
+  },
+  {
+    id: "i7",
+    label: "Core i7-13620H",
+    detail: "10G · 고부하 보안 정책",
+    users: "약 100~300명",
+    price: 1090000,
+  },
 ];
 
 const sfpOptions = [
@@ -112,6 +130,17 @@ export default function PricingConfigurator() {
               <span>{item}</span>
             </div>
           ))}
+          <div className="mt-4 rounded-xl bg-white/5 px-4 py-3">
+            <dt className="text-[10px] uppercase tracking-widest text-white/45">
+              권장 동시 사용자
+            </dt>
+            <dd className="mt-1 font-display text-lg font-bold text-emerald-200">
+              {selected.cpu.users}
+            </dd>
+            <dd className="mt-1 text-[10px] leading-relaxed text-white/45">
+              일반 사무 트래픽과 IDS/IPS 사용 기준의 예상 범위
+            </dd>
+          </div>
         </dl>
 
         <div className="mt-7">
@@ -123,6 +152,7 @@ export default function PricingConfigurator() {
           하드웨어 조립·기본 검수·방화벽 OS 설치·기본 네트워크 설정을 포함합니다.
           현장 구축, HA 이중화, SFP+ 모듈 및 연간 운영지원은 별도 견적입니다.
           수입 하드웨어 원가는 상품가와 배송비에 관부가세 18%를 적용해 산정했습니다.
+          실제 수용 규모는 회선 사용량, 동시 세션, VPN 암호화와 보안 규칙에 따라 달라집니다.
         </div>
 
         <a
