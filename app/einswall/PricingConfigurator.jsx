@@ -218,14 +218,13 @@ export default function PricingConfigurator() {
         <div className="mt-6 space-y-3 text-[11px] leading-relaxed text-white/55">
           <p>
             <strong className="text-white/75">포함 내용:</strong>{" "}
-            하드웨어, 조립, 부품 호환성 검수, 방화벽 OS 설치, 초기 불량 대응, 국내
-            보증충당금 및 판매마진
+            하드웨어, 조립, 부품 호환성 검수 및 기본 방화벽 OS 설치
           </p>
           <p>
             <strong className="text-white/75">불포함 내용:</strong>{" "}
-            부가가치세(VAT), 네트워크 구성, 보안 정책 설정, 인터넷 회선, 현장 설치·배선
-            공사, 랙·UPS·스위치 등 주변 장비, HA 이중화, 유료 보안 구독·라이선스 및
-            연간 운영지원
+            부가가치세(VAT), 출장비, 현장 설치비·배선 공사비, 네트워크 구성비, 방화벽
+            보안 정책 설정비, 인터넷 회선, 랙·UPS·스위치 등 주변 장비, HA 이중화,
+            유료 보안 구독·라이선스, 유지보수비 및 별도 워런티 비용
           </p>
           <p>
             메모리는 삼성전자·SK하이닉스 DDR5 SO-DIMM, NVMe는 삼성전자·SK하이닉스

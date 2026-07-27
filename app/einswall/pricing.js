@@ -2,6 +2,8 @@ import market from "./pricing-market.json";
 
 const roundUp10000 = (value) => Math.ceil(value / 10000) * 10000;
 const excludedOnsiteConfigurationFee = 200000;
+const excludedWarrantyReserve = 100000;
+const excludedServiceFees = excludedOnsiteConfigurationFee + excludedWarrantyReserve;
 
 export const pricingPolicy = {
   effectiveMonth: market.effectiveMonth,
@@ -18,13 +20,13 @@ export const pricingPolicy = {
 export const einswallPrices = {
   cpu: {
     "8505": roundUp10000(
-      1037000 + market.memory16 + market.storage512 - excludedOnsiteConfigurationFee,
+      1037000 + market.memory16 + market.storage512 - excludedServiceFees,
     ),
     i5: roundUp10000(
-      1237000 + market.memory16 + market.storage512 - excludedOnsiteConfigurationFee,
+      1237000 + market.memory16 + market.storage512 - excludedServiceFees,
     ),
     i7: roundUp10000(
-      1437000 + market.memory16 + market.storage512 - excludedOnsiteConfigurationFee,
+      1437000 + market.memory16 + market.storage512 - excludedServiceFees,
     ),
   },
   network: {
