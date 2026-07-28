@@ -5,7 +5,7 @@ const categories = [
     vendor: "Hewlett Packard Enterprise",
     desc: "ProLiant DL·ML, Synergy와 Apollo 서버 제품군",
     uses: ["가상화·DB·ERP", "HA Cluster 노드", "기업용 컴퓨팅"],
-    href: "/contact?subject=HP%20Server%20제품%20문의",
+    href: "/hp-server",
   },
   {
     code: "GPU",
@@ -13,7 +13,7 @@ const categories = [
     vendor: "NVIDIA",
     desc: "AI 학습·추론과 HPC를 위한 GPU 컴퓨팅 제품군",
     uses: ["사내 생성형 AI", "모델 학습·추론", "GPU 클러스터"],
-    href: "/contact?subject=NVIDIA%20GPU%20제품%20문의",
+    href: "/nvidia-gpu",
   },
   {
     code: "STORAGE",
@@ -21,7 +21,7 @@ const categories = [
     vendor: "Hitachi Vantara · Infortrend EonStor",
     desc: "High-End와 Midrange를 분리한 스토리지 제품군",
     uses: ["High-End · Hitachi", "Midrange · EonStor", "DR·복제 구성"],
-    href: "/storage-backup",
+    href: "/storage",
   },
   {
     code: "SAN_SWITCH",
@@ -29,7 +29,7 @@ const categories = [
     vendor: "Broadcom Brocade",
     desc: "32G·64G Fibre Channel SAN 패브릭 제품군",
     uses: ["이중 패브릭", "ISL 확장", "스토리지 연결"],
-    href: "/contact?subject=Brocade%20SAN%20Switch%20제품%20문의",
+    href: "/san-switch",
   },
   {
     code: "FIREWALL",

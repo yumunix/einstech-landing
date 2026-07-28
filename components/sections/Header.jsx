@@ -1,12 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { productItems } from "./productItems";
 
-const productItems = [
-  { label: "HP Server + NVIDIA GPU", desc: "기업용 서버 · AI/HPC 컴퓨팅", href: "/infrastructure" },
-  { label: "Hitachi + Brocade SAN", desc: "VSP 스토리지 · Fibre Channel 패브릭", href: "/storage-backup" },
-  { label: "TP-Link + EINSWALL", desc: "Network Switch · Firewall", href: "/einswall" },
-];
 
 const solutionItems = [
   { label: "HA Cluster", desc: "Rose HA · MCCS — 무중단 페일오버", href: "/ha-cluster" },
