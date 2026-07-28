@@ -4,12 +4,14 @@ import GlassPanel from "@/components/ds/GlassPanel";
 import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({ path: "/infrastructure",
   title: "Infrastructure — HP Server · NVIDIA GPU · Hitachi · Brocade SAN | EINSTECH",
   description:
     "HP 서버·NVIDIA GPU, Hitachi 스토리지·Brocade SAN, TP-Link 네트워크 스위치·EINSWALL 방화벽을 표준 조합으로 설계·공급·구축합니다.",
-};
+  keywords: ["HP 서버", "NVIDIA GPU 서버", "Hitachi 스토리지", "Brocade SAN Switch", "TP-Link 스위치", "인프라 구축"],
+});
 
 const whyCards = [
   {

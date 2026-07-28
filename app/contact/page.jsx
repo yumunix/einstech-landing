@@ -3,12 +3,14 @@ import Footer from "@/components/sections/Footer";
 import GlassPanel from "@/components/ds/GlassPanel";
 import Badge from "@/components/ds/Badge";
 import ContactForm from "./ContactForm";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({ path: "/contact",
   title: "문의하기 — EINSTECH",
   description:
     "BCP · HA Cluster · 스토리지 · 백업 · DLP 도입 문의를 보내주세요. 30년 경력의 인프라 엔지니어가 직접 응답합니다.",
-};
+  keywords: ["IT 인프라 문의", "HA 구축 문의", "스토리지 견적", "백업 견적", "방화벽 견적"],
+});
 
 export default function ContactPage() {
   return (

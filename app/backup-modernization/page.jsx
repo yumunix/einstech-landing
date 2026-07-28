@@ -4,12 +4,14 @@ import GlassPanel from "@/components/ds/GlassPanel";
 import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({ path: "/backup-modernization",
   title: "백업 현대화 — Acronis 전환 서비스 | EINSTECH",
   description:
     "레거시 백업에서 사이버 보호 통합 백업으로. 아인스테크는 백업·안티랜섬웨어·복구를 하나로 묶은 단일 플랫폼 Acronis Cyber Protect로의 무중단 전환(Migration)을 설계·구축합니다. 백업과 보안을 하나로.",
-};
+  keywords: ["백업 현대화", "Acronis", "백업 마이그레이션", "안티랜섬웨어", "데이터 복구"],
+});
 
 const whyCards = [
   {

@@ -4,12 +4,14 @@ import GlassPanel from "@/components/ds/GlassPanel";
 import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({ path: "/bcp",
   title: "DR 솔루션 — EINSTECH | Disaster Recovery · Cyber Resilience",
   description:
     "랜섬웨어·서버 장애·재난이 발생해도 비즈니스는 멈추지 않습니다. 아인스테크는 Isolated Recovery, Immutable Vault, Active-Active 이중화를 통합해 사이버 회복탄력성(Cyber Resilience) 체계를 설계·구축합니다.",
-};
+  keywords: ["DR 솔루션", "재해복구", "BCP", "사이버 회복탄력성", "Immutable Vault", "격리 복구"],
+});
 
 const purposes = [
   {

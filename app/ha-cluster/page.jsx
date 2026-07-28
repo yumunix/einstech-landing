@@ -4,12 +4,14 @@ import GlassPanel from "@/components/ds/GlassPanel";
 import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({ path: "/ha-cluster",
   title: "HA Cluster — Rose HA · Mantech MCCS | EINSTECH",
   description:
     "단일 장애가 비즈니스를 멈추지 않게. 아인스테크는 글로벌 표준 Rose HA와 국내 1위 맨텍 MCCS를 환경에 맞춰 설계·구축합니다. Active-Standby부터 SANless·DR까지 한 파트너로.",
-};
+  keywords: ["HA Cluster", "Rose HA", "MCCS", "고가용성", "서버 이중화", "SANless HA"],
+});
 
 const whyCards = [
   {

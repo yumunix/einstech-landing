@@ -8,12 +8,9 @@ import PricingConfigurator from "./PricingConfigurator";
 import RackPricingConfigurator from "./RackPricingConfigurator";
 import TpLinkLineup from "./TpLinkLineup";
 import ProductFamilyLineup from "./ProductFamilyLineup";
+import { einswallMetadata, einswallStructuredData } from "./seo";
 
-export const metadata = {
-  title: "TP-Link Network Switch + EINSWALL Firewall | EINSTECH",
-  description:
-    "TP-Link Network Switch와 EINSWALL Firewall을 함께 구성합니다. 데스크톱 팬리스형과 19형 1U 랙형 방화벽 서버를 선택할 수 있습니다.",
-};
+export const metadata = einswallMetadata;
 
 const specs = [
   { label: "CPU", value: "Intel Pentium 8505 / Core i5-12450H / Core i7-13620H (모델 선택)" },
@@ -128,6 +125,7 @@ export default function EinswallPage() {
       <Header />
 
       <main className="pt-16">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(einswallStructuredData) }} />
         {/* Hero */}
         <section className="relative py-24 lg:py-32 overflow-hidden">
           <div className="relative z-10 max-w-page mx-auto px-6 lg:px-12">

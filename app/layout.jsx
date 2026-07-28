@@ -2,6 +2,7 @@ import "./globals.css";
 import "./page.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { organizationStructuredData, websiteStructuredData } from "@/lib/seo";
 
 const siteUrl = "https://www.einstech.kr";
 const siteName = "EINSTECH";
@@ -96,6 +97,7 @@ export default function RootLayout({ children }) {
         <script src="https://unpkg.com/@phosphor-icons/web" async></script>
       </head>
       <body className="einstech-white-body">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationStructuredData, websiteStructuredData]) }} />
         {children}
         <Analytics />
         <SpeedInsights />

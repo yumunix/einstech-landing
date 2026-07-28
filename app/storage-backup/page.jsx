@@ -4,12 +4,14 @@ import GlassPanel from "@/components/ds/GlassPanel";
 import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({ path: "/storage-backup",
   title: "Backup + WORM Storage — Hitachi HCP · Acronis · NetBackup | EINSTECH",
   description:
     "Acronis와 NetBackup 백업 데이터를 Hitachi Content Platform(HCP) WORM Storage에 보관합니다. S3 Object Lock과 Compliance Mode로 보존기간 동안 삭제와 덮어쓰기를 방지합니다.",
-};
+  keywords: ["WORM 스토리지", "Hitachi HCP", "Acronis 백업", "Veritas NetBackup", "S3 Object Lock", "랜섬웨어 백업"],
+});
 
 const whyCards = [
   {

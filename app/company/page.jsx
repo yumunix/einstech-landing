@@ -4,12 +4,14 @@ import GlassPanel from "@/components/ds/GlassPanel";
 import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({ path: "/company",
   title: "회사 소개 — EINSTECH | 2014 설립 · 엔지니어 30년 · 1,000+ 프로젝트",
   description:
     "EINSTECH는 2014년 설립된 인프라 전문 SI 기업입니다. 엔지니어 30년 경험으로 HA Cluster · Storage · Backup · Data Security를 통합 설계해 왔으며, 누적 1,000건 이상의 프로젝트와 말레이시아 해외 거점을 운영합니다.",
-};
+  keywords: ["EINSTECH", "아인스테크", "인프라 SI", "IT 인프라 구축", "용인 IT 기업"],
+});
 
 const identity = [
   { label: "설립", value: "2014.05.01", unit: "EST" },

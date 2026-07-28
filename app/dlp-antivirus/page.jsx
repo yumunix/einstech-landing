@@ -4,12 +4,14 @@ import GlassPanel from "@/components/ds/GlassPanel";
 import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({ path: "/dlp-antivirus",
   title: "Data Security — Netwrix DLP · Kaspersky · ESET PROTECT | EINSTECH",
   description:
     "Netwrix DLP, Kaspersky Endpoint Security와 ESET PROTECT를 통합 설계해 데이터 유출, 엔드포인트 위협과 랜섬웨어를 한 체계로 통제합니다.",
-};
+  keywords: ["DLP", "Netwrix DLP", "Kaspersky", "ESET PROTECT", "정보유출방지", "엔드포인트 보안"],
+});
 
 const shiftCards = [
   {
