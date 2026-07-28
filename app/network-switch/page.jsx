@@ -3,7 +3,7 @@ import Footer from "@/components/sections/Footer";
 import Badge from "@/components/ds/Badge";
 import SectionHeader from "@/components/ds/SectionHeader";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
-import TpLinkLineup from "@/app/einswall/TpLinkLineup";
+import TpLinkCatalog from "./TpLinkCatalog";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -70,7 +70,7 @@ export default function NetworkSwitchPage() {
                 <span className="text-navy">스위치 제품을 선택하세요.</span>
               </h2>
             </SectionHeader>
-            <TpLinkLineup />
+            <TpLinkCatalog />
           </div>
         </section>
       </main>
