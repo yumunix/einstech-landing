@@ -8,7 +8,6 @@ const switches = [
     features: ["802.1Q VLAN", "QoS · IGMP Snooping", "19형 랙마운트"],
     fit: "일반 사무실 · 업무망/게스트망 분리",
     pair: "EINSWALL MINI PC / RACK ENTRY",
-    url: "https://www.tp-link.com/kr/business-networking/easy-smart-switch/tl-sg1024de/",
   },
   {
     line: "POE ACCESS",
@@ -19,7 +18,6 @@ const switches = [
     features: ["PoE+ 250W", "Omada SDN", "VLAN · ACL · 정적 라우팅"],
     fit: "무선 AP · IP전화 · CCTV 통합",
     pair: "EINSWALL RACK ENTRY / ADVANCED",
-    url: "https://www.tp-link.com/kr/business-networking/omada-switch-access/tl-sg2428p/",
   },
   {
     line: "10G AGGREGATION",
@@ -30,7 +28,6 @@ const switches = [
     features: ["Omada SDN", "VLAN · ACL · QoS", "ERPS · 정적 라우팅"],
     fit: "서버·스토리지·스위치 10G 집선",
     pair: "EINSWALL RACK ADVANCED / FLAGSHIP",
-    url: "https://www.tp-link.com/kr/business-networking/omada-switch-aggregation/sx3008f/",
   },
 ];
 
@@ -46,7 +43,7 @@ export default function TpLinkLineup() {
           <article key={item.model} className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={item.image} alt={`TP-Link ${item.model} 스위치`} className="aspect-[4/3] w-full border-b border-slate-100 bg-white object-contain p-5" />
-            <div className="p-6"><div className="font-mono text-[9px] font-bold tracking-widest text-emerald">{item.line}</div><h4 className="mt-2 font-display text-xl font-black text-slate-900">{item.model}</h4><p className="mt-1 text-sm text-slate-500">{item.name}</p><div className="mt-4 rounded-xl bg-slate-50 px-3 py-2 font-mono text-[11px] text-navy">{item.ports}</div><ul className="mt-4 space-y-2 text-xs text-slate-600">{item.features.map((feature) => <li key={feature}>▸ {feature}</li>)}</ul><div className="mt-5 border-t border-slate-100 pt-4 text-[11px] leading-relaxed text-slate-500"><strong className="text-slate-800">적합 환경</strong> · {item.fit}<br /><strong className="text-slate-800">권장 조합</strong> · {item.pair}</div><div className="mt-5 grid grid-cols-2 gap-2"><a href={item.url} target="_blank" rel="noreferrer" className="rounded-xl border border-slate-200 px-3 py-3 text-center text-xs font-bold text-slate-600 hover:border-navy hover:text-navy">공식 사양</a><a href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} + EINSWALL 구성 견적 문의`)}`} className="rounded-xl bg-navy px-3 py-3 text-center text-xs font-bold text-white hover:bg-emerald">구성 견적</a></div></div>
+            <div className="p-6"><div className="font-mono text-[9px] font-bold tracking-widest text-emerald">{item.line}</div><h4 className="mt-2 font-display text-xl font-black text-slate-900">{item.model}</h4><p className="mt-1 text-sm text-slate-500">{item.name}</p><div className="mt-4 rounded-xl bg-slate-50 px-3 py-2 font-mono text-[11px] text-navy">{item.ports}</div><ul className="mt-4 space-y-2 text-xs text-slate-600">{item.features.map((feature) => <li key={feature}>▸ {feature}</li>)}</ul><div className="mt-5 border-t border-slate-100 pt-4 text-[11px] leading-relaxed text-slate-500"><strong className="text-slate-800">적합 환경</strong> · {item.fit}<br /><strong className="text-slate-800">권장 조합</strong> · {item.pair}</div><div className="mt-5 grid grid-cols-2 gap-2"><a href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 상세 사양 및 공급 문의`)}`} className="rounded-xl border border-slate-200 px-3 py-3 text-center text-xs font-bold text-slate-600 hover:border-navy hover:text-navy">상세 사양 · 공급 문의</a><a href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} + EINSWALL 구성 견적 문의`)}`} className="rounded-xl bg-navy px-3 py-3 text-center text-xs font-bold text-white hover:bg-emerald">아인스테크 구매 견적</a></div></div>
           </article>
         ))}
       </div>
