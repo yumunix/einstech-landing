@@ -15,9 +15,9 @@ const families = {
     base: einswallPrices.rack.entryConfigured,
     source: "US$366.63",
     cpus: [
-      { id: "c3758", label: "Atom C3758", image: "/products/e-gate/rack-entry-c3758.webp", detail: "8코어 · 지사·소규모 사업장", users: "약 50~150명", price: 0 },
-      { id: "c3808", label: "Atom C3808", image: "/products/e-gate/rack-entry-c3808.webp", detail: "12코어 · 다중 VPN", users: "약 100~250명", price: 300000 },
-      { id: "c3958", label: "Atom C3958", image: "/products/e-gate/rack-entry-c3958.webp", detail: "16코어 · 고부하 정책", users: "약 150~350명", price: 500000 },
+      { id: "c3758", label: "Atom C3758", image: "/products/e-gate/rack-entry-c3758.webp", detail: "8코어 · 지사·소규모 사업장", users: "처리량·정책 기준 별도 산정", price: 0 },
+      { id: "c3808", label: "Atom C3808", image: "/products/e-gate/rack-entry-c3808.webp", detail: "12코어 · 다중 VPN", users: "처리량·정책 기준 별도 산정", price: 300000 },
+      { id: "c3958", label: "Atom C3958", image: "/products/e-gate/rack-entry-c3958.webp", detail: "16코어 · 고부하 정책", users: "처리량·정책 기준 별도 산정", price: 500000 },
     ],
   },
   advanced: {
@@ -29,9 +29,9 @@ const families = {
     base: einswallPrices.rack.advancedConfigured,
     source: "US$763.88",
     cpus: [
-      { id: "i5", label: "Core i5-13400", image: "/products/e-gate/rack-advanced-i5.webp", detail: "10코어 · 기업 표준형", users: "약 150~400명", price: 0 },
-      { id: "i7", label: "Core i7-13700", image: "/products/e-gate/rack-advanced-i7.webp", detail: "16코어 · VPN·IDS/IPS", users: "약 300~700명", price: 400000 },
-      { id: "i9", label: "Core i9-13900", image: "/products/e-gate/rack-advanced-i9.webp", detail: "24코어 · 고부하 10G", users: "약 500~1,000명", price: 700000 },
+      { id: "i5", label: "Core i5-13400", image: "/products/e-gate/rack-advanced-i5.webp", detail: "10코어 · 기업 표준형", users: "처리량·정책 기준 별도 산정", price: 0 },
+      { id: "i7", label: "Core i7-13700", image: "/products/e-gate/rack-advanced-i7.webp", detail: "16코어 · VPN·IDS/IPS", users: "처리량·정책 기준 별도 산정", price: 400000 },
+      { id: "i9", label: "Core i9-13900", image: "/products/e-gate/rack-advanced-i9.webp", detail: "24코어 · 고부하 10G", users: "처리량·정책 기준 별도 산정", price: 700000 },
     ],
   },
   flagship: {
