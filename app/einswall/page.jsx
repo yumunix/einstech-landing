@@ -6,7 +6,6 @@ import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 import PricingConfigurator from "./PricingConfigurator";
 import RackPricingConfigurator from "./RackPricingConfigurator";
-import TpLinkLineup from "./TpLinkLineup";
 import ProductFamilyLineup from "./ProductFamilyLineup";
 import { einswallMetadata, einswallStructuredData } from "./seo";
 
@@ -132,23 +131,23 @@ export default function EinswallPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <div className="flex flex-wrap items-center gap-3 mb-8">
-                  <Badge color="cyan">TP-LINK + EINSWALL</Badge>
+                  <Badge color="cyan">EINSWALL FIREWALL</Badge>
                   <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
-                    Network Switch + Firewall
+                    Enterprise Firewall
                   </span>
                 </div>
 
                 <h1 className="font-display leading-[0.95] mb-10">
                   <span className="block text-[clamp(2.5rem,5vw,5rem)] font-bold tracking-tight text-slate-900">
-                    TP-Link + EINSWALL
+                    EINSWALL
                   </span>
                   <span className="block text-[clamp(1.5rem,3vw,2.5rem)] font-light tracking-widest text-navy mt-3">
-                    Network Switch + Firewall
+                    Enterprise Firewall
                   </span>
                 </h1>
 
                 <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl border-l-2 border-navy/30 pl-5 mb-12">
-                  TP-Link 관리형 Network Switch와 EINSWALL Firewall을 VLAN Trunk로 연동해 업무망·서버망·게스트망·CCTV망을 분리하고, 인터넷 경계와 망 간 접근을 함께 보호합니다. EINSWALL은 경제적인 1G 운용형부터 10G SFP+
+                  EINSWALL Firewall은 업무망·서버망·게스트망·CCTV망 사이의 접근 정책과 인터넷 경계를 통합 보호합니다. 경제적인 경제적인 1G 운용형부터 10G SFP+
                   고급형까지 필요한 사양을 선택할 수 있으며, 현장 네트워크 및 방화벽
                   정책 설정은 별도 견적입니다.
                 </p>
@@ -257,7 +256,6 @@ export default function EinswallPage() {
               </h2>
             </SectionHeader>
 
-            <div className="mb-16 lg:mb-24"><TpLinkLineup /></div>
 
             <div className="mb-8 lg:ml-12"><div className="font-mono text-[10px] font-bold tracking-[0.2em] text-navy">EINSWALL MINI PC LINE</div><h3 className="mt-2 font-display text-3xl font-black text-slate-900">미니PC 방화벽 제품군</h3></div>
             <div id="pricing-mini" className="scroll-mt-24"><PricingConfigurator /></div>

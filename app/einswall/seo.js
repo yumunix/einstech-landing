@@ -2,9 +2,9 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const einswallMetadata = createPageMetadata({
   path: "/einswall",
-  title: "TP-Link Switch + EINSWALL Firewall",
+  title: "EINSWALL Enterprise Firewall",
   description:
-    "TP-Link Omada 관리형 스위치와 EINSWALL 미니PC·1U·2U 방화벽 서버를 VLAN, VPN, IDS/IPS 요구사항에 맞춰 구성하고 예상 공급가를 확인합니다.",
+    "EINSWALL 미니PC·1U·2U 방화벽 서버를 VLAN, VPN, IDS/IPS 요구사항에 맞춰 구성하고 예상 공급가를 확인합니다.",
   keywords: [
     "EINSWALL",
     "방화벽 서버",
@@ -38,7 +38,7 @@ const products = [
 export const einswallStructuredData = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "TP-Link Switch + EINSWALL Firewall",
+  name: "EINSWALL Enterprise Firewall",
   url: "https://www.einstech.kr/einswall",
   mainEntity: {
     "@type": "ItemList",
