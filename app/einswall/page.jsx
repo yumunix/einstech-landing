@@ -260,7 +260,7 @@ export default function EinswallPage() {
             <div className="mb-16 lg:mb-24"><TpLinkLineup /></div>
 
             <div className="mb-8 lg:ml-12"><div className="font-mono text-[10px] font-bold tracking-[0.2em] text-navy">EINSWALL MINI PC LINE</div><h3 className="mt-2 font-display text-3xl font-black text-slate-900">미니PC 방화벽 제품군</h3></div>
-            <PricingConfigurator />
+            <div id="pricing-mini" className="scroll-mt-24"><PricingConfigurator /></div>
 
             <div className="mt-16"><RackPricingConfigurator familyId="entry" /></div>
             <div className="mt-16"><RackPricingConfigurator familyId="advanced" /></div>

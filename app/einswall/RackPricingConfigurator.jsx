@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { einswallPrices, pricingPolicy } from "./pricing";
 
 const won = new Intl.NumberFormat("ko-KR");
@@ -92,6 +92,13 @@ export default function RackPricingConfigurator({ familyId }) {
   const [memory, setMemory] = useState("16");
   const [storage, setStorage] = useState("512");
   const [modules, setModules] = useState("none");
+  useEffect(() => {
+    const selectModel = (event) => {
+      if (event.detail?.family === familyId && family.cpus.some((item) => item.id === event.detail.model)) setCpu(event.detail.model);
+    };
+    window.addEventListener("einswall:model-select", selectModel);
+    return () => window.removeEventListener("einswall:model-select", selectModel);
+  }, [family, familyId]);
   const selected = useMemo(() => ({
     cpu: family.cpus.find((item) => item.id === cpu),
     memory: memoryOptions.find((item) => item.id === memory),
@@ -104,14 +111,14 @@ export default function RackPricingConfigurator({ familyId }) {
   const inquiry = encodeURIComponent(`${modelName} / ${selected.memory.label} / ${selected.storage.label} / ${selected.modules.label} 견적 문의`);
 
   return (
-    <section className="overflow-hidden rounded-[36px] border border-slate-200 bg-white shadow-sm lg:ml-12">
+    <section id={`pricing-${familyId}`} className="scroll-mt-24 overflow-hidden rounded-[36px] border border-slate-200 bg-white shadow-sm lg:ml-12">
       <div className="border-b border-slate-200 bg-slate-950 p-7 text-white sm:p-9">
         <div className="font-mono text-[10px] font-bold tracking-[0.2em] text-cyan-300">{family.badge}</div>
         <div className="mt-2 flex flex-wrap items-end justify-between gap-4"><div><h3 className="font-display text-3xl font-black">{family.title}</h3><p className="mt-2 text-sm text-white/50">{family.chassis} · {family.network}</p></div><div className="text-right font-mono text-[10px] text-white/35">독립 제품군 · CPU별 개별 모델</div></div>
       </div>
       <div className="grid gap-6 p-6 sm:p-8 xl:grid-cols-[360px_1fr_340px]">
         <div className="overflow-hidden rounded-[28px] bg-slate-950">
-          <img src={selected.cpu.image} alt={`  제품 이미지`} className="aspect-square w-full object-cover" />
+          <img src={selected.cpu.image} alt={`${modelName} 실제 제품 이미지`} className="aspect-square w-full object-cover" />
           <div className="border-t border-white/10 p-5 text-white"><div className="font-mono text-[9px] tracking-widest text-cyan-300">SELECTED MODEL</div><div className="mt-1 font-display text-xl font-bold">{selected.cpu.label}</div><p className="mt-2 text-xs leading-relaxed text-white/45">{selected.cpu.detail}</p></div>
         </div>
         <div className="space-y-8 rounded-[28px] bg-slate-50/80 p-5 sm:p-7">

@@ -133,6 +133,16 @@ export default function PricingConfigurator() {
         : moduleOptions.filter((item) => item.id === "none");
 
   useEffect(() => {
+    const selectModel = (event) => {
+      if (event.detail?.family !== "mini") return;
+      const network = { "1g": "none", "10g2": "2s", "10g4": "4s" }[event.detail.model];
+      if (network) setSfp(network);
+    };
+    window.addEventListener("einswall:model-select", selectModel);
+    return () => window.removeEventListener("einswall:model-select", selectModel);
+  }, []);
+
+  useEffect(() => {
     if (sfp === "none" || (sfp === "2s" && modules === "4")) {
       setModules("none");
     }

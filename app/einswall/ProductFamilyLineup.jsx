@@ -1,3 +1,5 @@
+"use client";
+
 import { einswallPrices } from "./pricing";
 
 const won = new Intl.NumberFormat("ko-KR");
@@ -60,7 +62,7 @@ export default function ProductFamilyLineup() {
               <article key={product.name} className="group overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={product.image} alt={`${product.name} 제품 이미지`} className="aspect-square w-full border-b border-slate-100 object-cover" />
-                <div className="p-5"><div className="font-mono text-[9px] font-bold tracking-widest text-emerald">{product.chip}</div><h4 className="mt-2 font-display text-lg font-black text-slate-900">{product.name}</h4><p className="mt-1 min-h-9 text-xs leading-relaxed text-slate-500">{product.spec}</p><div className="mt-4 flex items-end justify-between border-t border-slate-100 pt-4"><div><div className="text-[9px] text-slate-400">기본 예상 공급가 · VAT 별도</div><strong className="font-display text-xl text-navy">{won.format(product.price)}원~</strong></div><a href="#pricing" className="rounded-full bg-slate-100 px-3 py-2 text-[10px] font-bold text-navy group-hover:bg-navy group-hover:text-white">사양 선택</a></div></div>
+                <div className="p-5"><div className="font-mono text-[9px] font-bold tracking-widest text-emerald">{product.chip}</div><h4 className="mt-2 font-display text-lg font-black text-slate-900">{product.name}</h4><p className="mt-1 min-h-9 text-xs leading-relaxed text-slate-500">{product.spec}</p><div className="mt-4 flex items-end justify-between border-t border-slate-100 pt-4"><div><div className="text-[9px] text-slate-400">기본 예상 공급가 · VAT 별도</div><strong className="font-display text-xl text-navy">{won.format(product.price)}원~</strong></div><a href={`#pricing-${group.id}`} onClick={() => window.dispatchEvent(new CustomEvent("einswall:model-select", { detail: { family: group.id, model: product.name.split(" ").at(-1).toLowerCase() } }))} className="rounded-full bg-slate-100 px-3 py-2 text-[10px] font-bold text-navy group-hover:bg-navy group-hover:text-white">사양 선택</a></div></div>
               </article>
             ))}
           </div>
