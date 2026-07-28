@@ -28,9 +28,9 @@ const cpuOptions = [
 ];
 
 const sfpOptions = [
-  { id: "none", label: "1G 경제형", detail: "4×2.5GbE RJ45 · SFP+ 없음", price: einswallPrices.network.none, suffix: "-1G" },
-  { id: "2s", label: "10G 고급형", detail: "4×2.5GbE + 2×10G SFP+", price: einswallPrices.network["2s"], suffix: "-10G2" },
-  { id: "4s", label: "10G 확장형", detail: "4×2.5GbE + 4×10G SFP+", price: einswallPrices.network["4s"], suffix: "-10G4" },
+  { id: "none", label: "1G 경제형", detail: "4×2.5GbE RJ45 · SFP+ 없음", image: "/products/e-gate/einswall-mini-1g-v2.webp", price: einswallPrices.network.none, suffix: "-1G" },
+  { id: "2s", label: "10G 고급형", detail: "4×2.5GbE + 2×10G SFP+", image: "/products/e-gate/einswall-mini-10g2-v2.webp", price: einswallPrices.network["2s"], suffix: "-10G2" },
+  { id: "4s", label: "10G 확장형", detail: "4×2.5GbE + 4×10G SFP+", image: "/products/e-gate/einswall-mini-10g4-v2.webp", price: einswallPrices.network["4s"], suffix: "-10G4" },
 ];
 
 const memoryOptions = [
@@ -181,6 +181,7 @@ export default function PricingConfigurator() {
           Estimated Configuration
         </div>
         <h3 className="font-display text-2xl font-bold mb-6">{modelName}</h3>
+        <img src={selected.sfp.image} alt={` 제품 이미지`} className="mb-5 aspect-square w-full rounded-2xl object-cover" />
 
         <dl className="space-y-3 text-sm border-y border-white/10 py-6">
           {[

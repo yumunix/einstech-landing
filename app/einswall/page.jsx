@@ -5,9 +5,9 @@ import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 import PricingConfigurator from "./PricingConfigurator";
-import RackEntryConfigurator from "./RackEntryConfigurator";
-import RackAdvancedConfigurator from "./RackAdvancedConfigurator";
-import RackFlagshipConfigurator from "./RackFlagshipConfigurator";
+import RackPricingConfigurator from "./RackPricingConfigurator";
+import TpLinkLineup from "./TpLinkLineup";
+import ProductFamilyLineup from "./ProductFamilyLineup";
 
 export const metadata = {
   title: "TP-Link Network Switch + EINSWALL Firewall | EINSTECH",
@@ -33,7 +33,7 @@ const models = [
     level: "ESSENTIAL",
     network: "1G 회선 운용 · 4×2.5GbE RJ45",
     desc: "SFP+가 필요 없는 사무실·매장·소규모 사업장용 경제형",
-    image: "/products/e-gate/einswall-1g.jpg",
+    image: "/products/e-gate/einswall-mini-1g-v2.webp",
     imageAlt: "EINSWALL 1G 모델의 4개 2.5GbE 네트워크 포트",
   },
   {
@@ -42,7 +42,7 @@ const models = [
     level: "RACK ESSENTIAL",
     network: "19형 1U · 6×1GbE + 4×2.5GbE + 4×SFP",
     desc: "통신실·서버실 표준 랙에 장착하는 Intel Atom C3758 기반 보급형",
-    image: "/products/e-gate/einswall-rack-entry.webp",
+    image: "/products/e-gate/rack-entry-c3758.webp",
     imageAlt: "EINSWALL RACK ENTRY 19형 1U 랙마운트 방화벽 서버",
   },
   {
@@ -51,7 +51,7 @@ const models = [
     level: "RACK PERFORMANCE",
     network: "19형 1U · 8×2.5GbE + 4×10G SFP+",
     desc: "Core i5-13400 기반으로 10G 트래픽·VPN·IDS/IPS를 처리하는 고급형",
-    image: "/products/e-gate/einswall-rack-advanced.webp",
+    image: "/products/e-gate/rack-advanced-i5.webp",
     imageAlt: "EINSWALL RACK ADVANCED 19형 1U 고급형 방화벽 서버",
   },
   {
@@ -60,7 +60,7 @@ const models = [
     level: "RACK FLAGSHIP",
     network: "19형 2U · 최대 16×RJ45 + 8×10G SFP+",
     desc: "LGA1700 CPU와 대규모 네트워크 확장을 지원하는 데이터센터급 최고급형",
-    image: "/products/e-gate/einswall-rack-flagship.webp",
+    image: "/products/e-gate/rack-flagship-12g.webp",
     imageAlt: "EINSWALL RACK FLAGSHIP 19형 2U 최고급형 방화벽 서버",
   },
   {
@@ -69,7 +69,7 @@ const models = [
     level: "PRO",
     network: "4×2.5GbE RJ45 + 2×10G SFP+",
     desc: "10G 업링크, 다중 VPN과 IDS/IPS를 사용하는 기업용",
-    image: "/products/e-gate/einswall-10g2.jpg",
+    image: "/products/e-gate/einswall-mini-10g2-v2.webp",
     imageAlt: "EINSWALL 10G2 모델의 4개 2.5GbE 및 2개 10G SFP+ 포트",
   },
   {
@@ -78,7 +78,7 @@ const models = [
     level: "ENTERPRISE",
     network: "4×2.5GbE RJ45 + 4×10G SFP+",
     desc: "다수의 10G 구간과 고부하 보안 정책을 위한 고급형",
-    image: "/products/e-gate/einswall-10g4.jpg",
+    image: "/products/e-gate/einswall-mini-10g4-v2.webp",
     imageAlt: "EINSWALL 10G4 모델의 4개 2.5GbE 및 4개 10G SFP+ 포트",
   },
 ];
@@ -240,32 +240,7 @@ export default function EinswallPage() {
               </h2>
             </SectionHeader>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 lg:pl-12">
-              {models.map((m) => (
-                <GlassPanel key={m.name} className="overflow-hidden flex flex-col">
-                  <div className="border-b border-slate-100 bg-navy px-4 py-2 font-mono text-[9px] font-bold tracking-widest text-white">{m.category}</div>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={m.image}
-                    alt={m.imageAlt}
-                    className="aspect-square w-full border-b border-slate-100 bg-white object-cover"
-                  />
-                  <div className="p-7 flex flex-col gap-3">
-                  <div className="font-mono text-[10px] font-bold tracking-widest text-emerald">
-                    {m.level}
-                  </div>
-                  <div className="font-display text-xl font-bold text-slate-900">{m.name}</div>
-                  <div className="font-mono text-[11px] text-navy">{m.network}</div>
-                  <p className="font-sans text-sm leading-relaxed text-slate-500">{m.desc}</p>
-                  </div>
-                </GlassPanel>
-              ))}
-            </div>
-
-            <p className="font-mono text-[11px] text-slate-500 tracking-wide uppercase mt-8 lg:ml-12">
-              ※ EINSWALL 1G도 물리적으로는 2.5GbE 포트를 제공하며, 1G 회선·스위치와 호환됩니다.
-              CPU·메모리·스토리지는 환경에 맞춰 구성합니다.
-            </p>
+            <ProductFamilyLineup />
           </div>
         </section>
 
@@ -284,17 +259,14 @@ export default function EinswallPage() {
               </h2>
             </SectionHeader>
 
+            <div className="mb-16 lg:mb-24"><TpLinkLineup /></div>
+
+            <div className="mb-8 lg:ml-12"><div className="font-mono text-[10px] font-bold tracking-[0.2em] text-navy">EINSWALL MINI PC LINE</div><h3 className="mt-2 font-display text-3xl font-black text-slate-900">미니PC 방화벽 제품군</h3></div>
             <PricingConfigurator />
 
-            <div className="mt-10">
-              <RackEntryConfigurator />
-            </div>
-            <div className="mt-10">
-              <RackAdvancedConfigurator />
-            </div>
-            <div className="mt-10">
-              <RackFlagshipConfigurator />
-            </div>
+            <div className="mt-16"><RackPricingConfigurator familyId="entry" /></div>
+            <div className="mt-16"><RackPricingConfigurator familyId="advanced" /></div>
+            <div className="mt-16"><RackPricingConfigurator familyId="flagship" /></div>
           </div>
         </section>
 
