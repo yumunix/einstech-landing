@@ -5,6 +5,7 @@ import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 import { createPageMetadata } from "@/lib/seo";
+import ProductCategories from "./ProductCategories";
 
 export const metadata = createPageMetadata({ path: "/infrastructure",
   title: "Infrastructure — HP Server · NVIDIA GPU · Hitachi · Brocade SAN | EINSTECH",
@@ -167,8 +168,8 @@ export default function InfrastructurePage() {
               <PrimaryButton href="/contact" className="flex-1">
                 인프라 구성 문의
               </PrimaryButton>
-              <SecondaryButton href="#lineup" className="flex-1">
-                브랜드 라인업 보기
+              <SecondaryButton href="#products" className="flex-1">
+                제품 카테고리 보기
               </SecondaryButton>
             </div>
           </div>
@@ -223,8 +224,17 @@ export default function InfrastructurePage() {
           </div>
         </section>
 
+        <section id="products" className="py-24 lg:py-32 relative">
+          <div className="w-full max-w-page mx-auto px-6 lg:px-12 relative z-10">
+            <SectionHeader badgeText="PRODUCT_CATEGORIES" badgeColor="acid" sectionLabel="2. Products — 독립 제품 카테고리">
+              <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] max-w-4xl">제품은 카테고리별로 선택하고<br /><span className="text-emerald">솔루션은 목적에 맞게 조합합니다.</span></h2>
+            </SectionHeader>
+            <ProductCategories />
+          </div>
+        </section>
+
         {/* ENTERPRISE LINEUP */}
-        <section id="lineup" className="py-24 lg:py-32 relative">
+        <section id="lineup" className="hidden">
           <div
             className="absolute left-12 top-0 bottom-0 w-px bg-gradient-to-b from-acid/30 via-transparent to-transparent hidden lg:block -z-10"
             aria-hidden
@@ -308,7 +318,7 @@ export default function InfrastructurePage() {
         </section>
 
         {/* NETWORK SWITCH + FIREWALL */}
-        <section id="smb" className="py-24 lg:py-32 relative">
+        <section id="smb" className="hidden">
           <div className="w-full max-w-page mx-auto px-6 lg:px-12 relative z-10">
             <SectionHeader
               badgeText="NETWORK_FIREWALL"
