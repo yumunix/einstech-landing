@@ -81,7 +81,7 @@ export default function BrocadeSanPage() {
                 <div className={`grid gap-6 md:grid-cols-2 ${family.products.length === 3 ? "xl:grid-cols-3" : ""}`}>
                   {family.products.map((product) => (
                     <article key={product.model} className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm">
-                      <div className="flex aspect-[4/3] items-center justify-center border-b border-slate-100 bg-gradient-to-br from-slate-950 via-navy to-slate-900 p-8">
+                      <div className="flex aspect-[4/3] items-center justify-center border-b border-slate-100 bg-white p-8">
                         <img src={`/products/san-switch/${product.image}`} alt={`Brocade ${product.model} SAN Switch`} className="max-h-full max-w-full object-contain" />
                       </div>
                       <div className="p-6">
