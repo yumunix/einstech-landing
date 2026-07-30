@@ -1,0 +1,110 @@
+name: Product catalog lifecycle review
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"       # 매주 월요일 09:00 KST: 링크
+    - cron: "15 0 1 * *"      # 매월 1일 09:15 KST: 공식 페이지 변경
+    - cron: "30 0 1 1,4,7,10 *" # 분기 첫날 09:30 KST: 판매·단종 검토
+    - cron: "45 0 5 1 *"      # 매년 1월 5일 09:45 KST: 전체 리뉴얼
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "점검 범위"
+        required: true
+        default: weekly
+        type: choice
+        options: [weekly, monthly, quarterly, annual]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: product-catalog-review
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      SMTP_FROM: ${{ secrets.SMTP_FROM }}
+      PRODUCT_REVIEW_EMAIL_TO: ${{ secrets.PRODUCT_REVIEW_EMAIL_TO }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Select review mode
+        id: mode
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            mode="${{ inputs.mode }}"
+          elif [[ "${{ github.event.schedule }}" == "45 0 5 1 *" ]]; then
+            mode="annual"
+          elif [[ "${{ github.event.schedule }}" == "30 0 1 1,4,7,10 *" ]]; then
+            mode="quarterly"
+          elif [[ "${{ github.event.schedule }}" == "15 0 1 * *" ]]; then
+            mode="monthly"
+          else
+            mode="weekly"
+          fi
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+
+      - name: Check product catalog
+        run: node scripts/check-product-catalog.mjs --mode=${{ steps.mode.outputs.mode }}
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: product-catalog-${{ steps.mode.outputs.mode }}-${{ github.run_number }}
+          path: reports/product-catalog-review.*
+          retention-days: 365
+
+      - name: Read alert state
+        id: alert
+        shell: bash
+        run: |
+          echo "required=$(node -p "require('./reports/product-catalog-review.json').requiresAttention")" >> "$GITHUB_OUTPUT"
+          echo "date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub notification issue
+        if: steps.alert.outputs.required == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="[제품 정기점검] ${{ steps.mode.outputs.mode }} · ${{ steps.alert.outputs.date }}"
+          gh issue create --title "$title" --body-file reports/product-catalog-review.md --label product-review || \
+          gh issue create --title "$title" --body-file reports/product-catalog-review.md
+
+      - name: Send Telegram notification
+        if: steps.alert.outputs.required == 'true' && env.TELEGRAM_BOT_TOKEN != '' && env.TELEGRAM_CHAT_ID != ''
+        run: |
+          summary=$(head -c 3500 reports/product-catalog-review.md)
+          curl -fsS --retry 3 -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=${summary}"
+
+      - name: Send email notification
+        if: steps.alert.outputs.required == 'true' && env.SMTP_SERVER != '' && env.SMTP_USERNAME != '' && env.SMTP_PASSWORD != '' && env.PRODUCT_REVIEW_EMAIL_TO != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ env.SMTP_SERVER }}
+          server_port: ${{ env.SMTP_PORT || '587' }}
+          secure: false
+          username: ${{ env.SMTP_USERNAME }}
+          password: ${{ env.SMTP_PASSWORD }}
+          subject: "[EINSTECH] 제품 카탈로그 변경·검토 알림"
+          to: ${{ env.PRODUCT_REVIEW_EMAIL_TO }}
+          from: ${{ env.SMTP_FROM || env.SMTP_USERNAME }}
+          body: file://reports/product-catalog-review.md

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 const inquiryTypes = [
   { value: "BCP", label: "BCP (Business Continuity Planning)" },
@@ -9,6 +10,7 @@ const inquiryTypes = [
   { value: "EINSWALL", label: "EINSWALL 맞춤형 방화벽 서버" },
   { value: "Backup", label: "Backup (Acronis / NetBackup)" },
   { value: "DLP", label: "DLP / 백신" },
+  { value: "기술지원", label: "기술지원" },
   { value: "기타", label: "기타 / 일반 문의" },
 ];
 
@@ -16,6 +18,9 @@ const FORMSPREE_ID =
   process.env.NEXT_PUBLIC_FORMSPREE_ID || "";
 
 export default function ContactForm() {
+  const searchParams = useSearchParams();
+  const requestedType = searchParams.get("type") || "";
+  const requestedSubject = searchParams.get("subject") || "";
   const [status, setStatus] = useState("idle"); // idle | submitting | success | error
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -153,7 +158,7 @@ export default function ContactForm() {
           id="inquiry"
           name="inquiry"
           required
-          defaultValue=""
+          defaultValue={inquiryTypes.some((item) => item.value === requestedType) ? requestedType : ""}
           className={baseInput}
         >
           <option value="" disabled>
@@ -176,6 +181,7 @@ export default function ContactForm() {
           name="message"
           required
           rows={6}
+          defaultValue={requestedSubject ? `[${requestedSubject}]\n\n현재 환경과 요청 내용을 입력해 주세요.` : ""}
           placeholder="현재 환경, 도입 시기, 예상 규모 등을 알려주시면 더 정확한 답변이 가능합니다."
           className={`${baseInput} resize-y min-h-[160px]`}
         />

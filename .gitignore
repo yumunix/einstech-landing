@@ -4,3 +4,6 @@ out/
 .DS_Store
 *.log
 .env*
+
+reports/product-catalog-review.md
+reports/product-catalog-review.json

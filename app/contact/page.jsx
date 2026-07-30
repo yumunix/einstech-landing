@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import GlassPanel from "@/components/ds/GlassPanel";
@@ -69,7 +70,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <ContactForm />
+                <Suspense fallback={<div className="py-12 text-center font-mono text-xs text-slate-500">문의 양식을 준비하고 있습니다.</div>}><ContactForm /></Suspense>
               </GlassPanel>
             </div>
 

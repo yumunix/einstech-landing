@@ -12,10 +12,10 @@ const solutionItems = [
 ];
 
 const supportItems = [
-  { label: "구축 및 마이그레이션", desc: "신규 구축 · 시스템 전환", href: "/contact" },
-  { label: "유지보수", desc: "정기점검 · 예방정비", href: "/contact" },
-  { label: "장애 대응", desc: "원인 분석 · 복구 지원", href: "/contact" },
-  { label: "원격 기술지원", desc: "신속한 비대면 기술지원", href: "/contact" },
+  { label: "구축 및 마이그레이션", desc: "신규 구축 · 시스템 전환", href: "/support/implementation-migration" },
+  { label: "유지보수", desc: "정기점검 · 예방정비", href: "/support/maintenance" },
+  { label: "장애 대응", desc: "원인 분석 · 복구 지원", href: "/support/incident-response" },
+  { label: "원격 기술지원", desc: "신속한 비대면 기술지원", href: "/support/remote-support" },
 ];
 
 const companyItems = [

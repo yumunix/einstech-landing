@@ -6,7 +6,11 @@
     "dev": "next dev -p 3030 -H 0.0.0.0",
     "build": "next build",
     "start": "next start -p 3030 -H 0.0.0.0",
-    "lint": "next lint"
+    "lint": "next lint",
+    "catalog:check": "node scripts/check-product-catalog.mjs --mode=weekly",
+    "catalog:monthly": "node scripts/check-product-catalog.mjs --mode=monthly",
+    "catalog:quarterly": "node scripts/check-product-catalog.mjs --mode=quarterly",
+    "catalog:annual": "node scripts/check-product-catalog.mjs --mode=annual"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
