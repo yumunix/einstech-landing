@@ -2,6 +2,9 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
+import { storageProducts } from "./products";
+
+const storageSlugByName = Object.fromEntries(storageProducts.map((product) => [product.name, product.slug]));
 
 const hitachiFlash = [
   { name: "VSP One Block 20 Series", image: "hitachi-vsp-one-block.webp", tag: "ALL-FLASH · NVME", desc: "기업 규모와 워크로드에 맞춰 확장하는 2U All-NVMe 블록 스토리지 제품군입니다.", specs: ["모델: VSP One Block 24 · 26 · 28 · 26 QLC", "NVMe/FC · NVMe/TCP · 25G iSCSI · 64G FC", "최대 1.8PB 유효용량 · 최대 32개 호스트 포트", "100% 데이터 가용성 · GAD · Immutable Snapshot"], link: "https://www.his21.co.kr/his/product/digital_enterprise/storage/vsp_one_block_20_series.do" },
@@ -35,7 +38,7 @@ const wormOptions = [
 ];
 
 function FamilyCard({ product }) {
-  return <article className="overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-sm"><div className="flex aspect-[16/9] items-center justify-center border-b border-slate-100 bg-white p-6"><img src={`/products/storage/${product.image}`} alt={`${product.name} 공식 제품군 이미지`} className="max-h-full max-w-full object-contain" /></div><div className="p-6"><div className="font-mono text-[9px] font-bold tracking-[0.18em] text-emerald">{product.tag}</div><h3 className="mt-2 font-display text-2xl font-black text-slate-900">{product.name}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{product.desc}</p><ul className="mt-5 space-y-2 border-t border-slate-100 pt-5">{product.specs.map((spec) => <li key={spec} className="text-xs leading-5 text-slate-600">▸ {spec}</li>)}</ul><div className="mt-6 grid gap-2 sm:grid-cols-2"><a href={`/contact?subject=${encodeURIComponent(`${product.name} 구성 견적`)}`} className="rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald">구성 상담 · 견적</a><a href={product.link} target="_blank" rel="noreferrer" className="rounded-xl border border-slate-200 px-4 py-3 text-center text-xs font-bold text-slate-700 hover:border-navy">공식 제품 정보</a></div></div></article>;
+  return <article className="overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-sm"><div className="flex aspect-[16/9] items-center justify-center border-b border-slate-100 bg-white p-6"><img src={`/products/storage/${product.image}`} alt={`${product.name} 공식 제품군 이미지`} className="max-h-full max-w-full object-contain" /></div><div className="p-6"><div className="font-mono text-[9px] font-bold tracking-[0.18em] text-emerald">{product.tag}</div><h3 className="mt-2 font-display text-2xl font-black text-slate-900">{product.name}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{product.desc}</p><ul className="mt-5 space-y-2 border-t border-slate-100 pt-5">{product.specs.map((spec) => <li key={spec} className="text-xs leading-5 text-slate-600">▸ {spec}</li>)}</ul><div className="mt-6 grid gap-2 sm:grid-cols-2"><a href={`/contact?subject=${encodeURIComponent(`${product.name} 구성 견적`)}`} className="rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald">구성 상담 · 견적</a><a href={`/storage/${storageSlugByName[product.name]}`} className="rounded-xl border border-slate-200 px-4 py-3 text-center text-xs font-bold text-slate-700 hover:border-navy">제품 상세 보기</a></div></div></article>;
 }
 
 function ProductSection({ code, title, description, products }) {
