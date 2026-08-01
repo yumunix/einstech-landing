@@ -1,10 +1,10 @@
 {
-  "effectiveMonth": "2026.07",
-  "nextReviewDate": "2026-08-01",
-  "memory16": 333000,
+  "effectiveMonth": "2026.08",
+  "nextReviewDate": "2026-09-01",
+  "memory16": 335000,
   "memory32": 547000,
-  "storage512": 308000,
-  "storage1tb": 420000,
+  "storage512": 300000,
+  "storage1tb": 397000,
   "sources": {
     "memory16": "삼성전자 DDR5-4800 SO-DIMM 16GB",
     "memory32": "삼성전자 DDR5-4800 SO-DIMM 32GB",

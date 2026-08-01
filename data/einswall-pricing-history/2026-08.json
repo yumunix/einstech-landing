@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-08-01T03:47:01.451Z",
+  "policy": {
+    "schedule": "매월 1일 09:15 KST",
+    "maximumAutomaticChange": "30%",
+    "fixedUsdKrw": 1600,
+    "importTaxRate": 0.18
+  },
+  "previous": {
+    "effectiveMonth": "2026.07",
+    "nextReviewDate": "2026-08-01",
+    "memory16": 333000,
+    "memory32": 547000,
+    "storage512": 308000,
+    "storage1tb": 420000,
+    "sources": {
+      "memory16": "삼성전자 DDR5-4800 SO-DIMM 16GB",
+      "memory32": "삼성전자 DDR5-4800 SO-DIMM 32GB",
+      "storage512": "삼성전자 980 / SK하이닉스 P41 500GB",
+      "storage1tb": "삼성전자 990 EVO Plus / SK하이닉스 P41 1TB"
+    }
+  },
+  "next": {
+    "effectiveMonth": "2026.08",
+    "nextReviewDate": "2026-09-01",
+    "memory16": 335000,
+    "memory32": 547000,
+    "storage512": 300000,
+    "storage1tb": 397000,
+    "sources": {
+      "memory16": "삼성전자 DDR5-4800 SO-DIMM 16GB",
+      "memory32": "삼성전자 DDR5-4800 SO-DIMM 32GB",
+      "storage512": "삼성전자 980 / SK하이닉스 P41 500GB",
+      "storage1tb": "삼성전자 990 EVO Plus / SK하이닉스 P41 1TB"
+    }
+  },
+  "evidence": {
+    "memory16": {
+      "selected": 335000,
+      "results": [
+        {
+          "price": 335000,
+          "sellerCount": 3,
+          "samples": [
+            286000,
+            335000,
+            341210
+          ],
+          "brand": "Samsung",
+          "url": "https://prod.danawa.com/list/popup/simpleProduct/simpleProductInfo.php?pcode=17666249&pview_method=2"
+        }
+      ]
+    },
+    "memory32": {
+      "selected": 547000,
+      "results": [
+        {
+          "price": 546100,
+          "sellerCount": 3,
+          "samples": [
+            546090,
+            546100,
+            565000
+          ],
+          "brand": "Samsung",
+          "url": "https://prod.danawa.com/list/popup/simpleProduct/simpleProductInfo.php?pcode=17666252&pview_method=2"
+        }
+      ]
+    },
+    "storage512": {
+      "selected": 300000,
+      "results": [
+        {
+          "price": 280000,
+          "sellerCount": 3,
+          "samples": [
+            278800,
+            280000,
+            290000
+          ],
+          "brand": "Samsung",
+          "url": "https://prod.danawa.com/list/popup/simpleProduct/simpleProductInfo.php?pcode=13562693&pview_method=2"
+        },
+        {
+          "price": 300000,
+          "sellerCount": 3,
+          "samples": [
+            269000,
+            300000,
+            308000
+          ],
+          "brand": "SK hynix",
+          "url": "https://prod.danawa.com/list/popup/simpleProduct/simpleProductInfo.php?pcode=17001083&pview_method=2"
+        }
+      ]
+    },
+    "storage1tb": {
+      "selected": 397000,
+      "results": [
+        {
+          "price": 317500,
+          "sellerCount": 3,
+          "samples": [
+            315700,
+            317500,
+            317580
+          ],
+          "brand": "Samsung",
+          "url": "https://prod.danawa.com/list/popup/simpleProduct/simpleProductInfo.php?pcode=69869543&pview_method=2"
+        },
+        {
+          "price": 397000,
+          "sellerCount": 3,
+          "samples": [
+            359000,
+            397000,
+            400600
+          ],
+          "brand": "SK hynix",
+          "url": "https://prod.danawa.com/list/popup/simpleProduct/simpleProductInfo.php?pcode=17001050&pview_method=2"
+        }
+      ]
+    }
+  }
+}
