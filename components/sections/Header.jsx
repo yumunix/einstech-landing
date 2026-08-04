@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { productItems } from "./productItems";
-
+import { SMARTSTORE_URL } from "@/data/storeLinks";
 
 const solutionItems = [
   { label: "HA Cluster", desc: "Rose HA · MCCS — 무중단 페일오버", href: "/ha-cluster" },
@@ -21,6 +21,7 @@ const supportItems = [
 const companyItems = [
   { label: "회사 소개", desc: "EINSTECH 2014 설립 · 엔지니어 30년", href: "/company" },
   { label: "회사 연혁", desc: "Since 2014", href: "/company#history" },
+  { label: "파트너십", desc: "Technology · Solution · Channel Partners", href: "/partners" },
 ];
 
 function NavDropdown({ label, items, openId, setOpenId, id }) {
@@ -160,6 +161,14 @@ export default function Header() {
             <div className="font-mono text-[10px] text-slate-400">KRW / KO</div>
           </div>
           <a
+            href={SMARTSTORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:inline-flex px-5 py-2 bg-navy text-white border border-navy hover:bg-white hover:text-navy rounded-full font-bold text-sm transition-all duration-300"
+          >
+            제품 구매
+          </a>
+          <a
             href="/contact"
             className="hidden sm:inline-flex px-5 py-2 bg-white border border-navy text-navy hover:bg-navy hover:text-white rounded-full font-bold text-sm transition-all duration-300"
           >
@@ -199,6 +208,14 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
+            <a
+              href={SMARTSTORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-2 text-sm font-bold text-navy"
+            >
+              네이버 스마트스토어에서 제품 구매 ↗
+            </a>
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
               솔루션
             </div>

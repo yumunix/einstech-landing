@@ -1,5 +1,6 @@
 import "./page.css";
 import Header from "@/components/sections/Header";
+import { TPLINK_STORE_URL } from "@/data/storeLinks";
 
 export default function Home() {
   return (
@@ -464,7 +465,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {/* HP Server + NVIDIA GPU */}
+            {/* HPE Server + NVIDIA GPU */}
             <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
               <div className="w-14 h-14 bg-navy/5 rounded-[20px] flex items-center justify-center mb-8">
                 <i className="ph-fill ph-hard-drives text-2xl text-navy"></i>
@@ -472,13 +473,13 @@ export default function Home() {
               <div className="text-[10px] font-black text-slate-400 tracking-[0.16em] mb-2">
                 ENTERPRISE SERVER
               </div>
-              <h3 className="text-xl font-black text-navy mb-4">HP Server + NVIDIA GPU</h3>
+              <h3 className="text-xl font-black text-navy mb-4">HPE Server + NVIDIA GPU</h3>
               <p className="text-slate-500 font-medium leading-relaxed mb-8 flex-grow text-sm">
                 기간계·가상화·DB 서버부터 AI 학습·추론용 GPU 시스템까지 설계하고
                 공급합니다.
               </p>
               <ul className="space-y-3 text-[13px] font-bold text-slate-700">
-                <li>HP ProLiant</li>
+                <li>HPE ProLiant</li>
                 <li>NVIDIA GPU · AI/HPC</li>
               </ul>
             </div>
@@ -503,10 +504,7 @@ export default function Home() {
             </div>
 
             {/* TP-Link Network Switch + EINSWALL Firewall */}
-            <a
-              href="/einswall"
-              className="group p-10 rounded-[40px] bg-navy text-white border border-navy flex flex-col h-full transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(10,61,98,0.2)]"
-            >
+            <div className="group p-10 rounded-[40px] bg-navy text-white border border-navy flex flex-col h-full transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(10,61,98,0.2)]">
               <div className="w-14 h-14 bg-white/10 rounded-[20px] flex items-center justify-center mb-8">
                 <i className="ph-fill ph-shield-check text-2xl text-white"></i>
               </div>
@@ -518,15 +516,29 @@ export default function Home() {
                 TP-Link 네트워크 스위치와 EINSWALL 방화벽 서버를 하나의 네트워크
                 보안 구성으로 공급합니다.
               </p>
-              <ul className="space-y-3 text-[13px] font-bold text-white/85">
+              <ul className="space-y-3 text-[13px] font-bold text-white/85 mb-7">
                 <li>TP-Link Network Switch</li>
                 <li>EINSWALL Firewall</li>
-                <li className="flex items-center gap-2">
-                  제품 보기
-                  <i className="ph-bold ph-arrow-right transition-transform group-hover:translate-x-1"></i>
-                </li>
               </ul>
-            </a>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-auto">
+                <a
+                  href="/einswall"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-5 py-3 text-sm font-bold hover:bg-white/10 transition-colors"
+                >
+                  제품 상세
+                  <i className="ph-bold ph-arrow-right"></i>
+                </a>
+                <a
+                  href={TPLINK_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-black text-navy hover:bg-emerald hover:text-white transition-colors"
+                >
+                  TP-Link 구매
+                  <i className="ph-bold ph-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

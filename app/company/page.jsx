@@ -114,7 +114,7 @@ const history = [
     year: "2016",
     title: "Security Hardening",
     items: [
-      "랜섬웨어 보호솔루션 · NetApp NAS · HP 서버 도입",
+      "랜섬웨어 보호솔루션 · NetApp NAS · HPE 서버 도입",
       "NAS · 백업 · 스토리지 17개 프로젝트 수행",
     ],
   },

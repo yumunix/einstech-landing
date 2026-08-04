@@ -1,6 +1,6 @@
 export const productItems = [
   {
-    label: "HP Server",
+    label: "HPE Server",
     desc: "HPE ProLiant · 엔터프라이즈 서버",
     href: "/hp-server",
   },

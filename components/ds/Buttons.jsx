@@ -1,7 +1,10 @@
 export function PrimaryButton({ children, href = "#", className = "", icon = true }) {
+  const external = /^https?:\/\//.test(href);
   return (
     <a
       href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       className={`ds-btn-primary font-display font-medium px-8 py-4 uppercase tracking-wider text-sm group ${className}`.trim()}
     >
       <span>{children}</span>
@@ -25,9 +28,12 @@ export function PrimaryButton({ children, href = "#", className = "", icon = tru
 }
 
 export function SecondaryButton({ children, href = "#", className = "" }) {
+  const external = /^https?:\/\//.test(href);
   return (
     <a
       href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       className={`ds-btn-secondary font-display font-medium px-8 py-4 uppercase tracking-wider text-sm ${className}`.trim()}
     >
       {children}

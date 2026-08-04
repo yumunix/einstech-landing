@@ -8,10 +8,10 @@ import { createPageMetadata } from "@/lib/seo";
 import ProductCategories from "./ProductCategories";
 
 export const metadata = createPageMetadata({ path: "/infrastructure",
-  title: "Infrastructure — HP Server · NVIDIA GPU · Hitachi · Brocade SAN | EINSTECH",
+  title: "Infrastructure — HPE Server · NVIDIA GPU · Hitachi · Brocade SAN | EINSTECH",
   description:
-    "HP 서버·NVIDIA GPU, Hitachi 스토리지·Brocade SAN, TP-Link 네트워크 스위치·EINSWALL 방화벽을 표준 조합으로 설계·공급·구축합니다.",
-  keywords: ["HP 서버", "NVIDIA GPU 서버", "Hitachi 스토리지", "Brocade SAN Switch", "TP-Link 스위치", "인프라 구축"],
+    "HPE 서버·NVIDIA GPU, Hitachi 스토리지·Brocade SAN, TP-Link 네트워크 스위치·EINSWALL 방화벽을 표준 조합으로 설계·공급·구축합니다.",
+  keywords: ["HPE 서버", "NVIDIA GPU 서버", "Hitachi 스토리지", "Brocade SAN Switch", "TP-Link 스위치", "인프라 구축"],
 });
 
 const whyCards = [
@@ -19,7 +19,7 @@ const whyCards = [
     index: "01",
     tag: "SINGLE_RESPONSIBILITY",
     title: "서버·스토리지·네트워크·GPU 한 파트너",
-    desc: "벤더가 갈리면 장애 시 책임 핑퐁이 시작됩니다. EINSTECH는 HP 서버·NVIDIA GPU와 Hitachi 스토리지·Brocade SAN을 한 손으로 묶어 설계·공급·운영합니다.",
+    desc: "벤더가 갈리면 장애 시 책임 핑퐁이 시작됩니다. EINSTECH는 HPE 서버·NVIDIA GPU와 Hitachi 스토리지·Brocade SAN을 한 손으로 묶어 설계·공급·운영합니다.",
   },
   {
     index: "02",
@@ -38,7 +38,7 @@ const whyCards = [
 const enterpriseLineup = [
   {
     badge: "SERVER_GPU",
-    name: "HP Server + NVIDIA GPU",
+    name: "HPE Server + NVIDIA GPU",
     vendor: "Hewlett Packard Enterprise · NVIDIA",
     color: "cyan",
     tag: "서버 · AI/HPC 컴퓨트",
@@ -102,8 +102,8 @@ const smbLineup = {
 const useCases = [
   {
     industry: "엔터프라이즈 서버 + SAN",
-    stack: "HP ProLiant + Brocade FC + Hitachi",
-    desc: "기간계 DB·ERP를 HP 서버 + Brocade SAN + Hitachi 스토리지 표준 구성으로 통합. Rose HA·MCCS 클러스터와 결합해 무중단 운영.",
+    stack: "HPE ProLiant + Brocade FC + Hitachi",
+    desc: "기간계 DB·ERP를 HPE 서버 + Brocade SAN + Hitachi 스토리지 표준 구성으로 통합. Rose HA·MCCS 클러스터와 결합해 무중단 운영.",
     color: "cyan",
   },
   {
@@ -138,7 +138,7 @@ export default function InfrastructurePage() {
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <Badge color="cyan">INFRASTRUCTURE</Badge>
               <span className="font-mono text-xs text-slate-500 uppercase tracking-widest">
-                HP Server · NVIDIA GPU · Hitachi · Brocade SAN · TP-Link · EINSWALL
+                HPE Server · NVIDIA GPU · Hitachi · Brocade SAN · TP-Link · EINSWALL
               </span>
             </div>
 
@@ -158,7 +158,7 @@ export default function InfrastructurePage() {
             </p>
 
             <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
-              아인스테크는 데이터센터 하드웨어를 <span className="text-slate-900">HP 서버 + NVIDIA GPU</span>와{" "}
+              아인스테크는 데이터센터 하드웨어를 <span className="text-slate-900">HPE 서버 + NVIDIA GPU</span>와{" "}
               <span className="text-slate-900">Hitachi 스토리지 + Brocade SAN</span> 표준 조합으로 설계·공급합니다. 사무 환경
               네트워크와 방화벽은 <span className="text-slate-900">TP-Link + EINSWALL</span>로 묶어, 환경별로
               과·소투자 없이 균형 잡힌 인프라를 구축합니다.
@@ -247,7 +247,7 @@ export default function InfrastructurePage() {
               sectionLabel="2. Lineup — 엔터프라이즈 데이터센터 표준"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
-                HP Server + NVIDIA GPU
+                HPE Server + NVIDIA GPU
                 <br />
                 <span className="text-emerald">Hitachi + Brocade SAN Switch</span>
               </h2>

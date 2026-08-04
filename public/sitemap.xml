@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.einstech.kr/partners</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.einstech.kr/ha-cluster</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

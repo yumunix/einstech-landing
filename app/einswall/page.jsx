@@ -4,6 +4,7 @@ import GlassPanel from "@/components/ds/GlassPanel";
 import SectionHeader from "@/components/ds/SectionHeader";
 import Badge from "@/components/ds/Badge";
 import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
+import { TPLINK_STORE_URL } from "@/data/storeLinks";
 import PricingConfigurator from "./PricingConfigurator";
 import RackPricingConfigurator from "./RackPricingConfigurator";
 import ProductFamilyLineup from "./ProductFamilyLineup";
@@ -152,12 +153,15 @@ export default function EinswallPage() {
                   정책 설정은 별도 견적입니다.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 max-w-xl">
-                  <PrimaryButton href="/contact" className="flex-1">
-                    도입 문의
+                <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">
+                  <PrimaryButton href={TPLINK_STORE_URL} className="flex-1">
+                    TP-Link 구매
                   </PrimaryButton>
                   <SecondaryButton href="#models" className="flex-1">
-                    모델 라인업 보기
+                    EINSWALL 모델 보기
+                  </SecondaryButton>
+                  <SecondaryButton href="/contact" className="flex-1">
+                    구축 문의
                   </SecondaryButton>
                 </div>
               </div>
