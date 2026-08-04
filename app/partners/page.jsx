@@ -40,12 +40,28 @@ const customerReferences = [
     diagram: "storage-review",
   },
   {
-    customer: "치과의원",
-    project: "백업 솔루션 구축",
-    year: "2016-2018",
-    partner: "Acronis",
-    summary: "Acronis 기반 백업 환경을 구성하고, 서버별 백업 용량 산정과 운영 문서를 함께 정리했습니다.",
-    diagram: "backup",
+    customer: "공공병원",
+    project: "영상데이터 스토리지(NAS) 납품",
+    year: "2019",
+    partner: "AnyStor",
+    summary: "의료 영상 서버용 NAS 스토리지를 AnyStor 브랜드로 납품하고 구축을 지원했습니다.",
+    diagram: "nas-delivery",
+  },
+  {
+    customer: "반도체 생산기업",
+    project: "서버·스토리지 인프라 구축 및 지속 업그레이드",
+    year: "2014-2024",
+    partner: "HPE · Hitachi",
+    summary: "HPE 서버와 Hitachi 스토리지로 전산 인프라를 최초 구축한 뒤, 2017·2022·2024년에 걸쳐 지속적으로 업그레이드를 진행했습니다.",
+    diagram: "infra-build",
+  },
+  {
+    customer: "해외 반도체 생산기업 (말레이시아)",
+    project: "전산시스템 통합 구축",
+    year: "2021-2022",
+    partner: "종합 구축",
+    summary: "말레이시아 현지 생산 법인의 전산시스템을 서버·네트워크·스토리지까지 포함해 종합적으로 구축했습니다.",
+    diagram: "global-infra",
   },
   {
     customer: "에너지 공기업",
@@ -136,19 +152,6 @@ const diagrams = {
       <text x="110" y="95" textAnchor="middle" fontSize="8" fontFamily="monospace" fill={SLATE} letterSpacing="1">SPEC COMPARISON</text>
     </DiagramFrame>
   ),
-  backup: () => (
-    <DiagramFrame>
-      <Box x="16" y="30" w="60" h="50" label="SERVER" />
-      <path d="M82 55 H144" stroke={EMERALD} strokeWidth="2" fill="none" markerEnd="url(#arrow2)" />
-      <Cylinder x="150" y="24" w="54" h="42" label="BACKUP" accent />
-      <circle cx="113" cy="40" r="9" fill="#fff" stroke={SLATE} strokeWidth="1.5" />
-      <path d="M113 35 V40 L117 43" stroke={SLATE} strokeWidth="1.5" fill="none" strokeLinecap="round" />
-      <text x="110" y="95" textAnchor="middle" fontSize="8" fontFamily="monospace" fill={SLATE} letterSpacing="1">SCHEDULED BACKUP</text>
-      <defs>
-        <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill={EMERALD} /></marker>
-      </defs>
-    </DiagramFrame>
-  ),
   migration: () => (
     <DiagramFrame>
       <Cylinder x="16" y="30" w="54" h="40" label="OLD" />
@@ -191,6 +194,32 @@ const diagrams = {
       <Box x="134" y="58" w="34" h="30" label="B" accent />
       <path d="M168 35 H180 V63 H168" stroke={EMERALD} strokeWidth="2" fill="none" />
       <text x="110" y="98" textAnchor="middle" fontSize="8" fontFamily="monospace" fill={SLATE} letterSpacing="1">SECURITY + HA CLUSTER</text>
+    </DiagramFrame>
+  ),
+  "infra-build": () => (
+    <DiagramFrame>
+      <Box x="16" y="26" w="64" h="46" label="HPE SERVER" />
+      <path d="M80 49 H140" stroke={NAVY} strokeWidth="2" fill="none" />
+      <Box x="140" y="26" w="64" h="46" label="HITACHI STORAGE" accent />
+      {[50, 110, 170].map((cx, i) => (
+        <g key={cx}>
+          <circle cx={cx} cy="86" r="3.5" fill={EMERALD} />
+          {i < 2 && <path d={`M${cx + 4} 86 H${cx + 56}`} stroke={SLATE} strokeWidth="1.5" strokeDasharray="2 2" />}
+        </g>
+      ))}
+      <text x="110" y="102" textAnchor="middle" fontSize="8" fontFamily="monospace" fill={SLATE} letterSpacing="1">2014 → 2017 → 2022 → 2024</text>
+    </DiagramFrame>
+  ),
+  "global-infra": () => (
+    <DiagramFrame>
+      <path d="M110 8 C100 8 92 16 92 26 C92 38 110 54 110 54 C110 54 128 38 128 26 C128 16 120 8 110 8 Z" fill="#fff" stroke={EMERALD} strokeWidth="2" />
+      <circle cx="110" cy="25" r="5" fill={EMERALD} />
+      <path d="M75 60 L110 54 L145 60" stroke={SLATE} strokeWidth="1.5" fill="none" />
+      <path d="M110 54 V60" stroke={SLATE} strokeWidth="1.5" fill="none" />
+      <Box x="16" y="62" w="58" h="34" label="SERVER" />
+      <Box x="81" y="62" w="58" h="34" label="NETWORK" accent />
+      <Box x="146" y="62" w="58" h="34" label="STORAGE" />
+      <text x="110" y="106" textAnchor="middle" fontSize="8" fontFamily="monospace" fill={SLATE} letterSpacing="1">TURNKEY BUILD</text>
     </DiagramFrame>
   ),
 };
