@@ -49,10 +49,10 @@ const customerReferences = [
   },
   {
     customer: "에너지 공기업",
-    project: "GNAS 데이터 이전",
+    project: "스토리지 마이그레이션",
     year: "2015",
-    partner: "Commvault",
-    summary: "GNAS 데이터 이전 계획과 백업·복구 현황을 기반으로 마이그레이션 작업을 지원했습니다.",
+    partner: "Hitachi",
+    summary: "기존 스토리지 데이터를 Hitachi 스토리지로 이전하는 마이그레이션 작업을 계획하고 지원했습니다.",
     diagram: "migration",
   },
   {
