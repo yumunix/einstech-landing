@@ -1,7 +1,7 @@
 const categories = [
   {
     code: "SERVER",
-    title: "HP Server",
+    title: "HPE Server",
     vendor: "Hewlett Packard Enterprise",
     desc: "ProLiant DL·ML, Synergy와 Apollo 서버 제품군",
     uses: ["가상화·DB·ERP", "HA Cluster 노드", "기업용 컴퓨팅"],

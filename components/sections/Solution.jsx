@@ -213,7 +213,7 @@ export default function Solution() {
                 subtitle="서버 · SAN · GPU · 네트워크"
                 description={
                   <>
-                    HP 서버 · Brocade SAN · NVIDIA GPU 엔터프라이즈 표준 조합을 한 파트너로 설계·공급.
+                    HPE 서버 · Brocade SAN · NVIDIA GPU 엔터프라이즈 표준 조합을 한 파트너로 설계·공급.
                     사무 환경은 TP-Link Omada로 분리 운영.
                     <br />
                     <br />
