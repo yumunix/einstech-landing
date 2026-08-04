@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/save-transcript.js",
+            "timeout": 60,
+            "async": true,
+            "statusMessage": "대화 기록을 WebDAV(Z:\\einstech-ai)에 저장 중..."
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/save-transcript.js",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
