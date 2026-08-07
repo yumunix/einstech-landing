@@ -7,7 +7,7 @@ import { SMARTSTORE_URL } from "@/data/storeLinks";
 const aiItems = [
   { label: "Ai Services", desc: "기업 AI 구축 서비스 전체 보기", href: "/ai-services" },
   { label: "온프레미스 AI 구축", desc: "사내 전용 AI 시스템 구축", href: "/onpremise-ai" },
-  { label: "AI 직원 설계", desc: "업무를 처리하는 AI 직원", href: "/ai-services#employee" },
+  { label: "AI 업무 어시스턴트", desc: "업무를 보조하는 AI 어시스턴트", href: "/ai-services#assistant" },
   { label: "AI 보안 컨설팅", desc: "AI 사용 보안 정책·DLP 연동", href: "/ai-services#security" },
 ];
 

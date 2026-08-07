@@ -8,8 +8,8 @@ export const metadata = createPageMetadata({
   path: "/ai-services",
   title: "Ai Services — 기업 AI 구축 서비스 | EINSTECH",
   description:
-    "온프레미스 AI 구축부터 AI 직원 설계까지. 아인스테크가 기업 맞춤형 AI 시스템을 설계·구축·운영합니다. 데이터는 외부로 나가지 않습니다.",
-  keywords: ["AI 구축", "온프레미스 AI", "AI 직원", "사내 AI", "LLM 구축", "RAG", "AI 서비스"],
+    "온프레미스 AI 구축부터 AI 업무 어시스턴트 도입까지. 아인스테크가 기업 맞춤형 AI 시스템을 설계·구축·운영합니다. 데이터는 외부로 나가지 않습니다.",
+  keywords: ["AI 구축", "온프레미스 AI", "AI 업무 어시스턴트", "사내 AI", "LLM 구축", "RAG", "업무 자동화"],
 });
 
 const services = [
@@ -23,11 +23,11 @@ const services = [
   },
   {
     icon: "ph-bold ph-user-gear",
-    tag: "AI_EMPLOYEE",
-    title: "AI 직원 설계",
-    desc: "업무를 실제로 처리하는 AI 직원을 만들어드립니다. 보고서 작성, 고객 응대, 데이터 분석 등 반복 업무를 AI가 대신합니다.",
-    href: "/ai-services#employee",
-    items: ["업무 분석 및 AI 역할 설계", "보고서·문서 자동 작성", "고객 문의 1차 응대", "데이터 분석·요약"],
+    tag: "AI_ASSISTANT",
+    title: "AI 업무 어시스턴트",
+    desc: "반복 업무를 AI가 보조합니다. 보고서 작성, 고객 응대, 데이터 분석 등 직원들의 업무 효율을 높여드립니다.",
+    href: "/ai-services#assistant",
+    items: ["업무 프로세스 분석·설계", "보고서·문서 자동화", "고객 문의 1차 지원", "데이터 분석·요약"],
   },
   {
     icon: "ph-bold ph-shield-check",
@@ -39,39 +39,39 @@ const services = [
   },
 ];
 
-const employees = [
+const assistants = [
   {
     icon: "ph-bold ph-file-text",
-    name: "보고서 담당 AI",
-    desc: "점검보고서, 작업일지, 운영 브리핑을 자동으로 작성합니다. 기존 문서 형식을 학습해 일관된 품질로 생성합니다.",
-    tasks: ["정기 점검보고서 자동 작성", "작업일지 정리", "월간 운영 브리핑 생성"],
+    name: "문서 작성 어시스턴트",
+    desc: "점검보고서, 작업일지, 운영 브리핑 초안을 자동으로 생성합니다. 담당자가 검토·수정만 하면 됩니다.",
+    tasks: ["정기 점검보고서 초안 생성", "작업일지 자동 정리", "월간 운영 브리핑 초안"],
   },
   {
     icon: "ph-bold ph-headset",
-    name: "고객응대 담당 AI",
-    desc: "고객 문의를 1차 분석하고 답변 초안을 작성합니다. 사내 기술자료를 기반으로 정확한 답변을 제공합니다.",
-    tasks: ["고객 문의 1차 분류·답변", "기술 문의 자동 안내", "이슈 이력 조회·요약"],
+    name: "고객응대 어시스턴트",
+    desc: "고객 문의를 분석하고 답변 초안을 제안합니다. 사내 기술자료를 기반으로 정확한 내용을 지원합니다.",
+    tasks: ["고객 문의 분류·답변 초안", "기술 문의 관련 자료 검색", "이슈 이력 조회·요약"],
   },
   {
     icon: "ph-bold ph-chart-bar",
-    name: "데이터 분석 담당 AI",
-    desc: "서버 로그, 백업 현황, 운영 데이터를 분석하고 인사이트를 도출합니다. 이상 징후를 사전에 파악합니다.",
-    tasks: ["서버·네트워크 로그 분석", "백업 현황 요약", "이상 징후 사전 감지"],
+    name: "데이터 분석 어시스턴트",
+    desc: "서버 로그, 백업 현황, 운영 데이터를 분석해 담당자가 빠르게 상황을 파악할 수 있도록 지원합니다.",
+    tasks: ["서버·네트워크 로그 요약", "백업 현황 정리", "이상 징후 사전 알림"],
   },
   {
     icon: "ph-bold ph-file-arrow-up",
-    name: "제안서 담당 AI",
-    desc: "고객사 정보와 요구사항을 바탕으로 제안서 초안을 작성합니다. 기존 납품 사례를 참고해 맞춤형 내용을 생성합니다.",
-    tasks: ["제안서·견적 초안 생성", "고객사 맞춤 구성 제안", "기존 사례 기반 작성"],
+    name: "제안서 작성 어시스턴트",
+    desc: "고객사 정보와 요구사항을 바탕으로 제안서 초안을 제안합니다. 기존 사례를 참고해 담당자 작업 시간을 줄여줍니다.",
+    tasks: ["제안서·견적 초안 제안", "고객사 맞춤 구성 참고", "기존 사례 기반 내용 검색"],
   },
 ];
 
 const steps = [
   { step: "01", title: "업무 분석", desc: "반복되는 업무와 AI로 대체 가능한 영역을 파악합니다." },
-  { step: "02", title: "AI 역할 설계", desc: "각 업무에 맞는 AI 직원의 역할과 범위를 설계합니다." },
+  { step: "02", title: "AI 어시스턴트 설계", desc: "각 업무에 맞는 AI 어시스턴트의 역할과 범위를 설계합니다." },
   { step: "03", title: "시스템 구축", desc: "온프레미스 AI 환경과 사내 문서를 연동합니다." },
   { step: "04", title: "학습·최적화", desc: "실제 업무 데이터로 AI를 최적화합니다." },
-  { step: "05", title: "배포·운영", desc: "AI 직원을 배포하고 지속적으로 개선합니다." },
+  { step: "05", title: "배포·운영", desc: "AI 어시스턴트를 배포하고 지속적으로 개선합니다." },
 ];
 
 export default function AIServices() {
@@ -93,11 +93,11 @@ export default function AIServices() {
               AI SERVICES · ENTERPRISE AI
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-[72px] font-black text-white leading-[1.05] mb-10 tracking-tight">
-              AI 직원을<br />
-              <span className="text-emerald">채용하세요</span>
+              AI 업무 어시스턴트를<br />
+              <span className="text-emerald">도입하세요</span>
             </h1>
             <p className="text-xl text-slate-300 mb-14 leading-relaxed max-w-2xl font-medium">
-              온프레미스 AI 구축부터 업무를 실제로 처리하는 AI 직원 설계까지.<br />
+              온프레미스 AI 구축부터 반복 업무를 보조하는 AI 어시스턴트 도입까지.<br />
               데이터는 외부로 나가지 않습니다.
             </p>
             <div className="flex flex-wrap gap-5">
@@ -149,17 +149,17 @@ export default function AIServices() {
         </div>
       </section>
 
-      {/* AI EMPLOYEE */}
-      <section id="employee" className="py-32 bg-navy relative overflow-hidden">
+      {/* AI ASSISTANT */}
+      <section id="assistant" className="py-32 bg-navy relative overflow-hidden">
         <div className="max-w-page mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center mb-20">
-            <span className="text-emerald font-black text-sm tracking-[0.2em] uppercase mb-4 block">AI Employee</span>
+            <span className="text-emerald font-black text-sm tracking-[0.2em] uppercase mb-4 block">AI Assistant</span>
             <h2 className="text-4xl lg:text-5xl font-black text-white">
-              어떤 AI 직원이<br />필요하신가요?
+              어떤 업무를 AI로<br />지원받고 싶으신가요?
             </h2>
           </div>
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-            {employees.map((e) => (
+            {assistants.map((e) => (
               <div key={e.name} className="bg-white/5 border border-white/10 p-8 rounded-[32px]">
                 <div className="w-12 h-12 bg-emerald/10 rounded-[16px] flex items-center justify-center mb-6">
                   <i className={`${e.icon} text-xl text-emerald`}></i>
@@ -245,7 +245,7 @@ export default function AIServices() {
         <div className="max-w-page mx-auto px-6 lg:px-12">
           <SectionHeader
             eyebrow="Process"
-            title={<>AI 직원 구축 프로세스</>}
+            title={<>AI 어시스턴트 도입 프로세스</>}
           />
           <div className="grid md:grid-cols-5 gap-6 mt-20">
             {steps.map((s, i) => (
@@ -271,7 +271,7 @@ export default function AIServices() {
         <div className="max-w-page mx-auto px-6 lg:px-12 text-center relative z-10">
           <span className="text-emerald font-black text-sm tracking-[0.2em] uppercase mb-6 block">무료 상담</span>
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-8">
-            우리 회사에 맞는<br />AI 직원, 지금 상담하세요
+            우리 회사에 맞는<br />AI 업무 어시스턴트, 지금 상담하세요
           </h2>
           <p className="text-slate-300 text-xl mb-12 max-w-2xl mx-auto">
             업무 분석부터 구축까지 맞춤 설계해드립니다.<br />상담 후 견적을 제공합니다.
