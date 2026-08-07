@@ -180,6 +180,66 @@ export default function AIServices() {
         </div>
       </section>
 
+      {/* AI SECURITY */}
+      <section id="security" className="py-32 bg-white">
+        <div className="max-w-page mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+              <span className="text-emerald font-black text-sm tracking-[0.2em] uppercase mb-6 block">AI Security</span>
+              <h2 className="text-4xl lg:text-5xl font-black text-navy leading-[1.1] mb-8">
+                직원들이 외부 AI를<br />사용하고 있나요?
+              </h2>
+              <p className="text-slate-500 text-lg leading-relaxed mb-10">
+                ChatGPT, Claude, Gemini 등 외부 AI에 고객 정보, 내부 문서, 기술 자료를 입력하는 순간 데이터는 외부 서버로 전송됩니다. 아인스테크가 AI 사용 보안 체계를 설계합니다.
+              </p>
+              <ul className="space-y-5">
+                {[
+                  { icon: "ph-bold ph-prohibit", title: "외부 AI 접근 차단·모니터링", desc: "특정 외부 AI 서비스 접근을 차단하거나 사용 현황을 모니터링합니다." },
+                  { icon: "ph-bold ph-file-lock", title: "DLP 연동", desc: "민감 데이터가 외부 AI에 입력되는 것을 자동으로 감지하고 차단합니다." },
+                  { icon: "ph-bold ph-notepad", title: "AI 사용 보안 정책 수립", desc: "부서별·역할별 AI 사용 범위와 금지 항목을 정책으로 수립합니다." },
+                  { icon: "ph-bold ph-chalkboard-teacher", title: "임직원 보안 교육", desc: "AI 사용 시 보안 위협과 올바른 사용법을 임직원에게 교육합니다." },
+                ].map((item) => (
+                  <li key={item.title} className="flex items-start gap-5">
+                    <div className="w-12 h-12 bg-navy/5 rounded-[16px] flex items-center justify-center flex-shrink-0">
+                      <i className={`${item.icon} text-xl text-navy`}></i>
+                    </div>
+                    <div>
+                      <h4 className="font-black text-navy mb-1">{item.title}</h4>
+                      <p className="text-sm text-slate-500 font-medium">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-navy rounded-[40px] p-10">
+              <div className="text-[10px] font-black text-emerald tracking-widest mb-8">AI SECURITY RISK</div>
+              <div className="space-y-6">
+                {[
+                  { risk: "고객 개인정보 입력", result: "외부 서버 저장·학습 가능", level: "HIGH" },
+                  { risk: "내부 기술자료 공유", result: "경쟁사 유출 위험", level: "HIGH" },
+                  { risk: "계약서·견적서 첨부", result: "기밀 정보 노출", level: "HIGH" },
+                  { risk: "무분별한 AI 사용", result: "보안 정책 위반", level: "MED" },
+                ].map((item) => (
+                  <div key={item.risk} className="flex items-center justify-between py-4 border-b border-white/10">
+                    <div>
+                      <div className="font-bold text-white text-sm">{item.risk}</div>
+                      <div className="text-slate-400 text-xs mt-1">{item.result}</div>
+                    </div>
+                    <span className={`text-[10px] font-black px-3 py-1 rounded-full ${item.level === 'HIGH' ? 'bg-red-500/20 text-red-400' : 'bg-yellow-500/20 text-yellow-400'}`}>
+                      {item.level}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <a href="/contact" className="mt-8 flex items-center justify-center gap-2 bg-emerald text-navy font-bold py-4 rounded-2xl hover:opacity-90 transition-opacity">
+                보안 진단 신청
+                <i className="ph-bold ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PROCESS */}
       <section className="py-32 bg-slate-50/60">
         <div className="max-w-page mx-auto px-6 lg:px-12">
