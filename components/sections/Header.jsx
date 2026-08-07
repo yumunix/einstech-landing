@@ -4,6 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import { productItems } from "./productItems";
 import { SMARTSTORE_URL } from "@/data/storeLinks";
 
+const aiItems = [
+  { label: "AI Services", desc: "기업 AI 구축 서비스 전체 보기", href: "/ai-services" },
+  { label: "온프레미스 AI 구축", desc: "사내 전용 AI 시스템 구축", href: "/onpremise-ai" },
+  { label: "AI 직원 설계", desc: "업무를 처리하는 AI 직원", href: "/ai-services#employee" },
+  { label: "AI 보안 컨설팅", desc: "AI 사용 보안 정책·DLP 연동", href: "/ai-services#security" },
+];
+
 const solutionItems = [
   { label: "HA Cluster", desc: "Rose HA · MCCS — 무중단 페일오버", href: "/ha-cluster" },
   { label: "Backup", desc: "Acronis · NetBackup · Immutable Backup", href: "/storage-backup" },
@@ -123,6 +130,13 @@ export default function Header() {
 
           <div className="hidden md:flex items-center gap-6">
             <NavDropdown
+              id="ai"
+              label="AI Services"
+              items={aiItems}
+              openId={openId}
+              setOpenId={setOpenId}
+            />
+            <NavDropdown
               id="product"
               label="제품"
               items={productItems}
@@ -216,6 +230,17 @@ export default function Header() {
             >
               네이버 스마트스토어에서 제품 구매 ↗
             </a>
+            <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
+              AI Services</div>
+            {aiItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="block py-2 text-sm text-slate-700 hover:text-navy"
+              >
+                {item.label}
+              </a>
+            ))}
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
               솔루션
             </div>
