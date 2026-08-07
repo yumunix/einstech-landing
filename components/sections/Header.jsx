@@ -137,16 +137,16 @@ export default function Header() {
               setOpenId={setOpenId}
             />
             <NavDropdown
-              id="product"
-              label="제품"
-              items={productItems}
+              id="solution"
+              label="솔루션"
+              items={solutionItems}
               openId={openId}
               setOpenId={setOpenId}
             />
             <NavDropdown
-              id="solution"
-              label="솔루션"
-              items={solutionItems}
+              id="product"
+              label="제품"
+              items={productItems}
               openId={openId}
               setOpenId={setOpenId}
             />
@@ -211,26 +211,6 @@ export default function Header() {
         <div className="md:hidden bg-white border-b border-slate-100">
           <div className="px-6 py-4 flex flex-col gap-1">
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
-              제품
-            </div>
-            {productItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="block py-2 text-sm text-slate-700 hover:text-navy"
-              >
-                {item.label}
-              </a>
-            ))}
-            <a
-              href={SMARTSTORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block py-2 text-sm font-bold text-navy"
-            >
-              네이버 스마트스토어에서 제품 구매 ↗
-            </a>
-            <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
               Ai Services</div>
             {aiItems.map((item) => (
               <a
@@ -253,6 +233,26 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
+            <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
+              제품
+            </div>
+            {productItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="block py-2 text-sm text-slate-700 hover:text-navy"
+              >
+                {item.label}
+              </a>
+            ))}
+            <a
+              href={SMARTSTORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-2 text-sm font-bold text-navy"
+            >
+              네이버 스마트스토어에서 제품 구매 ↗
+            </a>
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-3 pb-1 border-t border-slate-100">
               기술지원
             </div>
