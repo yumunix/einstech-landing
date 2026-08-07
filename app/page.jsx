@@ -493,6 +493,34 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
+            {/* Onpremise AI */}
+            <a
+              href="/onpremise-ai"
+              className="p-10 rounded-[40px] bg-navy group flex flex-col h-full relative overflow-hidden"
+            >
+              <div className="absolute top-6 right-6 bg-emerald text-navy text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                NEW
+              </div>
+              <div className="w-14 h-14 bg-white/10 rounded-[20px] flex items-center justify-center mb-8 group-hover:bg-emerald transition-colors">
+                <i className="ph-fill ph-brain text-2xl text-white group-hover:text-navy transition-colors"></i>
+              </div>
+              <div className="text-[10px] font-black text-emerald tracking-[0.16em] mb-2">
+                ONPREMISE AI
+              </div>
+              <h3 className="text-xl font-black text-white mb-4">자사 AI 시스템 구축</h3>
+              <p className="text-slate-300 font-medium leading-relaxed mb-8 flex-grow text-sm">
+                데이터가 외부로 나가지 않는 기업 전용 AI. 하드웨어부터 LLM 설치, 사내 문서 연동까지 완성합니다.
+              </p>
+              <ul className="space-y-3 text-[13px] font-bold text-slate-300 mb-8">
+                <li className="flex items-center gap-2"><i className="ph-bold ph-check-circle text-emerald"></i>완전 내부망 운영</li>
+                <li className="flex items-center gap-2"><i className="ph-bold ph-check-circle text-emerald"></i>사내 문서 RAG 연동</li>
+                <li className="flex items-center gap-2"><i className="ph-bold ph-check-circle text-emerald"></i>무제한 사용·토큰 과금 없음</li>
+              </ul>
+              <span className="inline-flex items-center gap-2 font-black text-emerald group-hover:gap-4 transition-all text-sm">
+                자세히 보기 <i className="ph-bold ph-arrow-right"></i>
+              </span>
+            </a>
+
             {/* HPE Server + NVIDIA GPU */}
             <div className="p-10 rounded-[40px] bg-slate-50/60 border border-slate-100 flex flex-col h-full">
               <div className="w-14 h-14 bg-navy/5 rounded-[20px] flex items-center justify-center mb-8">
