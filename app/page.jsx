@@ -162,8 +162,8 @@ export default function Home() {
       </section>
 
       {/* COMPANY INTRO VIDEO */}
-      <section className="py-24 bg-navy relative overflow-hidden">
-        <div className="max-w-page mx-auto px-6 lg:px-12 text-center">
+      <section className="bg-navy relative overflow-hidden">
+        <div className="text-center pt-24 pb-12 max-w-page mx-auto px-6 lg:px-12">
           <span className="text-emerald font-black text-sm tracking-[0.2em] uppercase mb-4 block">
             Company Introduction
           </span>
@@ -171,21 +171,21 @@ export default function Home() {
             멈추지 않는 시스템,<br />
             <span className="text-emerald">사라지지 않는 데이터</span>
           </h2>
-          <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
+          <p className="text-slate-400 text-lg mb-0 max-w-2xl mx-auto">
             아인스테크의 30년 엔지니어링 노하우와 사이버 회복탄력성 솔루션을 만나보세요.
           </p>
-          <div className="relative max-w-4xl mx-auto rounded-[32px] overflow-hidden shadow-2xl">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster="/company-intro-poster.png"
-              className="w-full h-auto"
-            >
-              <source src="/company-intro.mp4" type="video/mp4" />
-            </video>
-          </div>
+        </div>
+        <div className="w-full">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/company-intro-poster.png"
+            className="w-full h-auto block"
+          >
+            <source src="/company-intro.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 
