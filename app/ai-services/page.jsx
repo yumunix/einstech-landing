@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
   path: "/ai-services",
-  title: "AI Services — 기업 AI 구축 서비스 | EINSTECH",
+  title: "Ai Services — 기업 AI 구축 서비스 | EINSTECH",
   description:
     "온프레미스 AI 구축부터 AI 직원 설계까지. 아인스테크가 기업 맞춤형 AI 시스템을 설계·구축·운영합니다. 데이터는 외부로 나가지 않습니다.",
   keywords: ["AI 구축", "온프레미스 AI", "AI 직원", "사내 AI", "LLM 구축", "RAG", "AI 서비스"],
@@ -123,7 +123,7 @@ export default function AIServices() {
       <section id="services" className="py-32 bg-white">
         <div className="max-w-page mx-auto px-6 lg:px-12">
           <SectionHeader
-            eyebrow="AI Services"
+            eyebrow="Ai Services"
             title={<>3가지 AI 서비스</>}
           />
           <div className="grid md:grid-cols-3 gap-8 mt-20">
