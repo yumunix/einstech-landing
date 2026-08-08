@@ -58,7 +58,7 @@ function NavDropdown({ label, items, openId, setOpenId, id }) {
         onClick={() => setOpenId(open ? null : id)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className={`flex items-center gap-1.5 text-base font-bold transition-colors ${
+        className={`flex items-center gap-1.5 whitespace-nowrap text-sm font-bold transition-colors ${
           open ? "text-navy" : "text-slate-600 hover:text-navy"
         }`}
       >
@@ -118,7 +118,7 @@ export default function Header() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 h-16">
       <div className="max-w-page mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
-        <div className="flex items-center gap-14">
+        <div className="flex items-center gap-8">
           <a href="/" className="flex items-center leading-none">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -128,8 +128,9 @@ export default function Header() {
             />
           </a>
 
-          <div className="hidden md:flex items-center gap-6">
-            <a href="/einsguard-ai" className="rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-emerald hover:text-slate-950">
+          <div className="hidden lg:flex items-center gap-4">
+            <a href="/einsguard-ai" className="group flex items-center gap-2 whitespace-nowrap text-sm font-black text-navy transition-colors hover:text-emerald">
+              <span className="h-2 w-2 rounded-full bg-emerald shadow-[0_0_10px_rgba(16,185,129,.55)]"></span>
               EINSGUARD AI
             </a>
             <NavDropdown
@@ -170,7 +171,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <div className="text-right hidden sm:block">
             <div className="font-mono text-[10px] text-emerald">
               SYS_STATUS: OPTIMAL
@@ -181,19 +182,19 @@ export default function Header() {
             href={SMARTSTORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-flex px-5 py-2 bg-navy text-white border border-navy hover:bg-white hover:text-navy rounded-full font-bold text-sm transition-all duration-300"
+            className="hidden whitespace-nowrap lg:inline-flex px-4 py-2 bg-navy text-white border border-navy hover:bg-white hover:text-navy rounded-full font-bold text-sm transition-all duration-300"
           >
             제품 구매
           </a>
           <a
             href="/contact"
-            className="hidden sm:inline-flex px-5 py-2 bg-white border border-navy text-navy hover:bg-navy hover:text-white rounded-full font-bold text-sm transition-all duration-300"
+            className="hidden whitespace-nowrap sm:inline-flex px-4 py-2 bg-white border border-navy text-navy hover:bg-navy hover:text-white rounded-full font-bold text-sm transition-all duration-300"
           >
             도입 문의
           </a>
           <button
             type="button"
-            className="md:hidden p-2 text-slate-600 hover:text-navy"
+            className="lg:hidden p-2 text-slate-600 hover:text-navy"
             aria-label="메뉴 열기"
             onClick={() => setMobileOpen((v) => !v)}
           >
@@ -211,9 +212,10 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-white border-b border-slate-100">
+        <div className="lg:hidden bg-white border-b border-slate-100">
           <div className="px-6 py-4 flex flex-col gap-1">
-            <a href="/einsguard-ai" className="mb-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-black text-white">
+            <a href="/einsguard-ai" className="mb-2 flex items-center gap-2 border-b border-slate-100 px-1 py-3 text-sm font-black text-navy">
+              <span className="h-2 w-2 rounded-full bg-emerald"></span>
               EINSGUARD AI · AI 코딩 보안 관리
             </a>
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
