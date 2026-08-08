@@ -7,6 +7,21 @@ export default function Home() {
     <div className="einstech-white w-full relative">
       <Header />
 
+      {/* EINSGUARD AI — PRIMARY HERO */}
+      <section className="relative flex min-h-[82vh] items-center overflow-hidden bg-slate-950 pb-24 pt-40 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,.28),transparent_38%)]"></div>
+        <div className="relative mx-auto grid w-full max-w-page gap-12 px-6 lg:grid-cols-[1.25fr_.75fr] lg:px-12">
+          <div>
+            <div className="font-mono text-xs font-black tracking-[.24em] text-emerald-300">NEW · AI GOVERNANCE</div>
+            <h1 className="mt-6 font-display text-6xl font-black tracking-tight md:text-7xl">EINSGUARD AI</h1>
+            <p className="mt-5 text-2xl font-black text-emerald-300 md:text-3xl">모든 AI를 한눈에. 모든 위험을 하나의 정책으로.</p>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-white/65">Claude, Codex, Gemini, Ollama 등 사내 AI 도구의 사용 현황과 위험 행동을 한 화면에서 확인하고 정책·승인·감사 이력을 온프레미스로 관리합니다.</p>
+            <div className="mt-9 flex flex-wrap gap-4"><a href="/downloads/einsguard-ai" className="rounded-2xl bg-emerald px-8 py-4 font-black text-slate-950">15일 무료체험</a><a href="/einsguard-ai" className="rounded-2xl border border-white/20 px-8 py-4 font-black text-white">제품 자세히 보기</a></div>
+          </div>
+          <div className="grid grid-cols-2 gap-4 self-center"><div className="rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-4xl text-emerald-300">15일</b><p className="mt-2 text-sm text-white/50">무료체험</p></div><div className="rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-4xl text-emerald-300">5대</b><p className="mt-2 text-sm text-white/50">체험 관리 대상</p></div><div className="col-span-2 rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-2xl text-emerald-300">Linux · macOS</b><p className="mt-2 text-sm text-white/50">Windows 지원은 후속 제공</p></div></div>
+        </div>
+      </section>
+
       {/* HERO */}
       <section className="relative pt-48 pb-32 overflow-hidden min-h-screen flex items-center bg-white">
         <div className="hero-glow top-0 -left-1/4"></div>
@@ -14,14 +29,13 @@ export default function Home() {
 
         <div className="w-full max-w-page mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center relative z-10">
           <div>
-            <a href="/einsguard-ai" className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-slate-950 border border-emerald/30 text-white text-[13px] font-bold mb-10 shadow-lg transition-transform hover:-translate-y-0.5">
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-slate-200 text-navy text-[13px] font-bold mb-10 shadow-sm">
               <span className="flex h-2.5 w-2.5 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald"></span>
               </span>
-              NEW · EINSGUARD AI 15일 무료체험
-              <i className="ph-bold ph-arrow-right text-emerald-300"></i>
-            </a>
+              EINSTECH INFRA DIAGNOSTICS · V.30
+            </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-[72px] font-black text-navy leading-[1.05] mb-10 tracking-tight">
               멈추지 않는 시스템,
@@ -51,13 +65,6 @@ export default function Home() {
               >
                 <i className="ph-bold ph-play-circle text-2xl"></i>
                 실제 구축 사례
-              </a>
-              <a
-                href="/einsguard-ai"
-                className="bg-emerald text-slate-950 px-10 lg:px-12 py-5 lg:py-6 rounded-2xl font-black text-lg hover:shadow-[0_20px_50px_rgba(16,185,129,0.2)] transition-all hover:-translate-y-1 flex items-center gap-3"
-              >
-                <i className="ph-bold ph-shield-check text-2xl"></i>
-                EINSGUARD AI
               </a>
             </div>
 
@@ -194,21 +201,6 @@ export default function Home() {
           >
             <source src="/company-intro.mp4" type="video/mp4" />
           </video>
-        </div>
-      </section>
-
-      {/* EINSGUARD AI */}
-      <section className="relative overflow-hidden bg-slate-950 py-24 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,.24),transparent_35%)]"></div>
-        <div className="relative mx-auto grid max-w-page gap-12 px-6 lg:grid-cols-[1.25fr_.75fr] lg:px-12">
-          <div>
-            <div className="font-mono text-xs font-black tracking-[.24em] text-emerald-300">NEW · AI GOVERNANCE</div>
-            <h2 className="mt-6 font-display text-5xl font-black tracking-tight md:text-6xl">EINSGUARD AI</h2>
-            <p className="mt-5 text-2xl font-black text-emerald-300">모든 AI를 한눈에. 모든 위험을 하나의 정책으로.</p>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/65">Claude, Codex, Gemini, Ollama 등 사내 AI 도구의 사용 현황과 위험 행동을 한 화면에서 확인하고 정책·승인·감사 이력을 온프레미스로 관리합니다.</p>
-            <div className="mt-9 flex flex-wrap gap-4"><a href="/downloads/einsguard-ai" className="rounded-2xl bg-emerald px-8 py-4 font-black text-slate-950">15일 무료체험</a><a href="/einsguard-ai" className="rounded-2xl border border-white/20 px-8 py-4 font-black text-white">제품 자세히 보기</a></div>
-          </div>
-          <div className="grid grid-cols-2 gap-4 self-center"><div className="rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-4xl text-emerald-300">15일</b><p className="mt-2 text-sm text-white/50">무료체험</p></div><div className="rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-4xl text-emerald-300">5대</b><p className="mt-2 text-sm text-white/50">체험 관리 대상</p></div><div className="col-span-2 rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-2xl text-emerald-300">Linux · macOS</b><p className="mt-2 text-sm text-white/50">Windows 지원은 후속 제공</p></div></div>
         </div>
       </section>
 
