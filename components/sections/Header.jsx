@@ -6,7 +6,7 @@ import { SMARTSTORE_URL } from "@/data/storeLinks";
 
 const aiItems = [
   { label: "EINSGUARD AI", desc: "기업용 AI 코딩 도구 보안·관리", href: "/einsguard-ai" },
-  { label: "Ai Services", desc: "기업 AI 구축 서비스 전체 보기", href: "/ai-services" },
+  { label: "AI 서비스 전체 보기", desc: "기업 AI 구축·컨설팅 서비스", href: "/ai-services" },
   { label: "온프레미스 AI 구축", desc: "사내 전용 AI 시스템 구축", href: "/onpremise-ai" },
   { label: "AI 업무 어시스턴트", desc: "업무를 보조하는 AI 어시스턴트", href: "/ai-services#assistant" },
   { label: "AI 보안 컨설팅", desc: "AI 사용 보안 정책·DLP 연동", href: "/ai-services#security" },
@@ -132,7 +132,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <NavDropdown
               id="ai"
-              label="Ai Services"
+              label="AI 솔루션"
               items={aiItems}
               openId={openId}
               setOpenId={setOpenId}
@@ -212,7 +212,7 @@ export default function Header() {
         <div className="lg:hidden bg-white border-b border-slate-100">
           <div className="px-6 py-4 flex flex-col gap-1">
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
-              Ai Services</div>
+              AI 솔루션</div>
             {aiItems.map((item) => (
               <a
                 key={item.label}
