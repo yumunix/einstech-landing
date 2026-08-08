@@ -129,6 +129,9 @@ export default function Header() {
           </a>
 
           <div className="hidden md:flex items-center gap-6">
+            <a href="/einsguard-ai" className="rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-emerald hover:text-slate-950">
+              EINSGUARD AI
+            </a>
             <NavDropdown
               id="ai"
               label="Ai Services"
@@ -210,6 +213,9 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden bg-white border-b border-slate-100">
           <div className="px-6 py-4 flex flex-col gap-1">
+            <a href="/einsguard-ai" className="mb-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-black text-white">
+              EINSGUARD AI · AI 코딩 보안 관리
+            </a>
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
               Ai Services</div>
             {aiItems.map((item) => (

@@ -8,17 +8,20 @@ export default function Home() {
       <Header />
 
       {/* EINSGUARD AI — PRIMARY HERO */}
-      <section className="relative flex min-h-[82vh] items-center overflow-hidden bg-slate-950 pb-24 pt-40 text-white">
+      <section className="relative flex min-h-[74vh] items-center overflow-hidden bg-slate-950 pb-20 pt-32 text-white lg:pt-36">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,.28),transparent_38%)]"></div>
         <div className="relative mx-auto grid w-full max-w-page gap-12 px-6 lg:grid-cols-[1.25fr_.75fr] lg:px-12">
           <div>
-            <div className="font-mono text-xs font-black tracking-[.24em] text-emerald-300">NEW · AI GOVERNANCE</div>
+            <div className="font-mono text-xs font-black tracking-[.24em] text-emerald-300">ENTERPRISE AI CODING SECURITY</div>
             <h1 className="mt-6 font-display text-6xl font-black tracking-tight md:text-7xl">EINSGUARD AI</h1>
-            <p className="mt-5 text-2xl font-black text-emerald-300 md:text-3xl">모든 AI를 한눈에. 모든 위험을 하나의 정책으로.</p>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/65">Claude, Codex, Gemini, Ollama 등 사내 AI 도구의 사용 현황과 위험 행동을 한 화면에서 확인하고 정책·승인·감사 이력을 온프레미스로 관리합니다.</p>
+            <p className="mt-5 text-2xl font-black text-emerald-300 md:text-3xl">기업용 AI 코딩 도구 보안·관리</p>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-white/65">Claude Code, Codex, Gemini CLI, Ollama 등 사내 AI 코딩 도구의 사용 현황과 위험 행동을 한눈에 확인하고 정책·승인·감사 이력을 온프레미스로 관리합니다.</p>
             <div className="mt-9 flex flex-wrap gap-4"><a href="/downloads/einsguard-ai" className="rounded-2xl bg-emerald px-8 py-4 font-black text-slate-950">15일 무료체험</a><a href="/einsguard-ai" className="rounded-2xl border border-white/20 px-8 py-4 font-black text-white">제품 자세히 보기</a></div>
           </div>
-          <div className="grid grid-cols-2 gap-4 self-center"><div className="rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-4xl text-emerald-300">15일</b><p className="mt-2 text-sm text-white/50">무료체험</p></div><div className="rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-4xl text-emerald-300">5대</b><p className="mt-2 text-sm text-white/50">체험 관리 대상</p></div><div className="col-span-2 rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-2xl text-emerald-300">Linux · macOS</b><p className="mt-2 text-sm text-white/50">Windows 지원은 후속 제공</p></div></div>
+          <div className="self-center overflow-hidden rounded-3xl border border-white/10 bg-[#0a0f1e] shadow-2xl shadow-emerald/10">
+            <div className="flex items-center justify-between border-b border-slate-800 px-5 py-4"><div><div className="font-mono text-[9px] tracking-widest text-emerald-400">EINSTECH</div><div className="text-sm font-black">EINSGUARD AI</div></div><div className="font-mono text-[10px] text-emerald-400">● LIVE</div></div>
+            <div className="p-5"><div className="text-base font-black">보안 운영 현황</div><div className="mt-1 text-[11px] text-slate-500">위험을 확인하고 필요한 조치를 바로 실행하세요.</div><div className="mt-5 grid grid-cols-2 gap-3"><div className="rounded-xl border border-slate-800 bg-slate-900 p-4"><div className="text-[10px] text-slate-400">고위험 알림</div><div className="mt-1 text-2xl font-black text-emerald-400">0</div></div><div className="rounded-xl border border-yellow-500/20 bg-yellow-500/5 p-4"><div className="text-[10px] text-slate-400">승인 대기</div><div className="mt-1 text-2xl font-black text-yellow-400">2</div></div><div className="rounded-xl border border-slate-800 bg-slate-900 p-4"><div className="text-[10px] text-slate-400">활성 세션</div><div className="mt-1 text-2xl font-black text-blue-400">12</div></div><div className="rounded-xl border border-slate-800 bg-slate-900 p-4"><div className="text-[10px] text-slate-400">오늘 실행</div><div className="mt-1 text-2xl font-black text-white">340</div></div></div><div className="mt-3 rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-4 py-3 text-xs text-emerald-300">현재 미해결 고위험 알림이 없습니다.</div></div>
+          </div>
         </div>
       </section>
 

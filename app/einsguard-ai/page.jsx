@@ -6,9 +6,9 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
   path: "/einsguard-ai",
-  title: "EINSGUARD AI — 기업용 AI 사용·보안 거버넌스 | EINSTECH",
-  description: "Claude, Codex 등 기업 내 AI 도구 사용을 온프레미스에서 모니터링하고 정책·승인·차단·위험 대응을 통합하는 AI 거버넌스 제품입니다. 15일 무료체험.",
-  keywords: ["EINSGUARD AI", "아인스가드 AI", "AI 거버넌스", "Claude 모니터링", "Codex 보안", "Shadow AI", "온프레미스 AI 보안"],
+  title: "EINSGUARD AI — 기업용 AI 코딩 도구 보안·관리 | EINSTECH",
+  description: "Claude Code, Codex, Gemini CLI 등 기업 내 AI 코딩 도구 사용을 온프레미스에서 모니터링하고 정책·승인·차단·위험 대응을 통합합니다. 15일 무료체험.",
+  keywords: ["EINSGUARD AI", "아인스가드 AI", "AI 코딩 보안", "AI 코딩 도구 관리", "Claude Code 모니터링", "Codex 보안", "Shadow AI", "온프레미스 AI 보안"],
 });
 
 const capabilities = [
@@ -37,7 +37,7 @@ const faqs = [
 ];
 
 export default function AiSentinelPage(){
-  const structuredData={"@context":"https://schema.org","@type":"SoftwareApplication",name:"EINSGUARD AI",applicationCategory:"SecurityApplication",operatingSystem:"Linux, macOS",description:"기업 내 AI 도구 사용과 위험을 통합 관리하는 온프레미스 AI 거버넌스 솔루션",offers:[{"@type":"Offer",name:"15일 무료체험",price:"0",priceCurrency:"KRW"},{"@type":"Offer",name:"Basic",price:"49000",priceCurrency:"KRW"},{"@type":"Offer",name:"Standard",price:"129000",priceCurrency:"KRW"},{"@type":"Offer",name:"Business",price:"229000",priceCurrency:"KRW"}]};
+  const structuredData={"@context":"https://schema.org","@type":"SoftwareApplication",name:"EINSGUARD AI",applicationCategory:"SecurityApplication",operatingSystem:"Linux, macOS",description:"기업 내 AI 코딩 도구 사용과 위험을 통합 관리하는 온프레미스 보안·거버넌스 솔루션",offers:[{"@type":"Offer",name:"15일 무료체험",price:"0",priceCurrency:"KRW"},{"@type":"Offer",name:"Basic",price:"49000",priceCurrency:"KRW"},{"@type":"Offer",name:"Standard",price:"129000",priceCurrency:"KRW"},{"@type":"Offer",name:"Business",price:"229000",priceCurrency:"KRW"}]};
   return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structuredData)}}/><Header/><main className="pt-16 bg-white text-slate-900">
     <section className="relative overflow-hidden bg-slate-950 py-24 text-white lg:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(16,185,129,.24),transparent_34%)]" />
