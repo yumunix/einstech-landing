@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 const inquiryTypes = [
+  { value: "EINSGUARD AI", label: "EINSGUARD AI — 무료체험·구독·기술지원" },
   { value: "BCP", label: "BCP (Business Continuity Planning)" },
   { value: "HA Cluster", label: "HA Cluster — Rose" },
   { value: "Storage", label: "Storage (Hitachi 외)" },
@@ -21,16 +22,18 @@ export default function ContactForm() {
   const searchParams = useSearchParams();
   const requestedType = searchParams.get("type") || "";
   const requestedSubject = searchParams.get("subject") || "";
-  const [status, setStatus] = useState("idle"); // idle | submitting | success | error
+  const [status, setStatus] = useState("idle"); // idle | submitting | success | email | error
   const [errorMsg, setErrorMsg] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (!e.currentTarget.reportValidity()) return;
     if (!FORMSPREE_ID) {
-      setStatus("error");
-      setErrorMsg(
-        "폼이 아직 설정되지 않았습니다. 아래 이메일/전화로 직접 문의해 주세요.",
-      );
+      const data = new FormData(e.currentTarget);
+      const subject = `[EINSTECH 문의] ${data.get("inquiry") || "일반 문의"} — ${data.get("company") || ""}`;
+      const body = [`회사명: ${data.get("company") || ""}`,`담당자: ${data.get("name") || ""}`,`연락처: ${data.get("phone") || ""}`,`이메일: ${data.get("email") || ""}`,`문의 유형: ${data.get("inquiry") || ""}`,"",String(data.get("message") || "")].join("\n");
+      window.location.href = `mailto:sungil.yum@einstech.kr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      setStatus("email");
       return;
     }
 
@@ -84,6 +87,17 @@ export default function ContactForm() {
         >
           새 문의 작성하기 →
         </button>
+      </div>
+    );
+  }
+
+  if (status === "email") {
+    return (
+      <div className="border border-navy/30 bg-navy/5 p-8 md:p-10">
+        <div className="font-mono text-[10px] text-navy uppercase tracking-widest mb-3">EMAIL_CLIENT_OPENED</div>
+        <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4 ds-word-keep">메일 작성 화면을 열었습니다.</h3>
+        <p className="font-sans text-slate-600 text-base leading-relaxed ds-word-keep mb-6">내용을 확인하고 메일 앱에서 전송을 완료해 주세요. 화면이 열리지 않으면 sungil.yum@einstech.kr로 직접 보내주세요.</p>
+        <button type="button" onClick={() => setStatus("idle")} className="font-mono text-sm text-navy border-b border-navy/40 pb-0.5">문의 내용 다시 작성하기 →</button>
       </div>
     );
   }
@@ -190,6 +204,11 @@ export default function ContactForm() {
       {/* Honeypot */}
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" />
 
+      <label className="flex items-start gap-3 border border-slate-200 bg-slate-50 p-4 text-xs leading-5 text-slate-600">
+        <input type="checkbox" name="privacy_consent" value="동의" required className="mt-1" />
+        <span><strong className="text-slate-900">개인정보 수집·이용에 동의합니다. *</strong><br/>회사명, 담당자명, 연락처, 이메일과 문의 내용은 문의 확인과 회신 목적으로 사용됩니다.</span>
+      </label>
+
       {status === "error" && (
         <div className="border border-alert/50 bg-alert/5 px-4 py-3 font-mono text-xs text-alert">
           {errorMsg}
@@ -198,7 +217,7 @@ export default function ContactForm() {
 
       <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-between pt-2">
         <p className="font-mono text-[10px] text-slate-500 leading-relaxed">
-          제출 시 입력하신 정보는 문의 응대 목적으로만 사용되며 별도 보관/마케팅에 활용되지 않습니다.
+          입력하신 정보는 문의 응대 목적으로만 사용되며 동의 없이 마케팅에 활용하지 않습니다.
         </p>
 
         <button

@@ -10,6 +10,9 @@ const nextConfig = {
       { source: "/storage-backup.html", destination: "/storage-backup", permanent: true },
       { source: "/dlp-antivirus.html", destination: "/dlp-antivirus", permanent: true },
       { source: "/company.html", destination: "/company", permanent: true },
+      { source: "/ai-sentinel", destination: "/einsguard-ai", permanent: true },
+      { source: "/downloads/ai-sentinel", destination: "/downloads/einsguard-ai", permanent: true },
+      { source: "/docs/ai-sentinel/install", destination: "/docs/einsguard-ai/install", permanent: true },
     ];
   },
 };
