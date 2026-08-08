@@ -14,13 +14,14 @@ export default function Home() {
 
         <div className="w-full max-w-page mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center relative z-10">
           <div>
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-slate-200 text-navy text-[13px] font-bold mb-10 shadow-sm">
+            <a href="/einsguard-ai" className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-slate-950 border border-emerald/30 text-white text-[13px] font-bold mb-10 shadow-lg transition-transform hover:-translate-y-0.5">
               <span className="flex h-2.5 w-2.5 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald"></span>
               </span>
-              EINSTECH INFRA DIAGNOSTICS · V.30
-            </div>
+              NEW · EINSGUARD AI 15일 무료체험
+              <i className="ph-bold ph-arrow-right text-emerald-300"></i>
+            </a>
 
             <h1 className="text-5xl md:text-6xl lg:text-[72px] font-black text-navy leading-[1.05] mb-10 tracking-tight">
               멈추지 않는 시스템,
@@ -50,6 +51,13 @@ export default function Home() {
               >
                 <i className="ph-bold ph-play-circle text-2xl"></i>
                 실제 구축 사례
+              </a>
+              <a
+                href="/einsguard-ai"
+                className="bg-emerald text-slate-950 px-10 lg:px-12 py-5 lg:py-6 rounded-2xl font-black text-lg hover:shadow-[0_20px_50px_rgba(16,185,129,0.2)] transition-all hover:-translate-y-1 flex items-center gap-3"
+              >
+                <i className="ph-bold ph-shield-check text-2xl"></i>
+                EINSGUARD AI
               </a>
             </div>
 
