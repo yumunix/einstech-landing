@@ -5,6 +5,7 @@ import { productItems } from "./productItems";
 import { SMARTSTORE_URL } from "@/data/storeLinks";
 
 const aiItems = [
+  { label: "EINSGUARD AI", desc: "기업용 AI 코딩 도구 보안·관리", href: "/einsguard-ai" },
   { label: "Ai Services", desc: "기업 AI 구축 서비스 전체 보기", href: "/ai-services" },
   { label: "온프레미스 AI 구축", desc: "사내 전용 AI 시스템 구축", href: "/onpremise-ai" },
   { label: "AI 업무 어시스턴트", desc: "업무를 보조하는 AI 어시스턴트", href: "/ai-services#assistant" },
@@ -129,10 +130,6 @@ export default function Header() {
           </a>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a href="/einsguard-ai" className="group flex items-center gap-2 whitespace-nowrap text-sm font-black text-navy transition-colors hover:text-emerald">
-              <span className="h-2 w-2 rounded-full bg-emerald shadow-[0_0_10px_rgba(16,185,129,.55)]"></span>
-              EINSGUARD AI
-            </a>
             <NavDropdown
               id="ai"
               label="Ai Services"
@@ -214,10 +211,6 @@ export default function Header() {
       {mobileOpen && (
         <div className="lg:hidden bg-white border-b border-slate-100">
           <div className="px-6 py-4 flex flex-col gap-1">
-            <a href="/einsguard-ai" className="mb-2 flex items-center gap-2 border-b border-slate-100 px-1 py-3 text-sm font-black text-navy">
-              <span className="h-2 w-2 rounded-full bg-emerald"></span>
-              EINSGUARD AI · AI 코딩 보안 관리
-            </a>
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
               Ai Services</div>
             {aiItems.map((item) => (

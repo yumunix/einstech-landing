@@ -1,10 +1,5 @@
 export const productItems = [
   {
-    label: "EINSGUARD AI",
-    desc: "기업용 AI 사용·보안 거버넌스",
-    href: "/einsguard-ai",
-  },
-  {
     label: "HPE Server",
     desc: "HPE ProLiant · 엔터프라이즈 서버",
     href: "/hp-server",
