@@ -95,4 +95,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.einstech.kr/docs/einsguard-ai/admin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://www.einstech.kr/ai-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.einstech.kr/onpremise-ai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.einstech.kr/e-gate</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

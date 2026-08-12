@@ -8,7 +8,7 @@ const siteUrl = "https://www.einstech.kr";
 const siteName = "EINSTECH";
 const siteTitle = "EINSTECH | Non Stop System, Lossless Data";
 const siteDescription =
-  "엔지니어 30년 경험 기반의 HA Cluster · 스토리지 · 백업 · DLP 통합 인프라 파트너. 2014년 설립된 EINSTECH가 멈추지 않는 시스템과 사라지지 않는 데이터를 설계합니다.";
+  "AI 보안, HPE 서버, NVIDIA GPU, Hitachi·Infortrend 스토리지, Brocade SAN, TP-Link 네트워크, Acronis·NetBackup 백업, HA Cluster, DLP·방화벽·재해복구 전문기업.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,6 +32,19 @@ export const metadata = {
     "EINSGUARD AI",
     "아인스가드 AI",
     "기업용 AI 거버넌스",
+    "AI 보안 솔루션",
+    "생성형 AI 보안",
+    "Shadow AI 탐지",
+    "AI DLP",
+    "AI 사용 모니터링",
+    "HPE 서버",
+    "NVIDIA GPU 서버",
+    "Hitachi VSP One",
+    "Infortrend EonStor",
+    "Brocade SAN Switch",
+    "TP-Link Omada",
+    "Acronis 백업",
+    "NetBackup",
   ],
   authors: [{ name: siteName, url: siteUrl }],
   creator: siteName,

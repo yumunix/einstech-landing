@@ -1,6 +1,9 @@
 import "./page.css";
 import Header from "@/components/sections/Header";
 import { TPLINK_STORE_URL } from "@/data/storeLinks";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata=createPageMetadata({path:"/",title:"EINSTECH | AI 보안·HPE 서버·Hitachi 스토리지·백업·HA 전문기업",description:"EINSTECH는 EINSGUARD AI 보안, HPE 서버, NVIDIA GPU, Hitachi·Infortrend 스토리지, Brocade SAN, TP-Link 네트워크, Acronis·NetBackup 백업, HA Cluster, DLP·방화벽·재해복구를 공급하고 유지보수합니다.",keywords:["AI 보안 솔루션","HPE 서버","Hitachi 스토리지","Infortrend 스토리지","Brocade SAN 스위치","NVIDIA GPU 서버","TP-Link 네트워크","Acronis 백업","NetBackup","HA Cluster","DLP 솔루션","방화벽","재해복구","EINSTECH","아인스테크"]});
 
 export default function Home() {
   return (
