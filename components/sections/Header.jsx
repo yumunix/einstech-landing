@@ -146,7 +146,7 @@ export default function Header() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 h-16">
       <div className="max-w-page mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <a href="/" className="flex items-center leading-none">
+          <a href="/" className="header-brand-link flex h-14 cursor-pointer items-center rounded-xl px-2 leading-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/einstech-logo.png"

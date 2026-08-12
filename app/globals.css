@@ -57,6 +57,11 @@ nav .cursor-pointer * {
   cursor: pointer !important;
 }
 
+.header-brand-link,
+.header-brand-link * {
+  cursor: pointer !important;
+}
+
 html,
 body {
   background-color: var(--bg-base);
