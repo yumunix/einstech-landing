@@ -26,6 +26,11 @@ const supportItems = [
   { label: "원격 기술지원", desc: "신속한 비대면 기술지원", href: "/support/remote-support" },
 ];
 
+const resourceItems = [
+  { label: "EINSGUARD AI 자료실", desc: "서버·Linux·macOS Agent 1.0", href: "/downloads/einsguard-ai" },
+  { label: "설치·사용 매뉴얼", desc: "설치 · 운영 · 제거 · 문제 해결", href: "/docs/einsguard-ai/install" },
+];
+
 const companyItems = [
   { label: "회사 소개", desc: "EINSTECH 2014 설립 · 엔지니어 30년", href: "/company" },
   { label: "회사 연혁", desc: "Since 2014", href: "/company#history" },
@@ -185,6 +190,13 @@ export default function Header() {
               setOpenId={setOpenId}
             />
             <NavDropdown
+              id="resources"
+              label="자료실"
+              items={resourceItems}
+              openId={openId}
+              setOpenId={setOpenId}
+            />
+            <NavDropdown
               id="company"
               label="회사소개"
               items={companyItems}
@@ -284,6 +296,18 @@ export default function Header() {
               기술지원
             </div>
             {supportItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="block min-h-11 rounded-lg px-3 py-3 text-[15px] font-semibold text-slate-800 hover:bg-slate-100 hover:text-navy"
+              >
+                {item.label}
+              </a>
+            ))}
+            <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-3 pb-1 border-t border-slate-100">
+              자료실
+            </div>
+            {resourceItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
