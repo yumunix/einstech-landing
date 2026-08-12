@@ -50,6 +50,13 @@ nav .cursor-pointer * {
   cursor: pointer;
 }
 
+/* Keep one consistent pointer across the complete desktop menu, including
+   labels, icons, gaps, dropdown bridges and descriptions. */
+.header-primary-nav,
+.header-primary-nav * {
+  cursor: pointer !important;
+}
+
 html,
 body {
   background-color: var(--bg-base);

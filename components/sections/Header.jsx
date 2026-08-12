@@ -155,7 +155,7 @@ export default function Header() {
             />
           </a>
 
-          <div className="hidden h-full lg:flex items-center gap-1">
+          <div className="header-primary-nav hidden h-full lg:flex items-center gap-1">
             <NavDropdown
               id="ai"
               label="AI 솔루션"
