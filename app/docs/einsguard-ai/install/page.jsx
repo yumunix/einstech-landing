@@ -4,7 +4,7 @@ import Badge from "@/components/ds/Badge";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata=createPageMetadata({path:"/docs/einsguard-ai/install",title:"EINSGUARD AI 1.0 설치·사용 매뉴얼 | EINSTECH",description:"AI GUARD 관리 서버와 Linux·macOS Agent 설치, 상태 확인, 운영, 제거 및 문제 해결 방법입니다."});
-const Code=({children})=><pre className="mt-4 overflow-x-auto rounded-xl bg-slate-950 p-5 text-xs leading-6 text-emerald-300"><code>{children}</code></pre>;
+const Code=({children})=><pre className="mt-4 overflow-x-auto rounded-xl border border-slate-300 bg-slate-100 p-5 font-mono text-xs font-semibold leading-6 text-slate-950 shadow-inner"><code className="text-slate-950">{children}</code></pre>;
 const Title=({n,children})=><h2 className="font-display text-3xl font-black"><span className="mr-3 text-blue-700">{n}</span>{children}</h2>;
 
 export default function InstallPage(){return <><Header/><main className="bg-slate-50 pt-16 text-slate-900"><section className="border-b border-slate-300 bg-white py-20"><div className="mx-auto max-w-4xl px-6"><Badge>VERSION 1.0</Badge><h1 className="mt-6 font-display text-5xl font-black">설치·사용·문제해결 매뉴얼</h1><p className="mt-5 text-base leading-8 text-slate-600">관리 서버 설치부터 Linux·macOS Agent 연결, 대시보드 확인, 제거와 로그 수집까지 순서대로 설명합니다.</p></div></section><article className="mx-auto max-w-4xl space-y-16 px-6 py-16 text-sm leading-7">
