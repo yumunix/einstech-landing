@@ -66,7 +66,7 @@ function NavDropdown({ label, items, openId, setOpenId, id }) {
 
   return (
     <div
-      className="relative"
+      className="relative flex h-full cursor-pointer items-center"
       ref={ref}
       onMouseEnter={openMenu}
       onMouseLeave={scheduleClose}
@@ -80,7 +80,7 @@ function NavDropdown({ label, items, openId, setOpenId, id }) {
         onClick={() => setOpenId(open ? null : id)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className={`flex h-11 items-center gap-2 whitespace-nowrap rounded-xl px-3 text-[15px] font-extrabold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2 ${
+        className={`flex h-14 cursor-pointer items-center gap-2 whitespace-nowrap rounded-xl px-4 text-[15px] font-extrabold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2 ${
           open ? "bg-navy text-white shadow-sm" : "text-slate-800 hover:bg-slate-100 hover:text-navy"
         }`}
       >
@@ -103,9 +103,9 @@ function NavDropdown({ label, items, openId, setOpenId, id }) {
 
       {open && (
         <div
-          className="absolute left-1/2 top-full z-[70] w-[21rem] -translate-x-1/2 pt-2"
+          className="absolute left-1/2 top-full z-[70] w-[21rem] -translate-x-1/2 cursor-pointer pt-1"
         >
-          <div role="menu" className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.22)]">
+          <div role="menu" className="cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.22)]">
             <div className="border-b border-slate-200 bg-slate-50 px-5 py-3 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
               {label}
             </div>
@@ -155,7 +155,7 @@ export default function Header() {
             />
           </a>
 
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden h-full lg:flex items-center gap-1">
             <NavDropdown
               id="ai"
               label="AI 솔루션"

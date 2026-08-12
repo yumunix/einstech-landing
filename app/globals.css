@@ -40,6 +40,16 @@ button,
   cursor: pointer;
 }
 
+/* Header menus use the full visual area, including the dropdown hover bridge. */
+nav a,
+nav button,
+nav [role="menu"],
+nav [role="menuitem"],
+nav .cursor-pointer,
+nav .cursor-pointer * {
+  cursor: pointer;
+}
+
 html,
 body {
   background-color: var(--bg-base);
