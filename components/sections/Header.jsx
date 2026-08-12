@@ -35,6 +35,17 @@ const companyItems = [
 function NavDropdown({ label, items, openId, setOpenId, id }) {
   const open = openId === id;
   const ref = useRef(null);
+  const closeTimer = useRef(null);
+
+  const openMenu = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenId(id);
+  };
+
+  const scheduleClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setOpenId(null), 180);
+  };
 
   useEffect(() => {
     if (!open) return;
@@ -47,20 +58,30 @@ function NavDropdown({ label, items, openId, setOpenId, id }) {
     document.addEventListener("mousedown", onClick);
     document.addEventListener("keydown", onEsc);
     return () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current);
       document.removeEventListener("mousedown", onClick);
       document.removeEventListener("keydown", onEsc);
     };
   }, [open, setOpenId]);
 
   return (
-    <div className="relative" ref={ref}>
+    <div
+      className="relative"
+      ref={ref}
+      onMouseEnter={openMenu}
+      onMouseLeave={scheduleClose}
+      onFocus={openMenu}
+      onBlur={(event) => {
+        if (!ref.current?.contains(event.relatedTarget)) scheduleClose();
+      }}
+    >
       <button
         type="button"
         onClick={() => setOpenId(open ? null : id)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className={`flex items-center gap-1.5 whitespace-nowrap text-sm font-bold transition-colors ${
-          open ? "text-navy" : "text-slate-600 hover:text-navy"
+        className={`flex h-11 items-center gap-2 whitespace-nowrap rounded-xl px-3 text-[15px] font-extrabold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2 ${
+          open ? "bg-navy text-white shadow-sm" : "text-slate-800 hover:bg-slate-100 hover:text-navy"
         }`}
       >
         {label}
@@ -82,30 +103,35 @@ function NavDropdown({ label, items, openId, setOpenId, id }) {
 
       {open && (
         <div
-          role="menu"
-          className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-72 bg-white border border-slate-200 rounded-2xl shadow-xl"
+          className="absolute left-1/2 top-full z-[70] w-[21rem] -translate-x-1/2 pt-2"
         >
-          <div className="px-4 py-2 border-b border-slate-100 font-mono text-[10px] text-slate-400 uppercase tracking-widest">
-            {label.toUpperCase()}_MENU
+          <div role="menu" className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.22)]">
+            <div className="border-b border-slate-200 bg-slate-50 px-5 py-3 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
+              {label}
+            </div>
+            <ul className="p-2">
+              {items.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    role="menuitem"
+                    className="group flex min-h-[62px] items-center justify-between gap-3 rounded-xl px-4 py-3 transition-all hover:bg-navy focus:bg-navy focus:outline-none"
+                    onClick={() => setOpenId(null)}
+                  >
+                    <span>
+                      <span className="block text-[15px] font-extrabold text-slate-950 group-hover:text-white group-focus:text-white">
+                        {item.label}
+                      </span>
+                      <span className="mt-1 block text-xs leading-relaxed text-slate-600 group-hover:text-white/80 group-focus:text-white/80">
+                        {item.desc}
+                      </span>
+                    </span>
+                    <span aria-hidden="true" className="text-lg text-slate-300 transition-transform group-hover:translate-x-1 group-hover:text-emerald group-focus:translate-x-1 group-focus:text-emerald">→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="py-2">
-            {items.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="block px-4 py-3 hover:bg-slate-50 group transition-colors"
-                  onClick={() => setOpenId(null)}
-                >
-                  <div className="font-bold text-sm text-slate-900 group-hover:text-navy">
-                    {item.label}
-                  </div>
-                  <div className="font-mono text-[10px] text-slate-400 mt-0.5">
-                    {item.desc}
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
       )}
     </div>
@@ -129,7 +155,7 @@ export default function Header() {
             />
           </a>
 
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-1">
             <NavDropdown
               id="ai"
               label="AI 솔루션"
@@ -191,7 +217,7 @@ export default function Header() {
           </a>
           <button
             type="button"
-            className="lg:hidden p-2 text-slate-600 hover:text-navy"
+            className="lg:hidden flex h-11 w-11 items-center justify-center rounded-xl text-slate-800 hover:bg-slate-100 hover:text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald"
             aria-label="메뉴 열기"
             onClick={() => setMobileOpen((v) => !v)}
           >
@@ -209,15 +235,15 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-100">
-          <div className="px-6 py-4 flex flex-col gap-1">
+        <div className="lg:hidden max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-slate-200 bg-white shadow-xl">
+          <div className="px-5 py-4 flex flex-col gap-1">
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
               AI 솔루션</div>
             {aiItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-2 text-sm text-slate-700 hover:text-navy"
+                className="block min-h-11 rounded-lg px-3 py-3 text-[15px] font-semibold text-slate-800 hover:bg-slate-100 hover:text-navy"
               >
                 {item.label}
               </a>
@@ -229,7 +255,7 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-2 text-sm text-slate-700 hover:text-navy"
+                className="block min-h-11 rounded-lg px-3 py-3 text-[15px] font-semibold text-slate-800 hover:bg-slate-100 hover:text-navy"
               >
                 {item.label}
               </a>
@@ -241,7 +267,7 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-2 text-sm text-slate-700 hover:text-navy"
+                className="block min-h-11 rounded-lg px-3 py-3 text-[15px] font-semibold text-slate-800 hover:bg-slate-100 hover:text-navy"
               >
                 {item.label}
               </a>
@@ -261,7 +287,7 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-2 text-sm text-slate-700 hover:text-navy"
+                className="block min-h-11 rounded-lg px-3 py-3 text-[15px] font-semibold text-slate-800 hover:bg-slate-100 hover:text-navy"
               >
                 {item.label}
               </a>
@@ -273,7 +299,7 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-2 text-sm text-slate-700 hover:text-navy"
+                className="block min-h-11 rounded-lg px-3 py-3 text-[15px] font-semibold text-slate-800 hover:bg-slate-100 hover:text-navy"
               >
                 {item.label}
               </a>
