@@ -28,15 +28,20 @@ body.einstech-white-body *,
 body:has(.einstech-white) * {
   cursor: auto;
 }
-html.einstech-white-body a,
-html.einstech-white-body button,
-html:has(.einstech-white) a,
-html:has(.einstech-white) button,
-body.einstech-white-body a,
-body.einstech-white-body button,
-body:has(.einstech-white) a,
-body:has(.einstech-white) button {
-  cursor: pointer;
+html.einstech-white-body :is(a[href], button:not(:disabled), summary, select, label[for], [role="button"], [role="link"], [role="menuitem"]),
+html.einstech-white-body :is(a[href], button:not(:disabled), summary, select, label[for], [role="button"], [role="link"], [role="menuitem"]) *,
+html:has(.einstech-white) :is(a[href], button:not(:disabled), summary, select, label[for], [role="button"], [role="link"], [role="menuitem"]),
+html:has(.einstech-white) :is(a[href], button:not(:disabled), summary, select, label[for], [role="button"], [role="link"], [role="menuitem"]) *,
+body.einstech-white-body :is(a[href], button:not(:disabled), summary, select, label[for], [role="button"], [role="link"], [role="menuitem"]),
+body.einstech-white-body :is(a[href], button:not(:disabled), summary, select, label[for], [role="button"], [role="link"], [role="menuitem"]) *,
+body:has(.einstech-white) :is(a[href], button:not(:disabled), summary, select, label[for], [role="button"], [role="link"], [role="menuitem"]),
+body:has(.einstech-white) :is(a[href], button:not(:disabled), summary, select, label[for], [role="button"], [role="link"], [role="menuitem"]) * {
+  cursor: pointer !important;
+}
+
+html.einstech-white-body :is(button:disabled, [aria-disabled="true"]),
+body.einstech-white-body :is(button:disabled, [aria-disabled="true"]) {
+  cursor: not-allowed !important;
 }
 
 /* Reset only the properties globals.css sets on elements
