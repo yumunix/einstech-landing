@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata=createPageMetadata({path:"/downloads/einsguard-ai",title:"EINSGUARD AI 1.0 다운로드 | EINSTECH",description:"AI GUARD 서버와 Windows·Linux·macOS Agent 1.0, 제거 도구, 매뉴얼 및 SHA-256을 제공합니다."});
 const packages=[
  {title:"AI GUARD 관리 서버",platform:"LINUX SERVER · 1.0.0",file:"einsguard-ai-server-1.0.0-linux.tar.gz",sha:"7ce1286d93d52998aa028947dd530e148bb3cc3dafe7e746be60d2afd164f293",items:["Linux x86_64·arm64","Docker/Podman Compose","15일 무료 · 이후 자동 중지"]},
- {title:"Windows Agent",platform:"WINDOWS CLIENT · 1.0",file:"EINSGUARD-AI-Windows-Agent-1.0.exe",cleanup:"EINSGUARD-AI-Cleanup-1.0.exe",sha:"b62510014b446ff1a6573d202e27fcfe2db61543996246beace540f2f4b12f64",items:["Windows 10·11 x64","앱·CLI·브라우저·Copilot 감지","설치·제거 로그 지원"]},
+ {title:"Windows Agent",platform:"WINDOWS CLIENT · 1.0.2",file:"EINSGUARD-AI-Windows-Agent-1.0.exe",cleanup:"EINSGUARD-AI-Cleanup-1.0.exe",sha:"14139432635d3fdd0b891debd944a512c82bd4ce0363377f10b1cf5afe5d64a7",items:["Windows 10·11 x64","백그라운드 숨김 실행","앱·CLI·브라우저·Copilot 감지"]},
  {title:"Linux Agent",platform:"LINUX CLIENT · 1.0.0",file:"einsguard-ai-agent-1.0.0-linux.tar.gz",sha:"19447ec41b214ff52a0557c200d0f8cb894d52f6ca23d9ff4e9235bafae8711a",items:["systemd 자동 실행","앱·CLI·브라우저 감지","상태·삭제 도구 포함"]},
  {title:"macOS Agent",platform:"MACOS CLIENT · 1.0.0",file:"einsguard-ai-agent-1.0.0-macos.tar.gz",sha:"9b5224ccd08e7814870a6b7d15e093c50d86aeba8ac537b504e1345bf4b6b4cb",items:["macOS 13 이상","launchd 자동 실행","상태·삭제 도구 포함"]},
 ];
