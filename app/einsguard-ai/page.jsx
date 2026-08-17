@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata({
   path: "/einsguard-ai",
   title: "기업용 AI 보안 솔루션 EINSGUARD AI | Shadow AI·DLP·접근 차단",
-  description: "Windows·Linux·macOS에서 ChatGPT, Copilot, Claude, Codex 등 앱·브라우저·CLI 사용을 탐지하고 Shadow AI, 개인정보·API 키 유출, 미승인 AI를 감사·차단하는 온프레미스 AI 보안 솔루션입니다.",
+  description: "Windows·Linux·macOS에서 생성형 AI 사용과 민감정보를 탐지하고, 고객사가 선택한 Ollama 또는 OpenAI 호환 내부 LLM으로 위험을 판정하는 온프레미스 AI 보안 솔루션입니다.",
   keywords: ["AI 보안 솔루션", "기업용 AI 보안", "생성형 AI 보안", "Shadow AI", "AI DLP", "AI 거버넌스", "AI 사용 모니터링", "AI 접근 차단", "Copilot 보안", "ChatGPT 보안", "Claude 보안", "Codex 보안", "EINSGUARD AI", "아인스가드 AI", "온프레미스 AI 보안"],
 });
 
@@ -17,7 +17,7 @@ const capabilities = [
   ["정책과 승인", "사용자·장비·AI 도구별 허용 시간, 횟수, 차단 및 승인 정책을 적용합니다."],
   ["Shadow AI 탐지·차단", "승인되지 않은 AI 앱·웹·CLI 실행을 식별하고 즉시 차단하며 발생 위치·원인·권장 조치와 감사 이력을 남깁니다."],
   ["사용량·비용 분석", "사용자·도구·모델별 실행, 토큰과 실제 비용 텔레메트리를 분석합니다."],
-  ["AI DLP와 온프레미스 운영", "주민번호·카드번호·비밀번호·API 키·개인키·고객정보를 검사하고 원문 대신 마스킹 증거와 해시를 고객 서버에 보관합니다."],
+  ["AI DLP와 내부 LLM", "주민번호·API 키·고객정보를 탐지하고 Ollama 또는 OpenAI 호환 내부 LLM으로 재판정합니다. 원문은 기본 저장하지 않습니다."],
 ];
 
 const plans = [
@@ -31,15 +31,16 @@ const plans = [
 const faqs = [
   ["관리 대상 1대는 무엇인가요?", "EINSGUARD AI 에이전트가 등록된 물리 서버, VM 또는 개인 PC 한 대입니다. 한 장비에서 여러 AI 도구를 사용해도 장비 1대로 계산합니다."],
   ["무료체험이 끝나면 데이터가 삭제되나요?", "삭제되지 않습니다. 핵심 수집·분석·제어 기능은 잠기지만 기존 데이터 조회와 라이선스 갱신 화면은 유지됩니다."],
-  ["현재 지원 운영체제는 무엇인가요?", "관리 서버는 Linux Docker/Podman 환경을 지원하며 Agent 1.0은 Windows 10·11 x64, Linux systemd, macOS 13 이상을 지원합니다."],
+  ["현재 지원 운영체제는 무엇인가요?", "관리 서버는 Linux Docker/Podman 환경을 지원하며 Agent 1.1.0은 Windows 10·11 x64, Linux systemd, macOS 13 이상을 지원합니다."],
+  ["Mac과 Gemma 모델이 반드시 필요한가요?", "아닙니다. Ollama 또는 vLLM·LocalAI·LM Studio 등 OpenAI 호환 내부 API를 고객 환경에 맞게 선택할 수 있고, 내부 LLM 없이 패턴 탐지만 사용할 수도 있습니다."],
   ["어떤 AI를 탐지하나요?", "ChatGPT, Microsoft Copilot, Claude, Codex, Gemini, Cursor, Ollama 등 중앙 카탈로그의 앱·브라우저·CLI를 탐지하며 새로운 AI는 관리자 카탈로그에 추가할 수 있습니다."],
-  ["AI에 입력한 원문을 모두 저장하나요?", "기본 정책은 원문을 저장하지 않고 위반 유형, 위험도, AI 서비스, 시각, 해시와 일부 마스킹 증거만 저장합니다. 원문 감사는 별도 정책과 권한이 있는 고객만 제한적으로 사용합니다."],
+  ["AI에 입력한 원문을 모두 저장하나요?", "기본 정책은 원문을 저장하지 않고 내부 LLM 판정 중에만 일시 사용합니다. 해시·마스킹 증거·판정 결과만 보관하며, 웹 채팅 입력창 전체 검사는 별도 확장·프록시·공식 감사 연동이 필요합니다."],
   ["인터넷 연결이 항상 필요한가요?", "EINSGUARD AI의 수집과 분석은 온프레미스에서 동작합니다. 구독 라이선스 인증에는 주기적인 연결이 필요합니다."],
   ["설치 전에 무엇을 준비해야 하나요?", "Linux 시험 VM, Docker Compose 또는 Podman Compose, 4GB 이상 메모리와 10GB 이상의 여유 공간을 권장합니다."],
 ];
 
 export default function AiSentinelPage(){
-  const structuredData=[{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://www.einstech.kr/einsguard-ai#software",name:"EINSGUARD AI",alternateName:"아인스가드 AI",applicationCategory:"SecurityApplication",applicationSubCategory:"AI Security and Governance",operatingSystem:"Windows 10, Windows 11, Linux, macOS",softwareVersion:"1.0",url:"https://www.einstech.kr/einsguard-ai",downloadUrl:"https://www.einstech.kr/downloads/einsguard-ai",publisher:{"@id":"https://www.einstech.kr/#organization"},description:"기업의 생성형 AI 앱·브라우저·CLI 사용을 탐지하고 Shadow AI, 민감정보 유출과 미승인 AI를 감사·차단하는 온프레미스 AI 보안 솔루션",featureList:["AI 자산 및 실행 상태 탐지","Shadow AI 탐지·차단","개인정보·API 키·개인키 DLP","사용자·PC·AI별 승인 정책","보안 사건 감사와 해결 안내"],offers:[{"@type":"Offer",name:"15일 무료체험",price:"0",priceCurrency:"KRW"},{"@type":"Offer",name:"Basic",price:"49000",priceCurrency:"KRW"},{"@type":"Offer",name:"Standard",price:"129000",priceCurrency:"KRW"},{"@type":"Offer",name:"Business",price:"229000",priceCurrency:"KRW"}]},{"@context":"https://schema.org","@type":"FAQPage",mainEntity:faqs.map(([q,a])=>({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:a}}))}];
+  const structuredData=[{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://www.einstech.kr/einsguard-ai#software",name:"EINSGUARD AI",alternateName:"아인스가드 AI",applicationCategory:"SecurityApplication",applicationSubCategory:"AI Security and Governance",operatingSystem:"Windows 10, Windows 11, Linux, macOS",softwareVersion:"0.3.0-trial",url:"https://www.einstech.kr/einsguard-ai",downloadUrl:"https://www.einstech.kr/downloads/einsguard-ai",publisher:{"@id":"https://www.einstech.kr/#organization"},description:"기업의 생성형 AI 사용과 민감정보 위험을 고객사 내부 LLM으로 판정하는 온프레미스 AI 보안 솔루션",featureList:["AI 자산 및 실행 상태 탐지","Shadow AI 탐지·차단","개인정보·API 키·개인키 DLP","Ollama·OpenAI 호환 내부 LLM 판정","사용자·PC·AI별 승인 정책"],offers:[{"@type":"Offer",name:"15일 무료체험",price:"0",priceCurrency:"KRW"},{"@type":"Offer",name:"Basic",price:"49000",priceCurrency:"KRW"},{"@type":"Offer",name:"Standard",price:"129000",priceCurrency:"KRW"},{"@type":"Offer",name:"Business",price:"229000",priceCurrency:"KRW"}]},{"@context":"https://schema.org","@type":"FAQPage",mainEntity:faqs.map(([q,a])=>({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:a}}))}];
   return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structuredData)}}/><Header/><main className="pt-16 bg-white text-slate-900">
     <section className="relative overflow-hidden bg-slate-950 py-24 text-white lg:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(16,185,129,.24),transparent_34%)]" />
@@ -48,7 +49,7 @@ export default function AiSentinelPage(){
         <div className="mt-6 font-mono text-sm font-black tracking-[.22em] text-white/60">EINSGUARD AI</div>
         <h1 className="mt-8 max-w-5xl font-display text-[clamp(3rem,7vw,6.5rem)] font-black leading-[.92] tracking-tight">AI를 막는 대신,<br/><span className="text-emerald-300">보이게 하고 통제합니다.</span></h1>
         <p className="mt-5 font-display text-2xl font-black text-emerald-300">모든 AI를 한눈에. 모든 위험을 하나의 정책으로.</p>
-        <p className="mt-6 max-w-3xl text-base leading-8 text-white/70 md:text-lg">EINSGUARD AI는 Windows·Linux·macOS에서 생성형 AI 앱, 브라우저와 CLI 사용을 탐지하고 Shadow AI, 개인정보·API 키 유출, 미승인 AI 접근을 하나의 온프레미스 정책으로 감사·차단하는 기업용 AI 보안 솔루션입니다.</p>
+        <p className="mt-6 max-w-3xl text-base leading-8 text-white/70 md:text-lg">EINSGUARD AI는 생성형 AI 사용과 민감정보 위험을 탐지하고 고객사가 선택한 내부 LLM으로 내용을 판정합니다. 정책과 감사 데이터는 고객 환경에 보관합니다.</p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row"><PrimaryButton href="/downloads/einsguard-ai">15일 무료체험</PrimaryButton><SecondaryButton href="/docs/einsguard-ai/install">설치 안내</SecondaryButton><SecondaryButton href="/contact?type=EINSGUARD%20AI">도입 문의</SecondaryButton></div>
         <div className="mt-14 grid gap-3 sm:grid-cols-3"><div className="rounded-xl border border-white/10 bg-white/5 p-5"><b className="text-2xl text-emerald-300">15일</b><p className="mt-1 text-xs text-white/50">무료체험</p></div><div className="rounded-xl border border-white/10 bg-white/5 p-5"><b className="text-2xl text-emerald-300">5대</b><p className="mt-1 text-xs text-white/50">체험판 관리 대상</p></div><div className="rounded-xl border border-white/10 bg-white/5 p-5"><b className="text-2xl text-emerald-300">On-Prem</b><p className="mt-1 text-xs text-white/50">고객 환경 데이터 보관</p></div></div>
       </div>
