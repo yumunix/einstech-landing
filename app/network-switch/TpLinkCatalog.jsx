@@ -29,7 +29,7 @@ const tiers = [
     models: [
       { model: "SG3210X-M2", image: "sg3210x-m2.jpg", ports: "8×2.5G RJ45 + 2×10G SFP+", specs: ["팬리스", "80Gbps 스위칭", "Omada 중앙관리"] },
       { model: "SG3218XP-M2", image: "sg3218xp-m2.jpg", ports: "16×2.5G PoE + 2×10G SFP+", specs: ["PoE++ 4포트", "PoE 240W", "Omada 중앙관리"] },
-      { model: "SG3428XPP-M2", image: "sg3428xpp-m2.jpg", ports: "24×2.5G PoE + 4×10G SFP+", specs: ["PoE++·PoE+", "PoE 500W", "정적 라우팅·ERPS"] },
+      { model: "SG3428XPP-M2", image: "sg3428xpp-m2.jpg", ports: "24×2.5G PoE + 4×10G SFP+", specs: ["PoE++·PoE+", "V2 기준 PoE 770W", "정적 라우팅·ERPS"] },
     ],
   },
   {
@@ -61,8 +61,8 @@ const tiers = [
     desc: "기업·캠퍼스·ISP를 위한 25G·100G Stackable L3 코어",
     models: [
       { model: "S6500-24G4XF", image: "s6500-24g4xf.jpg", ports: "24×1G RJ45 + 4×10G SFP+", specs: ["최대 12대 스태킹", "M-LAG", "전원 이중화"] },
-      { model: "S7500-48XF4C", image: "s7500-48xf4c.jpg", ports: "48×10G SFP+ + 4×100G QSFP28", specs: ["Stackable L3", "M-LAG", "핫스왑 전원 이중화"] },
-      { model: "S7500-32C", image: "s7500-32c.jpg", ports: "32×100G QSFP28", specs: ["100G 코어", "최대 12대 스태킹", "1+1 전원 이중화"] },
+      { model: "S6500-24MPP4Y", image: "https://static.tp-link.com/upload/image-line/S6500-24MPP4Y_UN_1.26_overview_01_large_20260203024335q.jpg", ports: "24×2.5G PoE++ + 4×25G SFP28", specs: ["PoE 최대 1,534W", "최대 12대 스태킹", "M-LAG · 전원 이중화"] },
+      { model: "S7500-24Y4C", image: "https://static.tp-link.com/upload/image-line/S7500-24Y4C_UN_1.20_overview_01_large_20260212054445j.jpg", ports: "24×25G SFP28 + 4×100G QSFP28", specs: ["2Tbps 스위칭", "최대 12대 스태킹", "M-LAG · 전원 이중화"] },
     ],
   },
 ];
@@ -82,7 +82,7 @@ export default function TpLinkCatalog() {
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {tier.models.map((item) => (
               <article key={item.model} className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm">
-                <img src={`/products/network-switch/${item.image}`} alt={`TP-Link ${item.model} 공식 제품 이미지`} className="aspect-square w-full border-b border-slate-100 object-contain p-6" />
+                <img src={item.image.startsWith("http") ? item.image : `/products/network-switch/${item.image}`} alt={`TP-Link ${item.model} 공식 제품 이미지`} className="aspect-square w-full border-b border-slate-100 object-contain p-6" />
                 <div className="p-6">
                   <h4 className="font-display text-2xl font-black text-slate-900">{item.model}</h4>
                   <div className="mt-3 rounded-xl bg-slate-50 px-3 py-3 font-mono text-[11px] font-bold text-navy">{item.ports}</div>

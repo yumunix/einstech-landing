@@ -19,17 +19,17 @@ export const storageProducts = [
   },
   {
     slug: "vsp-5000-series", vendor: "Hitachi Vantara", category: "올플래시 & 하이브리드", name: "Hitachi VSP 5000 Series", image: "hitachi-vsp-5000.jpg", eyebrow: "MISSION-CRITICAL STORAGE",
-    summary: "오픈시스템부터 메인프레임까지 통합하는 대규모 미션크리티컬 엔터프라이즈 스토리지입니다.", intro: "VSP 5000 Series는 최고 수준의 성능과 가용성이 필요한 금융·공공·대기업 핵심 업무를 위한 확장형 플랫폼입니다. 무중단 확장과 Active-Active DR을 중심으로 설계합니다.",
-    highlights: ["최대 3,300만 IOPS의 고성능 아키텍처", "최대 69PB 물리용량 확장", "2·4·6노드 구성과 무중단 업그레이드", "오픈시스템·메인프레임 통합 및 100% 데이터 가용성"],
-    specs: [["제품 모델", "VSP 5100/5100H · 5200/5200H · 5500/5500H · 5600/5600H"], ["노드 구성", "2 · 4 · 6노드"], ["최대 성능", "최대 3,300만 IOPS"], ["최대 물리용량", "최대 69PB"], ["지원 환경", "Open Systems · Mainframe"], ["가용성", "GAD Active-Active · 무중단 확장"]],
-    useCases: ["금융·공공 기간계", "대규모 SAP·Oracle", "메인프레임과 오픈 통합", "광역 Active-Active DR"], source: "https://www.his21.co.kr/his/product/digital_enterprise/storage/hitachi_virtual_storage_platform_5000_series.do"
+    summary: "현재 판매 중인 VSP 5200·5200H·5600·5600H와 기존 모델 유지보수를 함께 제공하는 미션크리티컬 스토리지입니다.", intro: "VSP 5000 Series는 오픈시스템과 메인프레임 핵심 업무를 위한 확장형 플랫폼입니다. 신규 공급은 현재 판매 중인 5200·5200H·5600·5600H를 기준으로 하며, 판매 종료된 5100·5100H·5500·5500H는 유지보수와 후속 제품 전환을 지원합니다.",
+    highlights: ["VSP 5200·5200H·5600·5600H 현재 판매", "5100·5100H·5500·5500H 유지보수", "2·4·6노드 구성과 무중단 업그레이드", "오픈시스템·메인프레임 통합 및 100% 데이터 가용성"],
+    specs: [["현재 판매 모델", "VSP 5200 · 5200H · 5600 · 5600H"], ["유지보수 모델", "VSP 5100 · 5100H · 5500 · 5500H"], ["기존 모델 서비스", "2027-09-30까지"], ["노드 구성", "2 · 4 · 6노드"], ["지원 환경", "Open Systems · Mainframe"], ["가용성", "GAD Active-Active · 무중단 확장"]],
+    useCases: ["금융·공공 기간계", "대규모 SAP·Oracle", "기존 VSP 5000 유지보수", "VSP One Block High End 전환"], source: "https://knowledge.hitachivantara.com/portal/app/portlets/results/viewsolution.jsp?solutionid=242403040002249&view=print"
   },
   {
     slug: "vsp-e-series", vendor: "Hitachi Vantara", category: "올플래시 & 하이브리드", name: "Hitachi VSP E Series", image: "hitachi-vsp-e.jpg", eyebrow: "NVME UNIFIED PLATFORM",
-    summary: "2U 고집적 모델부터 대용량 모델까지 제공하는 NVMe 최적화 통합 스토리지입니다.", intro: "VSP E Series는 레거시 환경부터 클라우드 애플리케이션까지 폭넓은 워크로드에 대응합니다. E590·E790·E1090을 업무 성능과 확장 요구에 맞춰 선정합니다.",
-    highlights: ["최대 840만 IOPS와 최소 41μs 지연", "E590·E790·E1090 혼합 Scale-out", "최대 65노드 확장", "100% 데이터 가용성을 지향하는 VSP 데이터 서비스"],
-    specs: [["제품 모델", "VSP E590 · E790 · E1090"], ["성능", "최대 840만 IOPS"], ["최소 지연", "최소 41μs"], ["확장", "최대 65노드 Scale-out"], ["혼합 구성", "E590 · E790 · E1090 간 지원"], ["미디어", "NVMe SSD 기반 All-Flash / Hybrid 구성"]],
-    useCases: ["중대형 데이터베이스", "프라이빗 클라우드", "VDI·서버 가상화", "통합 SAN과 원격 복제"], source: "https://www.his21.co.kr/his/product/digital_enterprise/all_flash/hitachi_virtual_storage_platform_e_series.do"
+    summary: "현재 판매 중인 E590H·E1090H와 판매 종료 모델의 유지보수를 함께 제공하는 NVMe 최적화 스토리지입니다.", intro: "신규 공급은 현재 판매 중인 VSP E590H와 E1090H Hybrid를 기준으로 합니다. E590/E790 All-Flash와 E790H·E1090 AFA는 판매가 종료됐지만 공식 서비스 기간 동안 유지보수와 최신 제품 전환을 지원합니다.",
+    highlights: ["E590H·E1090H Hybrid 현재 판매", "E590/E790 All-Flash 유지보수", "E790H·E1090 AFA 유지보수", "최대 65노드 확장과 VSP 데이터 서비스"],
+    specs: [["현재 판매 모델", "VSP E590H · E1090H"], ["유지보수 모델", "E590/E790 AFA · E790H · E1090 AFA"], ["E590/E790 AFA 서비스", "2029-12-31까지"], ["E790H/E1090 AFA 서비스", "2031-03-31까지"], ["확장", "최대 65노드 Scale-out"], ["미디어", "현재 판매 모델은 Hybrid 구성"]],
+    useCases: ["E590H·E1090H 신규 구축", "기존 E Series 유지보수", "프라이빗 클라우드", "VSP One 전환 설계"], source: "https://knowledge.hitachivantara.com/portal/app/portlets/results/viewsolution.jsp?solutionid=242403040002249&view=print"
   },
   {
     slug: "vsp-f-series", vendor: "Hitachi Vantara", category: "올플래시 & 하이브리드", name: "Hitachi VSP F Series", image: "hitachi-vsp-f.jpg", eyebrow: "ALL-FLASH STORAGE",
@@ -48,9 +48,9 @@ export const storageProducts = [
   {
     slug: "vsp-one-file", vendor: "Hitachi Vantara", category: "네트워크 스토리지", name: "VSP One File", image: "hitachi-vsp-one-file.webp", eyebrow: "SCALE-OUT FILE STORAGE",
     summary: "클라우드와 컨테이너 환경의 비정형 데이터를 위한 고성능 Scale-out 파일 스토리지입니다.", intro: "VSP One File은 엔터프라이즈 파일 서비스와 AI·분석 데이터 파이프라인을 하나의 네임스페이스로 통합합니다. 노드와 네트워크를 업무 처리량에 맞춰 설계합니다.",
-    highlights: ["VSP One File 32·34·38 모델", "NFS·SMB·iSCSI·FTP 멀티 프로토콜", "10/25/100GbE 고속 네트워크", "모델별 최대 2·4·8노드 확장과 클라우드 연계"],
-    specs: [["제품 모델", "VSP One File 32 · 34 · 38"], ["파일 프로토콜", "NFS v2/v3/v4/v4.1 · SMB2/SMB3"], ["기타 프로토콜", "iSCSI · FTP · S3/클라우드 티어링"], ["네트워크", "File 32: 10GbE · File 34: 10/25GbE · File 38: 10/25/100GbE"], ["확장", "File 32: 2노드 · File 34: 4노드 · File 38: 8노드"]],
-    useCases: ["기업 파일 공유", "AI·분석 데이터", "미디어 콘텐츠", "컨테이너·클라우드 파일 서비스"], source: "https://www.his21.co.kr/his/product/digital_enterprise/storage/vsp_one_file.do"
+    highlights: ["VSP One File 34·38 현재 판매", "File 32 기존 고객 유지보수", "NFS·SMB·iSCSI·FTP 멀티 프로토콜", "10/25/100GbE 고속 네트워크와 클라우드 연계"],
+    specs: [["현재 판매 모델", "VSP One File 34 · 38"], ["유지보수 모델", "VSP One File 32 (서비스 2030-04-29까지)"], ["파일 프로토콜", "NFS v2/v3/v4/v4.1 · SMB2/SMB3"], ["기타 프로토콜", "iSCSI · FTP · S3/클라우드 티어링"], ["네트워크", "File 34: 10/25GbE · File 38: 10/25/100GbE"], ["확장", "File 34: 최대 4노드 · File 38: 최대 8노드"]],
+    useCases: ["기업 파일 공유", "AI·분석 데이터", "File 32 유지보수", "컨테이너·클라우드 파일 서비스"], source: "https://knowledge.hitachivantara.com/portal/app/portlets/results/viewsolution.jsp?solutionid=242403040002249&view=print"
   },
   {
     slug: "vsp-one-object", vendor: "Hitachi Vantara", category: "오브젝트 스토리지", name: "VSP One Object", image: "hitachi-vsp-one-object.webp", eyebrow: "S3-NATIVE OBJECT STORAGE",
@@ -70,10 +70,10 @@ export const storageProducts = [
   },
   {
     slug: "hitachi-nas-platform", vendor: "Hitachi Vantara", category: "네트워크 스토리지", name: "Hitachi NAS Platform", image: "hitachi-nas-platform.jpg", eyebrow: "ENTERPRISE NAS",
-    summary: "분산 파일 워크로드를 위한 하드웨어 가속 기반 고가용성 엔터프라이즈 NAS입니다.", intro: "Hitachi NAS Platform은 파일 서비스의 성능과 연속성이 중요한 데이터센터를 위한 플랫폼입니다. Active-Active 원격 클러스터링과 클라우드 티어링을 결합할 수 있습니다.",
-    highlights: ["NFS·CIFS·iSCSI 멀티 프로토콜", "Active-Active 원격 클러스터링", "100% 데이터 가용성을 지향하는 설계", "WORM과 Cloud Tiering 지원"],
-    specs: [["프로토콜", "NFS · CIFS · iSCSI"], ["클러스터", "Active-Active 원격 구성"], ["파일시스템", "하드웨어 가속"], ["보존", "WORM 지원"], ["클라우드", "Cloud Tiering"]],
-    useCases: ["대규모 파일 서비스", "엔터프라이즈 NAS", "규제 데이터 보존", "하이브리드 클라우드 티어링"], source: "https://www.his21.co.kr/his/product/digital_enterprise/storage/hitachi_nas_platform.do"
+    summary: "판매 종료된 Hitachi NAS Platform 구축 환경을 위한 유지보수 및 전환 지원 항목입니다.", intro: "Hitachi NAS Platform 4060·4080·4100은 판매와 업그레이드가 종료됐으며 공식 서비스는 2026년 12월 31일까지입니다. 현재 운영 중인 환경의 점검, 장애 대응과 VSP One File·Unified 전환을 지원합니다.",
+    highlights: ["HNAS 4060·4080·4100 유지보수", "공식 서비스 2026년 12월 31일까지", "NFS·CIFS·iSCSI 운영 점검", "VSP One File·Unified 전환 설계"],
+    specs: [["유지보수 모델", "HNAS 4060 · 4080 · 4100"], ["판매 종료", "2021-12-06"], ["업그레이드 종료", "2024-12-06"], ["서비스 종료 예정", "2026-12-31"], ["후속 전환", "VSP One File · VSP One Unified"]],
+    useCases: ["기존 HNAS 유지보수", "장애 대응", "데이터 마이그레이션", "후속 NAS 전환"], source: "https://knowledge.hitachivantara.com/portal/app/portlets/results/viewsolution.jsp?solutionid=242403040002249&view=print"
   },
   {
     slug: "h-scaleway-sg5000", vendor: "HIS", category: "네트워크 스토리지", name: "HIS NAS H-Scaleway SG5000", image: "his-nas-sg5000.jpg", eyebrow: "SCALE-OUT NAS",

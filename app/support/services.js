@@ -9,6 +9,13 @@ export const supportServices = [
   {
     slug: "maintenance", code: "MAINTENANCE_SERVICE", name: "유지보수", subtitle: "정기점검과 예방정비로 장애 가능성을 낮춥니다", summary: "구축된 서버·스토리지·SAN·백업·네트워크 환경을 정기적으로 점검하고 펌웨어, 용량, 성능과 장애 징후를 관리합니다.",
     scope: ["정기 상태·로그·하드웨어 이벤트 점검", "용량·성능·가용성 추세 분석", "펌웨어·패치·지원 종료 위험 검토", "장애 이력·예방조치·권고사항 보고"],
+    maintenanceGroups: [
+      { title: "서버", items: ["HPE ProLiant DL·ML·BL 전 세대", "HPE Apollo 고밀도 서버", "HPE Synergy 컴퓨트 모듈", "판매 종료 서버의 부품·장애·OS 연계 지원"] },
+      { title: "스토리지 · SAN", items: ["Hitachi VSP One · VSP 5000 · VSP E/F/G", "Hitachi NAS · HIS NAS", "Infortrend EonStor GS·GSe·DS·CS", "Brocade SAN 스위치와 기존 패브릭"] },
+      { title: "백업 · 보안 · 네트워크", items: ["Acronis · NetBackup 백업", "EINSWALL · DLP · 백신", "TP-Link Omada 네트워크", "방화벽·VPN·백업 복구 점검"] },
+      { title: "업무 · 인프라 솔루션", items: ["ERP · 데이터베이스", "HA Cluster · 재해복구", "온프레미스 AI · 운영 자동화", "판매 상태와 관계없는 구축 솔루션 기술지원"] },
+    ],
+    maintenanceNote: "판매 종료 장비도 아인스테크 유지보수 대상에 포함됩니다. 다만 제조사 지원 종료, 부품 수급과 라이선스 갱신 가능 여부에 따라 대응 범위와 SLA를 사전 확인합니다.",
     process: [["01", "대상 등록", "장비, 계약범위, 서비스 수준과 연락체계를 등록합니다."], ["02", "정기 점검", "체크리스트 기반으로 상태와 위험요소를 확인합니다."], ["03", "예방 조치", "승인된 일정에 패치, 교체와 설정 개선을 수행합니다."], ["04", "결과 보고", "조치 결과, 잔여 위험과 다음 점검 계획을 제공합니다."]],
     prepare: ["유지보수 대상 장비와 시리얼·보증 정보", "현재 구성도와 관리 접속 방식", "최근 장애·변경·성능 이슈", "점검 가능 시간과 담당자 연락처"],
     response: "대상과 요구 SLA를 확인한 뒤 유지보수 범위와 견적을 안내합니다."
