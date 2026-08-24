@@ -7,7 +7,7 @@ const won = new Intl.NumberFormat("ko-KR");
 export default function RackFlagshipConfigurator() {
   const total = einswallPrices.rack.flagshipConfigured;
   const annualMaintenance = Math.ceil((total * 0.15) / 10000) * 10000;
-  const inquiry = encodeURIComponent("EINSWALL RACK FLAGSHIP / LGA1700 플랫폼 / 8GB / 128GB NVMe 구성 견적 문의");
+  const inquiry = encodeURIComponent("EINSWALL RACK FLAGSHIP / LGA1700 플랫폼 / 8GB / 정품 500GB NVMe 구성 견적 문의");
 
   return (
     <div className="grid overflow-hidden rounded-[32px] border border-slate-200 bg-white lg:grid-cols-[1fr_360px] lg:ml-12">
@@ -19,7 +19,7 @@ export default function RackFlagshipConfigurator() {
         <h3 className="font-display text-2xl font-bold text-slate-900">EINSWALL RACK FLAGSHIP</h3>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-500">통신실·서버실의 표준 19형 랙에 장착하는 확장형 2U 방화벽 서버입니다. Intel 12~14세대 LGA1700 플랫폼과 대규모 10G 인터페이스를 기반으로 지사·사무실의 방화벽, VPN 및 회선 이중화 용도에 적합합니다.</p>
         <dl className="mt-7 grid gap-3 sm:grid-cols-2">
-          {[["CPU", "Intel 12~14세대 LGA1700 · CPU 선택"], ["폼팩터", "19형 2U Rackmount"], ["네트워크", "최대 16×RJ45"], ["광 포트", "최대 8×10G SFP+"], ["메모리", "8GB 구성 기준 · 최대 32GB"], ["스토리지", "128GB NVMe 기준 · 최대 512GB"]].map(([label, value]) => (
+          {[["CPU", "Intel 12~14세대 LGA1700 · CPU 선택"], ["폼팩터", "19형 2U Rackmount"], ["네트워크", "최대 16×RJ45"], ["광 포트", "최대 8×10G SFP+"], ["메모리", "8GB 구성 기준 · 최대 32GB"], ["스토리지", "정품 500GB 권장 · 250GB 재고 확인"]].map(([label, value]) => (
             <div key={label} className="rounded-2xl bg-slate-50 px-4 py-3"><dt className="font-mono text-[9px] uppercase tracking-widest text-slate-400">{label}</dt><dd className="mt-1 text-sm font-semibold text-slate-800">{value}</dd></div>
           ))}
         </dl>
@@ -28,7 +28,7 @@ export default function RackFlagshipConfigurator() {
       <aside className="bg-navy p-8 text-white">
         <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/50">Standard Configuration</div>
         <div className="mt-5 space-y-3 border-y border-white/10 py-5 text-sm text-white/75">
-          {["LGA1700 플랫폼", "삼성 8GB 메모리", "삼성 128GB NVMe", "기본 방화벽 OS 설치"].map((item) => <div key={item} className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-emerald" />{item}</div>)}
+          {["LGA1700 플랫폼", "삼성 8GB 메모리", "삼성 980 / SK하이닉스 Gold P31 500GB 정품", "기본 방화벽 OS 설치"].map((item) => <div key={item} className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-emerald" />{item}</div>)}
         </div>
         <div className="mt-6 text-xs text-white/50">예상 공급가 · VAT 별도</div>
         <div className="mt-1 font-display text-3xl font-black">{won.format(total)}원</div>

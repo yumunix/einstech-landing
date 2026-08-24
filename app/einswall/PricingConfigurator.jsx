@@ -42,22 +42,16 @@ const memoryOptions = [
 
 const storageOptions = [
   {
-    id: "128",
-    label: "128GB NVMe",
-    detail: "삼성전자 · 기본 구성",
-    price: einswallPrices.storage["128"],
+    id: "250",
+    label: "250GB NVMe",
+    detail: "삼성 980 정품 · 재고 한정 선택 구성",
+    price: einswallPrices.storage["250"],
   },
   {
-    id: "256",
-    label: "256GB NVMe",
-    detail: "삼성전자",
-    price: einswallPrices.storage["256"],
-  },
-  {
-    id: "512",
-    label: "500/512GB NVMe",
-    detail: "삼성전자 · 최대 구성",
-    price: einswallPrices.storage["512"],
+    id: "500",
+    label: "500GB NVMe",
+    detail: "삼성 980 / SK하이닉스 Gold P31 정품 · 기본 권장 구성",
+    price: einswallPrices.storage["500"],
   },
 ];
 
@@ -112,9 +106,9 @@ function OptionGroup({ label, options, value, onChange }) {
                   {option.detail}
                 </span>
               )}
-              {option.price > 0 && (
+              {option.price !== 0 && (
                 <span className={`block font-mono text-[11px] mt-2 ${active ? "text-emerald-200" : "text-navy"}`}>
-                  +{won.format(option.price)}원
+                  {option.price > 0 ? "+" : "−"}{won.format(Math.abs(option.price))}원
                 </span>
               )}
             </button>
@@ -129,7 +123,7 @@ export default function PricingConfigurator() {
   const [cpu, setCpu] = useState("8505");
   const [sfp, setSfp] = useState("none");
   const [memory, setMemory] = useState("8");
-  const [storage, setStorage] = useState("128");
+  const [storage, setStorage] = useState("500");
   const [modules, setModules] = useState("none");
 
   const availableModuleOptions =
@@ -263,7 +257,9 @@ export default function PricingConfigurator() {
             유료 보안 구독·라이선스, 유지보수비 및 별도 워런티 비용
           </p>
           <p>
-            메모리와 NVMe는 삼성전자 국내 신품의 현재 판매가를 기준으로 산정합니다.
+            메모리는 삼성전자, NVMe는 삼성 980과 SK하이닉스 Gold P31 정품 신품의 현재
+            판매가를 기준으로 산정합니다. 250GB는 정품 판매처가 적어 500GB 권장 구성보다
+            시세가 높을 수 있습니다.
             부품 시세는{" "}
             {pricingPolicy.sourceSummary} 방식으로 확인하며, {pricingPolicy.componentRule}
             합니다. {pricingPolicy.exclusions} 기준입니다.

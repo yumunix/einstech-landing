@@ -11,10 +11,10 @@ export const pricingPolicy = {
   fixedUsdKrw: 1600,
   importTaxRate: 0.18,
   reviewCycle: "매월 1일 검토·갱신",
-  sourceSummary: "삼성전자 국내 신품 · 다나와 가격비교 기준",
+  sourceSummary: "삼성전자·SK하이닉스 정품 신품 · 국내 가격비교 기준",
   componentRule:
-    "삼성전자 메모리와 NVMe의 국내 신품 공급가를 기준으로 산정",
-  exclusions: "중고·해외구매·병행수입·렌탈·품절 상품 제외",
+    "삼성전자 메모리와 삼성 980·SK하이닉스 Gold P31 NVMe 정품 신품의 국내 유통가를 기준으로 산정",
+  exclusions: "OEM 벌크·적출품·중고·해외구매·병행수입·렌탈·품절 상품 제외",
 };
 
 const rackEntryUsd = 366.63;
@@ -24,13 +24,13 @@ const rackFlagshipUsd = 651.9;
 export const einswallPrices = {
   cpu: {
     "8505": roundUp10000(
-      1037000 + market.memory8 + market.storage128 - excludedServiceFees,
+      1037000 + market.memory8 + market.storage500 - excludedServiceFees,
     ),
     i5: roundUp10000(
-      1237000 + market.memory8 + market.storage128 - excludedServiceFees,
+      1237000 + market.memory8 + market.storage500 - excludedServiceFees,
     ),
     i7: roundUp10000(
-      1437000 + market.memory8 + market.storage128 - excludedServiceFees,
+      1437000 + market.memory8 + market.storage500 - excludedServiceFees,
     ),
   },
   network: {
@@ -44,9 +44,8 @@ export const einswallPrices = {
     "32": roundUp10000(market.memory32 - market.memory8),
   },
   storage: {
-    "128": 0,
-    "256": roundUp10000(market.storage256 - market.storage128),
-    "512": roundUp10000(market.storage512 - market.storage128),
+    "250": roundUp10000(market.storage250) - roundUp10000(market.storage500),
+    "500": 0,
   },
   sfpModule: {
     none: 0,
@@ -61,17 +60,17 @@ export const einswallPrices = {
     entryConfigured: roundUp10000(
       rackEntryUsd * pricingPolicy.fixedUsdKrw * (1 + pricingPolicy.importTaxRate) +
         market.memory8 +
-        market.storage128,
+        market.storage500,
     ),
     advancedConfigured: roundUp10000(
       rackAdvancedUsd * pricingPolicy.fixedUsdKrw * (1 + pricingPolicy.importTaxRate) +
         market.memory8 +
-        market.storage128,
+        market.storage500,
     ),
     flagshipConfigured: roundUp10000(
       rackFlagshipUsd * pricingPolicy.fixedUsdKrw * (1 + pricingPolicy.importTaxRate) +
         market.memory8 +
-        market.storage128,
+        market.storage500,
     ),
   },
 };

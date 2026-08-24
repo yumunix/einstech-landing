@@ -57,9 +57,8 @@ const memoryOptions = [
   { id: "32", label: "32GB", detail: "삼성전자 · 최대 구성", price: einswallPrices.memory["32"] },
 ];
 const storageOptions = [
-  { id: "128", label: "128GB NVMe", detail: "삼성전자 · 기본 구성", price: einswallPrices.storage["128"] },
-  { id: "256", label: "256GB NVMe", detail: "삼성전자", price: einswallPrices.storage["256"] },
-  { id: "512", label: "500/512GB NVMe", detail: "삼성전자 · 최대 구성", price: einswallPrices.storage["512"] },
+  { id: "250", label: "250GB NVMe", detail: "삼성 980 정품 · 재고 한정 선택 구성", price: einswallPrices.storage["250"] },
+  { id: "500", label: "500GB NVMe", detail: "삼성 980 / SK하이닉스 Gold P31 정품 · 기본 권장 구성", price: einswallPrices.storage["500"] },
 ];
 const moduleOptions = [
   { id: "none", label: "모듈 미포함", detail: "보유 모듈 사용", price: 0 },
@@ -79,7 +78,7 @@ function OptionGroup({ label, options, value, onChange }) {
               {option.image && <img src={option.image} alt="" className="mb-3 aspect-[4/3] w-full rounded-xl object-cover" />}
               <span className="block font-display text-sm font-bold">{option.label}</span>
               <span className={`mt-1 block text-[11px] ${active ? "text-white/65" : "text-slate-400"}`}>{option.detail}</span>
-              {option.price > 0 && <span className={`mt-2 block font-mono text-[11px] ${active ? "text-emerald-200" : "text-navy"}`}>+{won.format(option.price)}원</span>}
+              {option.price !== 0 && <span className={`mt-2 block font-mono text-[11px] ${active ? "text-emerald-200" : "text-navy"}`}>{option.price > 0 ? "+" : "−"}{won.format(Math.abs(option.price))}원</span>}
             </button>
           );
         })}
@@ -92,7 +91,7 @@ export default function RackPricingConfigurator({ familyId }) {
   const family = families[familyId];
   const [cpu, setCpu] = useState(family.cpus[0].id);
   const [memory, setMemory] = useState("8");
-  const [storage, setStorage] = useState("128");
+  const [storage, setStorage] = useState("500");
   const [modules, setModules] = useState("none");
   useEffect(() => {
     const selectModel = (event) => {

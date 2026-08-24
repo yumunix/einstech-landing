@@ -267,7 +267,7 @@ export default function BusinessPackageConfigurator() {
             별도 계산합니다.
           </div>
           <div>
-            자재비와 인건비는 장비 구독·분할 대상에 포함하지 않으며 계약 시 별도
+            자재비와 인건비는 장비 구독 대상에 포함하지 않으며 계약 시 별도
             일시불로 납부합니다.
           </div>
         </div>
