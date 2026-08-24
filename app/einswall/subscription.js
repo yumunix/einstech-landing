@@ -1,4 +1,5 @@
 const roundUp1000 = (value) => Math.ceil(value / 1000) * 1000;
+const roundUp10000 = (value) => Math.ceil(value / 10000) * 10000;
 
 export const subscriptionPlans = [
   {
@@ -23,6 +24,12 @@ export const subscriptionPlans = [
 
 export const defaultSubscriptionMonths = 36;
 
+export const installmentDownPaymentRates = [20, 30, 40, 50];
+export const installmentTerms = [12, 24, 36];
+export const defaultInstallmentDownPaymentRate = 30;
+export const defaultInstallmentMonths = 36;
+export const installmentAnnualRate = 0.06;
+
 export function calculateSubscription(cashPrice, months = defaultSubscriptionMonths) {
   const plan = subscriptionPlans.find((item) => item.months === months) ?? subscriptionPlans[0];
   const monthly = roundUp1000((cashPrice * plan.multiplier) / plan.months);
@@ -38,3 +45,35 @@ export function calculateSubscription(cashPrice, months = defaultSubscriptionMon
   };
 }
 
+export function calculateInstallment(
+  cashPrice,
+  downPaymentRate = defaultInstallmentDownPaymentRate,
+  months = defaultInstallmentMonths,
+) {
+  const normalizedRate = installmentDownPaymentRates.includes(downPaymentRate)
+    ? downPaymentRate
+    : defaultInstallmentDownPaymentRate;
+  const normalizedMonths = installmentTerms.includes(months)
+    ? months
+    : defaultInstallmentMonths;
+  const downPayment = roundUp10000(cashPrice * (normalizedRate / 100));
+  const financedPrincipal = cashPrice - downPayment;
+  const financeCharge = roundUp1000(
+    financedPrincipal * installmentAnnualRate * (normalizedMonths / 12),
+  );
+  const monthly = roundUp1000(
+    (financedPrincipal + financeCharge) / normalizedMonths,
+  );
+  const installmentTotal = monthly * normalizedMonths;
+
+  return {
+    downPaymentRate: normalizedRate,
+    months: normalizedMonths,
+    downPayment,
+    financedPrincipal,
+    financeCharge,
+    monthly,
+    installmentTotal,
+    contractTotal: downPayment + installmentTotal,
+  };
+}

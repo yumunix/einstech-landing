@@ -8,6 +8,7 @@ import { TPLINK_STORE_URL } from "@/data/storeLinks";
 import PricingConfigurator from "./PricingConfigurator";
 import RackPricingConfigurator from "./RackPricingConfigurator";
 import ProductFamilyLineup from "./ProductFamilyLineup";
+import BusinessPackageConfigurator from "./BusinessPackageConfigurator";
 import { einswallMetadata, einswallStructuredData } from "./seo";
 
 export const metadata = einswallMetadata;
@@ -150,7 +151,7 @@ export default function EinswallPage() {
                 <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl border-l-2 border-navy/30 pl-5 mb-12">
                   EINSWALL Firewall은 업무망·서버망·게스트망·CCTV망 사이의 접근 정책과 인터넷 경계를 통합 보호합니다. 경제적인 1G 운용형부터 10G SFP+
                   고급형까지 필요한 사양을 선택할 수 있으며, 일시불 구매와 3·4·5년
-                  구독형 중에서 선택할 수 있습니다.
+                  만기 소유형 구독, 선납금 20~50% 분할 구매 중에서 선택할 수 있습니다.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">
@@ -245,13 +246,32 @@ export default function EinswallPage() {
           </div>
         </section>
 
+        {/* BUSINESS PACKAGES */}
+        <section id="business-packages" className="relative py-24 lg:py-32">
+          <div className="relative z-10 mx-auto w-full max-w-page px-6 lg:px-12">
+            <SectionHeader
+              badgeText="FACTORY_SMB_PACKAGE"
+              badgeColor="acid"
+              sectionLabel="3. Package — 공장·중소기업 인원별 네트워크 패키지"
+            >
+              <h2 className="max-w-4xl font-display text-[clamp(2rem,4vw,4rem)] font-bold leading-[1.1] tracking-tight text-slate-900">
+                인원수에 맞춰 방화벽과
+                <br />
+                <span className="text-emerald">관리형 스위치를 함께 구성하세요.</span>
+              </h2>
+            </SectionHeader>
+
+            <BusinessPackageConfigurator />
+          </div>
+        </section>
+
         {/* PRICE CONFIGURATOR */}
         <section id="pricing" className="py-24 lg:py-32 relative">
           <div className="w-full max-w-page mx-auto px-6 lg:px-12 relative z-10">
             <SectionHeader
               badgeText="CONFIGURE_PRICE"
               badgeColor="cyan"
-              sectionLabel="3. Configure — 일시불·구독형 예상 가격"
+              sectionLabel="4. Configure — 일시불·구독형·분할 구매 예상 가격"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] max-w-4xl">
                 필요한 사양을 선택하고
@@ -276,7 +296,7 @@ export default function EinswallPage() {
             <SectionHeader
               badgeText="GATEWAY_FEATURES"
               badgeColor="cyan"
-              sectionLabel="4. Features — 게이트웨이 기능"
+              sectionLabel="5. Features — 게이트웨이 기능"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] max-w-4xl">
                 방화벽 그 이상의
@@ -322,8 +342,8 @@ export default function EinswallPage() {
 
               <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed max-w-2xl mx-auto mb-12 relative z-10">
                 CPU·SFP+ 포트·메모리·스토리지 구성과 설치 환경에 따라 가격이
-                책정됩니다. 일시불 구매 또는 3·4·5년 만기 인수형 구독을 선택할 수
-                있으며, 문의 주시면 모델별 최종 견적을 안내해 드립니다.
+                책정됩니다. 구독기간 납부 완료 후 장비는 반납 없이 고객 소유가 됩니다.
+                현장 네트워크 공사와 정책 설정 비용은 장비 구매금액과 별도입니다.
               </p>
 
               <div className="w-full max-w-2xl mx-auto relative z-10 flex flex-col items-center mb-8">

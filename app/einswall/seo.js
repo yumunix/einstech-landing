@@ -4,7 +4,7 @@ export const einswallMetadata = createPageMetadata({
   path: "/einswall",
   title: "EINSWALL Enterprise Firewall",
   description:
-    "EINSWALL 미니PC·1U·2U 방화벽 서버를 구성하고 일시불 구매와 3·4·5년 구독형 예상 가격을 비교합니다.",
+    "공장·중소기업 인원수에 맞춰 EINSWALL 방화벽과 Omada 관리형 스위치를 구성하고 일시불·구독·분할 구매 가격을 비교합니다.",
   keywords: [
     "EINSWALL",
     "방화벽 서버",
@@ -18,6 +18,9 @@ export const einswallMetadata = createPageMetadata({
     "VPN 게이트웨이",
     "구독형 방화벽",
     "방화벽 렌탈",
+    "방화벽 분할 구매",
+    "중소기업 네트워크 패키지",
+    "공장 네트워크 구축",
   ],
   image: "/products/e-gate/rack-advanced-i7.webp",
 });
