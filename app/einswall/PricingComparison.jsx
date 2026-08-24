@@ -148,7 +148,7 @@ export default function PricingComparison({ cashPrice }) {
             <div className="mb-2 text-[10px] font-bold uppercase tracking-wider text-white/45">
               선납금 선택
             </div>
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-3 gap-2">
               {installmentDownPaymentRates.map((rate) => {
                 const active = downPaymentRate === rate;
                 return (

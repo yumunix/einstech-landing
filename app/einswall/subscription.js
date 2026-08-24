@@ -25,7 +25,7 @@ export const subscriptionPlans = [
 
 export const defaultSubscriptionMonths = 36;
 
-export const installmentDownPaymentRates = [20, 30, 40, 50];
+export const installmentDownPaymentRates = [30, 40, 50];
 export const installmentTerms = [12, 24, 36];
 export const defaultInstallmentDownPaymentRate = 30;
 export const defaultInstallmentMonths = 36;
