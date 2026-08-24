@@ -28,7 +28,6 @@ export const installmentDownPaymentRates = [20, 30, 40, 50];
 export const installmentTerms = [12, 24, 36];
 export const defaultInstallmentDownPaymentRate = 30;
 export const defaultInstallmentMonths = 36;
-export const installmentAnnualRate = 0.06;
 
 export function calculateSubscription(cashPrice, months = defaultSubscriptionMonths) {
   const plan = subscriptionPlans.find((item) => item.months === months) ?? subscriptionPlans[0];
@@ -58,22 +57,18 @@ export function calculateInstallment(
     : defaultInstallmentMonths;
   const downPayment = roundUp10000(cashPrice * (normalizedRate / 100));
   const financedPrincipal = cashPrice - downPayment;
-  const financeCharge = roundUp1000(
-    financedPrincipal * installmentAnnualRate * (normalizedMonths / 12),
-  );
-  const monthly = roundUp1000(
-    (financedPrincipal + financeCharge) / normalizedMonths,
-  );
-  const installmentTotal = monthly * normalizedMonths;
+  const monthly = Math.ceil(financedPrincipal / normalizedMonths);
+  const finalPayment = financedPrincipal - monthly * (normalizedMonths - 1);
+  const installmentTotal = financedPrincipal;
 
   return {
     downPaymentRate: normalizedRate,
     months: normalizedMonths,
     downPayment,
     financedPrincipal,
-    financeCharge,
     monthly,
+    finalPayment,
     installmentTotal,
-    contractTotal: downPayment + installmentTotal,
+    contractTotal: cashPrice,
   };
 }

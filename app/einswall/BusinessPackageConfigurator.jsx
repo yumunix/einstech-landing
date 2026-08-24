@@ -250,9 +250,25 @@ export default function BusinessPackageConfigurator() {
           </div>
         </div>
 
-        <div className="mt-4 rounded-2xl border border-amber-300/20 bg-amber-300/10 p-4 text-[10px] leading-relaxed text-amber-100">
-          네트워크 공사비 별도: 현장 실사, UTP·광 배선, 랙 설치, VLAN·방화벽 정책,
-          CCTV 설치·각도 조정, 출장비는 장비 합계에 포함하지 않습니다.
+        <div className="mt-4 space-y-3 rounded-2xl border border-amber-300/20 bg-amber-300/10 p-4 text-[10px] leading-relaxed text-amber-100">
+          <div>
+            <strong className="text-white">장비 가격만 표시</strong> · 위 합계에는 방화벽,
+            관리형 스위치, 선택한 CCTV 카메라와 NVR/HDD 장비만 포함합니다.
+          </div>
+          <div>
+            <strong className="text-white">공사 자재비 별도</strong> · UTP·광케이블,
+            커넥터, 광모듈, 패치패널, 랙, 케이블 덕트 등은 현장에 필요한 수량을 확인해
+            별도 계산합니다.
+          </div>
+          <div>
+            <strong className="text-white">설치 인건비 별도</strong> · 배선 공사, 장비·랙
+            설치, VLAN·방화벽 정책 설정, CCTV 설치·각도 조정과 출장비는 현장 실사 후
+            별도 계산합니다.
+          </div>
+          <div>
+            자재비와 인건비는 장비 구독·분할 대상에 포함하지 않으며 계약 시 별도
+            일시불로 납부합니다.
+          </div>
         </div>
 
         <PricingComparison cashPrice={bundle.total} />

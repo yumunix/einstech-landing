@@ -7,7 +7,6 @@ import {
   defaultInstallmentDownPaymentRate,
   defaultInstallmentMonths,
   defaultSubscriptionMonths,
-  installmentAnnualRate,
   installmentDownPaymentRates,
   installmentTerms,
   subscriptionPlans,
@@ -205,17 +204,17 @@ export default function PricingComparison({ cashPrice }) {
             <div className="flex items-center justify-between gap-4">
               <dt className="text-white/50">월 분할 납부액</dt>
               <dd className="font-bold text-emerald-200">
-                {won.format(installment.monthly)}원 × {installment.months}개월
+                {won.format(installment.monthly)}원 × {installment.months - 1}개월
               </dd>
             </div>
             <div className="flex items-center justify-between gap-4">
-              <dt className="text-white/50">예상 분할 수수료</dt>
+              <dt className="text-white/50">마지막 회차</dt>
               <dd className="font-bold text-white">
-                {won.format(installment.financeCharge)}원
+                {won.format(installment.finalPayment)}원
               </dd>
             </div>
             <div className="flex items-center justify-between gap-4">
-              <dt className="text-white/50">총 납부액</dt>
+              <dt className="text-white/50">장비 총 납부액</dt>
               <dd className="font-bold text-white">
                 {won.format(installment.contractTotal)}원
               </dd>
@@ -223,17 +222,19 @@ export default function PricingComparison({ cashPrice }) {
           </dl>
 
           <p className="text-[10px] leading-relaxed text-white/45">
-            제품 구매가의 {downPaymentRate}%를 먼저 납부하고 나머지 금액을 연
-            {(installmentAnnualRate * 100).toFixed(0)}% 단리 기준으로 분할 납부하는
-            예상 금액입니다. 최종 납부 완료 후 장비는 고객 소유가 되며 반납하지
-            않습니다. 중도상환 조건은 최종 계약서를 따릅니다.
+            제품 구매가의 {downPaymentRate}%를 먼저 납부하고 나머지 장비 대금을
+            선택한 기간으로 나눠 납부하는 예상 금액입니다. 최종 납부 완료 후 장비는
+            고객 소유가 되며 반납하지 않습니다. 이자는 월 납부액과 장비 총액에
+            포함하지 않으며, 매년 잔여 원금과 해당 연도 계약조건을 기준으로 별도
+            산정합니다. 중도상환 조건은 최종 계약서를 따릅니다.
           </p>
         </div>
       )}
 
       <p className="text-[10px] leading-relaxed text-white/45">
-        모든 가격은 VAT 별도입니다. 현장 출동, 정책 설계·변경, 배선, HA, 유료 보안
-        라이선스는 별도이며 최종 조건은 견적서와 계약서를 따릅니다.
+        위 계산은 장비 가격만 포함하며 VAT 별도입니다. 케이블·광모듈·랙·패치패널 등
+        공사 자재비와 배선·장비 설치·정책 설정 등 인건비는 포함하지 않습니다. 자재비와
+        인건비는 현장 실사 후 각각 별도 계산하며 계약 시 일시불로 납부합니다.
       </p>
     </div>
   );

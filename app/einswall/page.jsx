@@ -343,7 +343,8 @@ export default function EinswallPage() {
               <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed max-w-2xl mx-auto mb-12 relative z-10">
                 CPU·SFP+ 포트·메모리·스토리지 구성과 설치 환경에 따라 가격이
                 책정됩니다. 구독기간 납부 완료 후 장비는 반납 없이 고객 소유가 됩니다.
-                현장 네트워크 공사와 정책 설정 비용은 장비 구매금액과 별도입니다.
+                화면에는 장비 가격만 표시합니다. 공사 자재비와 설치 인건비는 현장
+                실사 후 각각 별도 계산해 계약 시 일시불로 납부합니다.
               </p>
 
               <div className="w-full max-w-2xl mx-auto relative z-10 flex flex-col items-center mb-8">
