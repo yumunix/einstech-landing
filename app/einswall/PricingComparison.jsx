@@ -42,7 +42,7 @@ export default function PricingComparison({ cashPrice }) {
         <div className="mb-2 text-[10px] font-bold uppercase tracking-wider text-white/45">
           결제 방식 선택
         </div>
-        <div className="grid grid-cols-3 gap-2 rounded-2xl bg-white/5 p-1.5">
+        <div className="grid grid-cols-1 gap-2 rounded-2xl bg-white/5 p-1.5">
           {paymentModes.map((mode) => {
             const active = paymentMode === mode.id;
             return (
@@ -51,14 +51,14 @@ export default function PricingComparison({ cashPrice }) {
                 type="button"
                 onClick={() => setPaymentMode(mode.id)}
                 aria-pressed={active}
-                className={`flex min-h-[88px] flex-col items-center justify-center rounded-xl border px-2 py-3 text-center transition-colors ${
+                className={`flex min-h-[58px] w-full items-center justify-between gap-4 rounded-xl border px-4 py-3 text-left transition-colors ${
                   active
-                    ? "border-emerald bg-emerald text-white"
-                    : "border-white/10 bg-white/5 text-white/65 hover:border-white/35 hover:text-white"
+                    ? "border-emerald bg-navy text-white"
+                    : "border-slate-300 bg-slate-100 text-slate-950 hover:border-navy hover:bg-white hover:text-slate-950"
                 }`}
               >
-                <span className="block text-xs font-bold leading-tight">{mode.label}</span>
-                <span className="mt-2 block whitespace-nowrap font-display text-[13px] font-black leading-tight sm:text-sm">
+                <span className="block text-sm font-bold leading-tight">{mode.label}</span>
+                <span className="block whitespace-nowrap text-right font-display text-base font-black leading-tight">
                   {mode.amount}
                 </span>
               </button>
