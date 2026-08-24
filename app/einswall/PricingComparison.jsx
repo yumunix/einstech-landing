@@ -51,14 +51,14 @@ export default function PricingComparison({ cashPrice }) {
                 type="button"
                 onClick={() => setPaymentMode(mode.id)}
                 aria-pressed={active}
-                className={`rounded-xl border px-2 py-3 text-left transition-colors ${
+                className={`flex min-h-[88px] flex-col items-center justify-center rounded-xl border px-2 py-3 text-center transition-colors ${
                   active
                     ? "border-emerald bg-emerald text-white"
                     : "border-white/10 bg-white/5 text-white/65 hover:border-white/35 hover:text-white"
                 }`}
               >
-                <span className="block text-[10px] font-bold">{mode.label}</span>
-                <span className="mt-1 block font-display text-xs font-black sm:text-sm">
+                <span className="block text-xs font-bold leading-tight">{mode.label}</span>
+                <span className="mt-2 block whitespace-nowrap font-display text-[13px] font-black leading-tight sm:text-sm">
                   {mode.amount}
                 </span>
               </button>

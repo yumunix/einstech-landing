@@ -63,16 +63,61 @@ body.einstech-white-body :where(a) {
 }
 .einstech-white :where(button),
 body.einstech-white-body :where(button) {
-  background: transparent;
-  border: 0;
   font-family: inherit;
   text-transform: none;
-  box-shadow: none;
 }
-.einstech-white :where(button):hover,
-body.einstech-white-body :where(button):hover {
-  background: transparent;
-  box-shadow: none;
+
+/* Public-site readability floor: captions stay compact, but never tiny. */
+body.einstech-white-body [class~="text-[9px]"],
+body.einstech-white-body [class~="text-[10px]"],
+body.einstech-white-body [class~="text-[11px]"] {
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important;
+}
+
+body.einstech-white-body p[class~="text-[9px]"],
+body.einstech-white-body p[class~="text-[10px]"],
+body.einstech-white-body p[class~="text-[11px]"],
+body.einstech-white-body p[class~="text-xs"] {
+  font-size: 0.875rem !important;
+  line-height: 1.625 !important;
+}
+
+body.einstech-white-body :is(.text-slate-400, .text-slate-500, .text-slate-600) {
+  color: #334155 !important;
+}
+
+body.einstech-white-body [class~="bg-navy"] [class*="text-white/"],
+body.einstech-white-body [class~="bg-slate-950"] [class*="text-white/"],
+body.einstech-white-body [class~="bg-slate-900"] [class*="text-white/"],
+body.einstech-white-body [class~="bg-black"] [class*="text-white/"] {
+  color: #ffffff !important;
+}
+
+/* Interactive contrast must remain readable before and during hover/focus. */
+body.einstech-white-body :is(a, button)[class~="bg-white"],
+body.einstech-white-body :is(a, button)[class~="bg-white"] *,
+body.einstech-white-body :is(a, button)[class~="hover:bg-white"]:hover,
+body.einstech-white-body :is(a, button)[class~="hover:bg-white"]:hover * {
+  color: #0f172a !important;
+}
+
+body.einstech-white-body :is(a, button)[class~="bg-navy"],
+body.einstech-white-body :is(a, button)[class~="bg-navy"] *,
+body.einstech-white-body :is(a, button)[class~="bg-slate-950"],
+body.einstech-white-body :is(a, button)[class~="bg-slate-950"] *,
+body.einstech-white-body :is(a, button)[class~="hover:bg-navy"]:hover,
+body.einstech-white-body :is(a, button)[class~="hover:bg-navy"]:hover *,
+body.einstech-white-body :is(a, button)[class~="hover:bg-slate-950"]:hover,
+body.einstech-white-body :is(a, button)[class~="hover:bg-slate-950"]:hover * {
+  color: #ffffff !important;
+}
+
+body.einstech-white-body :is(a, button)[class~="bg-emerald"],
+body.einstech-white-body :is(a, button)[class~="bg-emerald"] *,
+body.einstech-white-body :is(a, button)[class~="hover:bg-emerald"]:hover,
+body.einstech-white-body :is(a, button)[class~="hover:bg-emerald"]:hover * {
+  color: #020617 !important;
 }
 
 .einstech-white {
@@ -144,9 +189,7 @@ body.einstech-white-body :where(button):hover {
   background: linear-gradient(to bottom, #0A3D62, transparent);
 }
 
-/* EINSWALL configurators: keep selected and unselected choices readable.
-   The white-theme button reset above intentionally clears legacy styles,
-   so interactive option buttons need an explicit high-contrast state. */
+/* High-contrast selected controls across the public site. */
 body.einstech-white-body button[aria-pressed="false"] {
   background: #ffffff !important;
   border: 1px solid #cbd5e1 !important;

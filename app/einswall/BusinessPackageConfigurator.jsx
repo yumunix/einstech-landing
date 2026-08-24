@@ -12,26 +12,26 @@ const switchUnitPrice = Math.ceil(
 ) * 10000;
 const cctvCameraUnitPrice = 70000;
 const cctvRecorderPackPrice = 300000;
-const packageSizes = [15, 30, 50, 100];
+const packageSizes = [20, 40, 60, 100];
 const cctvOptions = [0, 4, 8, 16, 24];
-const defaultCctvByUsers = { 15: 4, 30: 8, 50: 16, 100: 24 };
+const defaultCctvByUsers = { 20: 4, 40: 8, 60: 12, 100: 20 };
 
 function selectFirewall(users) {
-  if (users <= 15) {
+  if (users <= 20) {
     return {
       name: "EINSWALL i5-1G",
       detail: "Core i5 · 4×2.5GbE",
       price: einswallPrices.cpu.i5,
     };
   }
-  if (users <= 30) {
+  if (users <= 40) {
     return {
       name: "EINSWALL i5-10G2",
       detail: "Core i5 · 2×10G SFP+",
       price: einswallPrices.cpu.i5 + einswallPrices.network["2s"],
     };
   }
-  if (users <= 50) {
+  if (users <= 60) {
     return {
       name: "EINSWALL i7-10G2",
       detail: "Core i7 · 2×10G SFP+",
@@ -47,8 +47,8 @@ function selectFirewall(users) {
 
 function buildPackage(users, cctvCount = defaultCctvByUsers[users] ?? 0) {
   const userPorts = users;
-  const infrastructurePorts = 3;
-  const requiredPorts = userPorts + cctvCount + infrastructurePorts;
+  const infrastructurePorts = 4;
+  const requiredPorts = userPorts + cctvCount;
   const switchCount = Math.ceil(requiredPorts / 24);
   const totalSwitchPorts = switchCount * 24;
   const firewall = selectFirewall(users);
@@ -78,8 +78,8 @@ function buildPackage(users, cctvCount = defaultCctvByUsers[users] ?? 0) {
 }
 
 export default function BusinessPackageConfigurator() {
-  const [users, setUsers] = useState(15);
-  const [cctvCount, setCctvCount] = useState(defaultCctvByUsers[15]);
+  const [users, setUsers] = useState(20);
+  const [cctvCount, setCctvCount] = useState(defaultCctvByUsers[20]);
   const bundle = useMemo(() => buildPackage(users, cctvCount), [users, cctvCount]);
   const inquiry = encodeURIComponent(
     `${users}명/CCTV ${cctvCount}대 기준 EINSWALL + SG2428P ${bundle.switchCount}대 장비 견적 문의`,
@@ -96,7 +96,8 @@ export default function BusinessPackageConfigurator() {
             사업장 인원 기준 패키지
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-slate-600">
-            임직원 PC 외에 서버·무선 AP·CCTV·설비망과 향후 증설 포트를 함께 계산합니다.
+            SG2428P 1대당 임직원 20명과 CCTV 4대를 기본으로 계산하며,
+            서버·무선 AP·방화벽은 SFP 업링크와 현장 구성을 함께 검토합니다.
           </p>
         </div>
 
@@ -210,11 +211,11 @@ export default function BusinessPackageConfigurator() {
         </div>
 
         <dl className="grid gap-3 rounded-2xl border border-slate-200 bg-white p-5 text-xs sm:grid-cols-2">
-          <div className="flex justify-between gap-3"><dt className="text-slate-600">임직원용 포트</dt><dd className="font-bold text-slate-900">{bundle.userPorts}포트</dd></div>
-          <div className="flex justify-between gap-3"><dt className="text-slate-600">선택한 CCTV</dt><dd className="font-bold text-slate-900">{bundle.cctvCount}포트</dd></div>
-          <div className="flex justify-between gap-3"><dt className="text-slate-600">방화벽·서버·AP 기본</dt><dd className="font-bold text-slate-900">{bundle.infrastructurePorts}포트</dd></div>
-          <div className="flex justify-between gap-3"><dt className="text-slate-600">총 필요 포트</dt><dd className="font-bold text-slate-900">{bundle.requiredPorts}포트</dd></div>
-          <div className="flex justify-between gap-3"><dt className="text-slate-600">구성 후 예비 포트</dt><dd className="font-bold text-emerald-700">{bundle.sparePorts}포트</dd></div>
+          <div className="flex justify-between gap-3"><dt className="text-slate-600">임직원용 RJ45</dt><dd className="font-bold text-slate-900">{bundle.userPorts}포트</dd></div>
+          <div className="flex justify-between gap-3"><dt className="text-slate-600">선택한 CCTV RJ45</dt><dd className="font-bold text-slate-900">{bundle.cctvCount}포트</dd></div>
+          <div className="flex justify-between gap-3"><dt className="text-slate-600">총 필요 RJ45</dt><dd className="font-bold text-slate-900">{bundle.requiredPorts}포트</dd></div>
+          <div className="flex justify-between gap-3"><dt className="text-slate-600">구성 후 예비 RJ45</dt><dd className="font-bold text-emerald-700">{bundle.sparePorts}포트</dd></div>
+          <div className="flex justify-between gap-3 sm:col-span-2"><dt className="text-slate-600">스위치당 SFP 업링크</dt><dd className="font-bold text-slate-900">{bundle.infrastructurePorts}포트</dd></div>
         </dl>
 
         <p className="text-[10px] leading-relaxed text-slate-500">

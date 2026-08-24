@@ -234,13 +234,14 @@ export default function PricingConfigurator() {
             Optional Support
           </div>
           <div className="mt-2 flex items-end justify-between gap-3">
-            <span className="text-xs text-white/70">연간 장애 대응 유지보수</span>
+            <span className="text-xs text-white/70">1년 원격 장애 기술지원(선택)</span>
             <strong className="font-display text-base text-emerald-200">
               {won.format(annualMaintenance)}원
             </strong>
           </div>
-          <p className="mt-2 text-[10px] leading-relaxed text-white/45">
-            선택 제품가의 15% · 장애 발생 시 기술지원 · 출장비 별도
+          <p className="mt-2 text-sm leading-relaxed text-white/70">
+            선택 제품가의 15% · 장애 접수·원격 점검·원인 분석·복구 안내 ·
+            부품·출장·현장 작업 별도 · 지원 시간과 SLA는 계약 시 확정
           </p>
         </div>
 

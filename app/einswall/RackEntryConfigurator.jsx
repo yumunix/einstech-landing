@@ -33,7 +33,7 @@ export default function RackEntryConfigurator() {
         <div className="mt-6 text-xs text-white/50">예상 공급가 · VAT 별도</div>
         <div className="mt-1 font-display text-3xl font-black">{won.format(total)}원</div>
         <div className="mt-2 font-mono text-[10px] leading-relaxed text-white/40">원제품 US$366.63 · 고정환율 {won.format(pricingPolicy.fixedUsdKrw)}원 · 수입비용 {(pricingPolicy.importTaxRate * 100).toFixed(0)}% · 만원 단위 올림<br />가격 기준 {pricingPolicy.effectiveMonth}</div>
-        <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4"><div className="text-[10px] uppercase tracking-wider text-white/45">Optional Support</div><div className="mt-2 flex items-end justify-between gap-3"><span className="text-xs text-white/70">연간 장애 대응</span><strong className="text-emerald-200">{won.format(annualMaintenance)}원</strong></div></div>
+        <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4"><div className="text-[10px] uppercase tracking-wider text-white/45">Optional Support</div><div className="mt-2 flex items-end justify-between gap-3"><span className="text-xs text-white/70">1년 원격 장애 기술지원(선택)</span><strong className="text-emerald-200">{won.format(annualMaintenance)}원</strong></div><p className="mt-2 text-sm leading-relaxed text-white/70">장애 접수·원격 점검·원인 분석·복구 안내 · 부품·출장·현장 작업 별도 · 지원 시간·SLA는 계약 시 확정</p></div>
         <p className="mt-5 text-[10px] leading-relaxed text-white/45">VAT, 출장·현장 설치, 배선, 네트워크 구성, 보안 정책 설정, 랙·UPS, HA 이중화 및 유료 보안 구독은 별도입니다.</p>
         <a href={`/contact?subject=${inquiry}`} className="mt-6 block rounded-2xl bg-emerald px-5 py-4 text-center font-bold text-white transition-colors hover:bg-white hover:text-navy">랙형 보급형 견적 문의</a>
       </aside>

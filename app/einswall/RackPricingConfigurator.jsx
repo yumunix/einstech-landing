@@ -136,7 +136,10 @@ export default function RackPricingConfigurator({ familyId }) {
           <div className="mt-2 font-mono text-[9px] leading-relaxed text-white/35">원제품 {family.source} · 고정환율 {won.format(pricingPolicy.fixedUsdKrw)}원 · 수입비용 {(pricingPolicy.importTaxRate * 100).toFixed(0)}%<br />가격 기준 {pricingPolicy.effectiveMonth}</div>
           <PricingComparison cashPrice={total} />
           <div className="mt-5 rounded-xl bg-white/5 p-3 text-xs"><span className="text-white/50">권장 규모</span><strong className="float-right text-emerald-200">{selected.cpu.users}</strong></div>
-          <div className="mt-3 rounded-xl bg-white/5 p-3 text-xs"><span className="text-white/50">연간 장애 대응</span><strong className="float-right text-emerald-200">{won.format(maintenance)}원</strong></div>
+          <div className="mt-3 rounded-xl bg-white/5 p-3 text-xs">
+            <div><span className="text-white/70">1년 원격 장애 기술지원(선택)</span><strong className="float-right text-emerald-200">{won.format(maintenance)}원</strong></div>
+            <p className="mt-2 clear-both text-sm leading-relaxed text-white/70">장애 접수·원격 점검·원인 분석·복구 안내 · 부품·출장·현장 작업 별도 · 지원 시간·SLA는 계약 시 확정</p>
+          </div>
           <a href={`/contact?subject=${inquiry}`} className="mt-5 block rounded-xl bg-emerald px-4 py-3.5 text-center text-sm font-bold transition-colors hover:bg-white hover:text-navy">이 구성으로 견적 문의</a>
         </aside>
       </div>
