@@ -7,7 +7,7 @@ const won = new Intl.NumberFormat("ko-KR");
 export default function RackAdvancedConfigurator() {
   const total = einswallPrices.rack.advancedConfigured;
   const annualMaintenance = Math.ceil((total * 0.15) / 10000) * 10000;
-  const inquiry = encodeURIComponent("EINSWALL RACK ADVANCED / Intel Core i5-13400 / 16GB / 500·512GB NVMe 구성 견적 문의");
+  const inquiry = encodeURIComponent("EINSWALL RACK ADVANCED / Intel Core i5-13400 / 8GB / 128GB NVMe 구성 견적 문의");
 
   return (
     <div className="grid overflow-hidden rounded-[32px] border border-slate-200 bg-white lg:grid-cols-[1fr_360px] lg:ml-12">
@@ -19,7 +19,7 @@ export default function RackAdvancedConfigurator() {
         <h3 className="font-display text-2xl font-bold text-slate-900">EINSWALL RACK ADVANCED</h3>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-500">통신실·서버실의 표준 19형 랙에 장착하는 고성능 방화벽 서버입니다. Intel Core i5-13400과 2.5G·10G 인터페이스를 기반으로 지사·사무실의 방화벽, VPN 및 회선 이중화 용도에 적합합니다.</p>
         <dl className="mt-7 grid gap-3 sm:grid-cols-2">
-          {[["CPU", "Intel Core i5-13400 · 10코어"], ["폼팩터", "19형 1U Rackmount"], ["네트워크", "8×2.5GbE"], ["광 포트", "4×10G SFP+"], ["메모리", "16GB 구성 기준"], ["스토리지", "500/512GB NVMe 구성 기준"]].map(([label, value]) => (
+          {[["CPU", "Intel Core i5-13400 · 10코어"], ["폼팩터", "19형 1U Rackmount"], ["네트워크", "8×2.5GbE"], ["광 포트", "4×10G SFP+"], ["메모리", "8GB 구성 기준 · 최대 32GB"], ["스토리지", "128GB NVMe 기준 · 최대 512GB"]].map(([label, value]) => (
             <div key={label} className="rounded-2xl bg-slate-50 px-4 py-3"><dt className="font-mono text-[9px] uppercase tracking-widest text-slate-400">{label}</dt><dd className="mt-1 text-sm font-semibold text-slate-800">{value}</dd></div>
           ))}
         </dl>
@@ -28,7 +28,7 @@ export default function RackAdvancedConfigurator() {
       <aside className="bg-navy p-8 text-white">
         <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/50">Standard Configuration</div>
         <div className="mt-5 space-y-3 border-y border-white/10 py-5 text-sm text-white/75">
-          {["Intel Core i5-13400", "16GB 메모리", "500/512GB NVMe", "기본 방화벽 OS 설치"].map((item) => <div key={item} className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-emerald" />{item}</div>)}
+          {["Intel Core i5-13400", "삼성 8GB 메모리", "삼성 128GB NVMe", "기본 방화벽 OS 설치"].map((item) => <div key={item} className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-emerald" />{item}</div>)}
         </div>
         <div className="mt-6 text-xs text-white/50">예상 공급가 · VAT 별도</div>
         <div className="mt-1 font-display text-3xl font-black">{won.format(total)}원</div>

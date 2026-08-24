@@ -1,14 +1,18 @@
 {
   "effectiveMonth": "2026.08",
   "nextReviewDate": "2026-09-01",
-  "memory16": 335000,
-  "memory32": 547000,
-  "storage512": 300000,
-  "storage1tb": 397000,
+  "memory8": 152000,
+  "memory16": 333000,
+  "memory32": 588000,
+  "storage128": 88000,
+  "storage256": 90000,
+  "storage512": 275000,
   "sources": {
+    "memory8": "삼성전자 DDR5-4800 SO-DIMM 8GB",
     "memory16": "삼성전자 DDR5-4800 SO-DIMM 16GB",
     "memory32": "삼성전자 DDR5-4800 SO-DIMM 32GB",
-    "storage512": "삼성전자 980 / SK하이닉스 P41 500GB",
-    "storage1tb": "삼성전자 990 EVO Plus / SK하이닉스 P41 1TB"
+    "storage128": "삼성전자 PM991 M.2 NVMe 128GB",
+    "storage256": "삼성전자 PM9C1 M.2 NVMe 256GB",
+    "storage512": "삼성전자 980 M.2 NVMe 500GB"
   }
 }

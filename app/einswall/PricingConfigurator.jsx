@@ -35,23 +35,29 @@ const sfpOptions = [
 ];
 
 const memoryOptions = [
-  { id: "16", label: "16GB DDR5 SO-DIMM", detail: "삼성전자·SK하이닉스", price: einswallPrices.memory["16"] },
-  { id: "32", label: "32GB DDR5 SO-DIMM", detail: "삼성전자·SK하이닉스", price: einswallPrices.memory["32"] },
-  { id: "64", label: "64GB DDR5 SO-DIMM", detail: "32GB×2 · 삼성전자·SK하이닉스", price: einswallPrices.memory["64"] },
+  { id: "8", label: "8GB DDR5 SO-DIMM", detail: "삼성전자 · 기본 구성", price: einswallPrices.memory["8"] },
+  { id: "16", label: "16GB DDR5 SO-DIMM", detail: "삼성전자", price: einswallPrices.memory["16"] },
+  { id: "32", label: "32GB DDR5 SO-DIMM", detail: "삼성전자 · 최대 구성", price: einswallPrices.memory["32"] },
 ];
 
 const storageOptions = [
   {
-    id: "512",
-    label: "500/512GB NVMe",
-    detail: "삼성전자·SK하이닉스 정품",
-    price: einswallPrices.storage["512"],
+    id: "128",
+    label: "128GB NVMe",
+    detail: "삼성전자 · 기본 구성",
+    price: einswallPrices.storage["128"],
   },
   {
-    id: "1tb",
-    label: "1TB NVMe",
-    detail: "삼성전자·SK하이닉스 정품",
-    price: einswallPrices.storage["1tb"],
+    id: "256",
+    label: "256GB NVMe",
+    detail: "삼성전자",
+    price: einswallPrices.storage["256"],
+  },
+  {
+    id: "512",
+    label: "500/512GB NVMe",
+    detail: "삼성전자 · 최대 구성",
+    price: einswallPrices.storage["512"],
   },
 ];
 
@@ -122,8 +128,8 @@ function OptionGroup({ label, options, value, onChange }) {
 export default function PricingConfigurator() {
   const [cpu, setCpu] = useState("8505");
   const [sfp, setSfp] = useState("none");
-  const [memory, setMemory] = useState("16");
-  const [storage, setStorage] = useState("512");
+  const [memory, setMemory] = useState("8");
+  const [storage, setStorage] = useState("128");
   const [modules, setModules] = useState("none");
 
   const availableModuleOptions =
@@ -257,8 +263,8 @@ export default function PricingConfigurator() {
             유료 보안 구독·라이선스, 유지보수비 및 별도 워런티 비용
           </p>
           <p>
-            메모리는 삼성전자·SK하이닉스 DDR5 SO-DIMM, NVMe는 삼성전자·SK하이닉스
-            국내 유통 제품의 현재 판매가를 기준으로 산정합니다. 부품 시세는{" "}
+            메모리와 NVMe는 삼성전자 국내 신품의 현재 판매가를 기준으로 산정합니다.
+            부품 시세는{" "}
             {pricingPolicy.sourceSummary} 방식으로 확인하며, {pricingPolicy.componentRule}
             합니다. {pricingPolicy.exclusions} 기준입니다.
           </p>

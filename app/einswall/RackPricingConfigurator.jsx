@@ -52,13 +52,14 @@ const families = {
 };
 
 const memoryOptions = [
-  { id: "16", label: "16GB", detail: "기본 구성", price: einswallPrices.memory["16"] },
-  { id: "32", label: "32GB", detail: "VPN·IDS/IPS 권장", price: einswallPrices.memory["32"] },
-  { id: "64", label: "64GB", detail: "대규모 정책·로그", price: einswallPrices.memory["64"] },
+  { id: "8", label: "8GB", detail: "삼성전자 · 기본 구성", price: einswallPrices.memory["8"] },
+  { id: "16", label: "16GB", detail: "삼성전자 · VPN·IDS/IPS 권장", price: einswallPrices.memory["16"] },
+  { id: "32", label: "32GB", detail: "삼성전자 · 최대 구성", price: einswallPrices.memory["32"] },
 ];
 const storageOptions = [
-  { id: "512", label: "500/512GB NVMe", detail: "기본 구성", price: einswallPrices.storage["512"] },
-  { id: "1tb", label: "1TB NVMe", detail: "로그 장기 보관", price: einswallPrices.storage["1tb"] },
+  { id: "128", label: "128GB NVMe", detail: "삼성전자 · 기본 구성", price: einswallPrices.storage["128"] },
+  { id: "256", label: "256GB NVMe", detail: "삼성전자", price: einswallPrices.storage["256"] },
+  { id: "512", label: "500/512GB NVMe", detail: "삼성전자 · 최대 구성", price: einswallPrices.storage["512"] },
 ];
 const moduleOptions = [
   { id: "none", label: "모듈 미포함", detail: "보유 모듈 사용", price: 0 },
@@ -90,8 +91,8 @@ function OptionGroup({ label, options, value, onChange }) {
 export default function RackPricingConfigurator({ familyId }) {
   const family = families[familyId];
   const [cpu, setCpu] = useState(family.cpus[0].id);
-  const [memory, setMemory] = useState("16");
-  const [storage, setStorage] = useState("512");
+  const [memory, setMemory] = useState("8");
+  const [storage, setStorage] = useState("128");
   const [modules, setModules] = useState("none");
   useEffect(() => {
     const selectModel = (event) => {
