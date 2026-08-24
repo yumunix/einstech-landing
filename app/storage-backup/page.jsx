@@ -7,7 +7,7 @@ import { PrimaryButton, SecondaryButton } from "@/components/ds/Buttons";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({ path: "/storage-backup",
-  title: "Backup + WORM Storage — Hitachi HCP · Acronis · NetBackup | EINSTECH",
+  title: "Backup + WORM Storage — VIRBAK · Acronis · NetBackup | EINSTECH",
   description:
     "Acronis와 NetBackup 백업 데이터를 Hitachi Content Platform(HCP) WORM Storage에 보관합니다. S3 Object Lock과 Compliance Mode로 보존기간 동안 삭제와 덮어쓰기를 방지합니다.",
   keywords: ["WORM 스토리지", "Hitachi HCP", "Acronis 백업", "Veritas NetBackup", "S3 Object Lock", "랜섬웨어 백업"],
@@ -96,6 +96,27 @@ const lineup = [
       "공공·금융 엔터프라이즈 기간계",
     ],
   },
+  {
+    badge: "KOREAN_BACKUP",
+    name: "VIRBAK ABIO",
+    vendor: "BA Infra",
+    color: "acid",
+    tag: "국산 백업 Software + Appliance",
+    role: "통합 백업·복구 플랫폼",
+    strengths: [
+      "이기종 Multi-Vendor 서버 환경 통합관리",
+      "Agentless 가상화 백업과 CBT 증분 백업",
+      "인라인 중복제거와 원격지 복제",
+      "Software 단독 또는 All-in-One Appliance 선택",
+    ],
+    fitFor: [
+      "국산 백업 솔루션과 기술지원을 원하는 환경",
+      "기존 인프라 활용 또는 빠른 통합 장비 도입",
+      "중소규모부터 PB급까지 단계적 확장",
+    ],
+    linkLabel: "→ VIRBAK ABIO 제품군 보기",
+    linkHref: "/virbak-abio",
+  },
 ];
 
 const rule = [
@@ -131,13 +152,13 @@ const architecture = [
     index: "01",
     tag: "BACKUP_SOURCE",
     title: "백업 원본 계층",
-    desc: "서버·DB·가상화 환경의 데이터를 Acronis 또는 NetBackup 정책에 따라 백업합니다.",
+    desc: "서버·DB·가상화 환경의 데이터를 VIRBAK, Acronis 또는 NetBackup 정책에 따라 백업합니다.",
   },
   {
     index: "02",
     tag: "BACKUP_TIER",
-    title: "백업 소프트웨어 계층 (Acronis / NetBackup)",
-    desc: "워크로드 특성에 맞춰 통합 보호(Acronis)와 대규모 표준 백업(NetBackup)을 선택해 관리합니다.",
+    title: "백업 소프트웨어 계층 (VIRBAK / Acronis / NetBackup)",
+    desc: "국산 통합 백업(VIRBAK), 통합 사이버 보호(Acronis), 대규모 표준 백업(NetBackup)을 환경에 맞춰 선택합니다.",
   },
   {
     index: "03",

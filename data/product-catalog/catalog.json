@@ -48,6 +48,8 @@
     {"id":"eonstor-gs","vendor":"Infortrend","name":"EonStor GS","category":"Storage","siteUrl":"https://www.einstech.kr/storage/eonstor-gs","sourceUrl":"https://www.infortrend.com/global/products/GS","lastReviewed":"2026-08-24","nextReview":"2026-11-24","status":"selling"},
     {"id":"eonstor-gse","vendor":"Infortrend","name":"EonStor GSe","category":"Storage","siteUrl":"https://www.einstech.kr/storage/eonstor-gse","sourceUrl":"https://www.infortrend.com/global/Products/gse","lastReviewed":"2026-08-24","nextReview":"2026-11-24","status":"selling"},
     {"id":"eonstor-ds","vendor":"Infortrend","name":"EonStor DS","category":"Storage","siteUrl":"https://www.einstech.kr/storage/eonstor-ds","sourceUrl":"https://www.infortrend.com/global/products/DS","lastReviewed":"2026-08-24","nextReview":"2026-11-24","status":"selling"},
-    {"id":"eonstor-cs","vendor":"Infortrend","name":"EonStor CS","category":"Storage","siteUrl":"https://www.einstech.kr/storage/eonstor-cs","sourceUrl":"https://www.infortrend.com/global/products/cs","lastReviewed":"2026-08-24","nextReview":"2026-11-24","status":"selling"}
+    {"id":"eonstor-cs","vendor":"Infortrend","name":"EonStor CS","category":"Storage","siteUrl":"https://www.einstech.kr/storage/eonstor-cs","sourceUrl":"https://www.infortrend.com/global/products/cs","lastReviewed":"2026-08-24","nextReview":"2026-11-24","status":"selling"},
+    {"id":"virbak-abio-software","vendor":"BA Infra","name":"VIRBAK ABIO Version 5.0","category":"Backup Software","siteUrl":"https://www.einstech.kr/virbak-abio","sourceUrl":"https://bainfra.com/product/software.php","lastReviewed":"2026-08-24","nextReview":"2026-11-24","status":"selling"},
+    {"id":"virbak-backup-appliance","vendor":"BA Infra","name":"VIRBAK Backup Appliance","category":"Backup Appliance","siteUrl":"https://www.einstech.kr/virbak-abio","sourceUrl":"https://bainfra.com/product/app.php","lastReviewed":"2026-08-24","nextReview":"2026-11-24","status":"selling"}
   ]
 }

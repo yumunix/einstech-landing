@@ -15,6 +15,7 @@ const aiItems = [
 const solutionItems = [
   { label: "HA Cluster", desc: "Rose HA · MCCS — 무중단 페일오버", href: "/ha-cluster" },
   { label: "Backup", desc: "Acronis · NetBackup · Immutable Backup", href: "/storage-backup" },
+  { label: "VIRBAK ABIO", desc: "국산 백업 Software · All-in-One Appliance", href: "/virbak-abio" },
   { label: "Data Security", desc: "Netwrix · Kaspersky · ESET", href: "/dlp-antivirus" },
   { label: "DR 솔루션", desc: "재해복구 · BCP 설계", href: "/bcp" },
 ];
