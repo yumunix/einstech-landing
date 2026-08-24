@@ -27,7 +27,7 @@ const supportItems = [
 ];
 
 const resourceItems = [
-  { label: "EINSGUARD AI 자료실", desc: "관리 서버·Windows Agent 1.2.4", href: "/downloads/einsguard-ai" },
+  { label: "EINSGUARD AI 자료실", desc: "관리 서버·Agent 1.3.0", href: "/downloads/einsguard-ai" },
   { label: "설치·사용 매뉴얼", desc: "설치 · 운영 · 제거 · 문제 해결", href: "/docs/einsguard-ai/install" },
   { label: "관리자 운영 매뉴얼", desc: "승인 · 차단 · 사건 · 라이선스 · 감사", href: "/docs/einsguard-ai/admin" },
 ];
