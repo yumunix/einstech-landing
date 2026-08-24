@@ -148,9 +148,9 @@ export default function EinswallPage() {
                 </h1>
 
                 <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl border-l-2 border-navy/30 pl-5 mb-12">
-                  EINSWALL Firewall은 업무망·서버망·게스트망·CCTV망 사이의 접근 정책과 인터넷 경계를 통합 보호합니다. 경제적인 경제적인 1G 운용형부터 10G SFP+
-                  고급형까지 필요한 사양을 선택할 수 있으며, 현장 네트워크 및 방화벽
-                  정책 설정은 별도 견적입니다.
+                  EINSWALL Firewall은 업무망·서버망·게스트망·CCTV망 사이의 접근 정책과 인터넷 경계를 통합 보호합니다. 경제적인 1G 운용형부터 10G SFP+
+                  고급형까지 필요한 사양을 선택할 수 있으며, 일시불 구매와 3·4·5년
+                  구독형 중에서 선택할 수 있습니다.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">
@@ -251,12 +251,12 @@ export default function EinswallPage() {
             <SectionHeader
               badgeText="CONFIGURE_PRICE"
               badgeColor="cyan"
-              sectionLabel="3. Configure — 사양별 예상 공급가"
+              sectionLabel="3. Configure — 일시불·구독형 예상 가격"
             >
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] max-w-4xl">
                 필요한 사양을 선택하고
                 <br />
-                <span className="text-navy">예상 가격을 확인하세요.</span>
+                <span className="text-navy">구매 방식별 예상 가격을 확인하세요.</span>
               </h2>
             </SectionHeader>
 
@@ -322,7 +322,8 @@ export default function EinswallPage() {
 
               <p className="font-sans text-slate-600 text-base md:text-xl leading-relaxed max-w-2xl mx-auto mb-12 relative z-10">
                 CPU·SFP+ 포트·메모리·스토리지 구성과 설치 환경에 따라 가격이
-                책정됩니다. 문의 주시면 모델별 견적을 안내해 드립니다.
+                책정됩니다. 일시불 구매 또는 3·4·5년 만기 인수형 구독을 선택할 수
+                있으며, 문의 주시면 모델별 최종 견적을 안내해 드립니다.
               </p>
 
               <div className="w-full max-w-2xl mx-auto relative z-10 flex flex-col items-center mb-8">

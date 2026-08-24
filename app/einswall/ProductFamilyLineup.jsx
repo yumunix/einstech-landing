@@ -1,6 +1,7 @@
 "use client";
 
 import { einswallPrices } from "./pricing";
+import { calculateSubscription } from "./subscription";
 
 const won = new Intl.NumberFormat("ko-KR");
 
@@ -58,13 +59,16 @@ export default function ProductFamilyLineup() {
         <section key={group.id} className="border-t border-slate-200 pt-7 first:border-t-0 first:pt-0">
           <div className="mb-6 flex flex-wrap items-end justify-between gap-4"><div><div className="font-mono text-[10px] font-bold tracking-[0.2em] text-emerald">{String(groupIndex + 1).padStart(2, "0")} · {group.eyebrow}</div><h3 className="mt-2 font-display text-3xl font-black text-slate-900">{group.title}</h3></div><p className="text-sm text-slate-500">{group.desc}</p></div>
           <div className="grid gap-5 md:grid-cols-3">
-            {group.products.map((product) => (
+            {group.products.map((product) => {
+              const subscription = calculateSubscription(product.price, 36);
+              return (
               <article key={product.name} className="group overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={product.image} alt={`${product.name} 제품 이미지`} className="aspect-square w-full border-b border-slate-100 object-cover" />
-                <div className="p-5"><div className="font-mono text-[9px] font-bold tracking-widest text-emerald">{product.chip}</div><h4 className="mt-2 font-display text-lg font-black text-slate-900">{product.name}</h4><p className="mt-1 min-h-9 text-xs leading-relaxed text-slate-500">{product.spec}</p><div className="mt-4 flex items-end justify-between border-t border-slate-100 pt-4"><div><div className="text-[9px] text-slate-400">기본 예상 공급가 · VAT 별도</div><strong className="font-display text-xl text-navy">{won.format(product.price)}원~</strong></div><a href={`#pricing-${group.id}`} onClick={() => window.dispatchEvent(new CustomEvent("einswall:model-select", { detail: { family: group.id, model: product.name.split(" ").at(-1).toLowerCase() } }))} className="rounded-full bg-slate-100 px-3 py-2 text-[10px] font-bold text-navy group-hover:bg-navy group-hover:text-white">사양 선택</a></div></div>
+                <div className="p-5"><div className="font-mono text-[9px] font-bold tracking-widest text-emerald">{product.chip}</div><h4 className="mt-2 font-display text-lg font-black text-slate-900">{product.name}</h4><p className="mt-1 min-h-9 text-xs leading-relaxed text-slate-500">{product.spec}</p><div className="mt-4 grid grid-cols-2 gap-2 border-t border-slate-100 pt-4"><div className="rounded-xl bg-slate-50 p-3"><div className="text-[9px] text-slate-500">일시불 · VAT 별도</div><strong className="mt-1 block font-display text-base text-navy">{won.format(product.price)}원~</strong></div><div className="rounded-xl bg-emerald/10 p-3"><div className="text-[9px] text-emerald-700">3년 구독 · 월/VAT별도</div><strong className="mt-1 block font-display text-base text-emerald-700">{won.format(subscription.monthly)}원~</strong></div></div><div className="mt-4 flex justify-end"><a href={`#pricing-${group.id}`} onClick={() => window.dispatchEvent(new CustomEvent("einswall:model-select", { detail: { family: group.id, model: product.name.split(" ").at(-1).toLowerCase() } }))} className="rounded-full bg-slate-100 px-3 py-2 text-[10px] font-bold text-navy group-hover:bg-navy group-hover:text-white">일시불·구독 사양 선택</a></div></div>
               </article>
-            ))}
+              );
+            })}
           </div>
         </section>
       ))}

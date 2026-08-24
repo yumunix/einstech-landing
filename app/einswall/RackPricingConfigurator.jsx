@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { einswallPrices, pricingPolicy } from "./pricing";
+import PricingComparison from "./PricingComparison";
 
 const won = new Intl.NumberFormat("ko-KR");
 
@@ -131,9 +132,9 @@ export default function RackPricingConfigurator({ familyId }) {
           <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/45">Estimated Configuration</div>
           <h4 className="mt-3 font-display text-xl font-bold">{modelName}</h4>
           <dl className="my-5 space-y-2 border-y border-white/10 py-5 text-xs text-white/70">{[family.chassis, family.network, selected.memory.label, selected.storage.label, familyId === "entry" ? "SFP 모듈 별도" : selected.modules.label].map((item) => <div key={item} className="flex gap-2"><span className="text-emerald-300">●</span><span>{item}</span></div>)}</dl>
-          <div className="text-xs text-white/45">예상 공급가 · VAT 별도</div>
-          <div className="mt-1 font-display text-3xl font-black">{won.format(total)}원</div>
+          <div className="text-xs text-white/45">가격 기준 · VAT 별도</div>
           <div className="mt-2 font-mono text-[9px] leading-relaxed text-white/35">원제품 {family.source} · 고정환율 {won.format(pricingPolicy.fixedUsdKrw)}원 · 수입비용 {(pricingPolicy.importTaxRate * 100).toFixed(0)}%<br />가격 기준 {pricingPolicy.effectiveMonth}</div>
+          <PricingComparison cashPrice={total} />
           <div className="mt-5 rounded-xl bg-white/5 p-3 text-xs"><span className="text-white/50">권장 규모</span><strong className="float-right text-emerald-200">{selected.cpu.users}</strong></div>
           <div className="mt-3 rounded-xl bg-white/5 p-3 text-xs"><span className="text-white/50">연간 장애 대응</span><strong className="float-right text-emerald-200">{won.format(maintenance)}원</strong></div>
           <a href={`/contact?subject=${inquiry}`} className="mt-5 block rounded-xl bg-emerald px-4 py-3.5 text-center text-sm font-bold transition-colors hover:bg-white hover:text-navy">이 구성으로 견적 문의</a>

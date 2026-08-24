@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { einswallPrices, pricingPolicy } from "./pricing";
+import PricingComparison from "./PricingComparison";
 
 const cpuOptions = [
   {
@@ -221,11 +222,12 @@ export default function PricingConfigurator() {
 
         <div className="mt-7">
           <div className="text-xs text-white/50 mb-1">예상 공급가 · VAT 별도</div>
-          <div className="font-display text-3xl font-black">{won.format(total)}원</div>
           <div className="mt-2 font-mono text-[10px] text-white/40">
             가격 기준 {pricingPolicy.effectiveMonth} · {pricingPolicy.reviewCycle}
           </div>
         </div>
+
+        <PricingComparison cashPrice={total} />
 
         <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
           <div className="text-[10px] font-bold uppercase tracking-wider text-white/45">
