@@ -76,6 +76,66 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.einstech.kr/storage/vsp-one-block-20-series</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/vsp-one-block-high-end</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/vsp-one-file</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/vsp-one-object</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/vsp-one-unified</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/hitachi-nas-platform</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/h-scaleway-sg5000</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/gnas-9000e-series</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/eonstor-gs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/eonstor-gse</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/eonstor-ds</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.einstech.kr/storage/eonstor-cs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.einstech.kr/san-switch</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

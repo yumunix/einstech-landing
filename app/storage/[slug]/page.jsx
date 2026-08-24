@@ -9,8 +9,9 @@ export function generateStaticParams() {
   return storageProducts.map(({ slug }) => ({ slug }));
 }
 
-export function generateMetadata({ params }) {
-  const product = storageProductMap[params.slug];
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const product = storageProductMap[slug];
   if (!product) return {};
   return createPageMetadata({
     path: `/storage/${product.slug}`,
@@ -20,8 +21,9 @@ export function generateMetadata({ params }) {
   });
 }
 
-export default function StorageProductPage({ params }) {
-  const product = storageProductMap[params.slug];
+export default async function StorageProductPage({ params }) {
+  const { slug } = await params;
+  const product = storageProductMap[slug];
   if (!product) notFound();
   const related = storageProducts.filter((item) => item.slug !== product.slug && (item.vendor === product.vendor || item.category === product.category)).slice(0, 3);
   return <><Header /><main className="pt-16">

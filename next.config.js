@@ -13,6 +13,7 @@ const nextConfig = {
       { source: "/ai-sentinel", destination: "/einsguard-ai", permanent: true },
       { source: "/downloads/ai-sentinel", destination: "/downloads/einsguard-ai", permanent: true },
       { source: "/docs/ai-sentinel/install", destination: "/docs/einsguard-ai/install", permanent: true },
+      { source: "/storage/vsp-5000-series", destination: "/storage/vsp-one-block-high-end", permanent: true },
     ];
   },
 };

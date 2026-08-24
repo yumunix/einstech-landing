@@ -3,10 +3,19 @@ export const storageProducts = [
     slug: "vsp-one-block-20-series", vendor: "Hitachi Vantara", category: "올플래시 & 하이브리드", name: "VSP One Block 20 Series", image: "hitachi-vsp-one-block.webp", eyebrow: "ALL-NVME BLOCK STORAGE",
     summary: "간결한 2U 설계에 성능, 확장성, 사이버 복원력을 결합한 엔터프라이즈 All-NVMe 블록 스토리지입니다.",
     intro: "VSP One Block 20 Series는 업무 규모와 성장 단계에 맞춰 선택할 수 있는 NVMe 기반 블록 스토리지입니다. 데이터베이스, 가상화, 컨테이너와 핵심 업무를 하나의 데이터 플랫폼에서 운영하도록 설계합니다.",
-    highlights: ["100% 데이터 가용성을 지향하는 엔터프라이즈 설계", "최대 1.8PB 유효용량과 최대 32개 호스트 포트", "Immutable Snapshot과 Hardware Root of Trust 기반 보호", "GAD를 활용한 Active-Active 및 원격 DR 구성"],
-    specs: [["제품 모델", "VSP One Block 24 · 26 · 28 · 26 QLC"], ["폼팩터", "2U All-NVMe"], ["호스트 연결", "NVMe/FC · NVMe/TCP · 25GbE iSCSI · 64G FC"], ["유효용량", "최대 1.8PB"], ["확장", "Scale-out 최대 65노드"], ["데이터 보호", "Immutable Snapshot · GAD · 원격 복제 · 암호화"]],
+    highlights: ["100% 데이터 가용성을 지향하는 엔터프라이즈 설계", "모델별 최대 14.1PBe 유효용량과 최대 32개 호스트 포트", "Immutable Snapshot과 Hardware Root of Trust 기반 보호", "GAD를 활용한 Active-Active 및 원격 DR 구성"],
+    specs: [["제품 모델", "VSP One Block 24 · 26 · 28 · 26 QLC"], ["폼팩터", "2U All-NVMe"], ["호스트 연결", "NVMe/FC · NVMe/TCP · 25GbE iSCSI · 64G FC"], ["유효용량", "모델별 최대 14.1PBe"], ["확장", "Scale-out 최대 65노드"], ["데이터 보호", "Immutable Snapshot · GAD · 원격 복제 · 암호화"]],
     useCases: ["Oracle·SAP 및 핵심 데이터베이스", "VMware·OLVM 가상화 통합", "Kubernetes 영구 볼륨", "Active-Active 데이터센터와 DR"],
     source: "https://www.his21.co.kr/his/product/digital_enterprise/storage/vsp_one_block_20_series.do"
+  },
+  {
+    slug: "vsp-one-block-high-end", vendor: "Hitachi Vantara", category: "미션크리티컬 블록 스토리지", name: "VSP One Block High End", image: "hitachi-vsp-one-block-high-end.webp", eyebrow: "HIGH-END ALL-NVME STORAGE",
+    summary: "AI 시대의 핵심 업무와 대규모 데이터베이스를 위한 차세대 High-End All-NVMe 블록 스토리지입니다.",
+    intro: "VSP One Block High End는 VSP 5000 Series의 후속 세대로, 오픈시스템과 메인프레임 핵심 업무를 하나의 VSP One 데이터 플랫폼에서 운영하도록 설계합니다. 대규모 통합, 무중단 운영과 사이버 복원력이 필요한 환경에 적합합니다.",
+    highlights: ["최대 5,000만 IOPS의 미션크리티컬 성능", "최대 18.6PB 유효용량의 확장성", "8-Nines 가용성과 100% 가동시간 보증 프로그램", "FIPS 140-3 기반 보안과 4:1 데이터 절감 보증"],
+    specs: [["제품 모델", "VSP One Block 85 (High End)"], ["노드 구성", "2 · 4 · 6노드"], ["최대 성능", "최대 5,000만 IOPS"], ["최대 유효용량", "최대 18.6PB"], ["지원 환경", "Open Systems · Mainframe"], ["가용성", "8-Nines · GAD Active-Active · 무중단 운영"]],
+    useCases: ["금융·공공 핵심 기간계", "대규모 SAP·Oracle", "메인프레임과 오픈 통합", "AI 추론 및 초저지연 데이터 서비스"],
+    source: "https://www.hitachivantara.com/en-us/products/storage-platforms/vsp-one-block/high-end"
   },
   {
     slug: "vsp-5000-series", vendor: "Hitachi Vantara", category: "올플래시 & 하이브리드", name: "Hitachi VSP 5000 Series", image: "hitachi-vsp-5000.jpg", eyebrow: "MISSION-CRITICAL STORAGE",
@@ -39,9 +48,18 @@ export const storageProducts = [
   {
     slug: "vsp-one-file", vendor: "Hitachi Vantara", category: "네트워크 스토리지", name: "VSP One File", image: "hitachi-vsp-one-file.webp", eyebrow: "SCALE-OUT FILE STORAGE",
     summary: "클라우드와 컨테이너 환경의 비정형 데이터를 위한 고성능 Scale-out 파일 스토리지입니다.", intro: "VSP One File은 엔터프라이즈 파일 서비스와 AI·분석 데이터 파이프라인을 하나의 네임스페이스로 통합합니다. 노드와 네트워크를 업무 처리량에 맞춰 설계합니다.",
-    highlights: ["VSP One File 34·38 모델", "NFS·CIFS·iSCSI·FTP 멀티 프로토콜", "25/100GbE 고속 네트워크", "최대 4노드 확장과 클라우드 연계"],
-    specs: [["제품 모델", "VSP One File 34 · 38"], ["파일 프로토콜", "NFS v2/v3/v4/v4.1 · CIFS v2/v3"], ["기타 프로토콜", "iSCSI · FTP · S3 연계"], ["네트워크", "File 34: 10/25GbE · File 38: 25/100GbE"], ["확장", "최대 4노드"]],
+    highlights: ["VSP One File 32·34·38 모델", "NFS·SMB·iSCSI·FTP 멀티 프로토콜", "10/25/100GbE 고속 네트워크", "모델별 최대 2·4·8노드 확장과 클라우드 연계"],
+    specs: [["제품 모델", "VSP One File 32 · 34 · 38"], ["파일 프로토콜", "NFS v2/v3/v4/v4.1 · SMB2/SMB3"], ["기타 프로토콜", "iSCSI · FTP · S3/클라우드 티어링"], ["네트워크", "File 32: 10GbE · File 34: 10/25GbE · File 38: 10/25/100GbE"], ["확장", "File 32: 2노드 · File 34: 4노드 · File 38: 8노드"]],
     useCases: ["기업 파일 공유", "AI·분석 데이터", "미디어 콘텐츠", "컨테이너·클라우드 파일 서비스"], source: "https://www.his21.co.kr/his/product/digital_enterprise/storage/vsp_one_file.do"
+  },
+  {
+    slug: "vsp-one-object", vendor: "Hitachi Vantara", category: "오브젝트 스토리지", name: "VSP One Object", image: "hitachi-vsp-one-object.webp", eyebrow: "S3-NATIVE OBJECT STORAGE",
+    summary: "AI·분석·데이터 레이크하우스를 위한 확장형 S3 네이티브 오브젝트 스토리지입니다.",
+    intro: "VSP One Object는 대규모 비정형 데이터를 안전하게 보관하고 활용하는 소프트웨어 정의 오브젝트 스토리지입니다. S3 기반 데이터 레이크하우스, 분석과 AI 파이프라인을 지원하며 어플라이언스, 소프트웨어 정의 및 서비스형 배포 옵션을 제공합니다.",
+    highlights: ["S3 네이티브 API와 Amazon S3 Tables 지원", "Apache Iceberg 카탈로그와 내장 SQL 엔진 연계", "불변 데이터와 대규모 클린 복구 기반 사이버 복원력", "어플라이언스·SDS·서비스형 배포 옵션"],
+    specs: [["접근 방식", "S3 Native Object Storage"], ["데이터 활용", "S3 Tables · Apache Iceberg · 내장 SQL 연계"], ["확장", "수십억 개 오브젝트를 위한 Scale-out 설계"], ["배포 방식", "Appliance · Software-defined · As-a-Service"], ["데이터 보호", "Immutability · 대규모 복구 · 개인정보 탐지/거버넌스"]],
+    useCases: ["AI·ML 데이터 레이크", "데이터 레이크하우스", "백업 불변 보관", "대규모 오브젝트 아카이브"],
+    source: "https://www.hitachivantara.com/en-us/products/storage-platforms/object-storage"
   },
   {
     slug: "vsp-one-unified", vendor: "Hitachi Vantara", category: "네트워크 스토리지", name: "VSP One Unified", image: "hitachi-vsp-one-unified.jpg", eyebrow: "BLOCK + FILE UNIFIED",
