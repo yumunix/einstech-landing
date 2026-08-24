@@ -150,8 +150,8 @@ export default function EinswallPage() {
 
                 <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl border-l-2 border-navy/30 pl-5 mb-12">
                   EINSWALL Firewall은 업무망·서버망·게스트망·CCTV망 사이의 접근 정책과 인터넷 경계를 통합 보호합니다. 경제적인 1G 운용형부터 10G SFP+
-                  고급형까지 필요한 사양을 선택할 수 있으며, 일시불 구매와 3·4·5년
-                  40% 선납 후 월 구독료를 납부하는 만기 소유형 구독 중에서 선택할 수 있습니다.
+                  고급형까지 필요한 사양을 선택할 수 있으며, 일시불 구매와 2년 또는 3년
+                  동안 40% 선납 후 월 구독료를 납부하는 만기 소유형 구독 중에서 선택할 수 있습니다.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">

@@ -81,7 +81,7 @@ export default function PricingComparison({ cashPrice }) {
             <div className="mb-2 text-[10px] font-bold uppercase tracking-wider text-white/45">
               구독 계약 기간
             </div>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 gap-2">
               {installmentTerms.map((term) => {
                 const active = contractMonths === term;
                 return (
