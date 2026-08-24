@@ -143,3 +143,47 @@ body.einstech-white-body :where(button):hover {
   height: 60px;
   background: linear-gradient(to bottom, #0A3D62, transparent);
 }
+
+/* EINSWALL configurators: keep selected and unselected choices readable.
+   The white-theme button reset above intentionally clears legacy styles,
+   so interactive option buttons need an explicit high-contrast state. */
+body.einstech-white-body button[aria-pressed="false"] {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: none !important;
+}
+
+body.einstech-white-body button[aria-pressed="false"] * {
+  color: #0f172a !important;
+}
+
+body.einstech-white-body button[aria-pressed="false"]:hover {
+  background: #e2e8f0 !important;
+  border-color: #0a3d62 !important;
+  color: #020617 !important;
+}
+
+body.einstech-white-body button[aria-pressed="true"] {
+  background: #0f172a !important;
+  border: 2px solid #34d399 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.28) !important;
+  font-weight: 800 !important;
+}
+
+body.einstech-white-body button[aria-pressed="true"] * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+body.einstech-white-body button[aria-pressed="true"]:hover {
+  background: #0a3d62 !important;
+  border-color: #6ee7b7 !important;
+  color: #ffffff !important;
+}
+
+body.einstech-white-body button[aria-pressed]:focus-visible {
+  outline: 3px solid #f59e0b !important;
+  outline-offset: 3px !important;
+}
