@@ -94,10 +94,10 @@ export default function PricingComparison({ cashPrice }) {
                     type="button"
                     onClick={() => setSubscriptionMonths(plan.months)}
                     aria-pressed={active}
-                    className={`rounded-xl border px-2 py-2.5 text-xs font-bold transition-colors ${
+                    className={`min-h-11 rounded-xl border px-2 py-2.5 text-sm font-bold transition-colors ${
                       active
-                        ? "border-emerald bg-emerald text-white"
-                        : "border-white/10 bg-white/5 text-white/65 hover:border-white/35 hover:text-white"
+                        ? "border-emerald bg-navy text-white"
+                        : "border-slate-300 bg-slate-100 text-slate-950 hover:border-navy hover:bg-white hover:text-slate-950"
                     }`}
                   >
                     {plan.label}
@@ -157,10 +157,10 @@ export default function PricingComparison({ cashPrice }) {
                     type="button"
                     onClick={() => setDownPaymentRate(rate)}
                     aria-pressed={active}
-                    className={`rounded-xl border px-2 py-2.5 text-xs font-bold transition-colors ${
+                    className={`min-h-11 rounded-xl border px-2 py-2.5 text-sm font-bold transition-colors ${
                       active
-                        ? "border-emerald bg-emerald text-white"
-                        : "border-white/10 bg-white/5 text-white/65 hover:border-white/35 hover:text-white"
+                        ? "border-emerald bg-navy text-white"
+                        : "border-slate-300 bg-slate-100 text-slate-950 hover:border-navy hover:bg-white hover:text-slate-950"
                     }`}
                   >
                     {rate}%
@@ -183,10 +183,10 @@ export default function PricingComparison({ cashPrice }) {
                     type="button"
                     onClick={() => setInstallmentMonths(term)}
                     aria-pressed={active}
-                    className={`rounded-xl border px-2 py-2.5 text-xs font-bold transition-colors ${
+                    className={`min-h-11 rounded-xl border px-2 py-2.5 text-sm font-bold transition-colors ${
                       active
-                        ? "border-emerald bg-emerald text-white"
-                        : "border-white/10 bg-white/5 text-white/65 hover:border-white/35 hover:text-white"
+                        ? "border-emerald bg-navy text-white"
+                        : "border-slate-300 bg-slate-100 text-slate-950 hover:border-navy hover:bg-white hover:text-slate-950"
                     }`}
                   >
                     {term}개월
