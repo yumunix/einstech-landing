@@ -1,5 +1,6 @@
 const roundUp1000 = (value) => Math.ceil(value / 1000) * 1000;
 const roundUp10000 = (value) => Math.ceil(value / 10000) * 10000;
+const annualInstallmentAdjustment = 0.06;
 
 export const subscriptionPlans = [
   {
@@ -57,9 +58,11 @@ export function calculateInstallment(
     : defaultInstallmentMonths;
   const downPayment = roundUp10000(cashPrice * (normalizedRate / 100));
   const financedPrincipal = cashPrice - downPayment;
-  const monthly = Math.ceil(financedPrincipal / normalizedMonths);
-  const finalPayment = financedPrincipal - monthly * (normalizedMonths - 1);
-  const installmentTotal = financedPrincipal;
+  const adjustedInstallmentTotal =
+    financedPrincipal *
+    (1 + annualInstallmentAdjustment * (normalizedMonths / 12));
+  const monthly = roundUp1000(adjustedInstallmentTotal / normalizedMonths);
+  const installmentTotal = monthly * normalizedMonths;
 
   return {
     downPaymentRate: normalizedRate,
@@ -67,8 +70,7 @@ export function calculateInstallment(
     downPayment,
     financedPrincipal,
     monthly,
-    finalPayment,
     installmentTotal,
-    contractTotal: cashPrice,
+    contractTotal: downPayment + installmentTotal,
   };
 }

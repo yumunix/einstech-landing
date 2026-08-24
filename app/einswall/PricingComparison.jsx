@@ -204,13 +204,7 @@ export default function PricingComparison({ cashPrice }) {
             <div className="flex items-center justify-between gap-4">
               <dt className="text-white/50">월 분할 납부액</dt>
               <dd className="font-bold text-emerald-200">
-                {won.format(installment.monthly)}원 × {installment.months - 1}개월
-              </dd>
-            </div>
-            <div className="flex items-center justify-between gap-4">
-              <dt className="text-white/50">마지막 회차</dt>
-              <dd className="font-bold text-white">
-                {won.format(installment.finalPayment)}원
+                {won.format(installment.monthly)}원 × {installment.months}개월
               </dd>
             </div>
             <div className="flex items-center justify-between gap-4">
@@ -223,10 +217,9 @@ export default function PricingComparison({ cashPrice }) {
 
           <p className="text-[10px] leading-relaxed text-white/45">
             제품 구매가의 {downPaymentRate}%를 먼저 납부하고 나머지 장비 대금을
-            선택한 기간으로 나눠 납부하는 예상 금액입니다. 최종 납부 완료 후 장비는
-            고객 소유가 되며 반납하지 않습니다. 이자는 월 납부액과 장비 총액에
-            포함하지 않으며, 매년 잔여 원금과 해당 연도 계약조건을 기준으로 별도
-            산정합니다. 중도상환 조건은 최종 계약서를 따릅니다.
+            선택한 기간으로 나눠 납부하는 예상 금액입니다. 표시된 월 납부액과 장비
+            총 납부액을 기준으로 계약하며, 최종 납부 완료 후 장비는 고객 소유가 되어
+            반납하지 않습니다. 중도상환 조건은 최종 계약서를 따릅니다.
           </p>
         </div>
       )}
