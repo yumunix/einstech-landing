@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { einswallPrices, pricingPolicy } from "./pricing";
+import { einswallPrices } from "./pricing";
 import PricingComparison from "./PricingComparison";
 
 const won = new Intl.NumberFormat("ko-KR");
@@ -14,7 +14,6 @@ const families = {
     network: "6×1GbE + 4×2.5GbE + 4×SFP",
     image: "/products/e-gate/einswall-rack-entry-v2.png",
     base: einswallPrices.rack.entryConfigured,
-    source: "US$366.63",
     cpus: [
       { id: "c3758", label: "Atom C3758", image: "/products/e-gate/rack-entry-c3758.webp", detail: "8코어 · 지사·소규모 사업장", users: "처리량·정책 기준 별도 산정", price: 0 },
       { id: "c3808", label: "Atom C3808", image: "/products/e-gate/rack-entry-c3808.webp", detail: "12코어 · 다중 VPN", users: "처리량·정책 기준 별도 산정", price: 300000 },
@@ -28,7 +27,6 @@ const families = {
     network: "8×2.5GbE + 4×10G SFP+",
     image: "/products/e-gate/einswall-rack-advanced-v2.png",
     base: einswallPrices.rack.advancedConfigured,
-    source: "US$763.88",
     cpus: [
       { id: "i5", label: "Core i5-13400", image: "/products/e-gate/rack-advanced-i5.webp", detail: "10코어 · 기업 표준형", users: "처리량·정책 기준 별도 산정", price: 0 },
       { id: "i7", label: "Core i7-13700", image: "/products/e-gate/rack-advanced-i7.webp", detail: "16코어 · VPN·IDS/IPS", users: "처리량·정책 기준 별도 산정", price: 400000 },
@@ -42,7 +40,6 @@ const families = {
     network: "최대 16×RJ45 + 8×10G SFP+",
     image: "/products/e-gate/einswall-rack-flagship-v2.png",
     base: einswallPrices.rack.flagshipConfigured,
-    source: "US$651.90 플랫폼",
     cpus: [
       { id: "12g", label: "12세대 LGA1700", image: "/products/e-gate/rack-flagship-12g.webp", detail: "검증된 비용 최적화 구성", users: "요구 처리량별 설계", price: 300000 },
       { id: "13g", label: "13세대 LGA1700", image: "/products/e-gate/rack-flagship-13g.webp", detail: "고성능 멀티코어 구성", users: "요구 처리량별 설계", price: 600000 },
@@ -132,8 +129,7 @@ export default function RackPricingConfigurator({ familyId }) {
           <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/45">Estimated Configuration</div>
           <h4 className="mt-3 font-display text-xl font-bold">{modelName}</h4>
           <dl className="my-5 space-y-2 border-y border-white/10 py-5 text-xs text-white/70">{[family.chassis, family.network, selected.memory.label, selected.storage.label, familyId === "entry" ? "SFP 모듈 별도" : selected.modules.label].map((item) => <div key={item} className="flex gap-2"><span className="text-emerald-300">●</span><span>{item}</span></div>)}</dl>
-          <div className="text-xs text-white/45">가격 기준 · VAT 별도</div>
-          <div className="mt-2 font-mono text-[9px] leading-relaxed text-white/35">원제품 {family.source} · 고정환율 {won.format(pricingPolicy.fixedUsdKrw)}원 · 수입비용 {(pricingPolicy.importTaxRate * 100).toFixed(0)}%<br />가격 기준 {pricingPolicy.effectiveMonth}</div>
+          <div className="text-xs text-white/45">선택 구성 장비 가격</div>
           <PricingComparison cashPrice={total} />
           <div className="mt-5 rounded-xl bg-white/5 p-3 text-xs"><span className="text-white/50">권장 규모</span><strong className="float-right text-emerald-200">{selected.cpu.users}</strong></div>
           <div className="mt-3 rounded-xl bg-white/5 p-3 text-xs">

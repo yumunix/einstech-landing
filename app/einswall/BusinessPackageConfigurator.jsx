@@ -2,14 +2,11 @@
 
 import { useMemo, useState } from "react";
 import PricingComparison from "./PricingComparison";
-import { einswallPrices, pricingPolicy } from "./pricing";
+import { einswallPrices } from "./pricing";
 
 const won = new Intl.NumberFormat("ko-KR");
 
-const switchOfficialUsd = 309.99;
-const switchUnitPrice = Math.ceil(
-  (switchOfficialUsd * pricingPolicy.fixedUsdKrw) / 10000,
-) * 10000;
+const switchUnitPrice = 500000;
 const cctvCameraUnitPrice = 70000;
 const cctvRecorderPackPrice = 300000;
 const packageSizes = [20, 40, 60, 100];
@@ -218,20 +215,6 @@ export default function BusinessPackageConfigurator() {
           <div className="flex justify-between gap-3 sm:col-span-2"><dt className="text-slate-600">스위치당 SFP 업링크</dt><dd className="font-bold text-slate-900">{bundle.infrastructurePorts}포트</dd></div>
         </dl>
 
-        <p className="text-[10px] leading-relaxed text-slate-500">
-          SG2428P는 TP-Link 공식 Omada Store의 US${switchOfficialUsd}를 고정환율
-          {won.format(pricingPolicy.fixedUsdKrw)}원으로 환산해 대당 {won.format(switchUnitPrice)}원으로
-          산정했습니다. CCTV는 VIGI C340 및 8채널 NVR+감시용 HDD 기준의 예상 장비가입니다.
-          실제 견적은 공급 시점 재고와 하드웨어 버전을 확인합니다.
-        </p>
-        <a
-          href="https://store.omadanetworks.com/products/omada-28-port-poe-gigabit-smart-switch-with-4-sfp-slots-250w"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex text-[10px] font-bold text-navy underline decoration-navy/30 underline-offset-4 hover:text-emerald"
-        >
-          TP-Link Omada 공식 SG2428P 가격 기준 보기
-        </a>
       </div>
 
       <aside className="h-fit rounded-[32px] bg-navy p-7 text-white lg:sticky lg:top-28">
@@ -242,12 +225,12 @@ export default function BusinessPackageConfigurator() {
           방화벽 + 관리형 스위치
         </h3>
         <div className="mt-4 rounded-2xl bg-white/5 p-4">
-          <div className="text-[10px] text-white/45">장비 구매금액 합계 · VAT 별도</div>
+          <div className="text-[10px] text-white/45">장비 구매금액 합계</div>
           <div className="mt-1 font-display text-3xl font-black">
             {won.format(bundle.total)}원
           </div>
           <div className="mt-2 text-[10px] text-white/40">
-            방화벽 + 스위치 + 선택 CCTV · 가격 기준 {pricingPolicy.effectiveMonth}
+            방화벽 + 스위치 + 선택 CCTV
           </div>
         </div>
 

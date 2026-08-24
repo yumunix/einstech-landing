@@ -65,7 +65,7 @@ export default function PricingComparison({ cashPrice }) {
 
       {paymentMode === "cash" && (
         <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-          <div className="text-[10px] font-bold text-white/45">일시불 구매가 · VAT 별도</div>
+          <div className="text-[10px] font-bold text-white/45">일시불 장비 가격</div>
           <div className="mt-2 font-display text-2xl font-black text-white">
             {won.format(cashPrice)}원
           </div>
@@ -131,9 +131,13 @@ export default function PricingComparison({ cashPrice }) {
       )}
 
       <p className="text-[10px] leading-relaxed text-white/45">
-        위 계산은 장비 가격만 포함하며 VAT 별도입니다. 케이블·광모듈·랙·패치패널 등
+        위 계산은 장비 가격만 포함합니다. 케이블·광모듈·랙·패치패널 등
         공사 자재비와 배선·장비 설치·정책 설정 등 인건비는 포함하지 않습니다. 자재비와
         인건비는 현장 실사 후 각각 별도 계산하며 계약 시 일시불로 납부합니다.
+      </p>
+      <p className="text-[10px] font-bold leading-relaxed text-amber-100">
+        제품 수급과 제품 특성에 따라 동급 이상의 제조사 또는 모델로 변경될 수 있으며,
+        최종 공급 모델은 견적서에 명시합니다.
       </p>
     </div>
   );

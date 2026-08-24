@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { einswallPrices, pricingPolicy } from "./pricing";
+import { einswallPrices } from "./pricing";
 import PricingComparison from "./PricingComparison";
 
 const cpuOptions = [
@@ -221,10 +221,7 @@ export default function PricingConfigurator() {
         </dl>
 
         <div className="mt-7">
-          <div className="text-xs text-white/50 mb-1">예상 공급가 · VAT 별도</div>
-          <div className="mt-2 font-mono text-[10px] text-white/40">
-            가격 기준 {pricingPolicy.effectiveMonth} · {pricingPolicy.reviewCycle}
-          </div>
+          <div className="text-xs text-white/50 mb-1">선택 구성 장비 가격</div>
         </div>
 
         <PricingComparison cashPrice={total} />
@@ -252,17 +249,9 @@ export default function PricingConfigurator() {
           </p>
           <p>
             <strong className="text-white/75">불포함 내용:</strong>{" "}
-            부가가치세(VAT), 출장비, 현장 설치비·배선 공사비, 네트워크 구성비, 방화벽
+            출장비, 현장 설치비·배선 공사비, 네트워크 구성비, 방화벽
             보안 정책 설정비, 인터넷 회선, 랙·UPS·스위치 등 주변 장비, HA 이중화,
             유료 보안 구독·라이선스, 유지보수비 및 별도 워런티 비용
-          </p>
-          <p>
-            메모리는 삼성전자, NVMe는 삼성 980과 SK하이닉스 Gold P31 정품 신품의 현재
-            판매가를 기준으로 산정합니다. 250GB는 정품 판매처가 적어 500GB 권장 구성보다
-            시세가 높을 수 있습니다.
-            부품 시세는{" "}
-            {pricingPolicy.sourceSummary} 방식으로 확인하며, {pricingPolicy.componentRule}
-            합니다. {pricingPolicy.exclusions} 기준입니다.
           </p>
           <p>
             기본 모듈은 10G GBIC 멀티모드이며 장착·호환성 검수를 포함합니다. 장거리
