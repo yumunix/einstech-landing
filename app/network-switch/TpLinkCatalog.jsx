@@ -5,9 +5,9 @@ const tiers = [
     name: "Omada Access",
     desc: "1G 액세스와 PoE가 필요한 사무실·매장·지사",
     models: [
-      { model: "SG2008", image: "sg2008.jpg", ports: "8×1G RJ45", specs: ["팬리스", "Omada 중앙관리", "정적 라우팅"] },
-      { model: "SG2218", image: "sg2218.jpg", ports: "16×1G RJ45 + 2×1G SFP", specs: ["팬리스", "VLAN·ACL·QoS", "정적 라우팅"] },
-      { model: "SG2428P", image: "sg2428p.jpg", ports: "24×1G PoE+ + 4×1G SFP", specs: ["PoE 250W", "Omada 중앙관리", "랙마운트"] },
+      { model: "SG2008", image: "sg2008.jpg", ports: "8×1G RJ45", specs: ["팬리스", "Omada 중앙관리", "정적 라우팅"], msrp: 169000 },
+      { model: "SG2218", image: "sg2218.jpg", ports: "16×1G RJ45 + 2×1G SFP", specs: ["팬리스", "VLAN·ACL·QoS", "정적 라우팅"], msrp: 290000 },
+      { model: "SG2428P", image: "sg2428p.jpg", ports: "24×1G PoE+ + 4×1G SFP", specs: ["PoE 250W", "Omada 중앙관리", "랙마운트"], msrp: 690000 },
     ],
   },
   {
@@ -16,9 +16,9 @@ const tiers = [
     name: "Omada Access Plus",
     desc: "1G 다운링크와 10G 업링크를 갖춘 고밀도 엣지",
     models: [
-      { model: "SG3428X", image: "sg3428x.jpg", ports: "24×1G RJ45 + 4×10G SFP+", specs: ["정적 라우팅·ERPS", "Omada 중앙관리", "랙마운트"] },
-      { model: "SG3452X", image: "sg3452x.jpg", ports: "48×1G RJ45 + 4×10G SFP+", specs: ["팬리스", "정적 라우팅·ERPS", "랙마운트"] },
-      { model: "SG3428XMP", image: "sg3428xmp.jpg", ports: "24×1G PoE+ + 4×10G SFP+", specs: ["PoE 384W", "정적 라우팅·ERPS", "Omada 중앙관리"] },
+      { model: "SG3428X", image: "sg3428x.jpg", ports: "24×1G RJ45 + 4×10G SFP+", specs: ["정적 라우팅·ERPS", "Omada 중앙관리", "랙마운트"], msrp: 598000 },
+      { model: "SG3452X", image: "sg3452x.jpg", ports: "48×1G RJ45 + 4×10G SFP+", specs: ["팬리스", "정적 라우팅·ERPS", "랙마운트"], msrp: 880000 },
+      { model: "SG3428XMP", image: "sg3428xmp.jpg", ports: "24×1G PoE+ + 4×10G SFP+", specs: ["PoE 384W", "정적 라우팅·ERPS", "Omada 중앙관리"], msrp: 760000 },
     ],
   },
   {
@@ -27,9 +27,9 @@ const tiers = [
     name: "Omada Access Pro",
     desc: "2.5G 멀티기가비트와 10G 업링크를 위한 Wi-Fi 6·7 액세스",
     models: [
-      { model: "SG3210X-M2", image: "sg3210x-m2.jpg", ports: "8×2.5G RJ45 + 2×10G SFP+", specs: ["팬리스", "80Gbps 스위칭", "Omada 중앙관리"] },
-      { model: "SG3218XP-M2", image: "sg3218xp-m2.jpg", ports: "16×2.5G PoE + 2×10G SFP+", specs: ["PoE++ 4포트", "PoE 240W", "Omada 중앙관리"] },
-      { model: "SG3428XPP-M2", image: "sg3428xpp-m2.jpg", ports: "24×2.5G PoE + 4×10G SFP+", specs: ["PoE++·PoE+", "V2 기준 PoE 770W", "정적 라우팅·ERPS"] },
+      { model: "SG3210X-M2", image: "sg3210x-m2.jpg", ports: "8×2.5G RJ45 + 2×10G SFP+", specs: ["팬리스", "80Gbps 스위칭", "Omada 중앙관리"], msrp: 409000 },
+      { model: "SG3218XP-M2", image: "sg3218xp-m2.jpg", ports: "16×2.5G PoE + 2×10G SFP+", specs: ["PoE++ 4포트", "PoE 240W", "Omada 중앙관리"], msrp: 960000 },
+      { model: "SG3428XPP-M2", image: "sg3428xpp-m2.jpg", ports: "24×2.5G PoE + 4×10G SFP+", specs: ["PoE++·PoE+", "V2 기준 PoE 770W", "정적 라우팅·ERPS"], msrp: 1290000 },
     ],
   },
   {
@@ -38,9 +38,9 @@ const tiers = [
     name: "Omada Access Max",
     desc: "10GBASE-T 액세스와 플래그십 Wi-Fi 7용 PoE++",
     models: [
-      { model: "SX3206HPP", image: "sx3206hpp.jpg", ports: "4×10G PoE++ + 2×10G SFP+", specs: ["PoE 200W", "포트당 최대 60W", "정적 라우팅·ERPS"] },
-      { model: "SX3832", image: "sx3832.jpg", ports: "24×10G RJ45 + 8×10G SFP+", specs: ["32포트 10G", "Omada 중앙관리", "랙마운트"] },
-      { model: "SX3832MPP", image: "sx3832mpp.jpg", ports: "24×10G PoE++ + 8×10G SFP+", specs: ["PoE 770W", "출시·재고 확인", "별도 견적"] },
+      { model: "SX3206HPP", image: "sx3206hpp.jpg", ports: "4×10G PoE++ + 2×10G SFP+", specs: ["PoE 200W", "포트당 최대 60W", "정적 라우팅·ERPS"], msrp: 903000 },
+      { model: "SX3832", image: "sx3832.jpg", ports: "24×10G RJ45 + 8×10G SFP+", specs: ["32포트 10G", "Omada 중앙관리", "랙마운트"], msrp: 3290000 },
+      { model: "SX3832MPP", image: "sx3832mpp.jpg", ports: "24×10G PoE++ + 8×10G SFP+", specs: ["PoE 770W", "출시·재고 확인", "별도 견적"], msrp: null },
     ],
   },
   {
@@ -49,9 +49,9 @@ const tiers = [
     name: "Omada Aggregation",
     desc: "서버·스토리지·액세스 스위치를 집선하는 100% 광 패브릭",
     models: [
-      { model: "SX3008F", image: "sx3008f.jpg", ports: "8×10G SFP+", specs: ["160Gbps 스위칭", "팬리스", "정적 라우팅·ERPS"] },
-      { model: "SX3016F", image: "sx3016f.jpg", ports: "16×10G SFP+", specs: ["320Gbps 스위칭", "1+1 전원 이중화", "Omada 중앙관리"] },
-      { model: "SX3032F", image: "sx3032f.jpg", ports: "32×10G SFP+", specs: ["640Gbps 스위칭", "1+1 전원 이중화", "Omada 중앙관리"] },
+      { model: "SX3008F", image: "sx3008f.jpg", ports: "8×10G SFP+", specs: ["160Gbps 스위칭", "팬리스", "정적 라우팅·ERPS"], msrp: 550000 },
+      { model: "SX3016F", image: "sx3016f.jpg", ports: "16×10G SFP+", specs: ["320Gbps 스위칭", "1+1 전원 이중화", "Omada 중앙관리"], msrp: 1090000 },
+      { model: "SX3032F", image: "sx3032f.jpg", ports: "32×10G SFP+", specs: ["640Gbps 스위칭", "1+1 전원 이중화", "Omada 중앙관리"], msrp: 2259000 },
     ],
   },
   {
@@ -60,12 +60,19 @@ const tiers = [
     name: "Omada Campus",
     desc: "기업·캠퍼스·ISP를 위한 25G·100G Stackable L3 코어",
     models: [
-      { model: "S6500-24G4XF", image: "s6500-24g4xf.jpg", ports: "24×1G RJ45 + 4×10G SFP+", specs: ["최대 12대 스태킹", "M-LAG", "전원 이중화"] },
-      { model: "S6500-24MPP4Y", image: "s6500-24mpp4y.jpg", ports: "24×2.5G PoE++ + 4×25G SFP28", specs: ["PoE 최대 1,534W", "최대 12대 스태킹", "M-LAG · 전원 이중화"] },
-      { model: "S7500-24Y4C", image: "s7500-24y4c.jpg", ports: "24×25G SFP28 + 4×100G QSFP28", specs: ["2Tbps 스위칭", "최대 12대 스태킹", "M-LAG · 전원 이중화"] },
+      { model: "S6500-24G4XF", image: "s6500-24g4xf.jpg", ports: "24×1G RJ45 + 4×10G SFP+", specs: ["최대 12대 스태킹", "M-LAG", "전원 이중화"], msrp: 6490000 },
+      { model: "S6500-24MPP4Y", image: "s6500-24mpp4y.jpg", ports: "24×2.5G PoE++ + 4×25G SFP28", specs: ["PoE 최대 1,534W", "최대 12대 스태킹", "M-LAG · 전원 이중화"], msrp: 15390000 },
+      { model: "S7500-24Y4C", image: "s7500-24y4c.jpg", ports: "24×25G SFP28 + 4×100G QSFP28", specs: ["2Tbps 스위칭", "최대 12대 스태킹", "M-LAG · 전원 이중화"], msrp: 23080000 },
     ],
   },
 ];
+
+function formatPrice(msrp) {
+  if (!msrp) return null;
+  if (msrp >= 10000000) return `${(msrp / 10000000).toFixed(1).replace(/\.0$/, "")}천만원`;
+  if (msrp >= 1000000) return `${(msrp / 1000000).toFixed(1).replace(/\.0$/, "")}백만원`;
+  return `${msrp.toLocaleString("ko-KR")}원`;
+}
 
 export default function TpLinkCatalog() {
   return (
@@ -87,14 +94,25 @@ export default function TpLinkCatalog() {
                   <h4 className="font-display text-2xl font-black text-slate-900">{item.model}</h4>
                   <div className="mt-3 rounded-xl bg-slate-50 px-3 py-3 font-mono text-[11px] font-bold text-navy">{item.ports}</div>
                   <ul className="mt-4 space-y-2">{item.specs.map((spec) => <li key={spec} className="text-xs text-slate-600">▸ {spec}</li>)}</ul>
-                  <a href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 아인스테크 공급 견적 문의`)}`} className="mt-6 block rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald">상세 사양 · 아인스테크 구매 견적</a>
+                  {item.msrp ? (
+                    <div className="mt-4 flex items-baseline gap-1.5">
+                      <span className="text-[10px] text-slate-400">권장소비자가</span>
+                      <span className="font-display text-lg font-black text-emerald">{formatPrice(item.msrp)}</span>
+                      <span className="text-[10px] text-slate-400">(VAT 포함)</span>
+                    </div>
+                  ) : (
+                    <div className="mt-4">
+                      <span className="rounded-lg bg-slate-100 px-2 py-1 text-[10px] font-bold text-slate-500">별도 견적</span>
+                    </div>
+                  )}
+                  <a href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 아인스테크 공급 견적 문의`)}`} className="mt-4 block rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald">상세 사양 · 아인스테크 구매 견적</a>
                 </div>
               </article>
             ))}
           </div>
         </section>
       ))}
-      <p className="text-[10px] leading-5 text-slate-400">제품 이미지와 표기 사양은 TP-Link Omada 대한민국 공식 제품 페이지를 기준으로 구성했습니다. 실제 공급 시 국내 출시 여부, 하드웨어 버전, 재고와 라이선스를 확인해 최종 견적합니다.</p>
+      <p className="text-[10px] leading-5 text-slate-400">권장소비자가는 2026년 Q3 TP-Link 공식 가격표 기준이며 VAT가 포함된 금액입니다. 실제 공급가는 수량·프로젝트 조건에 따라 달라질 수 있으며, 재고·하드웨어 버전은 납품 시 최종 확인합니다.</p>
     </div>
   );
 }
