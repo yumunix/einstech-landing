@@ -12,6 +12,7 @@ const tiers = [
         radio: "BE19000 트라이밴드",
         specs: ["6GHz AFC 인증", "RF 스캐닝", "2×10G 포트"],
         msrp: 2190000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap787/",
       },
       {
         model: "EAP783",
@@ -20,6 +21,7 @@ const tiers = [
         radio: "BE19000 트라이밴드",
         specs: ["6GHz 고밀도", "Wi-Fi 7 플래그십", "10G 업링크"],
         msrp: 1273000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap783/",
       },
       {
         model: "EAP773",
@@ -28,6 +30,7 @@ const tiers = [
         radio: "BE9300 트라이밴드",
         specs: ["고밀도 환경", "2.5G 포트", "Omada 중앙관리"],
         msrp: 690000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap773/",
       },
       {
         model: "EAP770",
@@ -36,6 +39,7 @@ const tiers = [
         radio: "BE9300 트라이밴드",
         specs: ["팬리스", "2.5G 포트", "Omada 중앙관리"],
         msrp: 359000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap770/",
       },
       {
         model: "EAP720",
@@ -44,6 +48,7 @@ const tiers = [
         radio: "BE5000 듀얼밴드",
         specs: ["입문형 Wi-Fi 7", "2.5G 포트", "팬리스"],
         msrp: 149000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap720/",
       },
     ],
   },
@@ -60,6 +65,7 @@ const tiers = [
         radio: "AX3600 듀얼밴드",
         specs: ["고밀도 전용 설계", "2.5G 포트", "512+ 동시 접속"],
         msrp: 469000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap660-hd/",
       },
       {
         model: "EAP673",
@@ -68,6 +74,7 @@ const tiers = [
         radio: "AX5400 트라이밴드",
         specs: ["초고성능", "Omada 중앙관리", "10G SFP+ 옵션"],
         msrp: 299000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap673/",
       },
       {
         model: "EAP670",
@@ -76,6 +83,7 @@ const tiers = [
         radio: "AX5400 듀얼밴드",
         specs: ["팬리스", "2.5G 포트", "Omada 중앙관리"],
         msrp: 289000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap670/",
       },
     ],
   },
@@ -92,6 +100,7 @@ const tiers = [
         radio: "AX3000 듀얼밴드",
         specs: ["가성비 Wi-Fi 6", "기가비트 포트", "Omada 중앙관리"],
         msrp: null,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap653/",
       },
       {
         model: "EAP650",
@@ -100,6 +109,7 @@ const tiers = [
         radio: "AX3000 듀얼밴드",
         specs: ["팬리스", "기가비트 포트", "Omada 중앙관리"],
         msrp: null,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap650/",
       },
       {
         model: "EAP650-Outdoor",
@@ -108,6 +118,7 @@ const tiers = [
         radio: "AX3000 듀얼밴드",
         specs: ["IP67 방진방수", "실내외 겸용", "Omada Mesh"],
         msrp: 267000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap650-outdoor/",
       },
     ],
   },
@@ -177,12 +188,22 @@ export default function OmadaApCatalog() {
                       <span className="rounded-lg bg-slate-100 px-2 py-1 text-[10px] font-bold text-slate-500">별도 견적</span>
                     </div>
                   )}
-                  <a
-                    href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 아인스테크 공급 견적 문의`)}`}
-                    className="mt-4 block rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald"
-                  >
-                    상세 사양 · 아인스테크 구매 견적
-                  </a>
+                  <div className="mt-4 flex flex-col gap-2">
+                    <a
+                      href={item.tplink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-center text-xs font-bold text-navy hover:border-navy"
+                    >
+                      TP-Link 공식 사양 →
+                    </a>
+                    <a
+                      href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 아인스테크 공급 견적 문의`)}`}
+                      className="block rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald"
+                    >
+                      아인스테크 구매 견적
+                    </a>
+                  </div>
                 </div>
               </article>
             ))}

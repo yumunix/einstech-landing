@@ -11,6 +11,7 @@ const tiers = [
         ports: "2×10G SFP+ WAN/LAN + 1×2.5G WAN + 8×1G RJ45",
         specs: ["최대 10Gbps 처리", "IPsec·L2TP·PPTP VPN", "로드밸런싱·페일오버"],
         msrp: 1790000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-router/er8411/",
       },
       {
         model: "ER7412-M2",
@@ -18,6 +19,7 @@ const tiers = [
         ports: "2×2.5G WAN/LAN + 1×2.5G WAN + 8×1G RJ45",
         specs: ["2.5G 멀티기가 WAN", "IPsec VPN", "Omada SDN 통합"],
         msrp: 459000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-router/er7412-m2/",
       },
       {
         model: "ER7406",
@@ -25,6 +27,7 @@ const tiers = [
         ports: "2×1G SFP WAN + 4×1G RJ45 WAN/LAN",
         specs: ["6포트 유연한 WAN 구성", "기업 SD-WAN", "Omada 중앙관리"],
         msrp: 309000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-router/er7406/",
       },
     ],
   },
@@ -40,6 +43,7 @@ const tiers = [
         ports: "2×2.5G WAN + 8×1G RJ45 + OC220 컨트롤러 내장",
         specs: ["컨트롤러 일체형", "PoC(Power over Controller)", "올인원 설계"],
         msrp: 599000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-router/er7212pc/",
       },
       {
         model: "ER7206",
@@ -47,6 +51,7 @@ const tiers = [
         ports: "1×2.5G WAN + 1×1G SFP WAN + 4×1G RJ45",
         specs: ["6포트 멀티 WAN", "SD-WAN", "Omada 중앙관리"],
         msrp: 279000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-router/er7206/",
       },
       {
         model: "ER707-M2",
@@ -54,6 +59,7 @@ const tiers = [
         ports: "1×2.5G WAN + 1×2.5G WAN/LAN + 5×1G RJ45",
         specs: ["2.5G 멀티기가 WAN", "Wi-Fi 7 AP 연동 최적화", "Omada SDN"],
         msrp: 369000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-router/er707-m2/",
       },
     ],
   },
@@ -69,6 +75,7 @@ const tiers = [
         ports: "1×1G WAN + 1×1G WAN/LAN + 4×1G RJ45",
         specs: ["Wi-Fi 6 내장 (AX3000)", "올인원 유무선 게이트웨이", "Omada 중앙관리"],
         msrp: 299000,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-router/er706w/",
       },
       {
         model: "ER605",
@@ -76,6 +83,7 @@ const tiers = [
         ports: "1×1G WAN + 4×1G WAN/LAN RJ45",
         specs: ["5포트 멀티 WAN", "OpenVPN·IPsec·L2TP", "Omada SDN 지원"],
         msrp: 85900,
+        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-router/er605/",
       },
     ],
   },
@@ -150,12 +158,22 @@ export default function OmadaGatewayCatalog() {
                       <span className="rounded-lg bg-slate-100 px-2 py-1 text-[10px] font-bold text-slate-500">별도 견적</span>
                     </div>
                   )}
-                  <a
-                    href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 아인스테크 공급 견적 문의`)}`}
-                    className="mt-4 block rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald"
-                  >
-                    상세 사양 · 아인스테크 구매 견적
-                  </a>
+                  <div className="mt-4 flex flex-col gap-2">
+                    <a
+                      href={item.tplink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-center text-xs font-bold text-navy hover:border-navy"
+                    >
+                      TP-Link 공식 사양 →
+                    </a>
+                    <a
+                      href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 아인스테크 공급 견적 문의`)}`}
+                      className="block rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald"
+                    >
+                      아인스테크 구매 견적
+                    </a>
+                  </div>
                 </div>
               </article>
             ))}

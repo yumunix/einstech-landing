@@ -5,9 +5,9 @@ const tiers = [
     name: "Omada Access",
     desc: "1G 액세스와 PoE가 필요한 사무실·매장·지사",
     models: [
-      { model: "SG2008", image: "sg2008.jpg", ports: "8×1G RJ45", specs: ["팬리스", "Omada 중앙관리", "정적 라우팅"], msrp: 169000 },
-      { model: "SG2218", image: "sg2218.jpg", ports: "16×1G RJ45 + 2×1G SFP", specs: ["팬리스", "VLAN·ACL·QoS", "정적 라우팅"], msrp: 290000 },
-      { model: "SG2428P", image: "sg2428p.jpg", ports: "24×1G PoE+ + 4×1G SFP", specs: ["PoE 250W", "Omada 중앙관리", "랙마운트"], msrp: 690000 },
+      { model: "SG2008", image: "sg2008.jpg", ports: "8×1G RJ45", specs: ["팬리스", "Omada 중앙관리", "정적 라우팅"], msrp: 169000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sg2008/" },
+      { model: "SG2218", image: "sg2218.jpg", ports: "16×1G RJ45 + 2×1G SFP", specs: ["팬리스", "VLAN·ACL·QoS", "정적 라우팅"], msrp: 290000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sg2218/" },
+      { model: "SG2428P", image: "sg2428p.jpg", ports: "24×1G PoE+ + 4×1G SFP", specs: ["PoE 250W", "Omada 중앙관리", "랙마운트"], msrp: 690000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sg2428p/" },
     ],
   },
   {
@@ -16,9 +16,9 @@ const tiers = [
     name: "Omada Access Plus",
     desc: "1G 다운링크와 10G 업링크를 갖춘 고밀도 엣지",
     models: [
-      { model: "SG3428X", image: "sg3428x.jpg", ports: "24×1G RJ45 + 4×10G SFP+", specs: ["정적 라우팅·ERPS", "Omada 중앙관리", "랙마운트"], msrp: 598000 },
-      { model: "SG3452X", image: "sg3452x.jpg", ports: "48×1G RJ45 + 4×10G SFP+", specs: ["팬리스", "정적 라우팅·ERPS", "랙마운트"], msrp: 880000 },
-      { model: "SG3428XMP", image: "sg3428xmp.jpg", ports: "24×1G PoE+ + 4×10G SFP+", specs: ["PoE 384W", "정적 라우팅·ERPS", "Omada 중앙관리"], msrp: 760000 },
+      { model: "SG3428X", image: "sg3428x.jpg", ports: "24×1G RJ45 + 4×10G SFP+", specs: ["정적 라우팅·ERPS", "Omada 중앙관리", "랙마운트"], msrp: 598000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sg3428x/" },
+      { model: "SG3452X", image: "sg3452x.jpg", ports: "48×1G RJ45 + 4×10G SFP+", specs: ["팬리스", "정적 라우팅·ERPS", "랙마운트"], msrp: 880000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sg3452x/" },
+      { model: "SG3428XMP", image: "sg3428xmp.jpg", ports: "24×1G PoE+ + 4×10G SFP+", specs: ["PoE 384W", "정적 라우팅·ERPS", "Omada 중앙관리"], msrp: 760000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sg3428xmp/" },
     ],
   },
   {
@@ -27,9 +27,9 @@ const tiers = [
     name: "Omada Access Pro",
     desc: "2.5G 멀티기가비트와 10G 업링크를 위한 Wi-Fi 6·7 액세스",
     models: [
-      { model: "SG3210X-M2", image: "sg3210x-m2.jpg", ports: "8×2.5G RJ45 + 2×10G SFP+", specs: ["팬리스", "80Gbps 스위칭", "Omada 중앙관리"], msrp: 409000 },
-      { model: "SG3218XP-M2", image: "sg3218xp-m2.jpg", ports: "16×2.5G PoE + 2×10G SFP+", specs: ["PoE++ 4포트", "PoE 240W", "Omada 중앙관리"], msrp: 960000 },
-      { model: "SG3428XPP-M2", image: "sg3428xpp-m2.jpg", ports: "24×2.5G PoE + 4×10G SFP+", specs: ["PoE++·PoE+", "V2 기준 PoE 770W", "정적 라우팅·ERPS"], msrp: 1290000 },
+      { model: "SG3210X-M2", image: "sg3210x-m2.jpg", ports: "8×2.5G RJ45 + 2×10G SFP+", specs: ["팬리스", "80Gbps 스위칭", "Omada 중앙관리"], msrp: 409000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sg3210x-m2/" },
+      { model: "SG3218XP-M2", image: "sg3218xp-m2.jpg", ports: "16×2.5G PoE + 2×10G SFP+", specs: ["PoE++ 4포트", "PoE 240W", "Omada 중앙관리"], msrp: 960000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sg3218xp-m2/" },
+      { model: "SG3428XPP-M2", image: "sg3428xpp-m2.jpg", ports: "24×2.5G PoE + 4×10G SFP+", specs: ["PoE++·PoE+", "V2 기준 PoE 770W", "정적 라우팅·ERPS"], msrp: 1290000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sg3428xpp-m2/" },
     ],
   },
   {
@@ -38,9 +38,9 @@ const tiers = [
     name: "Omada Access Max",
     desc: "10GBASE-T 액세스와 플래그십 Wi-Fi 7용 PoE++",
     models: [
-      { model: "SX3206HPP", image: "sx3206hpp.jpg", ports: "4×10G PoE++ + 2×10G SFP+", specs: ["PoE 200W", "포트당 최대 60W", "정적 라우팅·ERPS"], msrp: 903000 },
-      { model: "SX3832", image: "sx3832.jpg", ports: "24×10G RJ45 + 8×10G SFP+", specs: ["32포트 10G", "Omada 중앙관리", "랙마운트"], msrp: 3290000 },
-      { model: "SX3832MPP", image: "sx3832mpp.jpg", ports: "24×10G PoE++ + 8×10G SFP+", specs: ["PoE 770W", "출시·재고 확인", "별도 견적"], msrp: null },
+      { model: "SX3206HPP", image: "sx3206hpp.jpg", ports: "4×10G PoE++ + 2×10G SFP+", specs: ["PoE 200W", "포트당 최대 60W", "정적 라우팅·ERPS"], msrp: 903000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sx3206hpp/" },
+      { model: "SX3832", image: "sx3832.jpg", ports: "24×10G RJ45 + 8×10G SFP+", specs: ["32포트 10G", "Omada 중앙관리", "랙마운트"], msrp: 3290000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sx3832/" },
+      { model: "SX3832MPP", image: "sx3832mpp.jpg", ports: "24×10G PoE++ + 8×10G SFP+", specs: ["PoE 770W", "출시·재고 확인", "별도 견적"], msrp: null, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sx3832mpp/" },
     ],
   },
   {
@@ -49,9 +49,9 @@ const tiers = [
     name: "Omada Aggregation",
     desc: "서버·스토리지·액세스 스위치를 집선하는 100% 광 패브릭",
     models: [
-      { model: "SX3008F", image: "sx3008f.jpg", ports: "8×10G SFP+", specs: ["160Gbps 스위칭", "팬리스", "정적 라우팅·ERPS"], msrp: 550000 },
-      { model: "SX3016F", image: "sx3016f.jpg", ports: "16×10G SFP+", specs: ["320Gbps 스위칭", "1+1 전원 이중화", "Omada 중앙관리"], msrp: 1090000 },
-      { model: "SX3032F", image: "sx3032f.jpg", ports: "32×10G SFP+", specs: ["640Gbps 스위칭", "1+1 전원 이중화", "Omada 중앙관리"], msrp: 2259000 },
+      { model: "SX3008F", image: "sx3008f.jpg", ports: "8×10G SFP+", specs: ["160Gbps 스위칭", "팬리스", "정적 라우팅·ERPS"], msrp: 550000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sx3008f/" },
+      { model: "SX3016F", image: "sx3016f.jpg", ports: "16×10G SFP+", specs: ["320Gbps 스위칭", "1+1 전원 이중화", "Omada 중앙관리"], msrp: 1090000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sx3016f/" },
+      { model: "SX3032F", image: "sx3032f.jpg", ports: "32×10G SFP+", specs: ["640Gbps 스위칭", "1+1 전원 이중화", "Omada 중앙관리"], msrp: 2259000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/sx3032f/" },
     ],
   },
   {
@@ -60,9 +60,9 @@ const tiers = [
     name: "Omada Campus",
     desc: "기업·캠퍼스·ISP를 위한 25G·100G Stackable L3 코어",
     models: [
-      { model: "S6500-24G4XF", image: "s6500-24g4xf.jpg", ports: "24×1G RJ45 + 4×10G SFP+", specs: ["최대 12대 스태킹", "M-LAG", "전원 이중화"], msrp: 6490000 },
-      { model: "S6500-24MPP4Y", image: "s6500-24mpp4y.jpg", ports: "24×2.5G PoE++ + 4×25G SFP28", specs: ["PoE 최대 1,534W", "최대 12대 스태킹", "M-LAG · 전원 이중화"], msrp: 15390000 },
-      { model: "S7500-24Y4C", image: "s7500-24y4c.jpg", ports: "24×25G SFP28 + 4×100G QSFP28", specs: ["2Tbps 스위칭", "최대 12대 스태킹", "M-LAG · 전원 이중화"], msrp: 23080000 },
+      { model: "S6500-24G4XF", image: "s6500-24g4xf.jpg", ports: "24×1G RJ45 + 4×10G SFP+", specs: ["최대 12대 스태킹", "M-LAG", "전원 이중화"], msrp: 6490000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/s6500-24g4xf/" },
+      { model: "S6500-24MPP4Y", image: "s6500-24mpp4y.jpg", ports: "24×2.5G PoE++ + 4×25G SFP28", specs: ["PoE 최대 1,534W", "최대 12대 스태킹", "M-LAG · 전원 이중화"], msrp: 15390000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/s6500-24mpp4y/" },
+      { model: "S7500-24Y4C", image: "s7500-24y4c.jpg", ports: "24×25G SFP28 + 4×100G QSFP28", specs: ["2Tbps 스위칭", "최대 12대 스태킹", "M-LAG · 전원 이중화"], msrp: 23080000, tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-switch/s7500-24y4c/" },
     ],
   },
 ];
@@ -105,7 +105,10 @@ export default function TpLinkCatalog() {
                       <span className="rounded-lg bg-slate-100 px-2 py-1 text-[10px] font-bold text-slate-500">별도 견적</span>
                     </div>
                   )}
-                  <a href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 아인스테크 공급 견적 문의`)}`} className="mt-4 block rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald">상세 사양 · 아인스테크 구매 견적</a>
+                  <div className="mt-4 flex flex-col gap-2">
+                    <a href={item.tplink} target="_blank" rel="noopener noreferrer" className="block rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-center text-xs font-bold text-navy hover:border-navy">TP-Link 공식 사양 →</a>
+                    <a href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 아인스테크 공급 견적 문의`)}`} className="block rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald">아인스테크 구매 견적</a>
+                  </div>
                 </div>
               </article>
             ))}

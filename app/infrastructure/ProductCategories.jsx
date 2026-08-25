@@ -43,9 +43,25 @@ const categories = [
     code: "NETWORK_SWITCH",
     title: "TP-Link Network Switch",
     vendor: "TP-Link Omada",
-    desc: "Access부터 Campus까지 관리형 네트워크 스위치",
-    uses: ["VLAN", "PoE", "10G·25G·100G"],
+    desc: "Access부터 Campus까지 관리형 네트워크 스위치 — 권장소비자가 포함",
+    uses: ["VLAN·QoS·ACL", "PoE / PoE+ / PoE++", "10G·25G·100G 업링크"],
     href: "/network-switch",
+  },
+  {
+    code: "OMADA_AP",
+    title: "TP-Link Omada AP",
+    vendor: "TP-Link Omada",
+    desc: "Wi-Fi 7(BE)·Wi-Fi 6(AX) 천장형·벽판형·실외형 액세스 포인트",
+    uses: ["Wi-Fi 7 · EAP770~EAP787", "Wi-Fi 6 · EAP650~EAP673", "Omada 중앙 컨트롤러"],
+    href: "/omada-ap",
+  },
+  {
+    code: "OMADA_GW",
+    title: "TP-Link Omada Gateway",
+    vendor: "TP-Link Omada",
+    desc: "멀티 WAN·VPN·SD-WAN을 단일 장비로 제공하는 기업용 게이트웨이",
+    uses: ["멀티 WAN 이중화", "IPsec·L2TP·OpenVPN", "SD-WAN · 로드밸런싱"],
+    href: "/omada-gateway",
   },
 ];
 
