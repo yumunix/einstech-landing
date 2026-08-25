@@ -61,8 +61,8 @@ const tiers = [
     desc: "기업·캠퍼스·ISP를 위한 25G·100G Stackable L3 코어",
     models: [
       { model: "S6500-24G4XF", image: "s6500-24g4xf.jpg", ports: "24×1G RJ45 + 4×10G SFP+", specs: ["최대 12대 스태킹", "M-LAG", "전원 이중화"] },
-      { model: "S6500-24MPP4Y", image: "https://static.tp-link.com/upload/image-line/S6500-24MPP4Y_UN_1.26_overview_01_large_20260203024335q.jpg", ports: "24×2.5G PoE++ + 4×25G SFP28", specs: ["PoE 최대 1,534W", "최대 12대 스태킹", "M-LAG · 전원 이중화"] },
-      { model: "S7500-24Y4C", image: "https://static.tp-link.com/upload/image-line/S7500-24Y4C_UN_1.20_overview_01_large_20260212054445j.jpg", ports: "24×25G SFP28 + 4×100G QSFP28", specs: ["2Tbps 스위칭", "최대 12대 스태킹", "M-LAG · 전원 이중화"] },
+      { model: "S6500-24MPP4Y", image: "s6500-24mpp4y.jpg", ports: "24×2.5G PoE++ + 4×25G SFP28", specs: ["PoE 최대 1,534W", "최대 12대 스태킹", "M-LAG · 전원 이중화"] },
+      { model: "S7500-24Y4C", image: "s7500-24y4c.jpg", ports: "24×25G SFP28 + 4×100G QSFP28", specs: ["2Tbps 스위칭", "최대 12대 스태킹", "M-LAG · 전원 이중화"] },
     ],
   },
 ];
