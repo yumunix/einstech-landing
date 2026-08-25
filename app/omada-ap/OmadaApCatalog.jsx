@@ -126,11 +126,8 @@ const tiers = [
 
 function formatPrice(msrp) {
   if (!msrp) return null;
-  if (msrp >= 1000000) {
-    const m = (msrp / 1000000).toFixed(1).replace(/\.0$/, "");
-    return `${m}백만원`;
-  }
-  return `${msrp.toLocaleString("ko-KR")}원`;
+  const man = parseFloat((msrp / 10000).toFixed(2));
+  return `${man.toLocaleString("ko-KR")}만원`;
 }
 
 export default function OmadaApCatalog() {
