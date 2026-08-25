@@ -69,8 +69,7 @@ const tiers = [
 
 function formatPrice(msrp) {
   if (!msrp) return null;
-  const man = parseFloat((msrp / 10000).toFixed(2));
-  return `${man.toLocaleString("ko-KR")}만원`;
+  return `${msrp.toLocaleString("ko-KR")}원`;
 }
 
 export default function TpLinkCatalog() {
