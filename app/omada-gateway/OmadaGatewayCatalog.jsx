@@ -38,14 +38,6 @@ const tiers = [
     desc: "중소기업·지사·리테일에 적합한 멀티 WAN 게이트웨이",
     models: [
       {
-        model: "ER7212PC",
-        image: null,
-        ports: "2×2.5G WAN + 8×1G RJ45 + OC220 컨트롤러 내장",
-        specs: ["컨트롤러 일체형", "PoC(Power over Controller)", "올인원 설계"],
-        msrp: 599000,
-        tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-router/er7212pc/",
-      },
-      {
         model: "ER7206",
         image: "er7206.jpg",
         ports: "1×2.5G WAN + 1×1G SFP WAN + 4×1G RJ45",
