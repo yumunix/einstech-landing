@@ -1,3 +1,6 @@
+import SpecModal from "@/components/product/SpecModal";
+import { switchSpecs } from "./switchSpecs";
+
 const tiers = [
   {
     id: "access",
@@ -104,7 +107,11 @@ export default function TpLinkCatalog() {
                     </div>
                   )}
                   <div className="mt-4 flex flex-col gap-2">
-                    <a href={item.tplink} target="_blank" rel="noopener noreferrer" className="block rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-center text-xs font-bold text-navy hover:border-navy">TP-Link 공식 사양 →</a>
+                    <SpecModal
+                      model={item.model}
+                      sections={switchSpecs[item.model]?.sections}
+                      officialUrl={switchSpecs[item.model]?.officialUrl ?? item.tplink}
+                    />
                     <a href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 아인스테크 공급 견적 문의`)}`} className="block rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald">아인스테크 구매 견적</a>
                   </div>
                 </div>
