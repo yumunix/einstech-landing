@@ -47,7 +47,7 @@ const tiers = [
         type: "천장형",
         radio: "BE11000 트라이밴드",
         specs: ["고밀도 환경 최적화", "2.5G 포트", "Omada 중앙관리"],
-        msrp: null,
+        msrp: 569000,
         tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap772/",
       },
       {
@@ -56,7 +56,7 @@ const tiers = [
         type: "실내외 겸용",
         radio: "BE11000 트라이밴드",
         specs: ["실내·실외 겸용", "IP67 방진방수", "Omada 중앙관리"],
-        msrp: null,
+        msrp: 669000,
         tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap772-outdoor/",
       },
       {
@@ -65,7 +65,7 @@ const tiers = [
         type: "천장형",
         radio: "BE3600 듀얼밴드",
         specs: ["입문형 Wi-Fi 7", "기가비트 포트", "팬리스"],
-        msrp: null,
+        msrp: 209000,
         tplink: "https://www.tp-link.com/kr/business-networking/omada-sdn-access-point/eap723/",
       },
       {
