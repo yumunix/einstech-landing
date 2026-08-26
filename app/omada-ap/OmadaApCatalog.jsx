@@ -1,3 +1,6 @@
+import SpecModal from "@/components/product/SpecModal";
+import { omadaApSpecs } from "./omadaApSpecs";
+
 const tiers = [
   {
     id: "wifi7",
@@ -212,14 +215,11 @@ export default function OmadaApCatalog() {
                     </div>
                   )}
                   <div className="mt-4 flex flex-col gap-2">
-                    <a
-                      href={item.tplink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-center text-xs font-bold text-navy hover:border-navy"
-                    >
-                      TP-Link 공식 사양 →
-                    </a>
+                    <SpecModal
+                      model={item.model}
+                      sections={omadaApSpecs[item.model]?.sections}
+                      officialUrl={omadaApSpecs[item.model]?.officialUrl ?? item.tplink}
+                    />
                     <a
                       href={`/contact?subject=${encodeURIComponent(`TP-Link ${item.model} 아인스테크 공급 견적 문의`)}`}
                       className="block rounded-xl bg-navy px-4 py-3 text-center text-xs font-bold text-white hover:bg-emerald"
