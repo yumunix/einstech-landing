@@ -210,6 +210,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* EINSGUARD AI */}
+      <section className="relative overflow-hidden bg-slate-950 py-24 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,.24),transparent_35%)]"></div>
+        <div className="relative mx-auto grid max-w-page gap-12 px-6 lg:grid-cols-[1.25fr_.75fr] lg:px-12">
+          <div>
+            <div className="font-mono text-xs font-black tracking-[.24em] text-emerald-300">NEW · AI GOVERNANCE</div>
+            <h2 className="mt-6 font-display text-5xl font-black tracking-tight md:text-6xl">EINSGUARD AI</h2>
+            <p className="mt-5 text-2xl font-black text-emerald-300">모든 AI를 한눈에. 모든 위험을 하나의 정책으로.</p>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-white/65">Claude, Codex, Gemini, Ollama 등 사내 AI 도구의 사용 현황과 위험 행동을 한 화면에서 확인하고 정책·승인·감사 이력을 온프레미스로 관리합니다.</p>
+            <div className="mt-9 flex flex-wrap gap-4"><a href="/downloads/einsguard-ai" className="rounded-2xl bg-emerald px-8 py-4 font-black text-slate-950">15일 무료체험</a><a href="/einsguard-ai" className="rounded-2xl border border-white/20 px-8 py-4 font-black text-white">제품 자세히 보기</a></div>
+          </div>
+          <div className="grid grid-cols-2 gap-4 self-center"><div className="rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-4xl text-emerald-300">15일</b><p className="mt-2 text-sm text-white/50">무료체험</p></div><div className="rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-4xl text-emerald-300">5대</b><p className="mt-2 text-sm text-white/50">체험 관리 대상</p></div><div className="col-span-2 rounded-3xl border border-white/10 bg-white/5 p-7"><b className="text-2xl text-emerald-300">Linux · macOS</b><p className="mt-2 text-sm text-white/50">Windows 지원은 후속 제공</p></div></div>
+        </div>
+      </section>
+
       {/* BRANDS MARQUEE */}
       <div className="py-20 bg-slate-50/60 border-y border-slate-100 relative overflow-hidden">
         <div className="flex whitespace-nowrap animate-marquee">

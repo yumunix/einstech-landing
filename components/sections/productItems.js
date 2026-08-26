@@ -44,4 +44,14 @@ export const productItems = [
     desc: "멀티 WAN · VPN · SD-WAN 게이트웨이",
     href: "/omada-gateway",
   },
+  {
+    label: "TP-Link VIGI 보안",
+    desc: "IP 카메라 · NVR · 기업 보안 솔루션",
+    href: "/vigi-security",
+  },
+  {
+    label: "Omada 클라우드 구독",
+    desc: "장치·카메라 클라우드 중앙관리 라이선스",
+    href: "/omada-cloud",
+  },
 ];

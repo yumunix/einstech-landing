@@ -20,11 +20,11 @@ const softwareFeatures = [
 ];
 
 const applianceModels = [
-  { model: "1050S", scale: "중소규모", capacity: "최대 16 / 32TB", network: "1/10GbE", summary: "간결한 백업 통합을 시작하는 엔트리 어플라이언스" },
-  { model: "2050S", scale: "중소규모", capacity: "최대 40 / 80TB", network: "1/10GbE", summary: "확장된 서버·스토리지 환경을 위한 표준 구성" },
-  { model: "4050S", scale: "중대규모", capacity: "최대 56 / 112TB", network: "1/10GbE", summary: "더 높은 처리량과 확장성을 요구하는 데이터센터" },
-  { model: "MD50", scale: "대규모", capacity: "최대 768TB", network: "1/10/25GbE", summary: "인라인 중복제거와 다중 복제를 갖춘 대용량 플랫폼" },
-  { model: "HD50", scale: "초대규모", capacity: "최대 1.5PB", network: "1/10/25/100GbE", summary: "PB급 백업과 고속 복제 환경을 위한 플래그십" },
+  {model:"1050S",scale:"중소규모",capacity:"최대 16 / 32TB",network:"1/10GbE",summary:"간결한 백업 통합을 시작하는 엔트리 어플라이언스"},
+  {model:"2050S",scale:"중소규모",capacity:"최대 40 / 80TB",network:"1/10GbE",summary:"확장된 서버·스토리지 환경을 위한 표준 구성"},
+  {model:"4050S",scale:"중대규모",capacity:"최대 56 / 112TB",network:"1/10GbE",summary:"더 높은 처리량과 확장성을 요구하는 데이터센터"},
+  {model:"MD50",scale:"대규모",capacity:"최대 768TB",network:"1/10/25GbE",summary:"인라인 중복제거와 다중 복제를 갖춘 대용량 플랫폼"},
+  {model:"HD50",scale:"초대규모",capacity:"최대 1.5PB",network:"1/10/25/100GbE",summary:"PB급 백업과 고속 복제 환경을 위한 플래그십"},
 ];
 
 export default function VirbakAbioPage(){
@@ -76,3 +76,4 @@ export default function VirbakAbioPage(){
     <Footer/>
   </>;
 }
+
