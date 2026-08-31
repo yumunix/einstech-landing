@@ -28,7 +28,7 @@ const supportItems = [
 ];
 
 const resourceItems = [
-  { label: "EINSGUARD AI 자료실", desc: "관리 서버·Agent 1.3.1", href: "/downloads/einsguard-ai" },
+  { label: "EINSGUARD AI 자료실", desc: "관리 서버·Agent 1.4.0", href: "/downloads/einsguard-ai" },
   { label: "설치·사용 매뉴얼", desc: "설치 · 운영 · 제거 · 문제 해결", href: "/docs/einsguard-ai/install" },
   { label: "관리자 운영 매뉴얼", desc: "승인 · 차단 · 사건 · 라이선스 · 감사", href: "/docs/einsguard-ai/admin" },
 ];
@@ -87,9 +87,7 @@ function NavDropdown({ label, items, openId, setOpenId, id }) {
         onClick={() => setOpenId(open ? null : id)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className={`flex h-14 cursor-pointer items-center gap-2 whitespace-nowrap rounded-xl px-4 text-[15px] font-extrabold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2 ${
-          open ? "bg-navy text-white shadow-sm" : "text-slate-800 hover:bg-slate-100 hover:text-navy"
-        }`}
+        className="flex h-14 cursor-pointer items-center gap-2 whitespace-nowrap rounded-xl px-[18px] text-base font-extrabold text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald focus-visible:ring-offset-2"
       >
         {label}
         <svg
@@ -152,7 +150,7 @@ export default function Header() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 h-16">
       <div className="max-w-page mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6 xl:gap-10">
           <a href="/" className="header-brand-link flex h-14 cursor-pointer items-center rounded-xl px-2 leading-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -162,7 +160,7 @@ export default function Header() {
             />
           </a>
 
-          <div className="header-primary-nav hidden h-full lg:flex items-center gap-1">
+          <div className="header-primary-nav hidden h-full xl:flex items-center gap-1.5">
             <NavDropdown
               id="ai"
               label="AI 솔루션"
@@ -209,7 +207,7 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="text-right hidden sm:block">
+          <div className="text-right hidden xl:block">
             <div className="font-mono text-[10px] text-emerald">
               SYS_STATUS: OPTIMAL
             </div>
@@ -219,7 +217,7 @@ export default function Header() {
             href={SMARTSTORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden whitespace-nowrap lg:inline-flex px-4 py-2 bg-navy text-white border border-navy hover:bg-white hover:text-navy rounded-full font-bold text-sm transition-all duration-300"
+            className="hidden whitespace-nowrap xl:inline-flex px-4 py-2 bg-navy text-white border border-navy hover:bg-white hover:text-navy rounded-full font-bold text-sm transition-all duration-300"
           >
             제품 구매
           </a>
@@ -231,7 +229,7 @@ export default function Header() {
           </a>
           <button
             type="button"
-            className="lg:hidden flex h-11 w-11 items-center justify-center rounded-xl text-slate-800 hover:bg-slate-100 hover:text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald"
+            className="xl:hidden flex h-11 w-11 items-center justify-center rounded-xl text-slate-800 hover:bg-slate-100 hover:text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald"
             aria-label="메뉴 열기"
             onClick={() => setMobileOpen((v) => !v)}
           >
@@ -249,7 +247,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-slate-200 bg-white shadow-xl">
+        <div className="xl:hidden max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-slate-200 bg-white shadow-xl">
           <div className="px-5 py-4 flex flex-col gap-1">
             <div className="font-mono text-[10px] text-slate-400 uppercase tracking-widest pt-2 pb-1">
               AI 솔루션</div>
