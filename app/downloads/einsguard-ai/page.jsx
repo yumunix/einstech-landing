@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata=createPageMetadata({path:"/downloads/einsguard-ai",title:"EINSGUARD AI 0.3.0 다운로드 | EINSTECH",description:"15일 Trial 관리 서버와 Windows·Linux·macOS Agent 1.4.0 및 SHA-256 체크섬을 제공합니다."});
 const packages=[
- {title:"AI GUARD 관리 서버",platform:"LINUX SERVER · 0.3.0-TRIAL",file:"einsguard-ai-0.3.0-trial-linux.tar.gz",sha:"acf49eafb7b25244ea538724adbee2ce111476f7ce96ed0f09c68362f98b45f5",items:["Linux x86_64·arm64","Ollama·OpenAI 호환 내부 LLM","Windows·Linux·macOS Agent 포함","15일 무료 · 관리 대상 5대"]},
+ {title:"AI GUARD 관리 서버",platform:"LINUX SERVER · 0.3.0-TRIAL",file:"einsguard-ai-0.3.0-trial-linux.tar.gz",sha:"e914fa65b1669f88e3fc6ae17d24de0cbd7cc5f7084b5ab9d7695c6103cbbfb5",items:["Linux x86_64·arm64","Ollama·OpenAI 호환 내부 LLM","Windows·Linux·macOS Agent 포함","15일 무료 · 관리 대상 5대"]},
  {title:"Windows Agent",platform:"WINDOWS CLIENT · 1.4.0",file:"EINSGUARD-AI-Windows-Agent-1.4.0.exe",sha:"0324e5a8d82a344bc7d9a621d458f0cde3799c2bb115be94e8e04e2a51cc899c",items:["서버 주소만 입력 · 승인 등록","클립보드·CLI·CLI 첨부 파일 DLP","Claude·Codex 실행 정책","장비 전용 키 자동 수령"]},
  {title:"Linux Agent",platform:"LINUX CLIENT · 1.4.0",file:"einsguard-ai-agent-1.4.0-linux.tar.gz",sha:"1748377d8a1d65b6c58968548736221895912255022e05ca5939a8c13a5b4148",items:["서버 주소만 입력 · 승인 등록","CLI 첨부 텍스트 파일 검사","로컬 사용자 추가·삭제 추적","현재 API·키 상태 확인"]},
  {title:"macOS Agent",platform:"MACOS CLIENT · 1.4.0",file:"einsguard-ai-agent-1.4.0-macos.tar.gz",sha:"270a4f61be36e2ce70819cafd233b32c179d5f04a096fdff176af48dd95494c8",items:["macOS 13 이상","서버 주소만 입력 · 승인 등록","CLI 첨부 텍스트 파일 검사","현재 API·키 상태 확인"]},
