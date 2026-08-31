@@ -25,8 +25,8 @@ export const productItems = [
     href: "/einswall",
   },
   {
-    label: "TP-Link Network Switch",
-    desc: "Omada Access · Campus",
+    label: "TP-Link Omada · VIGI",
+    desc: "스위치 · 무선 AP · IP 카메라",
     href: "/network-switch",
   },
 ];

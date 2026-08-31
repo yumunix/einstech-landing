@@ -9,7 +9,7 @@ export const metadata = {
 const partners = [
   { name: "HPE", company: "Hewlett Packard Enterprise", area: "Enterprise Server · Compute", url: "https://www.hpe.com/kr/ko/home.html", tone: "text-[#01a982]" },
   { name: "Hitachi", company: "HS효성인포메이션시스템 · Hitachi Vantara", area: "Enterprise Storage · Data Infrastructure", url: "https://www.his21.co.kr/", logo: "/partners/hitachi.svg" },
-  { name: "TP-Link", company: "TP-Link", area: "Network Switch · Omada SDN", url: "https://www.tp-link.com/kr/", logo: "/partners/tp-link.png" },
+  { name: "TP-Link", company: "TP-Link", area: "Omada 네트워킹 · VIGI 영상보안", url: "https://www.tp-link.com/kr/", logo: "/partners/tp-link.png" },
   { name: "Rose HA", company: "이에스케이솔루션", area: "High Availability · Replication · DR", url: "https://www.eskits.co.kr/", tone: "text-rose-600" },
   { name: "MCCS", company: "맨텍솔루션", area: "High Availability · Service Continuity", url: "https://www.mantech.co.kr/", logo: "/partners/mantech.png" },
   { name: "ESET", company: "ESET", area: "Endpoint Security · EDR", url: "https://www.eset.com/kr/", tone: "text-[#0096a1]" },

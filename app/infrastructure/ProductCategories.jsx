@@ -41,10 +41,10 @@ const categories = [
   },
   {
     code: "NETWORK_SWITCH",
-    title: "TP-Link Network Switch",
-    vendor: "TP-Link Omada",
-    desc: "Access부터 Campus까지 관리형 네트워크 스위치",
-    uses: ["VLAN", "PoE", "10G·25G·100G"],
+    title: "TP-Link Omada · VIGI",
+    vendor: "TP-Link Omada · VIGI",
+    desc: "Omada 스위치·무선 AP와 VIGI IP 카메라·NVR 대표 제품군",
+    uses: ["스위치 · 무선 AP", "IP 카메라 · NVR", "Omada Central 통합관리"],
     href: "/network-switch",
   },
 ];
