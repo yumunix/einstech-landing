@@ -6,18 +6,25 @@ import { organizationStructuredData, websiteStructuredData } from "@/lib/seo";
 
 const siteUrl = "https://www.einstech.kr";
 const siteName = "EINSTECH";
-const siteTitle = "EINSTECH | Non Stop System, Lossless Data";
+const siteTitle =
+  "아인스테크(EINSTECH) | 기업용 AI보안·서버·스토리지·백업·HA 전문기업";
 const siteDescription =
-  "AI 보안, HPE 서버, NVIDIA GPU, Hitachi·Infortrend 스토리지, Brocade SAN, TP-Link 네트워크, Acronis·NetBackup 백업, HA Cluster, DLP·방화벽·재해복구 전문기업.";
+  "아인스테크(EINSTECH)는 2014년 설립된 인프라 전문기업입니다. EINSGUARD AI 보안, HPE 서버, NVIDIA GPU, Hitachi·Infortrend 스토리지, Brocade SAN, TP-Link Omada·VIGI 네트워크, Acronis·NetBackup 백업, HA Cluster, DLP·방화벽·재해복구를 설계·공급·유지보수합니다.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: siteTitle,
-    template: "%s | EINSTECH",
+    template: "%s | 아인스테크(EINSTECH)",
   },
   description: siteDescription,
   keywords: [
+    "아인스테크",
+    "EINSTECH",
+    "아인스테크 회사",
+    "용인 IT 인프라 기업",
+    "인프라 SI 전문기업",
+    "기업 IT 인프라 구축",
     "HA 클러스터",
     "Rose HA",
     "MCCS",
