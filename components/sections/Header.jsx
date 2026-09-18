@@ -18,6 +18,7 @@ const solutionItems = [
   { label: "VIRBAK ABIO", desc: "국산 백업 Software · All-in-One Appliance", href: "/virbak-abio" },
   { label: "Data Security", desc: "Netwrix · Kaspersky · ESET", href: "/dlp-antivirus" },
   { label: "DR 솔루션", desc: "재해복구 · BCP 설계", href: "/bcp" },
+  { label: "Couchbase", desc: "NoSQL · ERP 보조 계층 · AI/RAG 연동", href: "/couchbase" },
 ];
 
 const supportItems = [
