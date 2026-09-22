@@ -8,10 +8,10 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
   path: "/erp",
-  title: "소규모 회사를 위한 모듈 선택형 온프레미스 ERP | EINSTECH ERP",
+  title: "소규모 ERP 구축 | 모듈 선택형 온프레미스 ERP — EINSTECH",
   description:
-    "직원 수가 적어 전담 IT팀 없이 대표·관리자가 직접 챙기는 소규모 회사를 위한 ERP. 아인스테크가 사내에서 직접 운영하며 다져온 시스템을 필요한 모듈만 골라 도입합니다.",
-  keywords: ["ERP", "소규모 기업 ERP", "온프레미스 ERP", "모듈형 ERP", "중소기업 ERP", "맞춤형 ERP", "EINSTECH ERP"],
+    "소규모 ERP 구축을 전문으로 하는 EINSTECH ERP. 전담 IT팀 없이 대표·관리자가 직접 챙기는 소규모 회사를 위해, 아인스테크가 사내에서 직접 운영하며 다져온 시스템을 필요한 모듈만 골라 온프레미스로 도입합니다.",
+  keywords: ["소규모 ERP 구축", "소규모 ERP", "ERP 구축", "온프레미스 ERP 구축", "소규모 기업 ERP", "모듈형 ERP", "중소기업 ERP 구축", "맞춤형 ERP", "EINSTECH ERP"],
 });
 
 const shiftCards = [
@@ -104,7 +104,7 @@ const guarantees = [
 ];
 
 const faqs = [
-  ["직원 수가 적은 회사도 도입할 수 있나요?", "오히려 그런 회사를 위해 만들었습니다. 대기업용 풀 패키지가 아니라, 소규모 회사가 실제로 쓰는 몇 개 모듈만 골라 가볍게 시작할 수 있습니다."],
+  ["소규모 회사도 ERP 구축이 가능한가요?", "오히려 그런 회사를 위해 만들었습니다. 대기업용 풀 패키지가 아니라, 소규모 ERP 구축에 맞춰 실제로 쓰는 몇 개 모듈만 골라 가볍게 시작할 수 있습니다."],
   ["모듈은 나중에 추가할 수 있나요?", "가능합니다. 처음엔 꼭 필요한 모듈만 도입하고, 이후 필요해지면 추가로 설치할 수 있습니다."],
   ["기존에 쓰던 엑셀 데이터를 옮길 수 있나요?", "가능합니다. 다만 데이터 형태가 고객사마다 달라 이행 방법은 상담 시 별도로 확인합니다."],
   ["여러 회사(계열사 등)를 하나의 ERP로 같이 쓸 수 있나요?", "고객사마다 완전히 분리된 인스턴스로 운영하는 것을 기본으로 합니다. 계열사 구조 등 특수한 요구가 있으면 상담 시 알려주세요."],
@@ -123,7 +123,7 @@ export default function ErpPage() {
       operatingSystem: "Linux (온프레미스)",
       url: "https://www.einstech.kr/erp",
       publisher: { "@id": "https://www.einstech.kr/#organization" },
-      description: "필요한 모듈만 선택해서 도입하는 온프레미스 ERP",
+      description: "소규모 ERP 구축을 위한, 필요한 모듈만 선택해서 도입하는 온프레미스 ERP",
       offers: { "@type": "Offer", availability: "https://schema.org/InStock", priceSpecification: { "@type": "PriceSpecification", price: "0", priceCurrency: "KRW", description: "모듈 구성에 따라 별도 견적" } },
     },
     {
@@ -160,21 +160,21 @@ export default function ErpPage() {
                 EINSTECH ERP
               </span>
               <span className="block text-[clamp(2rem,4vw,4rem)] font-light tracking-widest ds-text-glow-cyan text-navy mt-3">
-                BUILT FOR SMALL TEAMS
+                소규모 ERP 구축 전문
               </span>
             </h1>
 
             <p className="font-display text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-slate-900 leading-tight ds-word-keep mb-8 max-w-4xl">
-              전담 IT팀 없는 소규모 회사가,
+              전담 IT팀 없이도 가능한
               <br />
-              <span className="ds-text-glow-acid text-emerald">필요한 모듈만 고르는 ERP.</span>
+              <span className="ds-text-glow-acid text-emerald">소규모 ERP 구축.</span>
             </p>
 
             <p className="font-sans text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl border-l-2 border-navy/30 pl-5 ds-word-keep mb-12">
-              아인스테크도 전담 IT팀 없이 고객/거래처, 견적, 자산, 기술지원, 재무를 사내에서
-              이 ERP로 직접 처리하는 소규모 회사입니다. 판매 상품도 같은 코드베이스이며,
-              직원 수가 적은 고객사에 맞춰 필요한 모듈만 골라 온프레미스 전용 인스턴스로
-              도입합니다.
+              아인스테크는 소규모 ERP 구축을 전문으로 합니다. 아인스테크도 전담 IT팀 없이
+              고객/거래처, 견적, 자산, 기술지원, 재무를 사내에서 이 ERP로 직접 처리하는
+              소규모 회사입니다. 판매 상품도 같은 코드베이스이며, 직원 수가 적은 고객사에
+              맞춰 필요한 모듈만 골라 온프레미스 전용 인스턴스로 도입합니다.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 max-w-xl">
@@ -199,7 +199,7 @@ export default function ErpPage() {
           />
 
           <div className="w-full max-w-page mx-auto px-6 lg:px-12 relative z-10">
-            <SectionHeader badgeText="THE_PROBLEM" badgeColor="cyan" sectionLabel="1. Problem — 패키지 ERP의 흔한 문제">
+            <SectionHeader badgeText="THE_PROBLEM" badgeColor="cyan" sectionLabel="1. Problem — 소규모 ERP 구축에서 흔히 겪는 문제">
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 안 쓰는 기능까지 사고,
                 <br />
@@ -283,7 +283,7 @@ export default function ErpPage() {
           />
 
           <div className="w-full max-w-page mx-auto px-6 lg:px-12 relative z-10">
-            <SectionHeader badgeText="PROCESS" badgeColor="cyan" sectionLabel="3. Process — 도입 4단계">
+            <SectionHeader badgeText="PROCESS" badgeColor="cyan" sectionLabel="3. Process — 소규모 ERP 구축 4단계">
               <h2 className="font-display text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight text-slate-900 leading-[1.1] ds-word-keep max-w-4xl">
                 모듈 상담 → 설치
                 <br />
