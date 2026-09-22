@@ -11,6 +11,7 @@ const inquiryTypes = [
   { value: "EINSWALL", label: "EINSWALL 맞춤형 방화벽 서버" },
   { value: "Backup", label: "Backup (Acronis / NetBackup)" },
   { value: "DLP", label: "DLP / 백신" },
+  { value: "ERP", label: "EINSTECH ERP — 모듈 선택형 도입" },
   { value: "기술지원", label: "기술지원" },
   { value: "기타", label: "기타 / 일반 문의" },
 ];

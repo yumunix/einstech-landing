@@ -19,6 +19,7 @@ const solutionItems = [
   { label: "Data Security", desc: "Netwrix · Kaspersky · ESET", href: "/dlp-antivirus" },
   { label: "DR 솔루션", desc: "재해복구 · BCP 설계", href: "/bcp" },
   { label: "Couchbase", desc: "NoSQL · ERP 보조 계층 · AI/RAG 연동", href: "/couchbase" },
+  { label: "EINSTECH ERP", desc: "모듈 선택형 온프레미스 ERP", href: "/erp" },
 ];
 
 const supportItems = [
