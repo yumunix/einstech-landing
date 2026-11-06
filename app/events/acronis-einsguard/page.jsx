@@ -5,34 +5,47 @@ import { createPageMetadata } from "@/lib/seo";
 
 const EVENT = {
   period: "2026년 11월 6일 ~ 2027년 6월 30일",
-  minCopies: 10,
-  agentLimit: 10,
+  serverUsers: 5,
 };
+
+const INQUIRY = "/contact?subject=" + encodeURIComponent("Acronis 구매 시 EINSGUARD AI 1년 무상 이벤트");
 
 export const metadata = createPageMetadata({
   path: "/events/acronis-einsguard",
-  title: "Acronis 서버 10카피 구매 시 EINSGUARD AI 1년 무상 | EINSTECH 이벤트",
+  title: "Acronis 구매 시 EINSGUARD AI 1년 무상 | EINSTECH 이벤트",
   description:
-    "Acronis Cyber Protect 서버 라이선스 10카피 이상 구매 고객에게 기업용 AI 보안·관리 솔루션 EINSGUARD AI 1년 사용권을 무상으로 제공합니다.",
+    "Acronis Cyber Protect Workstation 구매 시 같은 수량, Server 구매 시 서버 1대당 5 User의 EINSGUARD AI 1년 사용권을 무상으로 제공합니다.",
   keywords: ["Acronis 이벤트", "Acronis Cyber Protect", "아크로니스 프로모션", "EINSGUARD AI", "AI 보안", "백업 보안"],
 });
 
-const benefits = [
-  { k: "백업·복구", t: "Acronis Cyber Protect", d: "서버 백업, 안티랜섬웨어, 이뮤터블 백업과 복구를 하나의 에이전트로 운영합니다." },
-  { k: "AI 사용 보안", t: "EINSGUARD AI 1년 무상", d: "Claude Code·Codex·Gemini CLI 등 사내 AI 도구 사용 현황, 민감정보 유출 시도, 승인·차단 이력을 온프레미스로 관리합니다." },
-  { k: "통합 지원", t: "아인스테크 기술지원", d: "Acronis 구축과 EINSGUARD AI 관리 서버 설치·초기 정책 설정을 한 번에 상담해 드립니다." },
+const offers = [
+  {
+    k: "WORKSTATION",
+    t: "Acronis Workstation 구매 시",
+    big: "구매 수량만큼",
+    d: "Acronis Cyber Protect Workstation을 구매하신 수량과 같은 수의 EINSGUARD AI Workstation 사용권을 1년간 무상 제공합니다.",
+    ex: "예) Workstation 20카피 구매 → EINSGUARD AI 20 User 1년 무상",
+  },
+  {
+    k: "SERVER",
+    t: "Acronis Server 구매 시",
+    big: `서버 1대당 ${EVENT.serverUsers} User`,
+    d: `Acronis Cyber Protect Server 1카피당 EINSGUARD AI ${EVENT.serverUsers} User 사용권을 1년간 무상 제공합니다.`,
+    ex: `예) Server 3카피 구매 → EINSGUARD AI ${EVENT.serverUsers * 3} User 1년 무상`,
+  },
 ];
 
 const steps = [
   ["01", "상담 신청", "아래 버튼으로 이벤트 상담을 신청합니다."],
-  ["02", "견적·구매", `Acronis 서버 라이선스 ${EVENT.minCopies}카피 이상을 아인스테크를 통해 구매합니다.`],
-  ["03", "사용권 발급", "구매 확인 후 EINSGUARD AI 1년 사용권을 발급합니다."],
-  ["04", "설치·운영", "관리 서버를 설치하고 Agent를 등록해 바로 사용합니다."],
+  ["02", "견적·구매", "Acronis Workstation 또는 Server 라이선스를 아인스테크를 통해 구매합니다."],
+  ["03", "사용권 발급", "구매 수량에 맞춰 EINSGUARD AI 1년 사용권을 발급합니다."],
+  ["04", "설치·운영", "관리 서버 설치와 Agent 등록 후 바로 사용합니다. 설치·기술지원은 별도 견적입니다."],
 ];
 
 const notes = [
-  `Acronis Cyber Protect 서버(Server) 라이선스를 ${EVENT.minCopies}카피 이상 한 번에 신규 구매하는 고객에 한합니다.`,
-  `EINSGUARD AI 사용권은 발급일로부터 1년, 관리 대상 장비 최대 ${EVENT.agentLimit}대입니다.`,
+  "Acronis Cyber Protect Workstation·Server 라이선스를 아인스테크를 통해 신규 구매하는 고객에 한합니다.",
+  "EINSGUARD AI 무상 사용권은 발급일로부터 1년이며, 1 User는 Agent를 설치하는 PC·서버 1대를 기준으로 합니다.",
+  "EINSGUARD AI 설치비와 기술지원료는 무상 제공 범위에 포함되지 않으며 별도로 청구됩니다.",
   "1년 사용 후에는 유상 연장 또는 사용 종료를 선택할 수 있으며, 자동으로 비용이 청구되지 않습니다.",
   "다른 프로모션과 중복 적용되지 않으며, 사용권은 현금으로 교환하거나 다른 회사에 양도할 수 없습니다.",
   "이벤트 내용은 당사 사정에 따라 변경되거나 조기 종료될 수 있습니다.",
@@ -48,17 +61,17 @@ export default function AcronisEinsguardEvent() {
           <div className="relative mx-auto max-w-page px-6 lg:px-12">
             <Badge color="acid">EVENT · {EVENT.period}</Badge>
             <h1 className="mt-6 font-display text-4xl font-black leading-tight md:text-6xl">
-              Acronis 서버 {EVENT.minCopies}카피 구매하면
+              Acronis 구매하면
               <br />
               <span className="text-emerald-300">EINSGUARD AI 1년 무상</span>
             </h1>
             <p className="mt-6 max-w-3xl text-base leading-8 text-white/70">
               백업과 랜섬웨어 대비는 Acronis로, 사내 AI 도구 사용 보안은 EINSGUARD AI로.
-              Acronis Cyber Protect 서버 라이선스를 {EVENT.minCopies}카피 이상 구매하시면
-              기업용 AI 보안·관리 솔루션 EINSGUARD AI를 1년간 무상으로 제공합니다.
+              Acronis Workstation은 구매 수량만큼, Acronis Server는 서버 1대당 {EVENT.serverUsers} User의
+              EINSGUARD AI 사용권을 1년간 무상으로 드립니다.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <a href="/contact?subject=Acronis%2010%EC%B9%B4%ED%94%BC%20%2B%20EINSGUARD%20AI%201%EB%85%84%20%EB%AC%B4%EC%83%81%20%EC%9D%B4%EB%B2%A4%ED%8A%B8" className="rounded-2xl bg-emerald px-8 py-4 font-black text-slate-950">이벤트 상담 신청</a>
+              <a href={INQUIRY} className="rounded-2xl bg-emerald px-8 py-4 font-black text-slate-950">이벤트 상담 신청</a>
               <a href="/einsguard-ai" className="rounded-2xl border border-white/20 px-8 py-4 font-black text-white">EINSGUARD AI 알아보기</a>
             </div>
           </div>
@@ -67,15 +80,21 @@ export default function AcronisEinsguardEvent() {
         <section className="py-20">
           <div className="mx-auto max-w-page px-6 lg:px-12">
             <h2 className="font-display text-3xl font-black">이벤트 혜택</h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-              {benefits.map((b) => (
-                <article key={b.t} className="rounded-[24px] border border-slate-300 bg-white p-7 shadow-sm">
-                  <div className="font-mono text-[11px] font-black tracking-widest text-blue-700">{b.k}</div>
-                  <h3 className="mt-3 font-display text-2xl font-black">{b.t}</h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-600">{b.d}</p>
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              {offers.map((o) => (
+                <article key={o.k} className="rounded-[24px] border border-slate-300 bg-white p-8 shadow-sm">
+                  <div className="font-mono text-[11px] font-black tracking-widest text-blue-700">{o.k}</div>
+                  <h3 className="mt-3 font-display text-2xl font-black">{o.t}</h3>
+                  <div className="mt-4 text-3xl font-black text-emerald-700">EINSGUARD AI {o.big}</div>
+                  <div className="mt-1 text-sm font-bold text-slate-500">1년 무상 사용권</div>
+                  <p className="mt-5 text-sm leading-7 text-slate-600">{o.d}</p>
+                  <p className="mt-4 rounded-xl bg-slate-100 px-4 py-3 text-sm font-bold text-slate-700">{o.ex}</p>
                 </article>
               ))}
             </div>
+            <p className="mt-6 rounded-xl border border-amber-300 bg-amber-50 px-5 py-4 text-sm font-bold text-amber-900">
+              EINSGUARD AI 설치비와 기술지원료는 별도입니다.
+            </p>
           </div>
         </section>
 
@@ -99,13 +118,15 @@ export default function AcronisEinsguardEvent() {
             <h2 className="font-display text-3xl font-black">유의사항</h2>
             <dl className="mt-6 rounded-2xl border border-slate-300 bg-white p-6 text-sm">
               <div className="flex gap-4 border-b border-slate-200 pb-3"><dt className="w-24 shrink-0 font-black">이벤트 기간</dt><dd>{EVENT.period}</dd></div>
-              <div className="flex gap-4 pt-3"><dt className="w-24 shrink-0 font-black">대상</dt><dd>Acronis Cyber Protect 서버 라이선스 {EVENT.minCopies}카피 이상 구매 고객</dd></div>
+              <div className="flex gap-4 border-b border-slate-200 py-3"><dt className="w-24 shrink-0 font-black">Workstation</dt><dd>구매 수량만큼 EINSGUARD AI 1년 무상</dd></div>
+              <div className="flex gap-4 border-b border-slate-200 py-3"><dt className="w-24 shrink-0 font-black">Server</dt><dd>서버 1대당 EINSGUARD AI {EVENT.serverUsers} User 1년 무상</dd></div>
+              <div className="flex gap-4 pt-3"><dt className="w-24 shrink-0 font-black">별도 비용</dt><dd>EINSGUARD AI 설치비, 기술지원료</dd></div>
             </dl>
             <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-600">
               {notes.map((n) => <li key={n}>· {n}</li>)}
             </ul>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a href="/contact?subject=Acronis%2010%EC%B9%B4%ED%94%BC%20%2B%20EINSGUARD%20AI%201%EB%85%84%20%EB%AC%B4%EC%83%81%20%EC%9D%B4%EB%B2%A4%ED%8A%B8" className="rounded-xl bg-slate-950 px-6 py-4 text-center font-black text-white">이벤트 상담 신청</a>
+              <a href={INQUIRY} className="rounded-xl bg-slate-950 px-6 py-4 text-center font-black text-white">이벤트 상담 신청</a>
               <a href="/backup-modernization" className="rounded-xl border border-slate-300 bg-white px-6 py-4 text-center font-black">Acronis 전환 서비스</a>
               <a href="/downloads/einsguard-ai" className="rounded-xl border border-slate-300 bg-white px-6 py-4 text-center font-black">EINSGUARD AI 체험판</a>
             </div>
