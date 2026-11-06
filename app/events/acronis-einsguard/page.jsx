@@ -46,7 +46,7 @@ const notes = [
   "Acronis Cyber Protect Workstation·Server 라이선스를 아인스테크를 통해 유상으로 신규 구매하는 고객에 한합니다. Acronis 라이선스는 무상 제공 대상이 아닙니다.",
   "EINSGUARD AI 무상 사용권은 발급일로부터 1년이며, 1 User는 Agent를 설치하는 PC·서버 1대를 기준으로 합니다.",
   "EINSGUARD AI 설치비와 기술지원료는 무상 제공 범위에 포함되지 않으며 별도로 청구됩니다.",
-  "1년 사용 후에는 유상 연장 또는 사용 종료를 선택할 수 있으며, 자동으로 비용이 청구되지 않습니다.",
+  "EINSGUARD AI 무상 사용권은 발급일로부터 1년이 지나면 자동 종료됩니다. 계속 사용하려면 유상 라이선스를 별도로 구매해야 하며, 자동으로 비용이 청구되지 않습니다.",
   "다른 프로모션과 중복 적용되지 않으며, 사용권은 현금으로 교환하거나 다른 회사에 양도할 수 없습니다.",
   "이벤트 내용은 당사 사정에 따라 변경되거나 조기 종료될 수 있습니다.",
 ];
@@ -120,6 +120,7 @@ export default function AcronisEinsguardEvent() {
               <div className="flex gap-4 border-b border-slate-200 pb-3"><dt className="w-24 shrink-0 font-black">이벤트 기간</dt><dd>{EVENT.period}</dd></div>
               <div className="flex gap-4 border-b border-slate-200 py-3"><dt className="w-24 shrink-0 font-black">Workstation</dt><dd>Acronis Workstation 유상 구매 수량만큼 EINSGUARD AI 1년 무상</dd></div>
               <div className="flex gap-4 border-b border-slate-200 py-3"><dt className="w-24 shrink-0 font-black">Server</dt><dd>Acronis Server 유상 구매 1대당 EINSGUARD AI {EVENT.serverUsers} User 1년 무상</dd></div>
+              <div className="flex gap-4 border-b border-slate-200 py-3"><dt className="w-24 shrink-0 font-black">사용 기간</dt><dd>발급일로부터 1년, 기간 만료 시 자동 종료</dd></div>
               <div className="flex gap-4 pt-3"><dt className="w-24 shrink-0 font-black">별도 비용</dt><dd>Acronis 라이선스 구매 비용, EINSGUARD AI 설치비·기술지원료</dd></div>
             </dl>
             <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-600">
