@@ -1,5 +1,6 @@
 import "./page.css";
 import Header from "@/components/sections/Header";
+import EventBannerRotator from "@/components/sections/EventBannerRotator";
 import { TPLINK_STORE_URL } from "@/data/storeLinks";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -10,19 +11,8 @@ export default function Home() {
     <div className="einstech-white w-full relative">
       <Header />
 
-      {/* EVENT — ACRONIS + EINSGUARD AI */}
-      <section className="relative overflow-hidden pb-8 pt-24 lg:pt-28" style={{background:"linear-gradient(90deg,#047857,#0f766e)",color:"#ffffff"}}>
-        <div className="relative mx-auto flex w-full max-w-page flex-col items-center justify-between gap-5 px-6 lg:flex-row lg:px-12">
-          <div className="flex flex-col items-center gap-3 text-center lg:flex-row lg:items-center lg:text-left">
-            <span className="inline-flex items-center rounded-full px-4 py-1.5 font-mono text-[11px] font-black tracking-widest" style={{background:"#ffffff",color:"#047857"}}>EVENT ~ 2027.06.30</span>
-            <div>
-              <p className="text-lg font-black lg:text-xl" style={{color:"#ffffff"}}>Acronis 유상 구매 시 EINSGUARD AI 1년 무상</p>
-              <p className="mt-1 text-sm" style={{color:"rgba(255,255,255,.88)"}}>Workstation은 구매 수량만큼 · Server는 1대당 5 User · 설치비·기술지원료 별도</p>
-            </div>
-          </div>
-          <a href="/events/acronis-einsguard" className="flex-shrink-0 rounded-xl px-6 py-3 text-sm font-black transition-all hover:shadow-[0_10px_30px_rgba(0,0,0,.2)]" style={{background:"#ffffff",color:"#047857"}}>이벤트 자세히 보기</a>
-        </div>
-      </section>
+      {/* EVENT·PROMOTION — ROTATING BANNER */}
+      <EventBannerRotator />
 
       {/* COUCHBASE — TOP BANNER */}
       <section className="relative overflow-hidden bg-navy pb-10 pt-10">
