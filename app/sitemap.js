@@ -26,6 +26,7 @@ const staticRoutes = [
   { path: "/bcp", priority: 0.8, changeFrequency: "monthly" },
   { path: "/partners", priority: 0.7, changeFrequency: "monthly" },
   { path: "/downloads/einsguard-ai", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/events/acronis-einsguard", priority: 0.8, changeFrequency: "monthly" },
   { path: "/docs/einsguard-ai/install", priority: 0.7, changeFrequency: "monthly" },
   { path: "/docs/einsguard-ai/admin", priority: 0.7, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.6, changeFrequency: "monthly" },

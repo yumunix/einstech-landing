@@ -1,8 +1,8 @@
 export const einswallPrices = {
   cpu: {
-    "8505": 1240000,
-    i5: 1440000,
-    i7: 1640000,
+    "8505": 1220000,
+    i5: 1420000,
+    i7: 1620000,
   },
   network: {
     none: 0,
@@ -11,11 +11,11 @@ export const einswallPrices = {
   },
   memory: {
     "8": 0,
-    "16": 85000,
-    "32": 175000,
+    "16": 190000,
+    "32": 610000,
   },
   storage: {
-    "250": 55000,
+    "250": 0,
     "500": 0,
   },
   sfpModule: {
@@ -25,8 +25,8 @@ export const einswallPrices = {
     "4": 240000,
   },
   rack: {
-    entryConfigured: 1200000,
-    advancedConfigured: 1950000,
-    flagshipConfigured: 1730000,
+    entryConfigured: 1180000,
+    advancedConfigured: 1930000,
+    flagshipConfigured: 1720000,
   },
 };
