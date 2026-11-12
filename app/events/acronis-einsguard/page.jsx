@@ -38,8 +38,8 @@ const offers = [
 const steps = [
   ["01", "상담 신청", "아래 버튼으로 이벤트 상담을 신청합니다."],
   ["02", "견적·구매", "Acronis Workstation 또는 Server 라이선스를 아인스테크를 통해 유상 구매합니다."],
-  ["03", "사용권 발급", "구매 수량에 맞춰 EINSGUARD AI 1년 사용권을 발급합니다."],
-  ["04", "설치·운영", "관리 서버 설치와 Agent 등록 후 바로 사용합니다. 설치·기술지원은 별도 견적입니다."],
+  ["03", "사용권 발급", "구매 수량에 맞춰 EINSGUARD AI 1년 라이선스 키를 이메일로 발급합니다."],
+  ["04", "설치·운영", "다운로드 센터에 키를 입력해 설치파일을 받고, 관리 서버에 키를 등록하면 1년간 사용합니다. 설치·기술지원은 별도 견적입니다."],
 ];
 
 const notes = [
@@ -71,8 +71,8 @@ export default function AcronisEinsguardEvent() {
               EINSGUARD AI 사용권을 1년간 무상으로 드립니다. 무상 혜택은 EINSGUARD AI 사용권에만 적용됩니다.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <a href={INQUIRY} className="rounded-2xl bg-emerald px-8 py-4 font-black text-slate-950">이벤트 상담 신청</a>
-              <a href="/einsguard-ai" className="rounded-2xl border border-white/20 px-8 py-4 font-black text-white">EINSGUARD AI 알아보기</a>
+              <a href="/downloads/einsguard-ai/request?plan=acronis-1y" className="rounded-2xl bg-emerald px-8 py-4 font-black text-slate-950">1년 무상 사용권 신청</a>
+              <a href={INQUIRY} className="rounded-2xl border border-white/20 px-8 py-4 font-black text-white">이벤트 상담 신청</a>
             </div>
           </div>
         </section>

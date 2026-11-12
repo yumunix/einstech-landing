@@ -2,12 +2,61 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import Badge from "@/components/ds/Badge";
 import { createPageMetadata } from "@/lib/seo";
+import DownloadUnlock from "./DownloadUnlock";
 
-export const metadata=createPageMetadata({path:"/downloads/einsguard-ai",title:"EINSGUARD AI 0.5.0 다운로드 | EINSTECH",description:"15일 Trial 관리 서버와 Windows·Linux·macOS Agent 1.4.0 및 SHA-256 체크섬을 제공합니다."});
-const packages=[
- {title:"AI GUARD 관리 서버",platform:"LINUX SERVER · 0.5.0-TRIAL",file:"einsguard-ai-0.5.0-trial-linux.tar.gz",sha:"5c1308e76ea11ca1d9075f277df9f7c452555babec62f76e965189df5819d0d3",items:["Linux x86_64·arm64","새 관리 콘솔 화면(흰색 메뉴·아이콘)","Ollama·OpenAI 호환 내부 LLM","15일 무료 · 관리 대상 5대"]},
- {title:"Windows Agent",platform:"WINDOWS CLIENT · 1.4.0",file:"EINSGUARD-AI-Windows-Agent-1.4.0.exe",sha:"0324e5a8d82a344bc7d9a621d458f0cde3799c2bb115be94e8e04e2a51cc899c",items:["서버 주소만 입력 · 승인 등록","클립보드·CLI·CLI 첨부 파일 DLP","Claude·Codex 실행 정책","장비 전용 키 자동 수령"]},
- {title:"Linux Agent",platform:"LINUX CLIENT · 1.4.0",file:"einsguard-ai-agent-1.4.0-linux.tar.gz",sha:"1748377d8a1d65b6c58968548736221895912255022e05ca5939a8c13a5b4148",items:["서버 주소만 입력 · 승인 등록","CLI 첨부 텍스트 파일 검사","로컬 사용자 추가·삭제 추적","현재 API·키 상태 확인"]},
- {title:"macOS Agent",platform:"MACOS CLIENT · 1.4.0",file:"einsguard-ai-agent-1.4.0-macos.tar.gz",sha:"270a4f61be36e2ce70819cafd233b32c179d5f04a096fdff176af48dd95494c8",items:["macOS 13 이상","서버 주소만 입력 · 승인 등록","CLI 첨부 텍스트 파일 검사","현재 API·키 상태 확인"]},
-];
-export default function DownloadPage(){return <><Header/><main className="bg-slate-50 pt-16 text-slate-900"><section className="bg-slate-950 py-24 text-white"><div className="mx-auto max-w-page px-6 lg:px-12"><Badge color="acid">DOWNLOAD CENTER</Badge><h1 className="mt-6 font-display text-5xl font-black">EINSGUARD AI 0.5.0-trial</h1><p className="mt-5 max-w-3xl text-base leading-8 text-white/70">고객사 내부 LLM 환경을 선택할 수 있는 온프레미스 공개 후보 버전입니다. 운영 서버가 아닌 별도 시험 환경에서 먼저 검증하십시오.</p></div></section><section className="py-16"><div className="mx-auto max-w-page px-6 lg:px-12"><div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">{packages.map(p=><article key={p.file} className="flex flex-col rounded-[24px] border border-slate-300 bg-white p-7 shadow-sm"><div className="font-mono text-[11px] font-black tracking-widest text-blue-700">{p.platform}</div><h2 className="mt-3 font-display text-2xl font-black">{p.title}</h2><ul className="mt-5 flex-1 space-y-2 text-sm text-slate-600">{p.items.map(x=><li key={x}>✓ {x}</li>)}</ul><a download href={`/downloads/${p.file}`} className="mt-7 rounded-xl bg-slate-950 px-5 py-4 text-center text-sm font-black text-white">설치 파일 다운로드</a><a download href={`/downloads/${p.file}.sha256`} className="mt-2 rounded-xl border border-slate-300 px-5 py-3 text-center text-sm font-bold">SHA-256 파일</a><code className="mt-4 break-all rounded-lg bg-slate-100 p-3 text-[10px] leading-5 text-slate-700">{p.sha}</code></article>)}</div><div className="mt-10 grid gap-5 lg:grid-cols-2 xl:grid-cols-4"><a href="/docs/einsguard-ai/admin" className="rounded-[20px] bg-slate-800 p-7 text-white"><div className="text-xs font-bold text-slate-300">ADMIN OPERATIONS</div><div className="mt-2 text-2xl font-black">관리자 운영 매뉴얼 →</div></a><a href="/docs/einsguard-ai/install" className="rounded-[20px] bg-blue-800 p-7 text-white"><div className="text-xs font-bold text-blue-200">WINDOWS · LINUX · MACOS</div><div className="mt-2 text-2xl font-black">설치·설정 매뉴얼 →</div></a><div className="rounded-[20px] border border-amber-400 bg-amber-50 p-7"><div className="font-black">원문 기본 미저장</div><p className="mt-2 text-sm leading-6 text-slate-700">내용은 내부 LLM 판정 중에만 일시 사용하며 기본 정책에서는 데이터베이스에 저장하지 않습니다.</p></div><a href="/downloads/einsguard-ai/removal-request" className="rounded-[20px] border border-amber-400 bg-amber-50 p-7 transition hover:bg-amber-100"><div className="font-black">에이전트 제거 요청 →</div><p className="mt-2 text-sm leading-6 text-slate-700">제거 도구는 홈페이지에서 받을 수 없습니다. 요청을 보내면 담당자가 관리자 승인이 반영된 전용 제거 도구를 이메일로 전달합니다.</p></a></div></div></section></main><Footer/></>}
+export const metadata = createPageMetadata({
+  path: "/downloads/einsguard-ai",
+  title: "EINSGUARD AI 0.5.0 다운로드 | EINSTECH",
+  description: "EINSGUARD AI 설치파일은 담당자가 이메일로 보내드린 라이선스 키가 있어야 받을 수 있습니다. 15일 체험과 Acronis 구매 고객 1년 무상 사용권을 제공합니다.",
+});
+
+export default function DownloadPage() {
+  return (
+    <>
+      <Header />
+      <main className="bg-slate-50 pt-16 text-slate-900">
+        <section className="bg-slate-950 py-24 text-white">
+          <div className="mx-auto max-w-page px-6 lg:px-12">
+            <Badge color="acid">DOWNLOAD CENTER</Badge>
+            <h1 className="mt-6 font-display text-5xl font-black">EINSGUARD AI 0.5.0-trial</h1>
+            <p className="mt-5 max-w-3xl text-base leading-8 text-white/70">
+              보안을 위해 설치파일은 홈페이지에서 바로 받을 수 없습니다. 아래에서 다운로드 키를 신청하시면
+              담당자가 확인 후 <b>라이선스 키를 이메일로</b> 보내드립니다. 받으신 키를 입력하면 설치파일을 내려받을 수 있습니다.
+              키에는 사용 기간이 들어 있어 <b>기본 15일 체험</b>, <b>Acronis 구매 고객은 1년 무상</b>으로 적용됩니다.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href="/downloads/einsguard-ai/request" className="rounded-2xl bg-emerald px-7 py-4 font-black text-slate-950">다운로드 키 신청 (15일 체험)</a>
+              <a href="/downloads/einsguard-ai/request?plan=acronis-1y" className="rounded-2xl border border-white/25 px-7 py-4 font-black text-white">Acronis 구매 고객 · 1년 무상 신청</a>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="mx-auto max-w-page px-6 lg:px-12">
+            <DownloadUnlock />
+
+            <div className="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-4">
+              <a href="/docs/einsguard-ai/admin" className="rounded-[20px] bg-slate-800 p-7 text-white">
+                <div className="text-xs font-bold text-slate-300">ADMIN OPERATIONS</div>
+                <div className="mt-2 text-2xl font-black">관리자 운영 매뉴얼 →</div>
+              </a>
+              <a href="/docs/einsguard-ai/install" className="rounded-[20px] bg-blue-800 p-7 text-white">
+                <div className="text-xs font-bold text-blue-200">WINDOWS · LINUX · MACOS</div>
+                <div className="mt-2 text-2xl font-black">설치·설정 매뉴얼 →</div>
+              </a>
+              <div className="rounded-[20px] border border-amber-400 bg-amber-50 p-7">
+                <div className="font-black">원문 기본 미저장</div>
+                <p className="mt-2 text-sm leading-6 text-slate-700">내용은 내부 LLM 판정 중에만 일시 사용하며 기본 정책에서는 데이터베이스에 저장하지 않습니다.</p>
+              </div>
+              <a href="/downloads/einsguard-ai/removal-request" className="rounded-[20px] border border-amber-400 bg-amber-50 p-7 transition hover:bg-amber-100">
+                <div className="font-black">에이전트 제거 요청 →</div>
+                <p className="mt-2 text-sm leading-6 text-slate-700">제거 도구는 홈페이지에서 받을 수 없습니다. 요청을 보내면 담당자가 관리자 승인이 반영된 전용 제거 도구를 이메일로 전달합니다.</p>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
